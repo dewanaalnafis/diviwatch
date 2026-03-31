@@ -464,7 +464,7 @@ function sparkline(prices, w=70, h=28) {
 // ── Load data ──────────────────────────────────────────────────────────────
 async function loadData() {
   try {
-    const res  = await fetch('candidates.json?t=' + Date.now());
+    const res  = await fetch('https://raw.githubusercontent.com/dewanaalnafis/diviwatch/main/candidates.json?t=' + Date.now());
     if (!res.ok) throw new Error('candidates.json tidak ditemukan');
     const json = await res.json();
 
