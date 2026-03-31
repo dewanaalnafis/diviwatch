@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>DiviWatch Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f1117;--surface:#161b27;--raised:#1e2535;--hover:#242d40;
+  --border:#2a3347;--border2:#313d54;
+  --txt:#e8edf5;--txt2:#8896b0;--txt3:#4e5d78;
+  --blue:#3b82f6;--blue-d:#1d3a6e;--blue-t:#93c5fd;
+  --green:#22c55e;--green-d:#14532d;--green-t:#86efac;
+  --amber:#f59e0b;--amber-d:#78350f;--amber-t:#fcd34d;
+  --red:#ef4444;--red-d:#7f1d1d;--red-t:#fca5a5;
+  --purple:#8b5cf6;--purple-d:#4c1d95;--purple-t:#c4b5fd;
+  --r-sm:4px;--r-md:7px;--r-lg:10px;
+}
+html,body{height:100%;background:var(--bg);color:var(--txt);font-family:'DM Sans',sans-serif;font-size:14px;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:99px}
+
+#app{display:grid;grid-template-rows:52px auto 1fr;height:100vh;overflow:hidden}
+
+/* HEADER */
+header{display:flex;align-items:center;justify-content:space-between;padding:0 20px;
+  border-bottom:1px solid var(--border);background:var(--surface)}
+.logo{display:flex;align-items:center;gap:9px}
+.logo-mark{width:26px;height:26px;background:var(--blue);border-radius:var(--r-sm);
+  display:flex;align-items:center;justify-content:center}
+.logo-mark svg{width:14px;height:14px;color:#fff}
+.logo-txt{font-size:15px;font-weight:600;letter-spacing:-.3px}
+.logo-txt span{color:var(--blue)}
+.hdr-meta{font-size:11px;color:var(--txt3);font-family:'DM Mono',monospace}
+.hdr-right{display:flex;align-items:center;gap:8px}
+.live{display:flex;align-items:center;gap:5px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.live-txt{font-size:11px;color:var(--green-t);font-family:'DM Mono',monospace}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:var(--r-md);
+  font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;
+  border:1px solid var(--border2);background:var(--raised);color:var(--txt2);transition:.12s}
+.btn:hover{background:var(--hover);color:var(--txt)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn svg{width:13px;height:13px}
+.btn-spin svg{animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* TOOLBAR */
+#toolbar{padding:12px 20px;border-bottom:1px solid var(--border);background:var(--surface);
+  display:flex;flex-direction:column;gap:12px}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tgl-group{display:flex;background:var(--bg);border:1px solid var(--border);border-radius:var(--r-md);padding:3px;gap:2px}
+.tgl{padding:4px 14px;border-radius:5px;font-size:12px;font-weight:500;font-family:'DM Sans',sans-serif;
+  cursor:pointer;border:none;background:transparent;color:var(--txt2);transition:.12s}
+.tgl:hover{color:var(--txt);background:var(--raised)}
+.tgl.on{background:var(--blue);color:#fff}
+.srch-wrap{position:relative;min-width:160px;max-width:220px}
+.srch-wrap svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);
+  width:13px;height:13px;color:var(--txt3);pointer-events:none}
+input.srch{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:5px 10px 5px 30px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--txt);outline:none}
+input.srch::placeholder{color:var(--txt3)}
+input.srch:focus{border-color:var(--blue)}
+select.sel{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:5px 10px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--txt2);outline:none;cursor:pointer}
+select.sel:focus{border-color:var(--blue);color:var(--txt)}
+
+/* METRICS */
+.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.mc{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:10px 14px}
+.mc-lbl{font-size:11px;color:var(--txt3);text-transform:uppercase;letter-spacing:.5px}
+.mc-val{font-size:22px;font-weight:600;font-family:'DM Mono',monospace;letter-spacing:-.5px;margin-top:2px}
+.mc-sub{font-size:11px;color:var(--txt3);margin-top:1px}
+.c-blue{color:var(--blue-t)}.c-green{color:var(--green-t)}
+.c-amber{color:var(--amber-t)}.c-red{color:var(--red-t)}.c-purple{color:var(--purple-t)}
+
+/* MAIN */
+#main{display:grid;grid-template-columns:55% 45%;overflow:hidden}
+
+/* LEFT */
+#left{display:flex;flex-direction:column;border-right:1px solid var(--border);overflow:hidden}
+.ph{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;
+  border-bottom:1px solid var(--border);background:var(--surface);flex-shrink:0}
+.ph-title{font-size:13px;font-weight:600;display:flex;align-items:center;gap:7px}
+.ph-title svg{width:14px;height:14px;color:var(--blue)}
+.ph-count{font-size:11px;color:var(--txt3);font-family:'DM Mono',monospace}
+.tbl-wrap{flex:1;overflow-y:auto}
+table{width:100%;border-collapse:collapse}
+thead{position:sticky;top:0;z-index:2}
+thead tr{background:var(--surface)}
+th{padding:7px 10px;font-size:11px;font-weight:500;color:var(--txt3);text-align:left;
+  text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);white-space:nowrap}
+th.r{text-align:right}
+tbody tr{cursor:pointer;border-bottom:1px solid var(--border);transition:.1s}
+tbody tr:hover{background:var(--raised)}
+tbody tr.sel{background:var(--raised);border-left:2px solid var(--blue)}
+td{padding:8px 10px;font-size:13px;color:var(--txt);white-space:nowrap}
+td.r{text-align:right}
+.mono{font-family:'DM Mono',monospace}
+
+/* BADGE */
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:99px;font-size:11px;font-weight:500;white-space:nowrap}
+.sb{background:var(--green-d);color:var(--green-t)}
+.b{background:var(--blue-d);color:var(--blue-t)}
+.w{background:var(--amber-d);color:var(--amber-t)}
+.sk{background:var(--red-d);color:var(--red-t)}
+.badge-flag{background:var(--raised);color:var(--txt3);border:1px solid var(--border);font-size:10px}
+
+/* SCORE BAR */
+.sbar{display:flex;align-items:center;gap:6px;justify-content:flex-end}
+.sbar-bg{width:44px;height:4px;background:var(--raised);border-radius:99px;overflow:hidden}
+.sbar-fill{height:100%;border-radius:99px}
+.fg{background:var(--green)}.fb{background:var(--blue)}.fa{background:var(--amber)}.fr{background:var(--red)}
+.snum{font-size:12px;font-family:'DM Mono',monospace;color:var(--txt2);min-width:30px;text-align:right}
+
+/* RIGHT PANEL */
+#right{display:flex;flex-direction:column;overflow:hidden;background:var(--surface)}
+.placeholder{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;color:var(--txt3);padding:40px;text-align:center}
+.placeholder svg{width:40px;height:40px;opacity:.2}
+.placeholder h3{font-size:14px;font-weight:500;color:var(--txt2)}
+.placeholder p{font-size:12px;line-height:1.6;max-width:220px}
+
+/* DETAIL HEADER */
+.d-hdr{padding:14px 16px;border-bottom:1px solid var(--border);flex-shrink:0}
+.d-title-row{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:4px}
+.d-kode{font-size:20px;font-weight:600;letter-spacing:-.5px}
+.d-nama{font-size:11px;color:var(--txt2);margin-bottom:8px}
+.d-price-row{display:flex;align-items:baseline;gap:10px}
+.d-price{font-size:22px;font-weight:600;font-family:'DM Mono',monospace}
+.d-change{font-size:13px}
+
+/* TABS */
+.tabs{display:flex;border-bottom:1px solid var(--border);flex-shrink:0}
+.tab{flex:1;padding:9px 8px;font-size:12px;font-weight:500;font-family:'DM Sans',sans-serif;
+  cursor:pointer;border:none;background:transparent;color:var(--txt3);
+  border-bottom:2px solid transparent;transition:.12s;text-align:center}
+.tab:hover{color:var(--txt2);background:var(--raised)}
+.tab.on{color:var(--blue-t);border-bottom-color:var(--blue)}
+
+/* TAB CONTENT */
+.tab-content{flex:1;overflow-y:auto;padding:14px 16px}
+
+/* KPI GRID */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+.kpi{background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);padding:10px 12px}
+.kpi-lbl{font-size:10px;color:var(--txt3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.kpi-val{font-size:16px;font-weight:600;font-family:'DM Mono',monospace}
+
+/* SECTION TITLE */
+.sec{font-size:11px;font-weight:600;color:var(--txt3);text-transform:uppercase;
+  letter-spacing:.5px;margin:14px 0 8px}
+
+/* CHECKLIST */
+.chk-item{display:flex;align-items:center;justify-content:space-between;
+  padding:5px 9px;border-radius:var(--r-sm);margin-bottom:3px;font-size:12px}
+.chk-item.pass{background:rgba(34,197,94,.07)}
+.chk-item.fail{background:rgba(239,68,68,.05)}
+.chk-lbl{color:var(--txt2)}
+.chk-pass{color:var(--green-t);font-size:11px;font-weight:500;white-space:nowrap;margin-left:8px}
+.chk-fail{color:var(--red-t);font-size:11px;white-space:nowrap;margin-left:8px}
+
+/* ENTRY WINDOW BAR */
+.ew-wrap{background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);padding:12px;margin-bottom:14px}
+.ew-title{font-size:11px;color:var(--txt3);margin-bottom:10px;display:flex;align-items:center;justify-content:space-between}
+.ew-track{position:relative;height:8px;background:var(--bg);border-radius:99px;margin:12px 0 6px}
+.ew-window{position:absolute;height:100%;border-radius:99px;background:rgba(59,130,246,.35)}
+.ew-marker{position:absolute;top:50%;transform:translate(-50%,-50%);
+  width:14px;height:14px;border-radius:50%;border:2px solid var(--bg)}
+.ew-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--txt3);font-family:'DM Mono',monospace}
+.ew-status{display:inline-flex;align-items:center;padding:2px 8px;border-radius:99px;font-size:11px;font-weight:600}
+
+/* CHART CONTAINER */
+.chart-wrap{background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);
+  padding:12px;margin-bottom:14px;position:relative}
+.chart-title{font-size:11px;color:var(--txt3);margin-bottom:10px;font-weight:600;
+  text-transform:uppercase;letter-spacing:.5px}
+.chart-canvas{width:100% !important;height:180px !important}
+.chart-canvas-sm{width:100% !important;height:140px !important}
+
+/* DIV TIMELINE */
+.div-timeline{display:flex;flex-direction:column;gap:6px}
+.div-event{display:flex;align-items:center;gap:10px;padding:8px 10px;
+  border-radius:var(--r-md);border:1px solid var(--border);background:var(--raised)}
+.div-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.div-info{flex:1}
+.div-date{font-size:12px;font-weight:500}
+.div-label{font-size:10px;color:var(--txt3)}
+.div-days{font-size:12px;font-family:'DM Mono',monospace;font-weight:600}
+
+/* FLAGS */
+.flags-wrap{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.flag-item{background:var(--amber-d);color:var(--amber-t);border-radius:var(--r-sm);
+  padding:3px 8px;font-size:11px}
+
+/* FOOTER */
+.d-footer{padding:10px 16px;border-top:1px solid var(--border);flex-shrink:0}
+
+/* LOADING */
+#loading{display:flex;align-items:center;justify-content:center;height:100%;
+  flex-direction:column;gap:12px;color:var(--txt3)}
+.spin-icon{width:24px;height:24px;border:2px solid var(--border);
+  border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite}
+
+/* SPARKLINE */
+.spark{display:block}
+</style>
+</head>
+<body>
+<div id="app">
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+    </div>
+    <span class="logo-txt">Divi<span>Watch</span></span>
+  </div>
+  <span class="hdr-meta" id="gen-at">Memuat...</span>
+  <div class="hdr-right">
+    <div class="live"><div class="live-dot"></div><span class="live-txt">IDX Dividend Screener</span></div>
+    <button class="btn" id="btn-refresh" onclick="refreshData()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+      </svg>Refresh
+    </button>
+  </div>
+</header>
+
+<!-- TOOLBAR -->
+<div id="toolbar">
+  <div class="row">
+    <div class="tgl-group">
+      <button class="tgl on" id="f-all"   onclick="setFilter('all')">Semua</button>
+      <button class="tgl"    id="f-sb"    onclick="setFilter('STRONG BUY')">Strong Buy</button>
+      <button class="tgl"    id="f-buy"   onclick="setFilter('BUY')">Buy</button>
+      <button class="tgl"    id="f-watch" onclick="setFilter('WATCH')">Watch</button>
+    </div>
+    <div class="srch-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+      </svg>
+      <input class="srch" type="text" placeholder="Cari kode..." id="srch" oninput="render()">
+    </div>
+    <select class="sel" id="sort" onchange="render()">
+      <option value="skor">Sort: Score</option>
+      <option value="yield">Sort: Yield Bersih</option>
+      <option value="rsi">Sort: RSI</option>
+      <option value="harga">Sort: Harga</option>
+    </select>
+    <span style="margin-left:auto;font-size:11px;color:var(--txt3);font-family:'DM Mono',monospace" id="count-lbl"></span>
+  </div>
+  <div class="metrics" id="metrics"></div>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+
+  <!-- LEFT: Table -->
+  <div id="left">
+    <div class="ph">
+      <span class="ph-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+        </svg>Hasil Screening
+      </span>
+      <span class="ph-count" id="tbl-count"></span>
+    </div>
+    <div class="tbl-wrap">
+      <div id="loading"><div class="spin-icon"></div><span>Memuat candidates.json...</span></div>
+      <table id="tbl" style="display:none">
+        <thead>
+          <tr>
+            <th>Kode</th>
+            <th>Klasifikasi</th>
+            <th class="r">Yield</th>
+            <th class="r">RSI</th>
+            <th style="min-width:70px">Trend</th>
+            <th class="r">Score</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- RIGHT: Detail -->
+  <div id="right">
+    <div id="detail-placeholder" class="placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/>
+        <polyline points="13 2 13 9 20 9"/>
+      </svg>
+      <h3>Pilih saham untuk melihat detail</h3>
+      <p>Klik baris di tabel kiri untuk melihat analisis lengkap.</p>
+    </div>
+
+    <div id="detail-panel" style="display:none;flex:1;display:none;flex-direction:column;overflow:hidden">
+      <!-- Header -->
+      <div class="d-hdr">
+        <div class="d-title-row">
+          <div>
+            <span class="d-kode" id="d-kode"></span>
+            <span id="d-badge" style="margin-left:8px"></span>
+          </div>
+          <button class="btn" onclick="closeDetail()" style="padding:3px 8px">✕</button>
+        </div>
+        <div class="d-nama" id="d-nama"></div>
+        <div class="d-price-row">
+          <span class="d-price" id="d-price"></span>
+          <span class="d-change" id="d-change"></span>
+          <span style="font-size:11px;color:var(--txt3);margin-left:4px" id="d-sektor"></span>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab on" id="tab-ringkasan" onclick="switchTab('ringkasan')">Ringkasan</button>
+        <button class="tab"    id="tab-dividen"   onclick="switchTab('dividen')">Dividen</button>
+        <button class="tab"    id="tab-teknikal"  onclick="switchTab('teknikal')">Teknikal</button>
+      </div>
+
+      <!-- Tab content -->
+      <div class="tab-content" id="tab-body"></div>
+
+      <!-- Footer -->
+      <div class="d-footer">
+        <button class="btn" style="width:100%;justify-content:center;font-size:12px" onclick="refreshData()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+          </svg>
+          Update semua data (scrape + score ulang)
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+// ── State ──────────────────────────────────────────────────────────────────
+let allData    = [];
+let filtered   = [];
+let selStock   = null;
+let curFilter  = 'all';
+let curTab     = 'ringkasan';
+let chartPrice = null;
+let chartDiv   = null;
+
+// ── Check labels ───────────────────────────────────────────────────────────
+const CHECKS = {
+  yield_bersih_4pct:    'Yield bersih ≥ 4%',
+  yield_tidak_abnormal: 'Yield tidak abnormal',
+  div_konsisten_3thn:   'Dividen konsisten ≥ 3 tahun',
+  div_konsisten_5thn:   'Dividen konsisten ≥ 5 tahun',
+  dividen_aktif:        'Dividen aktif (≤ 1 tahun lalu)',
+  pbv_wajar:            'PBV wajar',
+  per_wajar:            'PER wajar (0–25×)',
+  roe_positif:          'ROE ≥ 10%',
+  der_aman:             'DER aman',
+  above_ma20:           'Harga di atas MA20',
+  above_ma50:           'Harga di atas MA50',
+  golden_cross:         'Golden cross MA20 > MA50',
+  rsi_ideal:            'RSI zona ideal (40–65)',
+  rsi_tidak_overbought: 'RSI tidak overbought (< 70)',
+  macd_bullish:         'MACD bullish',
+  volume_normal:        'Volume normal (≥ 1×)',
+  volume_momentum:      'Volume momentum (≥ 1.5×)',
+  candle_bullish:       'Candle bullish',
+  candle_body_kuat:     'Body candle kuat (≥ 40%)',
+  upcoming_dividen:     'Potensi dividen berikutnya',
+};
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+function klasBadge(k) {
+  const m = {'STRONG BUY':'sb','BUY':'b','WATCH':'w','SKIP':'sk'};
+  return `<span class="badge ${m[k]||'sk'}">${k}</span>`;
+}
+
+function fillClass(pct) {
+  if (pct >= 75) return 'fg';
+  if (pct >= 60) return 'fb';
+  if (pct >= 45) return 'fa';
+  return 'fr';
+}
+
+function fmtRp(n) {
+  return 'Rp ' + (n||0).toLocaleString('id-ID');
+}
+
+function fmtDate(str) {
+  if (!str) return '—';
+  try {
+    return new Date(str).toLocaleDateString('id-ID', {day:'numeric',month:'short',year:'numeric'});
+  } catch { return str; }
+}
+
+function daysLabel(d) {
+  if (d === null || d === undefined) return '—';
+  if (d > 0)  return `${d} hari lagi`;
+  if (d === 0) return 'Hari ini';
+  return `${Math.abs(d)} hari lalu`;
+}
+
+// Estimate next cum date: last cum + 1 tahun jika sudah lewat
+function estimateNextCum(stock) {
+  if (!stock.cum_date) return null;
+  const last = new Date(stock.cum_date);
+  const today = new Date();
+  if (last > today) return last;
+  const next = new Date(last);
+  next.setFullYear(next.getFullYear() + 1);
+  return next;
+}
+
+function daysFrom(dt) {
+  if (!dt) return null;
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  return Math.round((dt - today) / 86400000);
+}
+
+// Entry window status
+function ewStatus(daysToNextCum) {
+  if (daysToNextCum === null) return {label:'—', cls:'', color:'var(--txt3)'};
+  const WS = 45, WE = 20; // default window H-45 to H-20
+  if (daysToNextCum <= 0)         return {label:'TERLEWAT',   cls:'', color:'var(--red-t)',    wS:WS, wE:WE};
+  if (daysToNextCum <= WE)        return {label:'URGENT',     cls:'', color:'var(--red-t)',    wS:WS, wE:WE};
+  if (daysToNextCum <= WS)        return {label:'AKTIF',      cls:'', color:'var(--green-t)',  wS:WS, wE:WE};
+  if (daysToNextCum <= WS + 14)   return {label:'MENDEKATI',  cls:'', color:'var(--blue-t)',   wS:WS, wE:WE};
+  return                                 {label:'JAUH',       cls:'', color:'var(--txt3)',     wS:WS, wE:WE};
+}
+
+// Sparkline SVG
+function sparkline(prices, w=70, h=28) {
+  if (!prices || prices.length < 2) return `<svg width="${w}" height="${h}"></svg>`;
+  const vals = prices.map(p => p.close || p);
+  const mn = Math.min(...vals), mx = Math.max(...vals);
+  const range = mx - mn || 1;
+  const pts = vals.map((v, i) => {
+    const x = (i / (vals.length-1)) * w;
+    const y = h - ((v - mn) / range) * (h-4) - 2;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  const isUp = vals[vals.length-1] >= vals[0];
+  const col  = isUp ? 'var(--green)' : 'var(--red)';
+  return `<svg class="spark" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+    <polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.5" stroke-linejoin="round"/>
+  </svg>`;
+}
+
+// ── Load data ──────────────────────────────────────────────────────────────
+async function loadData() {
+  try {
+    const res  = await fetch('candidates.json?t=' + Date.now());
+    if (!res.ok) throw new Error('candidates.json tidak ditemukan');
+    const json = await res.json();
+
+    allData = [
+      ...(json.strong_buy || []),
+      ...(json.buy        || []),
+      ...(json.watch      || []),
+      ...(json.skip       || []),
+    ];
+
+    document.getElementById('gen-at').textContent = 'Update: ' + (json.generated_at || '—');
+    renderMetrics(json.summary || {});
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('tbl').style.display = 'table';
+    render();
+
+    // Refresh selected stock data if still selected
+    if (selStock) {
+      const updated = allData.find(s => s.kode === selStock.kode);
+      if (updated) { selStock = updated; renderTabContent(); }
+    }
+  } catch(e) {
+    document.getElementById('loading').innerHTML =
+      `<span style="color:var(--red-t)">❌ ${e.message}<br><small>Pastikan server.py jalan dan candidates.json ada.</small></span>`;
+  }
+}
+
+async function refreshData() {
+  const btn = document.getElementById('btn-refresh');
+  btn.disabled = true;
+  btn.classList.add('btn-spin');
+  btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+  </svg>Updating...`;
+
+  try {
+    const res = await fetch('/api/run');
+    const json = await res.json();
+    if (json.status !== 'ok') throw new Error(json.msg);
+    await loadData();
+  } catch(e) {
+    alert('Gagal refresh: ' + e.message);
+  } finally {
+    btn.disabled = false;
+    btn.classList.remove('btn-spin');
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+    </svg>Refresh`;
+  }
+}
+
+// ── Metrics ────────────────────────────────────────────────────────────────
+function renderMetrics(s) {
+  document.getElementById('metrics').innerHTML = `
+    <div class="mc"><div class="mc-lbl">Total Saham</div><div class="mc-val c-blue">${s.total||0}</div><div class="mc-sub">discreened</div></div>
+    <div class="mc"><div class="mc-lbl">Strong Buy</div><div class="mc-val c-green">${s.strong_buy||0}</div><div class="mc-sub">skor ≥ 75%</div></div>
+    <div class="mc"><div class="mc-lbl">Buy</div><div class="mc-val c-blue">${s.buy||0}</div><div class="mc-sub">skor 60–74%</div></div>
+    <div class="mc"><div class="mc-lbl">Watch</div><div class="mc-val c-amber">${s.watch||0}</div><div class="mc-sub">skor 45–59%</div></div>
+    <div class="mc"><div class="mc-lbl">Skip</div><div class="mc-val c-red">${s.skip||0}</div><div class="mc-sub">skor < 45%</div></div>`;
+}
+
+// ── Filter / sort / render table ───────────────────────────────────────────
+function setFilter(f) {
+  curFilter = f;
+  ['all','sb','buy','watch'].forEach(id => document.getElementById('f-'+id).classList.remove('on'));
+  const map = {all:'f-all','STRONG BUY':'f-sb',BUY:'f-buy',WATCH:'f-watch'};
+  if (map[f]) document.getElementById(map[f]).classList.add('on');
+  render();
+}
+
+function render() {
+  const q    = document.getElementById('srch').value.trim().toLowerCase();
+  const sort = document.getElementById('sort').value;
+
+  filtered = allData.filter(s => {
+    if (curFilter !== 'all' && s.klasifikasi !== curFilter) return false;
+    if (q && !s.kode.toLowerCase().includes(q) && !s.nama.toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  filtered.sort((a,b) => {
+    if (sort==='skor')  return b.total_skor - a.total_skor;
+    if (sort==='yield') return b.yield_bersih - a.yield_bersih;
+    if (sort==='rsi')   return a.rsi - b.rsi;
+    if (sort==='harga') return b.harga - a.harga;
+    return 0;
+  });
+
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+
+  filtered.forEach(s => {
+    const tr  = document.createElement('tr');
+    if (selStock && s.kode === selStock.kode) tr.classList.add('sel');
+    tr.onclick = () => selectStock(s.kode);
+
+    const chg    = s.change_pct || 0;
+    const chgCls = chg >= 0 ? 'color:var(--green-t)' : 'color:var(--red-t)';
+    const pct    = s.pct || 0;
+    const fc     = fillClass(pct);
+    const spark  = sparkline(s.price_history || []);
+    const flags  = (s.flags||[]).map(f =>
+      `<span class="badge badge-flag" style="margin-left:3px">${f.replace(/_/g,' ')}</span>`).join('');
+
+    tr.innerHTML = `
+      <td>
+        <div style="font-weight:600;font-size:13px">${s.kode}</div>
+        <div style="font-size:10px;color:var(--txt3)">${s.sektor||''}</div>
+        ${flags}
+      </td>
+      <td>${klasBadge(s.klasifikasi)}</td>
+      <td class="r mono" style="${s.yield_bersih>=4?'color:var(--green-t)':''}">${s.yield_bersih}%</td>
+      <td class="r mono" style="${s.rsi<40||s.rsi>70?'color:var(--amber-t)':''}">${s.rsi}</td>
+      <td style="padding:6px 10px">${spark}</td>
+      <td class="r">
+        <div class="sbar">
+          <div class="sbar-bg"><div class="sbar-fill ${fc}" style="width:${pct}%"></div></div>
+          <span class="snum">${s.total_skor}/${s.skor_maks}</span>
+        </div>
+      </td>`;
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById('tbl-count').textContent = `${filtered.length} saham`;
+  document.getElementById('count-lbl').textContent = `${filtered.length} saham`;
+}
+
+// ── Select stock ───────────────────────────────────────────────────────────
+function selectStock(kode) {
+  selStock = allData.find(s => s.kode === kode);
+  if (!selStock) return;
+  curTab = 'ringkasan';
+  render();
+
+  const chg = selStock.change_pct || 0;
+  document.getElementById('d-kode').textContent    = selStock.kode;
+  document.getElementById('d-badge').innerHTML     = klasBadge(selStock.klasifikasi);
+  document.getElementById('d-nama').textContent    = selStock.nama;
+  document.getElementById('d-price').textContent   = fmtRp(selStock.harga);
+  document.getElementById('d-change').textContent  = (chg>=0?'+':'')+chg.toFixed(1)+'%';
+  document.getElementById('d-change').style.color  = chg>=0 ? 'var(--green-t)' : 'var(--red-t)';
+  document.getElementById('d-sektor').textContent  = selStock.sektor || '';
+
+  document.getElementById('detail-placeholder').style.display = 'none';
+  const panel = document.getElementById('detail-panel');
+  panel.style.display    = 'flex';
+  panel.style.flexDirection = 'column';
+  panel.style.overflow   = 'hidden';
+  panel.style.flex       = '1';
+
+  // Reset tabs
+  ['ringkasan','dividen','teknikal'].forEach(t => {
+    document.getElementById('tab-'+t).classList.toggle('on', t==='ringkasan');
+  });
+
+  renderTabContent();
+}
+
+function closeDetail() {
+  selStock = null;
+  destroyCharts();
+  document.getElementById('detail-placeholder').style.display = 'flex';
+  document.getElementById('detail-panel').style.display = 'none';
+  render();
+}
+
+function switchTab(tab) {
+  curTab = tab;
+  destroyCharts();
+  ['ringkasan','dividen','teknikal'].forEach(t => {
+    document.getElementById('tab-'+t).classList.toggle('on', t===tab);
+  });
+  renderTabContent();
+}
+
+function renderTabContent() {
+  if (!selStock) return;
+  const body = document.getElementById('tab-body');
+  body.innerHTML = '';
+  if (curTab === 'ringkasan') renderRingkasan(body);
+  if (curTab === 'dividen')   renderDividen(body);
+  if (curTab === 'teknikal')  renderTeknikal(body);
+}
+
+// ── TAB 1: Ringkasan ───────────────────────────────────────────────────────
+function renderRingkasan(container) {
+  const s   = selStock;
+  const det = s.skor_detail || {};
+  const nextCum = estimateNextCum(s);
+  const dToNext = daysFrom(nextCum);
+  const ew  = ewStatus(dToNext);
+  const WS  = 45, WE = 20, MAX = 60;
+
+  // Entry window bar positions (0–100%)
+  const wsPos  = Math.max(0, Math.min(100, ((MAX-WS)/MAX)*100));
+  const wePos  = Math.max(0, Math.min(100, ((MAX-WE)/MAX)*100));
+  const nowPos = dToNext !== null ? Math.max(0, Math.min(100, ((MAX-dToNext)/MAX)*100)) : null;
+  const wWidth = wePos - wsPos;
+
+  const checkHTML = Object.entries(CHECKS).map(([k,label]) => {
+    const pass = det[k] === 1;
+    return `<div class="chk-item ${pass?'pass':'fail'}">
+      <span class="chk-lbl">${label}</span>
+      <span class="${pass?'chk-pass':'chk-fail'}">${pass?'✓':'✗'}</span>
+    </div>`;
+  }).join('');
+
+  const flagHTML = (s.flags||[]).length
+    ? `<div class="flags-wrap">${(s.flags).map(f=>`<span class="flag-item">${f.replace(/_/g,' ')}</span>`).join('')}</div>`
+    : `<span style="font-size:12px;color:var(--txt3)">Tidak ada flag</span>`;
+
+  container.innerHTML = `
+    <div class="grid2">
+      <div class="kpi"><div class="kpi-lbl">Score</div>
+        <div class="kpi-val c-blue">${s.total_skor}/${s.skor_maks}
+          <span style="font-size:11px;color:var(--txt3)">(${s.pct}%)</span></div></div>
+      <div class="kpi"><div class="kpi-lbl">Yield Bersih</div>
+        <div class="kpi-val" style="color:var(--green-t)">${s.yield_bersih}%</div></div>
+      <div class="kpi"><div class="kpi-lbl">DPS Terakhir</div>
+        <div class="kpi-val">Rp ${(s.dps||0).toLocaleString('id-ID')}</div></div>
+      <div class="kpi"><div class="kpi-lbl">Yield Kotor</div>
+        <div class="kpi-val">${s.yield_kotor}%</div></div>
+    </div>
+
+    <div class="sec">Entry Window Tracker</div>
+    <div class="ew-wrap">
+      <div class="ew-title">
+        <span style="color:var(--txt2)">Default window H-${WS} s/d H-${WE} sebelum cum date</span>
+        <span class="ew-status" style="background:rgba(255,255,255,.07);color:${ew.color}">${ew.label}</span>
+      </div>
+      <div class="ew-track">
+        <div class="ew-window" style="left:${wsPos}%;width:${wWidth}%"></div>
+        ${nowPos!==null ? `<div class="ew-marker" style="left:${nowPos}%;background:${ew.color}"></div>` : ''}
+      </div>
+      <div class="ew-labels">
+        <span>H-${MAX}</span>
+        <span style="color:var(--amber-t)">H-${WS} (start)</span>
+        <span style="color:var(--amber-t)">H-${WE} (end)</span>
+        <span>Cum</span>
+      </div>
+      <div style="margin-top:8px;font-size:12px;color:${ew.color}">
+        ${dToNext !== null
+          ? (dToNext > 0
+              ? `Estimasi cum date berikutnya: ${fmtDate(nextCum?.toISOString?.()?.split('T')[0])} — ${daysLabel(dToNext)}`
+              : `Cum date terakhir sudah lewat ${Math.abs(dToNext)} hari lalu`)
+          : 'Data cum date tidak tersedia'}
+      </div>
+    </div>
+
+    <div class="sec">Checklist Scoring (${s.total_skor}/${s.skor_maks} terpenuhi)</div>
+    ${checkHTML}
+
+    <div class="sec">Warning Flags</div>
+    ${flagHTML}`;
+}
+
+// ── TAB 2: Dividen ────────────────────────────────────────────────────────
+function renderDividen(container) {
+  const s = selStock;
+  const hist = s.div_history || [];
+  const nextCum = estimateNextCum(s);
+  const dToNext = daysFrom(nextCum);
+
+  container.innerHTML = `
+    <div class="grid3">
+      <div class="kpi"><div class="kpi-lbl">DPS Terakhir</div>
+        <div class="kpi-val" style="color:var(--green-t)">Rp ${(s.dps||0).toLocaleString('id-ID')}</div></div>
+      <div class="kpi"><div class="kpi-lbl">Yield Bersih</div>
+        <div class="kpi-val" style="color:var(--green-t)">${s.yield_bersih}%</div></div>
+      <div class="kpi"><div class="kpi-lbl">Konsistensi</div>
+        <div class="kpi-val">${s.div_years} tahun</div></div>
+    </div>
+
+    <div class="sec">Riwayat DPS</div>
+    <div class="chart-wrap">
+      <canvas id="chart-div" class="chart-canvas-sm"></canvas>
+    </div>
+
+    <div class="sec">Tanggal Kunci</div>
+    <div class="div-timeline">
+      <div class="div-event">
+        <div class="div-dot" style="background:var(--amber)"></div>
+        <div class="div-info">
+          <div class="div-label">Cum Date (estimasi berikutnya)</div>
+          <div class="div-date">${nextCum ? fmtDate(nextCum.toISOString().split('T')[0]) : '—'}</div>
+        </div>
+        <div class="div-days" style="color:${dToNext&&dToNext>0?'var(--amber-t)':'var(--txt3)'}">
+          ${daysLabel(dToNext)}
+        </div>
+      </div>
+      <div class="div-event">
+        <div class="div-dot" style="background:var(--purple)"></div>
+        <div class="div-info">
+          <div class="div-label">Ex Date (terakhir diketahui)</div>
+          <div class="div-date">${fmtDate(s.ex_date)}</div>
+        </div>
+        <div class="div-days" style="color:var(--txt3)">${daysLabel(s.days_to_cum)}</div>
+      </div>
+    </div>
+
+    <div class="sec" style="margin-top:14px">Riwayat Lengkap</div>
+    <div style="background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden">
+      <table style="width:100%;border-collapse:collapse">
+        <thead>
+          <tr style="background:var(--surface)">
+            <th style="padding:6px 10px;font-size:11px;color:var(--txt3);text-align:left;border-bottom:1px solid var(--border)">Tanggal</th>
+            <th style="padding:6px 10px;font-size:11px;color:var(--txt3);text-align:right;border-bottom:1px solid var(--border)">DPS</th>
+            <th style="padding:6px 10px;font-size:11px;color:var(--txt3);text-align:right;border-bottom:1px solid var(--border)">Yield*</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${hist.slice().reverse().map((h,i) => `
+            <tr style="border-bottom:1px solid var(--border);${i%2===0?'background:rgba(255,255,255,.02)':''}">
+              <td style="padding:6px 10px;font-size:12px">${fmtDate(h.tanggal)}</td>
+              <td style="padding:6px 10px;font-size:12px;text-align:right;font-family:'DM Mono',monospace;color:var(--green-t)">Rp ${(h.dps||0).toLocaleString('id-ID')}</td>
+              <td style="padding:6px 10px;font-size:12px;text-align:right;font-family:'DM Mono',monospace;color:var(--txt3)">${s.harga ? ((h.dps/s.harga)*90).toFixed(1)+'%' : '—'}</td>
+            </tr>`).join('')}
+        </tbody>
+      </table>
+      <div style="padding:6px 10px;font-size:10px;color:var(--txt3)">* Yield bersih berdasarkan harga saat ini</div>
+    </div>`;
+
+  // Render bar chart dividen
+  setTimeout(() => {
+    const ctx = document.getElementById('chart-div');
+    if (!ctx || !hist.length) return;
+    destroyCharts();
+    chartDiv = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: hist.map(h => h.tanggal.slice(0,7)),
+        datasets: [{
+          label: 'DPS (Rp)',
+          data:  hist.map(h => h.dps),
+          backgroundColor: 'rgba(34,197,94,.5)',
+          borderColor:     'rgba(34,197,94,.8)',
+          borderWidth: 1,
+          borderRadius: 3,
+        }]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`Rp ${c.raw.toLocaleString('id-ID')}`}}},
+        scales:{
+          x:{ticks:{color:'#4e5d78',font:{size:10}},grid:{color:'rgba(255,255,255,.05)'}},
+          y:{ticks:{color:'#4e5d78',font:{size:10},callback:v=>`Rp ${v.toLocaleString('id-ID')}`},grid:{color:'rgba(255,255,255,.05)'}}
+        }
+      }
+    });
+  }, 50);
+}
+
+// ── TAB 3: Teknikal ───────────────────────────────────────────────────────
+function renderTeknikal(container) {
+  const s = selStock;
+
+  container.innerHTML = `
+    <div class="grid3">
+      <div class="kpi"><div class="kpi-lbl">RSI (14)</div>
+        <div class="kpi-val" style="color:${s.rsi>=40&&s.rsi<=65?'var(--green-t)':s.rsi>65?'var(--amber-t)':'var(--red-t)'}">${s.rsi}</div></div>
+      <div class="kpi"><div class="kpi-lbl">Volume Ratio</div>
+        <div class="kpi-val" style="color:${s.vol_ratio>=1.5?'var(--green-t)':s.vol_ratio>=1?'var(--txt)':'var(--txt3)'}">${s.vol_ratio}×</div></div>
+      <div class="kpi"><div class="kpi-lbl">MA Status</div>
+        <div class="kpi-val" style="font-size:13px;color:${s.above_ma50?'var(--green-t)':'var(--red-t)'}">${s.above_ma50?'Di atas MA50':'Di bawah MA50'}</div></div>
+    </div>
+
+    <div class="sec">Harga vs MA20 & MA50 (30 hari)</div>
+    <div class="chart-wrap">
+      <canvas id="chart-price" class="chart-canvas"></canvas>
+    </div>
+
+    <div class="sec">Indikator Detail</div>
+    <div style="background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);padding:12px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px">
+        ${[
+          ['MA20',          `Rp ${(s.ma20||0).toLocaleString('id-ID')}`],
+          ['MA50',          s.ma50 ? `Rp ${s.ma50.toLocaleString('id-ID')}` : '—'],
+          ['Golden Cross',  s.golden_cross ? '✓ Ya' : '✗ Tidak'],
+          ['MACD Bullish',  s.macd_bullish ? '✓ Ya' : '✗ Tidak'],
+          ['Candle Bullish',s.bullish_candle ? '✓ Ya' : '✗ Tidak'],
+          ['Body Ratio',    `${(s.body_ratio*100).toFixed(0)}%`],
+          ['PBV',           `${s.pbv}×`],
+          ['PER',           s.per > 0 ? `${s.per}×` : '—'],
+          ['ROE',           `${s.roe}%`],
+          ['DER',           `${s.der}`],
+        ].map(([l,v]) => `
+          <span style="color:var(--txt3)">${l}</span>
+          <span style="text-align:right;font-family:'DM Mono',monospace;font-weight:500">${v}</span>
+        `).join('')}
+      </div>
+    </div>`;
+
+  // Render price chart
+  setTimeout(() => {
+    const ctx = document.getElementById('chart-price');
+    if (!ctx) return;
+    const ph = s.price_history || [];
+    if (!ph.length) return;
+
+    destroyCharts();
+    const labels   = ph.map(p => p.date.slice(5));
+    const closes   = ph.map(p => p.close);
+    const ma20h    = s.ma20_history || [];
+    const ma50h    = s.ma50_history || [];
+
+    chartPrice = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'Harga',
+            data:  closes,
+            borderColor: '#3b82f6',
+            backgroundColor: 'rgba(59,130,246,.1)',
+            borderWidth: 2,
+            pointRadius: 0,
+            fill: true,
+            tension: 0.3,
+          },
+          ...(ma20h.length ? [{
+            label: 'MA20',
+            data:  ma20h,
+            borderColor: '#f59e0b',
+            borderWidth: 1.5,
+            borderDash: [4,3],
+            pointRadius: 0,
+            fill: false,
+            tension: 0.3,
+          }] : []),
+          ...(ma50h.length ? [{
+            label: 'MA50',
+            data:  ma50h,
+            borderColor: '#8b5cf6',
+            borderWidth: 1.5,
+            borderDash: [4,3],
+            pointRadius: 0,
+            fill: false,
+            tension: 0.3,
+          }] : []),
+        ]
+      },
+      options: {
+        responsive:true, maintainAspectRatio:false,
+        interaction:{mode:'index',intersect:false},
+        plugins:{
+          legend:{labels:{color:'#8896b0',font:{size:11},boxWidth:12}},
+          tooltip:{callbacks:{label:c=>`${c.dataset.label}: Rp ${(c.raw||0).toLocaleString('id-ID')}`}}
+        },
+        scales:{
+          x:{ticks:{color:'#4e5d78',font:{size:10},maxTicksLimit:8},grid:{color:'rgba(255,255,255,.05)'}},
+          y:{ticks:{color:'#4e5d78',font:{size:10},callback:v=>`${(v/1000).toFixed(0)}K`},grid:{color:'rgba(255,255,255,.05)'}}
+        }
+      }
+    });
+  }, 50);
+}
+
+// ── Chart cleanup ──────────────────────────────────────────────────────────
+function destroyCharts() {
+  if (chartPrice) { chartPrice.destroy(); chartPrice = null; }
+  if (chartDiv)   { chartDiv.destroy();   chartDiv   = null; }
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+loadData();
+</script>
+</body>
+</html>
