@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-03-31 17:32:27",
+  "generated_at": "2026-03-31 18:03:37",
   "summary": {
     "total": 36,
     "strong_buy": 6,
-    "buy": 17,
-    "watch": 12,
-    "skip": 1
+    "buy": 16,
+    "watch": 14,
+    "skip": 0
   },
   "strong_buy": [
     {
@@ -86,12 +86,73 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 16,
-      "skor_maks": 20,
-      "pct": 80.0,
-      "klasifikasi": "STRONG BUY"
+      "total_skor": 18,
+      "skor_maks": 22,
+      "pct": 81.8,
+      "klasifikasi": "STRONG BUY",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 8.8,
+        "skor_korporasi": 4,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 1,
+            "nama": "Dividen",
+            "sentimen": "bullish",
+            "bobot": 4,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Koleksi Saham Pemerintah Norwegia di RI: AKRA, ESSA, TINS - Market - Bloomberg Technoz",
+            "published": "Thu, 05 Mar 2026 08:00:00 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Tim Analis Bareksa: AKRA, MEDC, & PGEO, IHSG Bisa Lanjut Bullish - Bareksa.com",
+            "published": "Sun, 18 Jan 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Kinerja Solid dan Potensi Pertumbuhan, Saham AKRA Jadi Pilihan Analis - kontan.co.id",
+            "published": "Sat, 25 Oct 2025 07:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          },
+          {
+            "title": "Norwegia Koleksi Saham AKRA, ESSA, dan TINS di BEI - AsatuNews.co.id",
+            "published": "Thu, 05 Mar 2026 08:00:00 GMT",
+            "source": "AsatuNews.co.id",
+            "matches": []
+          },
+          {
+            "title": "AKR Corporindo Tbk Siap Tebar Dividen Rp 50 per Saham. Cek Jadwalnya di Sini! - Pasardana",
+            "published": "Mon, 28 Jul 2025 07:00:00 GMT",
+            "source": "Pasardana",
+            "matches": [
+              {
+                "id": 1,
+                "nama": "Dividen",
+                "sentimen": "bullish",
+                "bobot": 4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "kode": "BJTM",
@@ -171,12 +232,55 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 15,
-      "skor_maks": 20,
-      "pct": 75.0,
-      "klasifikasi": "STRONG BUY"
+      "total_skor": 17,
+      "skor_maks": 22,
+      "pct": 77.3,
+      "klasifikasi": "STRONG BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Bentuk KUB, BJTM beli Rp742,82 juta saham Bank Banten - IDNFinancials.com",
+            "published": "Mon, 10 Nov 2025 08:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": []
+          },
+          {
+            "title": "Arif Suhirman Tambah Investasi Sahamnya di BJTM - Pasardana",
+            "published": "Tue, 30 Dec 2025 08:00:00 GMT",
+            "source": "Pasardana",
+            "matches": []
+          },
+          {
+            "title": "Arif Suhirman Beli Saham Bank Jatim (BJTM), Jadi Direksi dengan Kepemilikan Terbesar Kedua - IDX Channel",
+            "published": "Wed, 31 Dec 2025 08:00:00 GMT",
+            "source": "IDX Channel",
+            "matches": []
+          },
+          {
+            "title": "R. Arief Wicaksono Tambah Investasi Sahamnya di BJTM - Pasardana",
+            "published": "Tue, 16 Dec 2025 08:00:00 GMT",
+            "source": "Pasardana",
+            "matches": []
+          },
+          {
+            "title": "RUPS Bank Banten (BEKS) Sepakati Bank Jatim (BJTM) jadi Pemegang Saham Pengendali - Bisnis.com",
+            "published": "Tue, 02 Dec 2025 08:00:00 GMT",
+            "source": "Bisnis.com",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "PTBA",
@@ -256,12 +360,55 @@
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 15,
-      "skor_maks": 20,
-      "pct": 75.0,
-      "klasifikasi": "STRONG BUY"
+      "total_skor": 17,
+      "skor_maks": 22,
+      "pct": 77.3,
+      "klasifikasi": "STRONG BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Saham PTBA Diakumulasi, Cuan Menanti - investor.id",
+            "published": "Sun, 08 Mar 2026 08:00:00 GMT",
+            "source": "investor.id",
+            "matches": []
+          },
+          {
+            "title": "Free Float Saham Bukit Asam (PTBA) Capai 32,75% - SWA.co.id",
+            "published": "Mon, 09 Mar 2026 07:00:00 GMT",
+            "source": "SWA.co.id",
+            "matches": []
+          },
+          {
+            "title": "PTBA Adalah Saham di Sektor Apa? Panduan Lengkap untuk Pemula - Ajaib",
+            "published": "Fri, 14 Nov 2025 08:00:00 GMT",
+            "source": "Ajaib",
+            "matches": []
+          },
+          {
+            "title": "IHSG Fluktuatif: Naik Tipis 0,03%, Saham PTBA Menguat 6,91% - Bloomberg Technoz",
+            "published": "Tue, 03 Mar 2026 08:00:00 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Tim Analis Bareksa: SMDR, PTBA & RAJA, IHSG Diprediksi Masih Melemah - Bareksa.com",
+            "published": "Tue, 03 Mar 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "ICBP",
@@ -341,12 +488,55 @@
         "volume_momentum": 1,
         "candle_bullish": 1,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 15,
-      "skor_maks": 20,
-      "pct": 75.0,
-      "klasifikasi": "STRONG BUY"
+      "total_skor": 17,
+      "skor_maks": 22,
+      "pct": 77.3,
+      "klasifikasi": "STRONG BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "THR PNS Mau Cair, Saham UNVR & ICBP Malah Jeblok - Market - Bloomberg Technoz",
+            "published": "Wed, 04 Mar 2026 08:00:00 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": []
+          },
+          {
+            "title": "Harga Baru Naik Disertai Volume Signifikan, Saham ICBP Diajak Pesta 17-an di BEI? - KONTAN",
+            "published": "Fri, 15 Aug 2025 07:00:00 GMT",
+            "source": "KONTAN",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Hari Ini BBCA, BBRI & ICBP, Wacana Aturan Baru MSCI Bayangi IHSG - Bareksa.com",
+            "published": "Mon, 27 Oct 2025 07:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Data Keyakinan Konsumen Lesu, Cek Rekomendasi Saham ICBP dan INDF - Bisnis.com",
+            "published": "Thu, 09 Oct 2025 07:00:00 GMT",
+            "source": "Bisnis.com",
+            "matches": []
+          },
+          {
+            "title": "IHSG rawan terkoreksi, saham AADI, JSMR, ICBP dan INDF jadi rekomendasi analis - MSN",
+            "published": "Tue, 03 Feb 2026 03:33:02 GMT",
+            "source": "MSN",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "INDF",
@@ -426,12 +616,55 @@
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 15,
-      "skor_maks": 20,
-      "pct": 75.0,
-      "klasifikasi": "STRONG BUY"
+      "total_skor": 17,
+      "skor_maks": 22,
+      "pct": 77.3,
+      "klasifikasi": "STRONG BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "​Saham INDF Turun dari MSCI Global Standard ke Small Cap, Jual atau Beli? - kontan.co.id",
+            "published": "Thu, 12 Feb 2026 08:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          },
+          {
+            "title": "Turun Kasta hingga Terdepak dari MSCI, Investor Jauhi INDF-ACES - Bloomberg Technoz",
+            "published": "Wed, 11 Feb 2026 08:00:00 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Hari Ini 18 Februari 2026: BMRI, BUKA, INDF & SMGR, IHSG Berpeluang Menguat - Bareksa.com",
+            "published": "Wed, 18 Feb 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Indeks MSCI Terbaru: Saham INDF Turun Kelas, ACES-CLEO Didepak - Validnews.id",
+            "published": "Wed, 11 Feb 2026 08:00:00 GMT",
+            "source": "Validnews.id",
+            "matches": []
+          },
+          {
+            "title": "Cobaan bagi Saham Emiten Grup Salim, Djarum, & Sinar Mas - investor.id",
+            "published": "Sun, 01 Mar 2026 08:00:00 GMT",
+            "source": "investor.id",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "CPIN",
@@ -511,12 +744,55 @@
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 15,
-      "skor_maks": 20,
-      "pct": 75.0,
-      "klasifikasi": "STRONG BUY"
+      "total_skor": 17,
+      "skor_maks": 22,
+      "pct": 77.3,
+      "klasifikasi": "STRONG BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "IHSG Ambruk 2,66% ke 8.016, Top Losers LQ45: MAPI, BRPT dan CPIN, Senin (2/3) - kontan.co.id",
+            "published": "Mon, 02 Mar 2026 08:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          },
+          {
+            "title": "BNI Sekuritas Jagokan Saham CPIN, BREN, UNTR, SGER, AMMN, dan UNVR di Perdagangan Jumat Ini - SWA.co.id",
+            "published": "Fri, 31 Oct 2025 07:00:00 GMT",
+            "source": "SWA.co.id",
+            "matches": []
+          },
+          {
+            "title": "3 Saham Peternakan di BEI yang Dapat Dicermati, Profil Usaha dan Kinerjanya - IDX Channel",
+            "published": "Tue, 28 Oct 2025 07:00:00 GMT",
+            "source": "IDX Channel",
+            "matches": []
+          },
+          {
+            "title": "MBG Jadi Angin Segar Buat Saham-saham Ini, Cek Rekomendasinya - Market - Bloomberg Technoz",
+            "published": "Wed, 24 Sep 2025 07:00:00 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": []
+          },
+          {
+            "title": "Gerak Saham Emiten Unggas CPIN-JPFA Cs saat Momentum Ramadan - Bisnis.com",
+            "published": "Thu, 19 Feb 2026 08:00:00 GMT",
+            "source": "Bisnis.com",
+            "matches": []
+          }
+        ]
+      }
     }
   ],
   "buy": [
@@ -598,12 +874,90 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
-      "skor_maks": 20,
-      "pct": 70.0,
-      "klasifikasi": "BUY"
+      "total_skor": 16,
+      "skor_maks": 22,
+      "pct": 72.7,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 9.4,
+        "skor_korporasi": 5,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Empat Direksi CIMB Niaga Kompak Borong Saham BNGA - Infobanknews",
+            "published": "Thu, 08 Jan 2026 08:00:00 GMT",
+            "source": "Infobanknews",
+            "matches": []
+          },
+          {
+            "title": "Bank CIMB Niaga (BNGA) Siapkan Buyback Saham dengan Nilai Maksimal Rp 480 juta - kontan.co.id",
+            "published": "Tue, 03 Mar 2026 08:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "CIMB Niaga (BNGA) Buka Peluang Himpun Dana dari BEI Usai Spin-off Bisnis Syariah - Bisnis.com",
+            "published": "Fri, 30 Jan 2026 08:00:00 GMT",
+            "source": "Bisnis.com",
+            "matches": []
+          },
+          {
+            "title": "Emiten Portofolio Lo Kheng Hong (BNGA) Gelar Private Placement di Rp 1.575 - Indo Premier Sekuritas",
+            "published": "Wed, 24 Jan 2024 08:00:00 GMT",
+            "source": "Indo Premier Sekuritas",
+            "matches": []
+          },
+          {
+            "title": "CIMB Niaga (BNGA) Buyback 168.000 Saham Senilai Rp357,24 Juta - Bisnis.com",
+            "published": "Wed, 07 Jan 2026 08:00:00 GMT",
+            "source": "Bisnis.com",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "kode": "BFIN",
@@ -683,12 +1037,107 @@
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
-      "skor_maks": 20,
-      "pct": 70.0,
-      "klasifikasi": "BUY"
+      "total_skor": 16,
+      "skor_maks": 22,
+      "pct": 72.7,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 9.4,
+        "skor_korporasi": 5,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Tan Rudy Eddywidjaja Tambah Porsi Kepemilikan Sahamnya di BFIN - Pasardana",
+            "published": "Tue, 09 Dec 2025 08:00:00 GMT",
+            "source": "Pasardana",
+            "matches": []
+          },
+          {
+            "title": "Laba BFIN terkerek 11,14%, saham menguat 4,64% di penutupan sesi II - IDNFinancials.com",
+            "published": "Fri, 25 Jul 2025 07:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": []
+          },
+          {
+            "title": "BFI Finance Mau Buyback Saham, Siapkan Dana Segini - Infobanknews",
+            "published": "Fri, 20 Feb 2026 08:00:00 GMT",
+            "source": "Infobanknews",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "BFI Finance (BFIN) Menyiapkan Rp100 Miliar untuk Buyback Saham - SWA.co.id",
+            "published": "Fri, 20 Feb 2026 08:00:00 GMT",
+            "source": "SWA.co.id",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "BFI Finance (BFIN) Telah Realisasikan Buyback 13,13 Juta Saham - TradingView",
+            "published": "Mon, 15 Sep 2025 07:00:00 GMT",
+            "source": "TradingView",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "kode": "ADRO",
@@ -768,12 +1217,55 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
-      "skor_maks": 20,
-      "pct": 70.0,
-      "klasifikasi": "BUY"
+      "total_skor": 16,
+      "skor_maks": 22,
+      "pct": 72.7,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Pucuk Harga Saham ADRO - investor.id",
+            "published": "Thu, 26 Mar 2026 01:53:26 GMT",
+            "source": "investor.id",
+            "matches": []
+          },
+          {
+            "title": "Bedah Saham ADRO: Panduan Lengkap untuk Investor Pemula - Ajaib",
+            "published": "Thu, 11 Sep 2025 07:00:00 GMT",
+            "source": "Ajaib",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Tim Analis Bareksa: BBRI, BBTN & ADRO, IHSG Diprediksi Melemah - Bareksa.com",
+            "published": "Tue, 24 Feb 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Jalan Sempit ADRO ke MSCI 2026, Antara Kapitalisasi dan Risiko Bursa - KabarBursa.com",
+            "published": "Tue, 27 Jan 2026 08:00:00 GMT",
+            "source": "KabarBursa.com",
+            "matches": []
+          },
+          {
+            "title": "Alamtri Resources (ADRO) Tambah Kepemilikan Saham di Alamtri Minerals (ADMR) - kontan.co.id",
+            "published": "Sun, 19 Oct 2025 07:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "ELSA",
@@ -853,12 +1345,73 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
-      "skor_maks": 20,
-      "pct": 70.0,
-      "klasifikasi": "BUY"
+      "total_skor": 16,
+      "skor_maks": 22,
+      "pct": 72.7,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 8.8,
+        "skor_korporasi": 4,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 3,
+            "nama": "Laba Positif",
+            "sentimen": "bullish",
+            "bobot": 4,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Kinerja Operasional Solid, Saham Elnusa (ELSA) Cetak Rekor Tertinggi - kontan.co.id",
+            "published": "Mon, 09 Feb 2026 08:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Trading Saham Hari Ini SMGR, BRIS & ELSA, IHSG Diprediksi Kembali Menguat - Bareksa.com",
+            "published": "Thu, 23 Oct 2025 07:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Saham ELSA Tembus ATH, Kinerja-kinerja ini Jadi Motornya - KabarBursa.com",
+            "published": "Wed, 11 Feb 2026 08:00:00 GMT",
+            "source": "KabarBursa.com",
+            "matches": []
+          },
+          {
+            "title": "Saham BUMN ANTM, ELSA, & PTPP Masih Koreksi Saat Danantara Mulai Masuk Pasar - Bisnis.com",
+            "published": "Mon, 02 Feb 2026 08:00:00 GMT",
+            "source": "Bisnis.com",
+            "matches": []
+          },
+          {
+            "title": "Laba Elnusa (ELSA) Tergerus 24% Meski Pendapatan Naik Dua Digit - Bloomberg Technoz",
+            "published": "Wed, 30 Jul 2025 07:00:00 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": [
+              {
+                "id": 3,
+                "nama": "Laba Positif",
+                "sentimen": "bullish",
+                "bobot": 4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "kode": "TLKM",
@@ -938,12 +1491,73 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
-      "skor_maks": 20,
-      "pct": 70.0,
-      "klasifikasi": "BUY"
+      "total_skor": 16,
+      "skor_maks": 22,
+      "pct": 72.7,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 8.8,
+        "skor_korporasi": 4,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 1,
+            "nama": "Dividen",
+            "sentimen": "bullish",
+            "bobot": 4,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Saham TLKM: Peluang Bisnis Telekomunikasi dan Strategi Investasi - brights.id",
+            "published": "Mon, 01 Sep 2025 07:00:00 GMT",
+            "source": "brights.id",
+            "matches": []
+          },
+          {
+            "title": "Saham TLKM Jadi Unggulan Sektor Telko di 2026, Diborong JP Morgan, FMR dan Invesco - KONTAN",
+            "published": "Mon, 05 Jan 2026 08:00:00 GMT",
+            "source": "KONTAN",
+            "matches": []
+          },
+          {
+            "title": "Target Baru Saham Telkom (TLKM) Usai Sinyal Dividen - Bloomberg Technoz",
+            "published": "Tue, 10 Mar 2026 07:00:00 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": [
+              {
+                "id": 1,
+                "nama": "Dividen",
+                "sentimen": "bullish",
+                "bobot": 4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Data Terbaru Kepemilikan Saham BUMI, TLKM, BBNI, RAJA, BBCA, dan ADRO di Atas 1% - Ajaib",
+            "published": "Fri, 13 Mar 2026 07:00:00 GMT",
+            "source": "Ajaib",
+            "matches": []
+          },
+          {
+            "title": "Saham Telkom (TLKM) Bakal Dapat Momentum - investor.id",
+            "published": "Tue, 06 Jan 2026 08:00:00 GMT",
+            "source": "investor.id",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "BMRI",
@@ -1023,12 +1637,55 @@
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
-      "skor_maks": 20,
-      "pct": 65.0,
-      "klasifikasi": "BUY"
+      "total_skor": 15,
+      "skor_maks": 22,
+      "pct": 68.2,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Struktur kepemilikan saham di atas 1% Bank Mandiri (BMRI) - MSN",
+            "published": "Thu, 12 Mar 2026 08:57:05 GMT",
+            "source": "MSN",
+            "matches": []
+          },
+          {
+            "title": "Mengenal Saham BMRI: Mengapa Bank Mandiri Jadi Pilihan Investor - Ajaib",
+            "published": "Wed, 10 Sep 2025 07:00:00 GMT",
+            "source": "Ajaib",
+            "matches": []
+          },
+          {
+            "title": "Diam-diam Ada Direksi Bank Mandiri Serok 155 Ribu Saham BMRI di Awal 2026 - Infobanknews",
+            "published": "Fri, 16 Jan 2026 08:00:00 GMT",
+            "source": "Infobanknews",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Hari Ini 18 Februari 2026: BMRI, BUKA, INDF & SMGR, IHSG Berpeluang Menguat - Bareksa.com",
+            "published": "Wed, 18 Feb 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "BMRI Ternyata Ada yang Tampung, Target Harga Di- spill - investor.id",
+            "published": "Sun, 08 Feb 2026 08:00:00 GMT",
+            "source": "investor.id",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "BBTN",
@@ -1108,12 +1765,55 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
-      "skor_maks": 20,
-      "pct": 65.0,
-      "klasifikasi": "BUY"
+      "total_skor": 15,
+      "skor_maks": 22,
+      "pct": 68.2,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Saham BBTN Menguat 3,27 Persen, Catat Kenaikan YTD Tertinggi Bank BUMN - Infobanknews",
+            "published": "Wed, 04 Feb 2026 08:00:00 GMT",
+            "source": "Infobanknews",
+            "matches": []
+          },
+          {
+            "title": "Saham Bank Diskon Besar Tetiba Diserbu, Book Value Masih Jauh - investor.id",
+            "published": "Thu, 05 Feb 2026 08:00:00 GMT",
+            "source": "investor.id",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Hari Ini: ARTO, BBTN, BJBR & HRUM, Sinyal Pemulihan IHSG Terbentuk - Bareksa.com",
+            "published": "Thu, 05 Feb 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "BTN (BBTN) Dapat Pinjaman Rp2 Triliun dari Danantara - Bloomberg Technoz",
+            "published": "Sun, 28 Dec 2025 08:00:00 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": []
+          },
+          {
+            "title": "Saham BBTN Menguat 5,95% pada Perdagangan Rabu 13 Agustus 2025 - TradingView",
+            "published": "Wed, 13 Aug 2025 07:00:00 GMT",
+            "source": "TradingView",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "BTPS",
@@ -1193,12 +1893,90 @@
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
-      "skor_maks": 20,
-      "pct": 65.0,
-      "klasifikasi": "BUY"
+      "total_skor": 15,
+      "skor_maks": 22,
+      "pct": 68.2,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 9.4,
+        "skor_korporasi": 5,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 1,
+            "nama": "Dividen",
+            "sentimen": "bullish",
+            "bobot": 4,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Direksi BTPN Syariah Lego 270.000 Saham BTPS, Kantongi Cuan Segini - Infobanknews",
+            "published": "Fri, 12 Sep 2025 07:00:00 GMT",
+            "source": "Infobanknews",
+            "matches": []
+          },
+          {
+            "title": "Cek Potensi Cuan Saham BTPS, ADMR, dan DEWA, Pelaku Pasar Mencermati Data Inflasi AS - SWA.co.id",
+            "published": "Tue, 26 Aug 2025 07:00:00 GMT",
+            "source": "SWA.co.id",
+            "matches": []
+          },
+          {
+            "title": "Bank BTPN Syariah Bakal Bagi Dividen sebesar Rp 34,5 per Saham. Ini Jadwalnya! - Pasardana",
+            "published": "Tue, 22 Apr 2025 07:00:00 GMT",
+            "source": "Pasardana",
+            "matches": [
+              {
+                "id": 1,
+                "nama": "Dividen",
+                "sentimen": "bullish",
+                "bobot": 4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "4 Saham Bank Syariah di BEI, Profil Singkat dan Perbandingan Kinerjanya - IDX Channel",
+            "published": "Thu, 06 Nov 2025 08:00:00 GMT",
+            "source": "IDX Channel",
+            "matches": []
+          },
+          {
+            "title": "Buyback Saham, BTPN Syariah (BTPS) Anggarkan Dana Rp 927 Miliar - kontan.co.id",
+            "published": "Wed, 11 Jun 2025 07:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "kode": "ITMG",
@@ -1278,12 +2056,90 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
-      "skor_maks": 20,
-      "pct": 65.0,
-      "klasifikasi": "BUY"
+      "total_skor": 15,
+      "skor_maks": 22,
+      "pct": 68.2,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.9,
+        "skor_korporasi": 1,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 7,
+            "nama": "Rugi",
+            "sentimen": "bearish",
+            "bobot": -4,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Saham Melonjak Tajam, ITMG Klarifikasi BEI: Tak Ada Aksi Korporasi - Emitennews.com",
+            "published": "Fri, 13 Mar 2026 07:00:00 GMT",
+            "source": "Emitennews.com",
+            "matches": []
+          },
+          {
+            "title": "IHSG Ditutup di Zona Merah, Saham ITMG, AADI Dkk Justru Melesat - Bloomberg Technoz",
+            "published": "Mon, 09 Mar 2026 07:00:00 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": [
+              {
+                "id": 7,
+                "nama": "Rugi",
+                "sentimen": "bearish",
+                "bobot": -4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "ITMG siapkan Rp2,49 triliun untuk buyback saham - IDNFinancials.com",
+            "published": "Thu, 18 Sep 2025 07:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Rekomendasi Saham Hari Ini: BUMI, ITMG, JSMR & WIFI, Sentimen FTSE Bayangi Pasar - Bareksa.com",
+            "published": "Tue, 10 Feb 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Harga Saham Blue Chip Tambang Ini Turun 13% Ytd, Investor Ritel Saatnya Beli / Jual? - TradingView",
+            "published": "Thu, 02 Oct 2025 07:00:00 GMT",
+            "source": "TradingView",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "KLBF",
@@ -1363,12 +2219,55 @@
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
-      "skor_maks": 20,
-      "pct": 65.0,
-      "klasifikasi": "BUY"
+      "total_skor": 15,
+      "skor_maks": 22,
+      "pct": 68.2,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Laba KLBF naik 10,63%, saham bereaksi positif - IDNFinancials.com",
+            "published": "Mon, 27 Oct 2025 07:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": []
+          },
+          {
+            "title": "Laba Masih Kuat, Analis Pasang Rekomendasi Beli Saham Kalbe Farma (KLBF) - KONTAN",
+            "published": "Thu, 04 Dec 2025 08:00:00 GMT",
+            "source": "KONTAN",
+            "matches": []
+          },
+          {
+            "title": "Komisaris Kalbe Beli 30.000 Lembar Saham KLBF - CNBC Indonesia",
+            "published": "Tue, 16 Dec 2025 08:00:00 GMT",
+            "source": "CNBC Indonesia",
+            "matches": []
+          },
+          {
+            "title": "Meski Target Kinerja Keuangan Direvisi Turun, Samuel Sekuritas Tetap Rekomendasikan Beli Saham KLBF - Investortrust.id",
+            "published": "Tue, 26 Aug 2025 00:41:25 GMT",
+            "source": "Investortrust.id",
+            "matches": []
+          },
+          {
+            "title": "IHSG Diramal Naik, Analis Rekomendasikan Saham KLBF, MEDC hingga PGAS - MSN",
+            "published": "Wed, 18 Mar 2026 12:59:14 GMT",
+            "source": "MSN",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "ASII",
@@ -1448,12 +2347,109 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
-      "skor_maks": 20,
-      "pct": 65.0,
-      "klasifikasi": "BUY"
+      "total_skor": 15,
+      "skor_maks": 22,
+      "pct": 68.2,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 9.4,
+        "skor_korporasi": 5,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 2,
+            "nama": "Rights Issue",
+            "sentimen": "neutral",
+            "bobot": 1,
+            "warning": "Bisa dilutif — analisis lebih lanjut",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [
+          "Bisa dilutif — analisis lebih lanjut"
+        ],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Komut ASII, AUTO, dan direksi UNTR borong saham Astra sebelum buyback - IDNFinancials.com",
+            "published": "Fri, 20 Mar 2026 07:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Astra International (ASII) Buyback Saham hingga Rp 2 Triliun - Readers.id",
+            "published": "Sat, 28 Mar 2026 17:02:00 GMT",
+            "source": "Readers.id",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "ASII Bakal Gelar RUPST April 2026, Kabar Pergantian Direksi Mencuat - Liputan6.com",
+            "published": "Fri, 27 Mar 2026 07:11:47 GMT",
+            "source": "Liputan6.com",
+            "matches": [
+              {
+                "id": 2,
+                "nama": "Rights Issue",
+                "sentimen": "neutral",
+                "bobot": 1,
+                "warning": "Bisa dilutif — analisis lebih lanjut",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Saham ASII: Prospek Astra di Sektor Otomotif dan Diversifikasi Bisnis - brights.id",
+            "published": "Mon, 01 Sep 2025 07:00:00 GMT",
+            "source": "brights.id",
+            "matches": []
+          },
+          {
+            "title": "Direktur Astra International Gidion Hasan Borong 700.000 Saham ASII - CNBC Indonesia",
+            "published": "Thu, 05 Mar 2026 08:00:00 GMT",
+            "source": "CNBC Indonesia",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "INTP",
@@ -1533,12 +2529,90 @@
         "volume_momentum": 1,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
-      "skor_maks": 20,
-      "pct": 65.0,
-      "klasifikasi": "BUY"
+      "total_skor": 15,
+      "skor_maks": 22,
+      "pct": 68.2,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 9.4,
+        "skor_korporasi": 5,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Performa Saham Lesu, Indocement (INTP) Siapkan Buyback Rp2,25 T - Bloomberg Technoz",
+            "published": "Thu, 14 Aug 2025 07:00:00 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "INTP Buka-bukaan! Volatilitas Saham Dipicu Aksi Buyback - Emitennews.com",
+            "published": "Wed, 13 Aug 2025 07:00:00 GMT",
+            "source": "Emitennews.com",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Rekomendasi Saham Hari Ini INTP, SMGR & PGAS, Pasar Menanti Pengumuman Suku Bunga AS - Bareksa.com",
+            "published": "Sun, 14 Sep 2025 07:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "6 Saham Semen di Indonesia Beserta Peluang Bisnis dan Tantangannya - InvestasiKu",
+            "published": "Thu, 20 Nov 2025 08:00:00 GMT",
+            "source": "InvestasiKu",
+            "matches": []
+          },
+          {
+            "title": "INTP Informasikan Rencana Penarikan Saham dengan Cara Pengurangan Modal Ditempatkan dan Disetor - Pasardana",
+            "published": "Wed, 16 Apr 2025 07:00:00 GMT",
+            "source": "Pasardana",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "PWON",
@@ -1618,12 +2692,55 @@
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
-      "skor_maks": 20,
-      "pct": 65.0,
-      "klasifikasi": "BUY"
+      "total_skor": 15,
+      "skor_maks": 22,
+      "pct": 68.2,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Pakuwon Jati (PWON) Buka Suara Usai Sahamnya Dibicarakan Anak Purbaya - CNBC Indonesia",
+            "published": "Wed, 14 Jan 2026 08:00:00 GMT",
+            "source": "CNBC Indonesia",
+            "matches": []
+          },
+          {
+            "title": "Minat beli melandai, asing akumulasi saham BBCA dan PWON di sesi I - IDNFinancials.com",
+            "published": "Wed, 22 Oct 2025 07:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Ajaib Sekuritas Hari Ini (BRIS, PWON, BUMI) - Ajaib",
+            "published": "Mon, 02 Feb 2026 08:00:00 GMT",
+            "source": "Ajaib",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Hari Ini: BBRI, EMTK, PGEO, PWON dan Prediksi IHSG 11 Februari 2026 - Bareksa.com",
+            "published": "Wed, 11 Feb 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Pakuwon Jati (PWON) Hadapi Tantangan Daya Beli, Simak Rekomendasi Sahamnya - kontan.co.id",
+            "published": "Fri, 22 Aug 2025 07:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "BBNI",
@@ -1703,12 +2820,92 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 12,
-      "skor_maks": 20,
-      "pct": 60.0,
-      "klasifikasi": "BUY"
+      "total_skor": 14,
+      "skor_maks": 22,
+      "pct": 63.6,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 9.4,
+        "skor_korporasi": 5,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 6,
+            "nama": "Akuisisi",
+            "sentimen": "bullish",
+            "bobot": 3,
+            "warning": "Tergantung valuasi — cek detail",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [
+          "Tergantung valuasi — cek detail"
+        ],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "IHSG Berpotensi Konsolidasi, Saham BBNI, BUMI hingga DEWA Dijagokan Analis - Katadata.co.id",
+            "published": "Mon, 30 Mar 2026 23:12:00 GMT",
+            "source": "Katadata.co.id",
+            "matches": [
+              {
+                "id": 6,
+                "nama": "Akuisisi",
+                "sentimen": "bullish",
+                "bobot": 3,
+                "warning": "Tergantung valuasi — cek detail",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Saham BBNI Turun Gara-gara Ini - investor.id",
+            "published": "Wed, 25 Mar 2026 02:07:29 GMT",
+            "source": "investor.id",
+            "matches": []
+          },
+          {
+            "title": "Data Terbaru Kepemilikan Saham BUMI, TLKM, BBNI, RAJA, BBCA, dan ADRO di Atas 1% - Ajaib",
+            "published": "Fri, 13 Mar 2026 07:00:00 GMT",
+            "source": "Ajaib",
+            "matches": []
+          },
+          {
+            "title": "Investor BBNI Cuma Punya 6 Hari Sebelum Cum Date 17 Maret 2026 - kontan.co.id",
+            "published": "Wed, 11 Mar 2026 07:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          },
+          {
+            "title": "Kelar Buyback 16,37 Juta Saham, BNI Klaim PBV dan Harga Saham Menguat - TradingView",
+            "published": "Sat, 21 Feb 2026 08:00:00 GMT",
+            "source": "TradingView",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "kode": "MEDC",
@@ -1788,12 +2985,55 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 12,
-      "skor_maks": 20,
-      "pct": 60.0,
-      "klasifikasi": "BUY"
+      "total_skor": 14,
+      "skor_maks": 22,
+      "pct": 63.6,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Medco Energi Internasional Tbk Umumkan Perjanjian Jual Beli Saham Antara Anak Usaha - Pasardana",
+            "published": "Tue, 16 Dec 2025 08:00:00 GMT",
+            "source": "Pasardana",
+            "matches": []
+          },
+          {
+            "title": "Saham MEDC Kembali Melesat! Harga Minyak Mentah Siang Ini Betah di Level US$115 Per Barel - Sinar Harapan - Sinar Harapan",
+            "published": "Mon, 09 Mar 2026 07:00:00 GMT",
+            "source": "Sinar Harapan",
+            "matches": []
+          },
+          {
+            "title": "Intip Rekomendasi Saham Medco Energi (MEDC) yang Raih Pinjaman Rp 800 Miliar - TradingView",
+            "published": "Thu, 05 Feb 2026 08:00:00 GMT",
+            "source": "TradingView",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Hari Ini MEDC, ENRG & ANTM, IHSG Diprediksi Menguat - Bareksa.com",
+            "published": "Sun, 28 Sep 2025 07:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "MedcoEnergi Tembus OTCQX! Saham Siap Dilirik Investor Global - KabarBursa.com",
+            "published": "Mon, 24 Nov 2025 08:00:00 GMT",
+            "source": "KabarBursa.com",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "EXCL",
@@ -1876,97 +3116,75 @@
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 12,
-      "skor_maks": 20,
-      "pct": 60.0,
-      "klasifikasi": "BUY"
-    },
-    {
-      "kode": "TINS",
-      "nama": "PT TIMAH Tbk",
-      "sektor": "Basic Materials",
-      "harga": 3340.0,
-      "change_pct": 7.05,
-      "ma20": 3718.0,
-      "ma50": 3659.0,
-      "rsi": 44.1,
-      "macd_line": -160.67,
-      "macd_signal": -92.43,
-      "macd_bullish": false,
-      "vol_ratio": 0.83,
-      "above_ma20": false,
-      "above_ma50": false,
-      "golden_cross": true,
-      "bullish_candle": true,
-      "body_ratio": 0.83,
-      "pbv": 3.27,
-      "per": 28.32,
-      "roe": 11.9,
-      "der": 33.64,
-      "dps": 64.0,
-      "yield_kotor": 1.92,
-      "yield_bersih": 1.73,
-      "div_history": [
-        {
-          "tanggal": "2017-05-09",
-          "dps": 10.0
-        },
-        {
-          "tanggal": "2018-04-24",
-          "dps": 24.0
-        },
-        {
-          "tanggal": "2019-05-03",
-          "dps": 25.0
-        },
-        {
-          "tanggal": "2022-06-06",
-          "dps": 61.0
-        },
-        {
-          "tanggal": "2023-06-26",
-          "dps": 42.0
-        },
-        {
-          "tanggal": "2025-06-23",
-          "dps": 64.0
-        }
-      ],
-      "div_years": 6,
-      "div_konsisten": true,
-      "ex_date": "2025-06-23",
-      "cum_date": "2025-06-22",
-      "days_to_cum": -282,
-      "last_updated": "2026-03-31 16:35:00",
-      "flags": [],
-      "skor_detail": {
-        "yield_bersih_4pct": 0,
-        "yield_tidak_abnormal": 1,
-        "div_konsisten_3thn": 1,
-        "div_konsisten_5thn": 1,
-        "dividen_aktif": 1,
-        "pbv_wajar": 0,
-        "per_wajar": 0,
-        "roe_positif": 1,
-        "der_aman": 1,
-        "above_ma20": 0,
-        "above_ma50": 0,
-        "golden_cross": 1,
-        "rsi_ideal": 1,
-        "rsi_tidak_overbought": 1,
-        "macd_bullish": 0,
-        "volume_normal": 0,
-        "volume_momentum": 0,
-        "candle_bullish": 1,
-        "candle_body_kuat": 1,
-        "upcoming_dividen": 1
-      },
-      "total_skor": 12,
-      "skor_maks": 20,
-      "pct": 60.0,
-      "klasifikasi": "BUY"
+      "total_skor": 14,
+      "skor_maks": 22,
+      "pct": 63.6,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.9,
+        "skor_korporasi": 1,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 2,
+            "nama": "Rights Issue",
+            "sentimen": "neutral",
+            "bobot": 1,
+            "warning": "Bisa dilutif — analisis lebih lanjut",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [
+          "Bisa dilutif — analisis lebih lanjut"
+        ],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "David Arcelus Oses Tambah Porsi Kepemilikan Sahamnya di EXCL - Pasardana",
+            "published": "Mon, 09 Mar 2026 07:00:00 GMT",
+            "source": "Pasardana",
+            "matches": []
+          },
+          {
+            "title": "Ada Transaksi Nego Rp 800 Miliar di Saham Konglomerat - CNBC Indonesia",
+            "published": "Fri, 13 Mar 2026 07:00:00 GMT",
+            "source": "CNBC Indonesia",
+            "matches": []
+          },
+          {
+            "title": "Direktur EXCL Beli 140.000 Saham, Segini Nilainya - Liputan6.com",
+            "published": "Tue, 24 Feb 2026 08:00:00 GMT",
+            "source": "Liputan6.com",
+            "matches": [
+              {
+                "id": 2,
+                "nama": "Rights Issue",
+                "sentimen": "neutral",
+                "bobot": 1,
+                "warning": "Bisa dilutif — analisis lebih lanjut",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Lagi, Direktur XLSmart Tambah Koleksi 140 Ribu Saham EXCL Oleh Warta Ekonomi - Investing.com Indonesia",
+            "published": "Wed, 25 Feb 2026 08:00:00 GMT",
+            "source": "Investing.com Indonesia",
+            "matches": []
+          },
+          {
+            "title": "Profil Emiten EXCL: Direktur Borong Saham, Cek Kembali Lini Usaha hingga Kinerjanya - KONTAN",
+            "published": "Wed, 25 Feb 2026 08:00:00 GMT",
+            "source": "KONTAN",
+            "matches": []
+          }
+        ]
+      }
     }
   ],
   "watch": [
@@ -2048,12 +3266,73 @@
         "volume_momentum": 1,
         "candle_bullish": 0,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 11,
-      "skor_maks": 20,
-      "pct": 55.0,
-      "klasifikasi": "WATCH"
+      "total_skor": 13,
+      "skor_maks": 22,
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 8.8,
+        "skor_korporasi": 4,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 1,
+            "nama": "Dividen",
+            "sentimen": "bullish",
+            "bobot": 4,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "BBRI Targetkan Dividen Rp52 Triliun, Fokus Jaga CAR di Level 20 Persen - Stabilitas.id",
+            "published": "Thu, 26 Mar 2026 16:33:56 GMT",
+            "source": "Stabilitas.id",
+            "matches": [
+              {
+                "id": 1,
+                "nama": "Dividen",
+                "sentimen": "bullish",
+                "bobot": 4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Asing agresif jual saham BBRI hingga EMTK, IHSG turun 0,75% di sesi I - IDNFinancials.com",
+            "published": "Tue, 25 Nov 2025 08:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": []
+          },
+          {
+            "title": "Investor Asing Lepas Saham BBRI Terbesar Sepekan Jelang Lebaran - Readers.id",
+            "published": "Wed, 25 Mar 2026 05:25:18 GMT",
+            "source": "Readers.id",
+            "matches": []
+          },
+          {
+            "title": "22 Tahun Melantai di BEI, Harga Saham BBRI Melonjak hingga 48 Kali Lipat Oleh Warta Ekonomi - Investing.com Indonesia",
+            "published": "Wed, 17 Dec 2025 08:00:00 GMT",
+            "source": "Investing.com Indonesia",
+            "matches": []
+          },
+          {
+            "title": "Mengapa Saham BBRI Sering Jadi Barometer Pasar Saham Indonesia? - Ajaib",
+            "published": "Thu, 30 Oct 2025 07:00:00 GMT",
+            "source": "Ajaib",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "PGAS",
@@ -2133,12 +3412,73 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 11,
-      "skor_maks": 20,
-      "pct": 55.0,
-      "klasifikasi": "WATCH"
+      "total_skor": 13,
+      "skor_maks": 22,
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 8.8,
+        "skor_korporasi": 4,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 1,
+            "nama": "Dividen",
+            "sentimen": "bullish",
+            "bobot": 4,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Direksi PGN Empat Kali Borong Saham PGAS, Beli di Harga Segini - KabarBursa.com",
+            "published": "Fri, 13 Mar 2026 07:00:00 GMT",
+            "source": "KabarBursa.com",
+            "matches": []
+          },
+          {
+            "title": "Catur Dermawan Tambah Investasi Sahamnya di PGAS - Pasardana",
+            "published": "Thu, 12 Mar 2026 07:00:00 GMT",
+            "source": "Pasardana",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Ajaib Sekuritas Hari Ini (BBNI, AADI, PGAS) - Ajaib",
+            "published": "Fri, 06 Mar 2026 08:00:00 GMT",
+            "source": "Ajaib",
+            "matches": []
+          },
+          {
+            "title": "Ingat! Dividen Saham PGAS Cum Date Hari Ini (11/6), Investor Perlu Beli/Jual? - MSN",
+            "published": "Wed, 21 Jan 2026 19:44:53 GMT",
+            "source": "MSN",
+            "matches": [
+              {
+                "id": 1,
+                "nama": "Dividen",
+                "sentimen": "bullish",
+                "bobot": 4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Jadi Simpanan Lo Kheng Hong, Harga Saham Blue Chip Ini Tren Naik, Cek Prospeknya! - kontan.co.id",
+            "published": "Tue, 27 May 2025 07:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "SIDO",
@@ -2218,12 +3558,92 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 11,
-      "skor_maks": 20,
-      "pct": 55.0,
-      "klasifikasi": "WATCH"
+      "total_skor": 13,
+      "skor_maks": 22,
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 9.4,
+        "skor_korporasi": 5,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 2,
+            "nama": "Rights Issue",
+            "sentimen": "neutral",
+            "bobot": 1,
+            "warning": "Bisa dilutif — analisis lebih lanjut",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [
+          "Bisa dilutif — analisis lebih lanjut"
+        ],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Komisaris Sido Muncul Beli 300 Ribu Saham SIDO, Nilainya Segini - Liputan6.com",
+            "published": "Wed, 25 Mar 2026 22:34:42 GMT",
+            "source": "Liputan6.com",
+            "matches": [
+              {
+                "id": 2,
+                "nama": "Rights Issue",
+                "sentimen": "neutral",
+                "bobot": 1,
+                "warning": "Bisa dilutif — analisis lebih lanjut",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Sido Muncul kembali gelar buyback saham, siapkan dana Rp192 miliar - IDNFinancials.com",
+            "published": "Fri, 20 Jun 2025 07:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Saham Sido Muncul (SIDO) Menguat, Seiring Mulai Kembali Masuknya Investor Asing - KONTAN",
+            "published": "Sun, 13 Jul 2025 07:00:00 GMT",
+            "source": "KONTAN",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Tim Analis Bareksa: KLBF, SIDO & SMGR, IHSG Berpotensi Koreksi - Bareksa.com",
+            "published": "Thu, 22 Jan 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Tancap Gas Borong Sido Muncul (SIDO) Awal Kuartal IV/2025 - Bisnis Indonesia Premium",
+            "published": "Tue, 21 Oct 2025 07:00:00 GMT",
+            "source": "Bisnis Indonesia Premium",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "HMSP",
@@ -2303,12 +3723,55 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 11,
-      "skor_maks": 20,
-      "pct": 55.0,
-      "klasifikasi": "WATCH"
+      "total_skor": 13,
+      "skor_maks": 22,
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "HM Sampoerna (HMSP) Beli Patriot Bond Danantara Rp 500 Miliar - KONTAN",
+            "published": "Fri, 24 Oct 2025 07:00:00 GMT",
+            "source": "KONTAN",
+            "matches": []
+          },
+          {
+            "title": "IHSG Sinyal Rebound, Peluang Trading Saham HMSP, PANI, SMGR & TLKM - Bareksa.com",
+            "published": "Mon, 09 Feb 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "HMSP & GGRM Cs Masuk Radar Analis di Tengah Meredanya Volatilitas Pasar - Bisnis.com",
+            "published": "Fri, 30 Jan 2026 08:00:00 GMT",
+            "source": "Bisnis.com",
+            "matches": []
+          },
+          {
+            "title": "Diskon Besar Saham HM Sampoerna (HMSP) - investor.id",
+            "published": "Mon, 07 Jul 2025 07:00:00 GMT",
+            "source": "investor.id",
+            "matches": []
+          },
+          {
+            "title": "Jejak Akhir Grup Sampoerna di Bursa, dari Raja Kretek HMSP Kini Lepas Saham SGRO - Katadata.co.id",
+            "published": "Thu, 20 Nov 2025 08:00:00 GMT",
+            "source": "Katadata.co.id",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "SCMA",
@@ -2388,12 +3851,73 @@
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 11,
-      "skor_maks": 20,
-      "pct": 55.0,
-      "klasifikasi": "WATCH"
+      "total_skor": 13,
+      "skor_maks": 22,
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 8.8,
+        "skor_korporasi": 4,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 1,
+            "nama": "Dividen",
+            "sentimen": "bullish",
+            "bobot": 4,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Emtek kendalikan 74% SCMA setelah borong 2,33 miliar saham - IDNFinancials.com",
+            "published": "Thu, 19 Feb 2026 08:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Tim Analis Bareksa: SCMA, BUKA & COIN, IHSG Diprediksi Menguat - Bareksa.com",
+            "published": "Tue, 16 Dec 2025 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Surya Citra Media Tbk Siap Tebar Dividen Interim Rp9 per Saham. Cek Jadwalnya di Sini! - Pasardana",
+            "published": "Tue, 11 Nov 2025 08:00:00 GMT",
+            "source": "Pasardana",
+            "matches": [
+              {
+                "id": 1,
+                "nama": "Dividen",
+                "sentimen": "bullish",
+                "bobot": 4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Saham SCMA Menguat, Peluang Tembus Level 356 Sangat Besar - KabarBursa.com",
+            "published": "Mon, 22 Sep 2025 07:00:00 GMT",
+            "source": "KabarBursa.com",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Ajaib Sekuritas Hari Ini (ARCI, CDIA, SCMA) - Ajaib",
+            "published": "Thu, 11 Dec 2025 08:00:00 GMT",
+            "source": "Ajaib",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "BBCA",
@@ -2473,12 +3997,90 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 10,
-      "skor_maks": 20,
-      "pct": 50.0,
-      "klasifikasi": "WATCH"
+      "total_skor": 12,
+      "skor_maks": 22,
+      "pct": 54.5,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 9.4,
+        "skor_korporasi": 5,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 1,
+            "nama": "Dividen",
+            "sentimen": "bullish",
+            "bobot": 4,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 1,
+            "nama": "Dividen",
+            "sentimen": "bullish",
+            "bobot": 4,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Harga anjlok jelang dividen, direksi dan komisaris BBCA borong saham - IDNFinancials.com",
+            "published": "Thu, 26 Mar 2026 01:44:19 GMT",
+            "source": "IDNFinancials.com",
+            "matches": [
+              {
+                "id": 1,
+                "nama": "Dividen",
+                "sentimen": "bullish",
+                "bobot": 4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Saham BBCA Longsor, Diserok - investor.id",
+            "published": "Mon, 30 Mar 2026 02:17:46 GMT",
+            "source": "investor.id",
+            "matches": []
+          },
+          {
+            "title": "Direksi dan Komisaris BCA (BBCA) Serentak Borong Saham, Fokus Investasi Jangka Panjang - KabarBursa.com",
+            "published": "Thu, 26 Mar 2026 08:05:00 GMT",
+            "source": "KabarBursa.com",
+            "matches": []
+          },
+          {
+            "title": "Aksi borong 5 juta lembar saham BBCA oleh jajaran direksi demi prospek cuan di 2026 - desakarangbendo.id",
+            "published": "Mon, 30 Mar 2026 03:21:19 GMT",
+            "source": "desakarangbendo.id",
+            "matches": []
+          },
+          {
+            "title": "Cum Date Dividen BBCA 27 Maret 2026, Investor Buruan Beli! - Readers.id",
+            "published": "Sat, 28 Mar 2026 18:15:00 GMT",
+            "source": "Readers.id",
+            "matches": [
+              {
+                "id": 1,
+                "nama": "Dividen",
+                "sentimen": "bullish",
+                "bobot": 4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "kode": "UNVR",
@@ -2558,12 +4160,55 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 10,
-      "skor_maks": 20,
-      "pct": 50.0,
-      "klasifikasi": "WATCH"
+      "total_skor": 12,
+      "skor_maks": 22,
+      "pct": 54.5,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Free float 6 saham LQ45 di bawah 15%, BEI beri tenggat - IDNFinancials.com",
+            "published": "Tue, 03 Feb 2026 08:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": []
+          },
+          {
+            "title": "Analisis Saham UNVR: Setelah Jual Sariwangi, Layak Beli? - kontan.co.id",
+            "published": "Thu, 08 Jan 2026 08:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          },
+          {
+            "title": "THR PNS Mau Cair, Saham UNVR & ICBP Malah Jeblok - Market - Bloomberg Technoz",
+            "published": "Wed, 04 Mar 2026 08:00:00 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": []
+          },
+          {
+            "title": "Saham UNVR Menuju Batas Atas - investor.id",
+            "published": "Mon, 02 Mar 2026 08:00:00 GMT",
+            "source": "investor.id",
+            "matches": []
+          },
+          {
+            "title": "Ada Revisi, Cek Rekomendasi & Target Saham UNVR Terbaru Akhir Februari 2026 - Bisnis.com",
+            "published": "Mon, 23 Feb 2026 08:00:00 GMT",
+            "source": "Bisnis.com",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "ISAT",
@@ -2643,71 +4288,136 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 10,
-      "skor_maks": 20,
-      "pct": 50.0,
-      "klasifikasi": "WATCH"
+      "total_skor": 12,
+      "skor_maks": 22,
+      "pct": 54.5,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.9,
+        "skor_korporasi": 1,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 2,
+            "nama": "Rights Issue",
+            "sentimen": "neutral",
+            "bobot": 1,
+            "warning": "Bisa dilutif — analisis lebih lanjut",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [
+          "Bisa dilutif — analisis lebih lanjut"
+        ],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Direktur Utama ISAT Vikram Sinha borong saham hingga Rp4,99 miliar - IDNFinancials.com",
+            "published": "Fri, 14 Nov 2025 08:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": []
+          },
+          {
+            "title": "Vikram Sinha Tambah Investasi Sahamnya di ISAT - Pasardana",
+            "published": "Fri, 14 Nov 2025 08:00:00 GMT",
+            "source": "Pasardana",
+            "matches": []
+          },
+          {
+            "title": "Bos Indosat (ISAT) Asal India Borong Saham, Tembus Segini - investor.id",
+            "published": "Fri, 14 Nov 2025 08:00:00 GMT",
+            "source": "investor.id",
+            "matches": []
+          },
+          {
+            "title": "Direktur Indosat Beli 1,04 Juta Saham, Segini Nilainya - Liputan6.com",
+            "published": "Sat, 08 Nov 2025 08:00:00 GMT",
+            "source": "Liputan6.com",
+            "matches": [
+              {
+                "id": 2,
+                "nama": "Rights Issue",
+                "sentimen": "neutral",
+                "bobot": 1,
+                "warning": "Bisa dilutif — analisis lebih lanjut",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Rekomendasi Trading Saham Hari Ini AUTO, ADMR & ISAT, IHSG Diprediksi Melemah - Bareksa.com",
+            "published": "Thu, 06 Nov 2025 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          }
+        ]
+      }
     },
     {
-      "kode": "INCO",
-      "nama": "PT Vale Indonesia Tbk",
+      "kode": "TINS",
+      "nama": "PT TIMAH Tbk",
       "sektor": "Basic Materials",
-      "harga": 5350.0,
-      "change_pct": 4.9,
-      "ma20": 6221.0,
-      "ma50": 6415.0,
-      "rsi": 39.2,
-      "macd_line": -336.43,
-      "macd_signal": -210.38,
+      "harga": 3340.0,
+      "change_pct": 7.05,
+      "ma20": 3718.0,
+      "ma50": 3659.0,
+      "rsi": 44.1,
+      "macd_line": -160.67,
+      "macd_signal": -92.43,
       "macd_bullish": false,
-      "vol_ratio": 1.09,
+      "vol_ratio": 0.83,
       "above_ma20": false,
       "above_ma50": false,
-      "golden_cross": false,
+      "golden_cross": true,
       "bullish_candle": true,
-      "body_ratio": 0.56,
-      "pbv": 20342.21,
-      "per": 43.89,
-      "roe": 2.76,
-      "der": 0.12,
-      "dps": 53.0,
-      "yield_kotor": 0.99,
-      "yield_bersih": 0.89,
+      "body_ratio": 0.83,
+      "pbv": 3.27,
+      "per": 28.32,
+      "roe": 11.9,
+      "der": 33.64,
+      "dps": 64.0,
+      "yield_kotor": 1.92,
+      "yield_bersih": 1.73,
       "div_history": [
         {
-          "tanggal": "2013-05-15",
+          "tanggal": "2017-05-09",
+          "dps": 10.0
+        },
+        {
+          "tanggal": "2018-04-24",
           "dps": 24.0
         },
         {
-          "tanggal": "2013-12-02",
-          "dps": 30.0
+          "tanggal": "2019-05-03",
+          "dps": 25.0
         },
         {
-          "tanggal": "2014-12-01",
-          "dps": 122.0
+          "tanggal": "2022-06-06",
+          "dps": 61.0
         },
         {
-          "tanggal": "2021-05-10",
-          "dps": 47.0
+          "tanggal": "2023-06-26",
+          "dps": 42.0
         },
         {
-          "tanggal": "2023-05-16",
-          "dps": 88.0
-        },
-        {
-          "tanggal": "2025-05-27",
-          "dps": 53.0
+          "tanggal": "2025-06-23",
+          "dps": 64.0
         }
       ],
-      "div_years": 5,
+      "div_years": 6,
       "div_konsisten": true,
-      "ex_date": "2025-05-27",
-      "cum_date": "2025-05-26",
-      "days_to_cum": -309,
-      "last_updated": "2026-03-31 16:35:02",
-      "flags": [],
+      "ex_date": "2025-06-23",
+      "cum_date": "2025-06-22",
+      "days_to_cum": -282,
+      "last_updated": "2026-03-31 16:35:00",
+      "flags": [
+        "BERITA_MAJOR_NEGATIF"
+      ],
       "skor_detail": {
         "yield_bersih_4pct": 0,
         "yield_tidak_abnormal": 1,
@@ -2716,24 +4426,104 @@
         "dividen_aktif": 1,
         "pbv_wajar": 0,
         "per_wajar": 0,
-        "roe_positif": 0,
+        "roe_positif": 1,
         "der_aman": 1,
         "above_ma20": 0,
         "above_ma50": 0,
-        "golden_cross": 0,
-        "rsi_ideal": 0,
+        "golden_cross": 1,
+        "rsi_ideal": 1,
         "rsi_tidak_overbought": 1,
         "macd_bullish": 0,
-        "volume_normal": 1,
+        "volume_normal": 0,
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 0,
+        "news_tidak_major_neg": 0
       },
-      "total_skor": 10,
-      "skor_maks": 20,
-      "pct": 50.0,
-      "klasifikasi": "WATCH"
+      "total_skor": 12,
+      "skor_maks": 22,
+      "pct": 54.5,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "major_negative",
+        "skor_normalized": 3.1,
+        "skor_korporasi": -5,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 9,
+            "nama": "Delisting/Suspensi",
+            "sentimen": "bearish",
+            "bobot": -5,
+            "warning": "EXIT segera",
+            "level": "korporasi"
+          },
+          {
+            "id": 9,
+            "nama": "Delisting/Suspensi",
+            "sentimen": "bearish",
+            "bobot": -5,
+            "warning": "EXIT segera",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [
+          "EXIT segera"
+        ],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "BEI Buka Kembali Perdagangan Saham Timah (TINS) Mulai Hari Ini (22/10) - MSN",
+            "published": "Sat, 21 Mar 2026 11:44:58 GMT",
+            "source": "MSN",
+            "matches": []
+          },
+          {
+            "title": "BEI buka suspensi, saham TINS terkerek 11,50% di awal sesi I - IDNFinancials.com",
+            "published": "Tue, 07 Oct 2025 07:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": [
+              {
+                "id": 9,
+                "nama": "Delisting/Suspensi",
+                "sentimen": "bearish",
+                "bobot": -5,
+                "warning": "EXIT segera",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Harga Timah Dunia Loyo, Saham TINS Cs 'Kebakaran' di Sesi Pertama - Wow Babel - Wow Babel",
+            "published": "Thu, 26 Mar 2026 05:11:07 GMT",
+            "source": "Wow Babel",
+            "matches": []
+          },
+          {
+            "title": "BEI Buka Suspensi Perdagangan Saham TINS - Pasardana",
+            "published": "Wed, 22 Oct 2025 07:00:00 GMT",
+            "source": "Pasardana",
+            "matches": [
+              {
+                "id": 9,
+                "nama": "Delisting/Suspensi",
+                "sentimen": "bearish",
+                "bobot": -5,
+                "warning": "EXIT segera",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Harga Saham TINS Naik Terus Sampai Digembok BEI, Manajemen Buka Suara - CNBC Indonesia",
+            "published": "Wed, 15 Oct 2025 07:00:00 GMT",
+            "source": "CNBC Indonesia",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "BSDE",
@@ -2815,12 +4605,75 @@
         "volume_momentum": 0,
         "candle_bullish": 1,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 10,
-      "skor_maks": 20,
-      "pct": 50.0,
-      "klasifikasi": "WATCH"
+      "total_skor": 12,
+      "skor_maks": 22,
+      "pct": 54.5,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.9,
+        "skor_korporasi": 1,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 2,
+            "nama": "Rights Issue",
+            "sentimen": "neutral",
+            "bobot": 1,
+            "warning": "Bisa dilutif — analisis lebih lanjut",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [
+          "Bisa dilutif — analisis lebih lanjut"
+        ],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Pengendali Serok Saham Bumi Serpong Damai (BSDE) Rp 9,36 Miliar - CNBC Indonesia",
+            "published": "Thu, 26 Mar 2026 02:30:26 GMT",
+            "source": "CNBC Indonesia",
+            "matches": []
+          },
+          {
+            "title": "Saham Bumi Serpong Damai (BSDE) Dibeli Pengendali, Ini Detailnya - kontan.co.id",
+            "published": "Wed, 25 Mar 2026 04:56:46 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          },
+          {
+            "title": "Paraga Artamida Borong 12,49 Juta Lembar Saham Bumi Serpong Damai (BSDE) - Media Asuransi News",
+            "published": "Thu, 26 Mar 2026 01:31:00 GMT",
+            "source": "Media Asuransi News",
+            "matches": []
+          },
+          {
+            "title": "Paraga Artamida Beli Saham BSDE Rp 9,36 Miliar - Liputan6.com",
+            "published": "Wed, 25 Mar 2026 08:51:40 GMT",
+            "source": "Liputan6.com",
+            "matches": [
+              {
+                "id": 2,
+                "nama": "Rights Issue",
+                "sentimen": "neutral",
+                "bobot": 1,
+                "warning": "Bisa dilutif — analisis lebih lanjut",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Cucu pendiri Grup Sinar Mas borong 3,29 juta saham BSDE - IDNFinancials.com",
+            "published": "Tue, 26 Aug 2025 07:00:00 GMT",
+            "source": "IDNFinancials.com",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "JSMR",
@@ -2900,12 +4753,55 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 1,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 10,
-      "skor_maks": 20,
-      "pct": 50.0,
-      "klasifikasi": "WATCH"
+      "total_skor": 12,
+      "skor_maks": 22,
+      "pct": 54.5,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "JPMorgan Kerek Saham JSMR Jadi Overweight, Potensi Cuan 53% - Market - Bloomberg Technoz",
+            "published": "Mon, 29 Dec 2025 03:19:16 GMT",
+            "source": "Bloomberg Technoz",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Hari Ini: BUMI, ITMG, JSMR & WIFI, Sentimen FTSE Bayangi Pasar - Bareksa.com",
+            "published": "Tue, 10 Feb 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Lima Saham Masuk LQ45, BEI Coret ARTO, JSMR, BRIS, MAPA, SMRA - Emitennews.com",
+            "published": "Tue, 28 Oct 2025 07:00:00 GMT",
+            "source": "Emitennews.com",
+            "matches": []
+          },
+          {
+            "title": "Cermati Rekomendasi Saham Teknikal BBTN, INDY, JSMR untuk Selasa (3/2) - kontan.co.id",
+            "published": "Tue, 03 Feb 2026 08:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          },
+          {
+            "title": "Melongok Prospek dan Rekomendasi Saham Emiten Sektor Infrastruktur Tahun Depan - TradingView",
+            "published": "Sun, 21 Dec 2025 08:00:00 GMT",
+            "source": "TradingView",
+            "matches": []
+          }
+        ]
+      }
     },
     {
       "kode": "SMGR",
@@ -2985,15 +4881,222 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 9,
-      "skor_maks": 20,
-      "pct": 45.0,
-      "klasifikasi": "WATCH"
-    }
-  ],
-  "skip": [
+      "total_skor": 11,
+      "skor_maks": 22,
+      "pct": 50.0,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "strong_positive",
+        "skor_normalized": 8.1,
+        "skor_korporasi": 3,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 6,
+            "nama": "Akuisisi",
+            "sentimen": "bullish",
+            "bobot": 3,
+            "warning": "Tergantung valuasi — cek detail",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [
+          "Tergantung valuasi — cek detail"
+        ],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Semen Indonesia (SMGR) Sukses Akuisisi 83,52% Saham SMCB - Ajaib",
+            "published": "Thu, 05 Mar 2026 19:21:44 GMT",
+            "source": "Ajaib",
+            "matches": [
+              {
+                "id": 6,
+                "nama": "Akuisisi",
+                "sentimen": "bullish",
+                "bobot": 3,
+                "warning": "Tergantung valuasi — cek detail",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Rekomendasi Saham Hari Ini: SMGR, BBNI & EXCL, Limit Investasi Dapen di Saham akan Naik - Bareksa.com",
+            "published": "Sun, 01 Feb 2026 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Asing Diam-diam Borong Saham SMGR, Beli di Harga Segini - KabarBursa.com",
+            "published": "Sun, 23 Nov 2025 08:00:00 GMT",
+            "source": "KabarBursa.com",
+            "matches": []
+          },
+          {
+            "title": "Intip Rekomendasi Saham Semen Indonesia (SMGR) yang Sedang Ngebut - kontan.co.id",
+            "published": "Tue, 24 Feb 2026 08:00:00 GMT",
+            "source": "kontan.co.id",
+            "matches": []
+          },
+          {
+            "title": "6 Saham Semen di Indonesia Beserta Peluang Bisnis dan Tantangannya - InvestasiKu",
+            "published": "Thu, 20 Nov 2025 08:00:00 GMT",
+            "source": "InvestasiKu",
+            "matches": []
+          }
+        ]
+      }
+    },
+    {
+      "kode": "INCO",
+      "nama": "PT Vale Indonesia Tbk",
+      "sektor": "Basic Materials",
+      "harga": 5350.0,
+      "change_pct": 4.9,
+      "ma20": 6221.0,
+      "ma50": 6415.0,
+      "rsi": 39.2,
+      "macd_line": -336.43,
+      "macd_signal": -210.38,
+      "macd_bullish": false,
+      "vol_ratio": 1.09,
+      "above_ma20": false,
+      "above_ma50": false,
+      "golden_cross": false,
+      "bullish_candle": true,
+      "body_ratio": 0.56,
+      "pbv": 20342.21,
+      "per": 43.89,
+      "roe": 2.76,
+      "der": 0.12,
+      "dps": 53.0,
+      "yield_kotor": 0.99,
+      "yield_bersih": 0.89,
+      "div_history": [
+        {
+          "tanggal": "2013-05-15",
+          "dps": 24.0
+        },
+        {
+          "tanggal": "2013-12-02",
+          "dps": 30.0
+        },
+        {
+          "tanggal": "2014-12-01",
+          "dps": 122.0
+        },
+        {
+          "tanggal": "2021-05-10",
+          "dps": 47.0
+        },
+        {
+          "tanggal": "2023-05-16",
+          "dps": 88.0
+        },
+        {
+          "tanggal": "2025-05-27",
+          "dps": 53.0
+        }
+      ],
+      "div_years": 5,
+      "div_konsisten": true,
+      "ex_date": "2025-05-27",
+      "cum_date": "2025-05-26",
+      "days_to_cum": -309,
+      "last_updated": "2026-03-31 16:35:02",
+      "flags": [],
+      "skor_detail": {
+        "yield_bersih_4pct": 0,
+        "yield_tidak_abnormal": 1,
+        "div_konsisten_3thn": 1,
+        "div_konsisten_5thn": 1,
+        "dividen_aktif": 1,
+        "pbv_wajar": 0,
+        "per_wajar": 0,
+        "roe_positif": 0,
+        "der_aman": 1,
+        "above_ma20": 0,
+        "above_ma50": 0,
+        "golden_cross": 0,
+        "rsi_ideal": 0,
+        "rsi_tidak_overbought": 1,
+        "macd_bullish": 0,
+        "volume_normal": 1,
+        "volume_momentum": 0,
+        "candle_bullish": 1,
+        "candle_body_kuat": 1,
+        "upcoming_dividen": 1,
+        "news_positif": 0,
+        "news_tidak_major_neg": 1
+      },
+      "total_skor": 11,
+      "skor_maks": 22,
+      "pct": 50.0,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "negative",
+        "skor_normalized": 3.8,
+        "skor_korporasi": -4,
+        "skor_makro": 2,
+        "kategori_match": [
+          {
+            "id": 7,
+            "nama": "Rugi",
+            "sentimen": "bearish",
+            "bobot": -4,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "IHSG Berpeluang Rebound, Cek Potensi Cuan Saham INCO, ENRG, BIPI, RATU, RAJA, dan BULL - SWA.co.id",
+            "published": "Tue, 31 Mar 2026 01:27:00 GMT",
+            "source": "SWA.co.id",
+            "matches": []
+          },
+          {
+            "title": "Direktur Vale Indonesia Beli Saham INCO dengan Jumlah Besar - KabarBursa.com",
+            "published": "Mon, 12 Jan 2026 08:00:00 GMT",
+            "source": "KabarBursa.com",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Hari Ini: BMRI, INCO, MBMA & MAPA, IHSG Diprediksi Melemah - Bareksa.com",
+            "published": "Wed, 17 Dec 2025 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Bandar Nikel Terbesar BEI, Saham Ditaksir Melejit 75% - investor.id",
+            "published": "Tue, 21 Oct 2025 07:00:00 GMT",
+            "source": "investor.id",
+            "matches": []
+          },
+          {
+            "title": "Indeks Bisnis-27 Dibuka Loyo, Saham INCO-ANTM di Zona Merah - Bisnis.com",
+            "published": "Mon, 16 Mar 2026 07:00:00 GMT",
+            "source": "Bisnis.com",
+            "matches": [
+              {
+                "id": 7,
+                "nama": "Rugi",
+                "sentimen": "bearish",
+                "bobot": -4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "kode": "ANTM",
       "nama": "PT Aneka Tambang Tbk",
@@ -3072,12 +5175,56 @@
         "volume_momentum": 0,
         "candle_bullish": 0,
         "candle_body_kuat": 0,
-        "upcoming_dividen": 1
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
       },
-      "total_skor": 8,
-      "skor_maks": 20,
-      "pct": 40.0,
-      "klasifikasi": "SKIP"
+      "total_skor": 10,
+      "skor_maks": 22,
+      "pct": 45.5,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 6.2,
+        "skor_korporasi": 0,
+        "skor_makro": 2,
+        "kategori_match": [],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "IHSG Sepekan Terkoreksi: Saham ANTM dan EMAS Diborong Asing di Akhir Pekan, Saham Big Bank di Lego Asing! - Sinar Harapan - Sinar Harapan",
+            "published": "Sun, 29 Mar 2026 02:40:16 GMT",
+            "source": "Sinar Harapan",
+            "matches": []
+          },
+          {
+            "title": "Saham emiten emas turun saat harga emas dunia naik, saatnya beli ANTM BRMS MDKA? - MSN",
+            "published": "Thu, 12 Mar 2026 23:59:22 GMT",
+            "source": "MSN",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Tim Analis Bareksa Hari Ini: ANTM, TINS dan DEWA - Bareksa.com",
+            "published": "Mon, 22 Dec 2025 08:00:00 GMT",
+            "source": "Bareksa.com",
+            "matches": []
+          },
+          {
+            "title": "Asing Lagi Incar Saham Emiten Ini, Labanya Rp 6 Triliun - investor.id",
+            "published": "Tue, 03 Mar 2026 08:00:00 GMT",
+            "source": "investor.id",
+            "matches": []
+          },
+          {
+            "title": "Saham ANTM Turun 13% dalam 30 Hari, Analis Tetap Rekomendasi Beli, Cek Target Harga - KONTAN",
+            "published": "Tue, 11 Nov 2025 08:00:00 GMT",
+            "source": "KONTAN",
+            "matches": []
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "skip": []
 }
