@@ -81,6 +81,8 @@ def scrape_stock(ticker_code):
         per    = round(info.get('trailingPE',     0) or 0, 2)
         roe    = round((info.get('returnOnEquity',0) or 0) * 100, 2)
         der    = round(info.get('debtToEquity',   0) or 0, 2)
+        net_income         = info.get('netIncomeToCommon', 0) or info.get('netIncome', 0) or 0
+        shares_outstanding = info.get('sharesOutstanding', 0) or 0
 
         div_hist = ticker.dividends
         dps_list = []
@@ -160,6 +162,8 @@ def scrape_stock(ticker_code):
             'price_history':  price_history,
             'ma20_history':   ma20_history,
             'ma50_history':   ma50_history,
+            'net_income':         net_income,
+            'shares_outstanding': shares_outstanding,
             'last_updated':   datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         }
 
