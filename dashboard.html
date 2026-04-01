@@ -325,11 +325,10 @@ async function loadData(){
 async function refreshData(){
   const btn=document.getElementById('btn-refresh');
   btn.disabled=true;btn.classList.add('btn-spin');
-  btn.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Updating...`;
+  btn.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Memuat...`;
   try{
-    const res=await fetch('/api/run');const json=await res.json();
-    if(json.status!=='ok')throw new Error(json.msg);await loadData();
-  }catch(e){alert('Gagal refresh: '+e.message);}
+    await loadData();
+  }catch(e){alert('Gagal memuat data: '+e.message);}
   finally{
     btn.disabled=false;btn.classList.remove('btn-spin');
     btn.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Refresh`;
