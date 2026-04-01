@@ -68,7 +68,7 @@ select.sel:focus{border-color:var(--blue);color:var(--txt)}
 .ph-title svg{width:14px;height:14px;color:var(--blue)}
 .ph-count{font-size:11px;color:var(--txt3);font-family:'DM Mono',monospace}
 .tbl-wrap{flex:1;overflow-y:auto}
-table{width:100%;border-collapse:collapse}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
 thead{position:sticky;top:0;z-index:2}
 thead tr{background:var(--surface)}
 th{padding:7px 10px;font-size:11px;font-weight:500;color:var(--txt3);text-align:left;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);white-space:nowrap}
@@ -202,9 +202,9 @@ td.r{text-align:right}
       <table id="tbl" style="display:none">
         <thead>
           <tr>
-            <th>Kode</th><th>Klasifikasi</th>
-            <th class="r">Yield</th><th class="r">RSI</th>
-            <th style="min-width:70px">Trend</th><th class="r" style="min-width:80px">Cum Date</th><th class="r" style="min-width:90px">Score</th>
+            <th style="width:18%">Kode</th><th style="width:16%">Klasifikasi</th>
+            <th class="r" style="width:9%">Yield</th><th class="r" style="width:7%">RSI</th>
+            <th style="width:10%">Trend</th><th class="r" style="width:13%">Cum Date</th><th class="r" style="width:12%">Score</th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>
