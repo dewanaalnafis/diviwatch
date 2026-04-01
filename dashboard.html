@@ -396,7 +396,7 @@ return 0;
         ${(()=>{
           const nc=estimateNextCum(s),d=daysFrom(nc);
           if(!nc)return '<span style="color:var(--txt3)">—</span>';
-          const col=d<=20?'var(--red-t)':d<=45?'var(--amber-t)':'var(--txt3)';
+          const col=d<=30?'var(--red-t)':d<=90?'var(--amber-t)':d<=180?'var(--blue-t)':'var(--txt3)';
           return `<span style="color:${col}">${nc.toLocaleDateString('id-ID',{day:'numeric',month:'short'})}</span><br><span style="font-size:10px;color:${col}">${d>0?d+'h lagi':Math.abs(d)+'h lalu'}</span>`;
         })()}
       </td>
