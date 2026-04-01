@@ -180,7 +180,7 @@ td.r{text-align:right}
       <option value="skor">Sort: Score</option>
       <option value="yield">Sort: Yield Bersih</option>
       <option value="rsi">Sort: RSI</option>
-      <option value="harga">Sort: Harga</option>
+      <option value="cum">Sort: Cum Date Terdekat</option>
     </select>
     <span style="margin-left:auto;font-size:11px;color:var(--txt3);font-family:'DM Mono',monospace" id="count-lbl"></span>
   </div>
@@ -204,7 +204,7 @@ td.r{text-align:right}
           <tr>
             <th>Kode</th><th>Klasifikasi</th>
             <th class="r">Yield</th><th class="r">RSI</th>
-            <th style="min-width:70px">Trend</th><th class="r">Score</th>
+            <th style="min-width:70px">Trend</th><th class="r">Cum Date</th><th class="r">Score</th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>
@@ -364,7 +364,15 @@ function render(){
     if(sort==='skor')return b.total_skor-a.total_skor;
     if(sort==='yield')return b.yield_bersih-a.yield_bersih;
     if(sort==='rsi')return a.rsi-b.rsi;
-    if(sort==='harga')return b.harga-a.harga;return 0;
+    if(sort==='harga')return b.harga-a.harga;
+if(sort==='cum'){
+  const da=daysFrom(estimateNextCum(a)),db=daysFrom(estimateNextCum(b));
+  if(da===null&&db===null)return 0;
+  if(da===null)return 1;
+  if(db===null)return -1;
+  return da-db;
+}
+return 0;
   });
   const tbody=document.getElementById('tbody');tbody.innerHTML='';
   filtered.forEach(s=>{
@@ -384,6 +392,15 @@ function render(){
       <td class="r mono" style="${s.yield_bersih>=4?'color:var(--green-t)':''}">${s.yield_bersih}%</td>
       <td class="r mono" style="${s.rsi<40||s.rsi>70?'color:var(--amber-t)':''}">${s.rsi}</td>
       <td style="padding:6px 10px">${spark}</td>
+      <td class="r mono" style="font-size:11px">
+        ${(()=>{
+          const nc=estimateNextCum(s),d=daysFrom(nc);
+          if(!nc)return '<span style="color:var(--txt3)">—</span>';
+          const col=d<=20?'var(--red-t)':d<=45?'var(--amber-t)':'var(--txt3)';
+          return `<span style="color:${col}">${nc.toLocaleDateString('id-ID',{day:'numeric',month:'short'})}</span><br><span style="font-size:10px;color:${col}">${d>0?d+'h lagi':Math.abs(d)+'h lalu'}</span>`;
+        })()}
+      </td>
+      <td class="r"><div class="sbar">
       <td class="r"><div class="sbar"><div class="sbar-bg"><div class="sbar-fill ${fc}" style="width:${pct}%"></div></div><span class="snum">${s.total_skor}/${s.skor_maks}</span></div></td>`;
     tbody.appendChild(tr);
   });
