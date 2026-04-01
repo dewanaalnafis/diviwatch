@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31 20:34:48",
+  "generated_at": "2026-04-01 13:41:23",
   "summary": {
     "total": 36,
     "strong_buy": 1,
@@ -2819,7 +2819,88 @@
             "matches": []
           }
         ]
-      }
+      },
+      "div_history_manual": [
+        {
+          "kode": "BBRI",
+          "tahun": "2023",
+          "tipe": "INTERIM",
+          "dps": 5700.0,
+          "harga_cum": 4.59,
+          "div_yield": 1.24,
+          "dpr": null,
+          "ex_date": "2023-01-10",
+          "cum_date": "2023-01-09",
+          "yield_1th": null
+        },
+        {
+          "kode": "BBRI",
+          "tahun": "2023",
+          "tipe": "FINAL",
+          "dps": 23122.0,
+          "harga_cum": 4.9,
+          "div_yield": 4.72,
+          "dpr": 85.0,
+          "ex_date": "2023-03-24",
+          "cum_date": "2023-03-23",
+          "yield_1th": 6.0
+        },
+        {
+          "kode": "BBRI",
+          "tahun": "2024",
+          "tipe": "INTERIM",
+          "dps": 8400.0,
+          "harga_cum": 5.725,
+          "div_yield": 1.47,
+          "dpr": null,
+          "ex_date": "2024-01-02",
+          "cum_date": "2024-01-01",
+          "yield_1th": null
+        },
+        {
+          "kode": "BBRI",
+          "tahun": "2024",
+          "tipe": "FINAL",
+          "dps": 23500.0,
+          "harga_cum": 6.4,
+          "div_yield": 3.67,
+          "dpr": 80.0,
+          "ex_date": "2024-03-14",
+          "cum_date": "2024-03-13",
+          "yield_1th": 5.1
+        },
+        {
+          "kode": "BBRI",
+          "tahun": "2025",
+          "tipe": "INTERIM",
+          "dps": 13500.0,
+          "harga_cum": 4.2,
+          "div_yield": 3.21,
+          "dpr": null,
+          "ex_date": "2024-12-27",
+          "cum_date": "2024-12-26",
+          "yield_1th": null
+        },
+        {
+          "kode": "BBRI",
+          "tahun": "2025",
+          "tipe": "FINAL",
+          "dps": 20840.0,
+          "harga_cum": 3.8,
+          "div_yield": 5.48,
+          "dpr": 86.0,
+          "ex_date": "2025-04-11",
+          "cum_date": "2025-04-10",
+          "yield_1th": 8.7
+        }
+      ],
+      "ex_date_manual": "2025-04-11",
+      "cum_date_manual": "2025-04-10",
+      "dps_manual": 20840.0,
+      "harga_cum": 3.8,
+      "div_yield_cum": 5.48,
+      "dpr_manual": 86.0,
+      "yield_bersih_cum": 4935.79
     },
     {
       "kode": "BBNI",
@@ -5176,7 +5257,185 @@
             "matches": []
           }
         ]
-      }
+      },
+      "div_history_manual": [
+        {
+          "kode": "ANTM",
+          "tahun": "2012",
+          "tipe": "TAHUNAN",
+          "dps": 9099.0,
+          "harga_cum": 1.39,
+          "div_yield": 6.55,
+          "dpr": 45.0,
+          "ex_date": "2012-06-28",
+          "cum_date": "2012-06-27",
+          "yield_1th": 6.55
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2013",
+          "tipe": "TAHUNAN",
+          "dps": 4709.0,
+          "harga_cum": 1.31,
+          "div_yield": 3.59,
+          "dpr": 15.0,
+          "ex_date": "2013-05-30",
+          "cum_date": "2013-05-29",
+          "yield_1th": 3.59
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2014",
+          "tipe": "TAHUNAN",
+          "dps": 967.0,
+          "harga_cum": 1.2,
+          "div_yield": 0.81,
+          "dpr": 22.5,
+          "ex_date": "2014-04-30",
+          "cum_date": "2014-04-29",
+          "yield_1th": 0.81
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2015",
+          "tipe": "TAHUNAN",
+          "dps": null,
+          "harga_cum": null,
+          "div_yield": null,
+          "dpr": null,
+          "ex_date": null,
+          "cum_date": null,
+          "yield_1th": null
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2016",
+          "tipe": "TAHUNAN",
+          "dps": null,
+          "harga_cum": null,
+          "div_yield": null,
+          "dpr": null,
+          "ex_date": null,
+          "cum_date": null,
+          "yield_1th": null
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2017",
+          "tipe": "TAHUNAN",
+          "dps": null,
+          "harga_cum": null,
+          "div_yield": null,
+          "dpr": null,
+          "ex_date": null,
+          "cum_date": null,
+          "yield_1th": null
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2018",
+          "tipe": "TAHUNAN",
+          "dps": 199.0,
+          "harga_cum": 935.0,
+          "div_yield": 0.21,
+          "dpr": 35.0,
+          "ex_date": "2018-04-20",
+          "cum_date": "2018-04-19",
+          "yield_1th": 0.21
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2019",
+          "tipe": "TAHUNAN",
+          "dps": 1274.0,
+          "harga_cum": 790.0,
+          "div_yield": 1.61,
+          "dpr": 35.0,
+          "ex_date": "2019-05-06",
+          "cum_date": "2019-05-05",
+          "yield_1th": 1.61
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2020",
+          "tipe": "TAHUNAN",
+          "dps": 282.0,
+          "harga_cum": 610.0,
+          "div_yield": 0.46,
+          "dpr": 35.0,
+          "ex_date": "2020-06-22",
+          "cum_date": "2020-06-21",
+          "yield_1th": 0.46
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2021",
+          "tipe": "TAHUNAN",
+          "dps": 1674.0,
+          "harga_cum": 2.27,
+          "div_yield": 0.74,
+          "dpr": 35.0,
+          "ex_date": "2021-04-16",
+          "cum_date": "2021-04-15",
+          "yield_1th": 0.74
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2022",
+          "tipe": "TAHUNAN",
+          "dps": 3874.0,
+          "harga_cum": 2.5,
+          "div_yield": 1.55,
+          "dpr": 50.0,
+          "ex_date": "2022-06-06",
+          "cum_date": "2022-06-05",
+          "yield_1th": 1.55
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2023",
+          "tipe": "TAHUNAN",
+          "dps": 7950.0,
+          "harga_cum": 2.01,
+          "div_yield": 3.96,
+          "dpr": 50.0,
+          "ex_date": "2023-06-26",
+          "cum_date": "2023-06-25",
+          "yield_1th": 3.96
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2024",
+          "tipe": "TAHUNAN",
+          "dps": 12807.0,
+          "harga_cum": 1.655,
+          "div_yield": 7.74,
+          "dpr": 100.0,
+          "ex_date": "2024-05-21",
+          "cum_date": "2024-05-20",
+          "yield_1th": 7.74
+        },
+        {
+          "kode": "ANTM",
+          "tahun": "2025",
+          "tipe": "TAHUNAN",
+          "dps": 15177.0,
+          "harga_cum": 3.2,
+          "div_yield": 4.74,
+          "dpr": 100.0,
+          "ex_date": "2025-06-23",
+          "cum_date": "2025-06-22",
+          "yield_1th": 4.74
+        }
+      ],
+      "ex_date_manual": "2025-06-23",
+      "cum_date_manual": "2025-06-22",
+      "dps_manual": 15177.0,
+      "harga_cum": 3.2,
+      "div_yield_cum": 4.74,
+      "dpr_manual": 100.0,
+      "yield_bersih_cum": 4268.53
     }
-  ]
+  ],
+  "div_manual_updated": "2026-04-01 13:41:23"
 }
