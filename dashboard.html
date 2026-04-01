@@ -542,6 +542,26 @@ function renderDividen(container){
       <div class="kpi"><div class="kpi-lbl">${yieldLabel}</div><div class="kpi-val" style="color:var(--green-t)">${(yieldShow||0).toFixed(2)}%</div></div>
       <div class="kpi"><div class="kpi-lbl">Konsistensi</div><div class="kpi-val">${s.div_years} tahun</div></div>
     </div>
+    ${s.est_dps ? `
+    <div class="sec">Estimasi Dividen Berikutnya</div>
+    <div style="background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(34,197,94,.08));border:1px solid var(--border);border-radius:var(--r-md);padding:12px;margin-bottom:14px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+        <div class="kpi"><div class="kpi-lbl">Laba Bersih</div>
+          <div class="kpi-val" style="font-size:13px">${s.est_net_income>=1e12?'Rp '+(s.est_net_income/1e12).toFixed(1)+' T':s.est_net_income>=1e9?'Rp '+(s.est_net_income/1e9).toFixed(1)+' M':'Rp '+(s.est_net_income||0).toLocaleString('id-ID')}</div></div>
+        <div class="kpi"><div class="kpi-lbl">DPR Estimasi</div>
+          <div class="kpi-val" style="color:var(--blue-t)">${(s.est_dpr||0).toFixed(1)}%</div>
+          <div style="font-size:10px;color:var(--txt3)">rata-rata 3 thn terakhir</div></div>
+        <div class="kpi"><div class="kpi-lbl">Est. DPS</div>
+          <div class="kpi-val" style="color:var(--green-t)">Rp ${(s.est_dps||0).toLocaleString('id-ID',{maximumFractionDigits:0})}</div></div>
+        <div class="kpi"><div class="kpi-lbl">Est. Yield Bersih</div>
+          <div class="kpi-val" style="color:var(--amber-t)">${(s.est_yield_bersih||0).toFixed(2)}%</div>
+          <div style="font-size:10px;color:var(--txt3)">dari harga saat ini</div></div>
+      </div>
+      <div style="font-size:10px;color:var(--txt3);padding-top:6px;border-top:1px solid var(--border)">
+        ⚠ Estimasi — belum tentu akurat. Saham beredar: ${s.est_shares?(s.est_shares/1e9).toFixed(2)+' M lembar':'—'}
+      </div>
+    </div>` : ''}
+
     <div class="sec">Tanggal Kunci</div>
     <div class="div-timeline">
       <div class="div-event"><div class="div-dot" style="background:var(--amber)"></div>
