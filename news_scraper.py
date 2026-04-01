@@ -1,3 +1,4 @@
+# DiviWatch News Scraper v2
 from gnews import GNews
 import requests
 from bs4 import BeautifulSoup
