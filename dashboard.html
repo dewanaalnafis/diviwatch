@@ -468,26 +468,57 @@ function renderRingkasan(container){
 }
 
 function renderDividen(container){
-  const s=selStock,hist=s.div_history||[];
+  const s=selStock;
+  const histManual = s.div_history_manual || [];
+  const histYF     = s.div_history || [];
   const nc=estimateNextCum(s),dTN=daysFrom(nc);
-  container.innerHTML=`
-    <div class="grid3">
-      <div class="kpi"><div class="kpi-lbl">DPS Terakhir</div><div class="kpi-val" style="color:var(--green-t)">Rp ${(s.dps||0).toLocaleString('id-ID')}</div></div>
-      <div class="kpi"><div class="kpi-lbl">Yield Bersih</div><div class="kpi-val" style="color:var(--green-t)">${s.yield_bersih}%</div></div>
-      <div class="kpi"><div class="kpi-lbl">Konsistensi</div><div class="kpi-val">${s.div_years} tahun</div></div>
-    </div>
-    <div class="sec">Riwayat DPS</div>
+
+  // Gunakan data manual kalau ada, fallback ke yfinance
+  const hasManual = histManual.length > 0;
+
+  // KPI — pakai data manual kalau ada
+  const dpsShow    = hasManual ? (s.dps_manual || s.dps || 0) : (s.dps || 0);
+  const yieldShow  = hasManual ? (s.yield_bersih_cum || s.yield_bersih || 0) : (s.yield_bersih || 0);
+  const yieldLabel = hasManual ? 'Yield Bersih (Harga Cum)' : 'Yield Bersih (Harga Kini)';
+
+  // Tabel riwayat manual
+  const manualTableHTML = hasManual ? `
+    <div class="sec">Riwayat Dividen Lengkap</div>
+    <div style="background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden">
+      <table style="width:100%;border-collapse:collapse">
+        <thead><tr style="background:var(--surface)">
+          <th style="padding:6px 8px;font-size:10px;color:var(--txt3);text-align:left;border-bottom:1px solid var(--border)">Tahun</th>
+          <th style="padding:6px 8px;font-size:10px;color:var(--txt3);text-align:center;border-bottom:1px solid var(--border)">Tipe</th>
+          <th style="padding:6px 8px;font-size:10px;color:var(--txt3);text-align:right;border-bottom:1px solid var(--border)">DPS</th>
+          <th style="padding:6px 8px;font-size:10px;color:var(--txt3);text-align:right;border-bottom:1px solid var(--border)">Harga Cum</th>
+          <th style="padding:6px 8px;font-size:10px;color:var(--txt3);text-align:right;border-bottom:1px solid var(--border)">Yield</th>
+          <th style="padding:6px 8px;font-size:10px;color:var(--txt3);text-align:right;border-bottom:1px solid var(--border)">DPR</th>
+          <th style="padding:6px 8px;font-size:10px;color:var(--txt3);text-align:center;border-bottom:1px solid var(--border)">Ex Date</th>
+          <th style="padding:6px 8px;font-size:10px;color:var(--txt3);text-align:right;border-bottom:1px solid var(--border)">Yield/Thn</th>
+        </tr></thead>
+        <tbody>${histManual.slice().reverse().map((h,i)=>{
+          const tipeColor = h.tipe==='INTERIM'?'var(--blue-d)':h.tipe==='FINAL'?'var(--purple-d)':'var(--green-d)';
+          const tipeTxt   = h.tipe==='INTERIM'?'var(--blue-t)':h.tipe==='FINAL'?'var(--purple-t)':'var(--green-t)';
+          const yld = h.div_yield ? (h.div_yield).toFixed(2)+'%' : (h.dps&&h.harga_cum ? ((h.dps/h.harga_cum)*100).toFixed(2)+'%' : '—');
+          return `<tr style="border-bottom:1px solid var(--border);${i%2===0?'background:rgba(255,255,255,.02)':''}">
+            <td style="padding:5px 8px;font-size:11px;font-family:'DM Mono',monospace">${h.tahun||'—'}</td>
+            <td style="padding:5px 8px;text-align:center">
+              <span style="display:inline-flex;padding:1px 7px;border-radius:99px;font-size:10px;font-weight:600;background:${tipeColor};color:${tipeTxt}">${h.tipe||'—'}</span>
+            </td>
+            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--green-t)">${h.dps ? 'Rp '+h.dps.toLocaleString('id-ID') : '—'}</td>
+            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace">${h.harga_cum ? 'Rp '+h.harga_cum.toLocaleString('id-ID') : '—'}</td>
+            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--amber-t)">${yld}</td>
+            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--txt3)">${h.dpr ? h.dpr.toFixed(1)+'%' : '—'}</td>
+            <td style="padding:5px 8px;font-size:11px;text-align:center;font-family:'DM Mono',monospace">${h.ex_date ? fmtDate(h.ex_date) : '—'}</td>
+            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--blue-t)">${h.yield_1th ? h.yield_1th.toFixed(2)+'%' : '—'}</td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table>
+      <div style="padding:5px 8px;font-size:10px;color:var(--txt3)">Yield dihitung dari harga saat cum date · Sumber: input manual</div>
+    </div>` : `
+    <div class="sec">Riwayat DPS (Yahoo Finance)</div>
     <div class="chart-wrap"><canvas id="chart-div" class="chart-canvas-sm"></canvas></div>
-    <div class="sec">Tanggal Kunci</div>
-    <div class="div-timeline">
-      <div class="div-event"><div class="div-dot" style="background:var(--amber)"></div>
-        <div class="div-info"><div class="div-label">Cum Date (estimasi berikutnya)</div><div class="div-date">${nc?fmtDate(nc.toISOString().split('T')[0]):'—'}</div></div>
-        <div class="div-days" style="color:${dTN&&dTN>0?'var(--amber-t)':'var(--txt3)'}">${daysLabel(dTN)}</div></div>
-      <div class="div-event"><div class="div-dot" style="background:var(--purple)"></div>
-        <div class="div-info"><div class="div-label">Ex Date (terakhir diketahui)</div><div class="div-date">${fmtDate(s.ex_date)}</div></div>
-        <div class="div-days" style="color:var(--txt3)">${daysLabel(s.days_to_cum)}</div></div>
-    </div>
-    <div class="sec" style="margin-top:14px">Riwayat Lengkap</div>
+    <div class="sec">Riwayat Lengkap</div>
     <div style="background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden">
       <table style="width:100%;border-collapse:collapse">
         <thead><tr style="background:var(--surface)">
@@ -495,21 +526,43 @@ function renderDividen(container){
           <th style="padding:6px 10px;font-size:11px;color:var(--txt3);text-align:right;border-bottom:1px solid var(--border)">DPS</th>
           <th style="padding:6px 10px;font-size:11px;color:var(--txt3);text-align:right;border-bottom:1px solid var(--border)">Yield*</th>
         </tr></thead>
-        <tbody>${hist.slice().reverse().map((h,i)=>`
+        <tbody>${histYF.slice().reverse().map((h,i)=>`
           <tr style="border-bottom:1px solid var(--border);${i%2===0?'background:rgba(255,255,255,.02)':''}">
             <td style="padding:6px 10px;font-size:12px">${fmtDate(h.tanggal)}</td>
             <td style="padding:6px 10px;font-size:12px;text-align:right;font-family:'DM Mono',monospace;color:var(--green-t)">Rp ${(h.dps||0).toLocaleString('id-ID')}</td>
-            <td style="padding:6px 10px;font-size:12px;text-align:right;font-family:'DM Mono',monospace;color:var(--txt3)">${s.harga?((h.dps/s.harga)*90).toFixed(1)+'%':'—'}</td>
+            <td style="padding:6px 10px;font-size:12px;text-align:right;font-family:'DM Mono',monospace;color:var(--txt3)">${s.harga?((h.dps/s.harga)*90).toFixed(2)+'%':'—'}</td>
           </tr>`).join('')}</tbody>
       </table>
-      <div style="padding:6px 10px;font-size:10px;color:var(--txt3)">* Yield bersih berdasarkan harga saat ini</div>
+      <div style="padding:6px 10px;font-size:10px;color:var(--txt3)">* Yield bersih dari harga saat ini</div>
     </div>`;
-  setTimeout(()=>{
-    const ctx=document.getElementById('chart-div');if(!ctx||!hist.length)return;destroyCharts();
-    chartDiv=new Chart(ctx,{type:'bar',data:{labels:hist.map(h=>h.tanggal.slice(0,7)),datasets:[{label:'DPS (Rp)',data:hist.map(h=>h.dps),backgroundColor:'rgba(34,197,94,.5)',borderColor:'rgba(34,197,94,.8)',borderWidth:1,borderRadius:3}]},
-      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`Rp ${c.raw.toLocaleString('id-ID')}`}}},
-        scales:{x:{ticks:{color:'#4e5d78',font:{size:10}},grid:{color:'rgba(255,255,255,.05)'}},y:{ticks:{color:'#4e5d78',font:{size:10},callback:v=>`Rp ${v.toLocaleString('id-ID')}`},grid:{color:'rgba(255,255,255,.05)'}}}}});
-  },50);
+
+  container.innerHTML=`
+    <div class="grid3">
+      <div class="kpi"><div class="kpi-lbl">DPS Terakhir</div><div class="kpi-val" style="color:var(--green-t)">Rp ${(dpsShow||0).toLocaleString('id-ID')}</div></div>
+      <div class="kpi"><div class="kpi-lbl">${yieldLabel}</div><div class="kpi-val" style="color:var(--green-t)">${(yieldShow||0).toFixed(2)}%</div></div>
+      <div class="kpi"><div class="kpi-lbl">Konsistensi</div><div class="kpi-val">${s.div_years} tahun</div></div>
+    </div>
+    <div class="sec">Tanggal Kunci</div>
+    <div class="div-timeline">
+      <div class="div-event"><div class="div-dot" style="background:var(--amber)"></div>
+        <div class="div-info"><div class="div-label">Cum Date (estimasi berikutnya)</div>
+          <div class="div-date">${nc?fmtDate(nc.toISOString().split('T')[0]):'—'}</div></div>
+        <div class="div-days" style="color:${dTN&&dTN>0?'var(--amber-t)':'var(--txt3)'}">${daysLabel(dTN)}</div></div>
+      <div class="div-event"><div class="div-dot" style="background:var(--purple)"></div>
+        <div class="div-info"><div class="div-label">Ex Date (terakhir)</div>
+          <div class="div-date">${fmtDate(s.ex_date_manual||s.ex_date)}</div></div>
+        <div class="div-days" style="color:var(--txt3)">${hasManual?'Manual':'Yahoo Finance'}</div></div>
+    </div>
+    ${manualTableHTML}`;
+
+  if(!hasManual){
+    setTimeout(()=>{
+      const ctx=document.getElementById('chart-div');if(!ctx||!histYF.length)return;destroyCharts();
+      chartDiv=new Chart(ctx,{type:'bar',data:{labels:histYF.map(h=>h.tanggal.slice(0,7)),datasets:[{label:'DPS',data:histYF.map(h=>h.dps),backgroundColor:'rgba(34,197,94,.5)',borderColor:'rgba(34,197,94,.8)',borderWidth:1,borderRadius:3}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`Rp ${c.raw.toLocaleString('id-ID')}`}}},
+          scales:{x:{ticks:{color:'#4e5d78',font:{size:10}},grid:{color:'rgba(255,255,255,.05)'}},y:{ticks:{color:'#4e5d78',font:{size:10},callback:v=>`Rp ${v.toLocaleString('id-ID')}`},grid:{color:'rgba(255,255,255,.05)'}}}}});
+    },50);
+  }
 }
 
 function renderTeknikal(container){
