@@ -1,0 +1,47 @@
+name: Update DiviWatch Data
+
+on:
+  schedule:
+    # 07:00 WIB = 00:00 UTC
+    - cron: '0 0 * * 1-5'
+    # 12:00 WIB = 05:00 UTC
+    - cron: '0 5 * * 1-5'
+    # 16:00 WIB = 09:00 UTC
+    - cron: '0 9 * * 1-5'
+  workflow_dispatch:  # bisa trigger manual dari GitHub
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        run: python scraper.py
+
+      - name: Run news scraper
+        run: python news_scraper.py
+
+      - name: Run scorer
+        run: python scorer.py
+
+      - name: Run merger (dividen manual)
+        run: python merger.py
+
+      - name: Push updated candidates.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add candidates.json
+          git diff --staged --quiet || git commit -m "auto: update data $(date +'%Y-%m-%d %H:%M WIB' -d '+7 hours')"
+          git push
