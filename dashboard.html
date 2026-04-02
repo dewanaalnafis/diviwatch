@@ -6,6 +6,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial@0.1.1/dist/chartjs-chart-financial.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1/dist/chartjs-adapter-luxon.umd.min.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -682,16 +685,20 @@ function renderTeknikal(container){
   setTimeout(()=>{
     const ctx=document.getElementById('chart-price');if(!ctx)return;
     const ph=s.price_history||[];if(!ph.length)return;destroyCharts();
-    const labels=ph.map(p=>p.date.slice(5)),closes=ph.map(p=>p.close),ma20h=s.ma20_history||[],ma50h=s.ma50_history||[];
-    chartPrice=new Chart(ctx,{type:'line',data:{labels,datasets:[
-      {label:'Harga',data:closes,borderColor:'#3b82f6',backgroundColor:'rgba(59,130,246,.1)',borderWidth:2,pointRadius:0,fill:true,tension:0.3},
-      ...(ma20h.length?[{label:'MA20',data:ma20h,borderColor:'#f59e0b',borderWidth:1.5,borderDash:[4,3],pointRadius:0,fill:false,tension:0.3}]:[]),
-      ...(ma50h.length?[{label:'MA50',data:ma50h,borderColor:'#8b5cf6',borderWidth:1.5,borderDash:[4,3],pointRadius:0,fill:false,tension:0.3}]:[]),
-    ]},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
-      plugins:{legend:{labels:{color:'#8896b0',font:{size:11},boxWidth:12}},tooltip:{callbacks:{label:c=>`${c.dataset.label}: Rp ${(c.raw||0).toLocaleString('id-ID')}`}}},
-      scales:{x:{ticks:{color:'#4e5d78',font:{size:10},maxTicksLimit:8},grid:{color:'rgba(255,255,255,.05)'}},
-        y:{ticks:{color:'#4e5d78',font:{size:10},callback:v=>`${(v/1000).toFixed(0)}K`},grid:{color:'rgba(255,255,255,.05)'}}}}});
-  },50);
+    const ma20h=s.ma20_history||[],ma50h=s.ma50_history||[];
+    const ohlcData=ph.map(p=>({x:new Date(p.date).getTime(),o:p.open||p.close,h:p.high||p.close,l:p.low||p.close,c:p.close}));
+    const labels=ph.map(p=>p.date);
+    chartPrice=new Chart(ctx,{
+      data:{datasets:[
+        {type:'candlestick',label:'OHLC',data:ohlcData,color:{up:'#22c55e',down:'#ef4444',unchanged:'#8896b0'},borderColor:{up:'#22c55e',down:'#ef4444',unchanged:'#8896b0'}},
+        ...(ma20h.length?[{type:'line',label:'MA20',data:ph.map((p,i)=>({x:new Date(p.date).getTime(),y:ma20h[i]})),borderColor:'#f59e0b',borderWidth:1.5,borderDash:[4,3],pointRadius:0,fill:false,tension:0.3}]:[]),
+        ...(ma50h.length?[{type:'line',label:'MA50',data:ph.map((p,i)=>({x:new Date(p.date).getTime(),y:ma50h[i]})),borderColor:'#8b5cf6',borderWidth:1.5,borderDash:[4,3],pointRadius:0,fill:false,tension:0.3}]:[]),
+      ]},
+      options:{responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{labels:{color:'#8896b0',font:{size:11},boxWidth:12}},tooltip:{callbacks:{label:c=>c.dataset.type==='candlestick'?`O:${c.raw.o} H:${c.raw.h} L:${c.raw.l} C:${c.raw.c}`:`${c.dataset.label}: Rp ${(c.raw.y||0).toLocaleString('id-ID')}`}}},
+        scales:{x:{type:'time',time:{unit:'day',displayFormats:{day:'dd MMM'}},ticks:{color:'#4e5d78',font:{size:10},maxTicksLimit:8},grid:{color:'rgba(255,255,255,.05)'}},
+          y:{ticks:{color:'#4e5d78',font:{size:10},callback:v=>`${(v/1000).toFixed(0)}K`},grid:{color:'rgba(255,255,255,.05)'}}}}});
+  },50)
 }
 
 function renderNews(container){
