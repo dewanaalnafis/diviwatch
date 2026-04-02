@@ -71,23 +71,24 @@ select.sel:focus{border-color:var(--blue);color:var(--txt)}
 table{width:100%;border-collapse:collapse;table-layout:fixed}
 thead{position:sticky;top:0;z-index:2}
 thead tr{background:var(--surface)}
-th{padding:7px 10px;font-size:11px;font-weight:500;color:var(--txt3);text-align:left;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);white-space:nowrap}
+th{padding:7px 6px;font-size:10px;font-weight:500;color:var(--txt3);text-align:left;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border);white-space:nowrap}
 th.r{text-align:right}
 tbody tr{cursor:pointer;border-bottom:1px solid var(--border);transition:.1s}
 tbody tr:hover{background:var(--raised)}
 tbody tr.sel{background:var(--raised);border-left:2px solid var(--blue)}
-td{padding:8px 10px;font-size:13px;color:var(--txt);white-space:nowrap}
+td{padding:8px 6px;font-size:13px;color:var(--txt);white-space:nowrap}
 td.r{text-align:right}
+td.c{text-align:center}
 .mono{font-family:'DM Mono',monospace}
 .badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:99px;font-size:11px;font-weight:500;white-space:nowrap}
 .sb{background:var(--green-d);color:var(--green-t)}.b{background:var(--blue-d);color:var(--blue-t)}
 .w{background:var(--amber-d);color:var(--amber-t)}.sk{background:var(--red-d);color:var(--red-t)}
 .badge-flag{background:var(--raised);color:var(--txt3);border:1px solid var(--border);font-size:10px}
-.sbar{display:flex;align-items:center;gap:6px;justify-content:flex-end}
-.sbar-bg{width:44px;height:4px;background:var(--raised);border-radius:99px;overflow:hidden}
-.sbar-fill{height:100%;border-radius:99px}
+.score-cell{display:flex;flex-direction:column;align-items:center;gap:1px}
+.score-num{font-size:11px;font-family:'DM Mono',monospace;font-weight:600}
+.score-bar{width:32px;height:3px;background:var(--raised);border-radius:99px;overflow:hidden;margin-top:1px}
+.score-fill{height:100%;border-radius:99px}
 .fg{background:var(--green)}.fb{background:var(--blue)}.fa{background:var(--amber)}.fr{background:var(--red)}
-.snum{font-size:12px;font-family:'DM Mono',monospace;color:var(--txt2);min-width:30px;text-align:right}
 #right{display:flex;flex-direction:column;overflow:hidden;background:var(--surface)}
 .placeholder{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--txt3);padding:40px;text-align:center}
 .placeholder svg{width:40px;height:40px;opacity:.2}
@@ -110,7 +111,8 @@ td.r{text-align:right}
 .kpi{background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);padding:10px 12px}
 .kpi-lbl{font-size:10px;color:var(--txt3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
 .kpi-val{font-size:16px;font-weight:600;font-family:'DM Mono',monospace}
-.sec{font-size:11px;font-weight:600;color:var(--txt3);text-transform:uppercase;letter-spacing:.5px;margin:14px 0 8px}
+.sec{font-size:11px;font-weight:600;color:var(--txt3);text-transform:uppercase;letter-spacing:.5px;margin:14px 0 8px;display:flex;align-items:center;justify-content:space-between}
+.sec-badge{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;font-family:'DM Mono',monospace}
 .chk-item{display:flex;align-items:center;justify-content:space-between;padding:5px 9px;border-radius:var(--r-sm);margin-bottom:3px;font-size:12px}
 .chk-item.pass{background:rgba(34,197,94,.07)}.chk-item.fail{background:rgba(239,68,68,.05)}
 .chk-lbl{color:var(--txt2)}
@@ -202,9 +204,15 @@ td.r{text-align:right}
       <table id="tbl" style="display:none">
         <thead>
           <tr>
-            <th style="width:20%">Kode</th><th style="width:17%">Klasifikasi</th>
-            <th class="r" style="width:9%">Yield</th><th class="r" style="width:7%">RSI</th>
-            <th style="width:11%">Trend</th><th class="r" style="width:14%">Cum Date</th><th class="r" style="width:22%">Score</th>
+            <th style="width:18%">Kode</th>
+            <th style="width:15%">Klasifikasi</th>
+            <th class="r" style="width:8%">Yield</th>
+            <th class="r" style="width:6%">RSI</th>
+            <th style="width:9%">Trend</th>
+            <th class="r" style="width:12%">Cum Date</th>
+            <th class="c" style="width:8%">F</th>
+            <th class="c" style="width:8%">T</th>
+            <th class="c" style="width:6%">N</th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>
@@ -263,18 +271,42 @@ td.r{text-align:right}
 <script>
 let allData=[],filtered=[],selStock=null,curFilter='all',curTab='ringkasan',chartPrice=null,chartDiv=null;
 
-const CHECKS={
-  yield_bersih_4pct:'Yield bersih ≥ 4%',yield_tidak_abnormal:'Yield tidak abnormal',
-  div_konsisten_3thn:'Dividen konsisten ≥ 3 tahun',div_konsisten_5thn:'Dividen konsisten ≥ 5 tahun',
-  dividen_aktif:'Dividen aktif (≤ 1 tahun lalu)',pbv_wajar:'PBV wajar',per_wajar:'PER wajar (0–25×)',
-  roe_positif:'ROE ≥ 10%',der_aman:'DER aman',above_ma20:'Harga di atas MA20',above_ma50:'Harga di atas MA50',
-  golden_cross:'Golden cross MA20 > MA50',rsi_ideal:'RSI zona ideal (40–65)',
-  rsi_tidak_overbought:'RSI tidak overbought (< 70)',macd_bullish:'MACD bullish',
-  volume_normal:'Volume normal (≥ 1×)',volume_momentum:'Volume momentum (≥ 1.5×)',
-  candle_bullish:'Candle bullish',candle_body_kuat:'Body candle kuat (≥ 40%)',
-  upcoming_dividen:'Potensi dividen berikutnya',
-  news_positif:'Berita/sentimen positif',news_tidak_major_neg:'Tidak ada berita major negatif',
+// ── Pembagian kriteria ────────────────────────────────────────────────────
+const CHECKS_F = {
+  yield_bersih_4pct:'Yield bersih ≥ 4%',
+  yield_tidak_abnormal:'Yield tidak abnormal',
+  div_konsisten_3thn:'Dividen konsisten ≥ 3 tahun',
+  div_konsisten_5thn:'Dividen konsisten ≥ 5 tahun',
+  dividen_aktif:'Dividen aktif (≤ 1 tahun lalu)',
+  pbv_wajar:'PBV wajar',
+  per_wajar:'PER wajar (0–25×)',
+  roe_positif:'ROE ≥ 10%',
+  der_aman:'DER aman',
 };
+const CHECKS_T = {
+  above_ma20:'Harga di atas MA20',
+  above_ma50:'Harga di atas MA50',
+  golden_cross:'Golden cross MA20 > MA50',
+  rsi_ideal:'RSI zona ideal (40–65)',
+  rsi_tidak_overbought:'RSI tidak overbought (< 70)',
+  macd_bullish:'MACD bullish',
+  volume_normal:'Volume normal (≥ 1×)',
+  volume_momentum:'Volume momentum (≥ 1.5×)',
+  candle_bullish:'Candle bullish',
+  candle_body_kuat:'Body candle kuat (≥ 40%)',
+  upcoming_dividen:'Potensi dividen berikutnya',
+};
+const CHECKS_N = {
+  news_positif:'Berita/sentimen positif',
+  news_tidak_major_neg:'Tidak ada berita major negatif',
+};
+
+function calcScores(det){
+  const f=Object.keys(CHECKS_F).reduce((a,k)=>a+(det[k]===1?1:0),0);
+  const t=Object.keys(CHECKS_T).reduce((a,k)=>a+(det[k]===1?1:0),0);
+  const n=Object.keys(CHECKS_N).reduce((a,k)=>a+(det[k]===1?1:0),0);
+  return {f,t,n,fMax:9,tMax:11,nMax:2};
+}
 
 function klasBadge(k){const m={'STRONG BUY':'sb','BUY':'b','WATCH':'w','SKIP':'sk'};return `<span class="badge ${m[k]||'sk'}">${k}</span>`;}
 function fillClass(p){if(p>=75)return 'fg';if(p>=60)return 'fb';if(p>=45)return 'fa';return 'fr';}
@@ -297,12 +329,21 @@ function ewStatus(d){
   if(d<=WS+14)return{label:'MENDEKATI',color:'var(--blue-t)',WS,WE};
   return{label:'JAUH',color:'var(--txt3)',WS,WE};
 }
-function sparkline(prices,w=70,h=28){
+function sparkline(prices,w=60,h=24){
   if(!prices||prices.length<2)return `<svg width="${w}" height="${h}"></svg>`;
   const vals=prices.map(p=>p.close||p),mn=Math.min(...vals),mx=Math.max(...vals),range=mx-mn||1;
   const pts=vals.map((v,i)=>`${((i/(vals.length-1))*w).toFixed(1)},${(h-((v-mn)/range)*(h-4)-2).toFixed(1)}`).join(' ');
   const col=vals[vals.length-1]>=vals[0]?'var(--green)':'var(--red)';
   return `<svg class="spark" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.5" stroke-linejoin="round"/></svg>`;
+}
+
+function scoreCell(val,max,color){
+  const pct=(val/max)*100;
+  const fc=pct>=75?'fg':pct>=60?'fb':pct>=45?'fa':'fr';
+  return `<div class="score-cell">
+    <span class="score-num" style="color:${color}">${val}/${max}</span>
+    <div class="score-bar"><div class="score-fill ${fc}" style="width:${pct}%"></div></div>
+  </div>`;
 }
 
 async function loadData(){
@@ -326,9 +367,7 @@ async function refreshData(){
   const btn=document.getElementById('btn-refresh');
   btn.disabled=true;btn.classList.add('btn-spin');
   btn.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Memuat...`;
-  try{
-    await loadData();
-  }catch(e){alert('Gagal memuat data: '+e.message);}
+  try{ await loadData(); }catch(e){alert('Gagal memuat data: '+e.message);}
   finally{
     btn.disabled=false;btn.classList.remove('btn-spin');
     btn.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Refresh`;
@@ -364,33 +403,31 @@ function render(){
     if(sort==='yield')return b.yield_bersih-a.yield_bersih;
     if(sort==='rsi')return a.rsi-b.rsi;
     if(sort==='harga')return b.harga-a.harga;
-if(sort==='cum'){
-  const da=daysFrom(estimateNextCum(a)),db=daysFrom(estimateNextCum(b));
-  if(da===null&&db===null)return 0;
-  if(da===null)return 1;
-  if(db===null)return -1;
-  return da-db;
-}
-return 0;
+    if(sort==='cum'){
+      const da=daysFrom(estimateNextCum(a)),db=daysFrom(estimateNextCum(b));
+      if(da===null&&db===null)return 0;if(da===null)return 1;if(db===null)return -1;return da-db;
+    }
+    return 0;
   });
   const tbody=document.getElementById('tbody');tbody.innerHTML='';
   filtered.forEach(s=>{
     const tr=document.createElement('tr');
     if(selStock&&s.kode===selStock.kode)tr.classList.add('sel');
     tr.onclick=()=>selectStock(s.kode);
-    const pct=s.pct||0,fc=fillClass(pct),spark=sparkline(s.price_history||[]);
+    const det=s.skor_detail||{};
+    const sc=calcScores(det);
+    const spark=sparkline(s.price_history||[]);
     const flags=(s.flags||[]).map(f=>`<span class="badge badge-flag" style="margin-left:3px">${f.replace(/_/g,' ')}</span>`).join('');
     const no=(s.news||{}).overall||'';
     const ndot=no==='major_negative'?`<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--red);margin-left:4px;vertical-align:middle"></span>`:
                no.includes('positive')?`<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-left:4px;vertical-align:middle"></span>`:'';
-    const chg=s.change_pct||0;
     tr.innerHTML=`
       <td><div style="font-weight:600;font-size:13px">${s.kode}${ndot}</div>
           <div style="font-size:10px;color:var(--txt3)">${s.sektor||''}</div>${flags}</td>
       <td>${klasBadge(s.klasifikasi)}</td>
-      <td class="r mono" style="${s.yield_bersih>=4?'color:var(--green-t)':''}">${s.yield_bersih}%</td>
-      <td class="r mono" style="${s.rsi<40||s.rsi>70?'color:var(--amber-t)':''}">${s.rsi}</td>
-      <td style="padding:6px 10px">${spark}</td>
+      <td class="r mono" style="font-size:12px;${s.yield_bersih>=4?'color:var(--green-t)':''}">${s.yield_bersih}%</td>
+      <td class="r mono" style="font-size:12px;${s.rsi<40||s.rsi>70?'color:var(--amber-t)':''}">${s.rsi}</td>
+      <td style="padding:4px 6px">${spark}</td>
       <td class="r mono" style="font-size:11px">
         ${(()=>{
           const nc=estimateNextCum(s),d=daysFrom(nc);
@@ -399,7 +436,9 @@ return 0;
           return `<span style="color:${col}">${nc.toLocaleDateString('id-ID',{day:'numeric',month:'short'})}</span><br><span style="font-size:10px;color:${col}">${d>0?d+'h lagi':Math.abs(d)+'h lalu'}</span>`;
         })()}
       </td>
-      <td class="r"><div class="sbar"><div class="sbar-bg"><div class="sbar-fill ${fc}" style="width:${pct}%"></div></div><span class="snum">${s.total_skor}/${s.skor_maks}</span></div></td>`;
+      <td class="c">${scoreCell(sc.f,sc.fMax,'var(--green-t)')}</td>
+      <td class="c">${scoreCell(sc.t,sc.tMax,'var(--blue-t)')}</td>
+      <td class="c">${scoreCell(sc.n,sc.nMax,'var(--amber-t)')}</td>`;
     tbody.appendChild(tr);
   });
   document.getElementById('tbl-count').textContent=`${filtered.length} saham`;
@@ -446,25 +485,34 @@ function renderTabContent(){
   if(curTab==='news')     renderNews(body);
 }
 
+function chkGroup(checks, det){
+  return Object.entries(checks).map(([k,label])=>{
+    const pass=det[k]===1;
+    return `<div class="chk-item ${pass?'pass':'fail'}"><span class="chk-lbl">${label}</span><span class="${pass?'chk-pass':'chk-fail'}">${pass?'✓':'✗'}</span></div>`;
+  }).join('');
+}
+
 function renderRingkasan(container){
   const s=selStock,det=s.skor_detail||{};
+  const sc=calcScores(det);
   const nc=estimateNextCum(s),dTN=daysFrom(nc),ew=ewStatus(dTN);
   const WS=45,WE=20,MAX=60;
   const wsP=Math.max(0,Math.min(100,((MAX-WS)/MAX)*100));
   const weP=Math.max(0,Math.min(100,((MAX-WE)/MAX)*100));
   const nwP=dTN!==null?Math.max(0,Math.min(100,((MAX-dTN)/MAX)*100)):null;
-  const chkHTML=Object.entries(CHECKS).map(([k,label])=>{
-    const pass=det[k]===1;
-    return `<div class="chk-item ${pass?'pass':'fail'}"><span class="chk-lbl">${label}</span><span class="${pass?'chk-pass':'chk-fail'}">${pass?'✓':'✗'}</span></div>`;
-  }).join('');
   const fHTML=(s.flags||[]).length?`<div class="flags-wrap">${(s.flags).map(f=>`<span class="flag-item">${f.replace(/_/g,' ')}</span>`).join('')}</div>`:`<span style="font-size:12px;color:var(--txt3)">Tidak ada flag</span>`;
+
   container.innerHTML=`
-    <div class="grid2">
-      <div class="kpi"><div class="kpi-lbl">Score</div><div class="kpi-val c-blue">${s.total_skor}/${s.skor_maks} <span style="font-size:11px;color:var(--txt3)">(${s.pct}%)</span></div></div>
-      <div class="kpi"><div class="kpi-lbl">Yield Bersih</div><div class="kpi-val" style="color:var(--green-t)">${s.yield_bersih}%</div></div>
-      <div class="kpi"><div class="kpi-lbl">DPS Terakhir</div><div class="kpi-val">Rp ${(s.dps||0).toLocaleString('id-ID')}</div></div>
-      <div class="kpi"><div class="kpi-lbl">Yield Kotor</div><div class="kpi-val">${s.yield_kotor}%</div></div>
+    <div class="grid3" style="margin-bottom:14px">
+      <div class="kpi"><div class="kpi-lbl">F · Fundamental</div><div class="kpi-val" style="color:var(--green-t)">${sc.f}/${sc.fMax}</div></div>
+      <div class="kpi"><div class="kpi-lbl">T · Teknikal</div><div class="kpi-val" style="color:var(--blue-t)">${sc.t}/${sc.tMax}</div></div>
+      <div class="kpi"><div class="kpi-lbl">N · News</div><div class="kpi-val" style="color:var(--amber-t)">${sc.n}/${sc.nMax}</div></div>
     </div>
+    <div class="grid2" style="margin-bottom:14px">
+      <div class="kpi"><div class="kpi-lbl">Total Score</div><div class="kpi-val c-blue">${s.total_skor}/${s.skor_maks} <span style="font-size:11px;color:var(--txt3)">(${s.pct}%)</span></div></div>
+      <div class="kpi"><div class="kpi-lbl">Yield Bersih</div><div class="kpi-val" style="color:var(--green-t)">${s.yield_bersih}%</div></div>
+    </div>
+
     <div class="sec">Entry Window Tracker</div>
     <div class="ew-wrap">
       <div class="ew-title"><span style="color:var(--txt2)">Default window H-${WS} s/d H-${WE} sebelum cum date</span>
@@ -478,26 +526,40 @@ function renderRingkasan(container){
         ${dTN!==null?(dTN>0?`Estimasi cum date berikutnya: ${fmtDate(nc?.toISOString?.()?.split('T')[0])} — ${daysLabel(dTN)}`:`Cum date terakhir sudah lewat ${Math.abs(dTN)} hari lalu`):'Data cum date tidak tersedia'}
       </div>
     </div>
-    <div class="sec">Checklist Scoring (${s.total_skor}/${s.skor_maks} terpenuhi)</div>${chkHTML}
-    <div class="sec">Warning Flags</div>${fHTML}`;
+
+    <div class="sec">
+      <span>Fundamental</span>
+      <span class="sec-badge" style="background:var(--green-d);color:var(--green-t)">${sc.f}/${sc.fMax}</span>
+    </div>
+    ${chkGroup(CHECKS_F, det)}
+
+    <div class="sec">
+      <span>Teknikal</span>
+      <span class="sec-badge" style="background:var(--blue-d);color:var(--blue-t)">${sc.t}/${sc.tMax}</span>
+    </div>
+    ${chkGroup(CHECKS_T, det)}
+
+    <div class="sec">
+      <span>News</span>
+      <span class="sec-badge" style="background:var(--amber-d);color:var(--amber-t)">${sc.n}/${sc.nMax}</span>
+    </div>
+    ${chkGroup(CHECKS_N, det)}
+
+    <div class="sec">Warning Flags</div>
+    ${fHTML}`;
 }
 
 function renderDividen(container){
   const s=selStock;
-  const histManual = s.div_history_manual || [];
-  const histYF     = s.div_history || [];
+  const histManual=s.div_history_manual||[];
+  const histYF=s.div_history||[];
   const nc=estimateNextCum(s),dTN=daysFrom(nc);
+  const hasManual=histManual.length>0;
+  const dpsShow=hasManual?(s.dps_manual||s.dps||0):(s.dps||0);
+  const yieldShow=hasManual?(s.yield_bersih_cum||s.yield_bersih||0):(s.yield_bersih||0);
+  const yieldLabel=hasManual?'Yield Bersih (Harga Cum)':'Yield Bersih (Harga Kini)';
 
-  // Gunakan data manual kalau ada, fallback ke yfinance
-  const hasManual = histManual.length > 0;
-
-  // KPI — pakai data manual kalau ada
-  const dpsShow    = hasManual ? (s.dps_manual || s.dps || 0) : (s.dps || 0);
-  const yieldShow  = hasManual ? (s.yield_bersih_cum || s.yield_bersih || 0) : (s.yield_bersih || 0);
-  const yieldLabel = hasManual ? 'Yield Bersih (Harga Cum)' : 'Yield Bersih (Harga Kini)';
-
-  // Tabel riwayat manual
-  const manualTableHTML = hasManual ? `
+  const manualTableHTML=hasManual?`
     <div class="sec">Riwayat Dividen Lengkap</div>
     <div style="background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden">
       <table style="width:100%;border-collapse:collapse">
@@ -512,25 +574,23 @@ function renderDividen(container){
           <th style="padding:6px 8px;font-size:10px;color:var(--txt3);text-align:right;border-bottom:1px solid var(--border)">Yield/Thn</th>
         </tr></thead>
         <tbody>${histManual.slice().reverse().map((h,i)=>{
-          const tipeColor = h.tipe==='INTERIM'?'var(--blue-d)':h.tipe==='FINAL'?'var(--purple-d)':'var(--green-d)';
-          const tipeTxt   = h.tipe==='INTERIM'?'var(--blue-t)':h.tipe==='FINAL'?'var(--purple-t)':'var(--green-t)';
-          const yld = h.div_yield ? (h.div_yield).toFixed(2)+'%' : (h.dps&&h.harga_cum ? ((h.dps/h.harga_cum)*100).toFixed(2)+'%' : '—');
+          const tipeColor=h.tipe==='INTERIM'?'var(--blue-d)':h.tipe==='FINAL'?'var(--purple-d)':'var(--green-d)';
+          const tipeTxt=h.tipe==='INTERIM'?'var(--blue-t)':h.tipe==='FINAL'?'var(--purple-t)':'var(--green-t)';
+          const yld=h.div_yield?(h.div_yield).toFixed(2)+'%':(h.dps&&h.harga_cum?((h.dps/h.harga_cum)*100).toFixed(2)+'%':'—');
           return `<tr style="border-bottom:1px solid var(--border);${i%2===0?'background:rgba(255,255,255,.02)':''}">
             <td style="padding:5px 8px;font-size:11px;font-family:'DM Mono',monospace">${h.tahun||'—'}</td>
-            <td style="padding:5px 8px;text-align:center">
-              <span style="display:inline-flex;padding:1px 7px;border-radius:99px;font-size:10px;font-weight:600;background:${tipeColor};color:${tipeTxt}">${h.tipe||'—'}</span>
-            </td>
-            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--green-t)">${h.dps ? 'Rp '+h.dps.toLocaleString('id-ID') : '—'}</td>
-            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace">${h.harga_cum ? 'Rp '+h.harga_cum.toLocaleString('id-ID') : '—'}</td>
+            <td style="padding:5px 8px;text-align:center"><span style="display:inline-flex;padding:1px 7px;border-radius:99px;font-size:10px;font-weight:600;background:${tipeColor};color:${tipeTxt}">${h.tipe||'—'}</span></td>
+            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--green-t)">${h.dps?'Rp '+h.dps.toLocaleString('id-ID'):'—'}</td>
+            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace">${h.harga_cum?'Rp '+h.harga_cum.toLocaleString('id-ID'):'—'}</td>
             <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--amber-t)">${yld}</td>
-            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--txt3)">${h.dpr ? h.dpr.toFixed(1)+'%' : '—'}</td>
-            <td style="padding:5px 8px;font-size:11px;text-align:center;font-family:'DM Mono',monospace">${h.ex_date ? fmtDate(h.ex_date) : '—'}</td>
-            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--blue-t)">${h.yield_1th ? h.yield_1th.toFixed(2)+'%' : '—'}</td>
+            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--txt3)">${h.dpr?h.dpr.toFixed(1)+'%':'—'}</td>
+            <td style="padding:5px 8px;font-size:11px;text-align:center;font-family:'DM Mono',monospace">${h.ex_date?fmtDate(h.ex_date):'—'}</td>
+            <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--blue-t)">${h.yield_1th?h.yield_1th.toFixed(2)+'%':'—'}</td>
           </tr>`;
         }).join('')}</tbody>
       </table>
       <div style="padding:5px 8px;font-size:10px;color:var(--txt3)">Yield dihitung dari harga saat cum date · Sumber: input manual</div>
-    </div>` : `
+    </div>`:`
     <div class="sec">Riwayat DPS (Yahoo Finance)</div>
     <div class="chart-wrap"><canvas id="chart-div" class="chart-canvas-sm"></canvas></div>
     <div class="sec">Riwayat Lengkap</div>
@@ -557,7 +617,7 @@ function renderDividen(container){
       <div class="kpi"><div class="kpi-lbl">${yieldLabel}</div><div class="kpi-val" style="color:var(--green-t)">${(yieldShow||0).toFixed(2)}%</div></div>
       <div class="kpi"><div class="kpi-lbl">Konsistensi</div><div class="kpi-val">${s.div_years} tahun</div></div>
     </div>
-    ${s.est_dps ? `
+    ${s.est_dps?`
     <div class="sec">Estimasi Dividen Berikutnya</div>
     <div style="background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(34,197,94,.08));border:1px solid var(--border);border-radius:var(--r-md);padding:12px;margin-bottom:14px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
@@ -575,8 +635,7 @@ function renderDividen(container){
       <div style="font-size:10px;color:var(--txt3);padding-top:6px;border-top:1px solid var(--border)">
         ⚠ Estimasi — belum tentu akurat. Saham beredar: ${s.est_shares?(s.est_shares/1e9).toFixed(2)+' M lembar':'—'}
       </div>
-    </div>` : ''}
-
+    </div>`:''}
     <div class="sec">Tanggal Kunci</div>
     <div class="div-timeline">
       <div class="div-event"><div class="div-dot" style="background:var(--amber)"></div>
