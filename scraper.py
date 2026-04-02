@@ -1,12 +1,9 @@
 import yfinance as yf
 import pandas as pd
-import requests
 import json
 from datetime import datetime, date, timedelta
 from ta.momentum import RSIIndicator
 from ta.trend import MACD
-
-yf.set_tz_cache_location("/tmp")
 
 UNIVERSE = [
     'BBCA.JK', 'BBRI.JK', 'BMRI.JK', 'BBNI.JK', 'BBTN.JK',
@@ -32,19 +29,10 @@ def days_until(dt_str):
     except:
         return None
 
-def make_session():
-    session = requests.Session()
-    session.headers.update({
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-    })
-    return session
-
-def scrape_stock(ticker_code, session):
+def scrape_stock(ticker_code):
     print(f'  Scraping {ticker_code}...', end=' ')
     try:
-        ticker = yf.Ticker(ticker_code, session=session)
+        ticker = yf.Ticker(ticker_code)
         kode   = ticker_code.replace('.JK', '')
 
         hist = ticker.history(period='90d')
@@ -186,12 +174,10 @@ def main():
     print('  DiviWatch Scraper — 40 saham IDX')
     print('=' * 55)
 
-    session  = make_session()
-    results  = []
-    errors   = []
+    results, errors = [], []
 
     for ticker_code in UNIVERSE:
-        data = scrape_stock(ticker_code, session)
+        data = scrape_stock(ticker_code)
         if data:
             results.append(data)
         else:
