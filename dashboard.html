@@ -345,8 +345,8 @@ function drawCandlestick(canvasEl, ph, ma20h, ma50h){
   ctx.scale(dpr,dpr);
   const pad={l:52,r:12,t:20,b:28};
   const cw=W-pad.l-pad.r,ch=H-pad.t-pad.b;
-  const allVals=[...ph.map(p=>p.high||p.close),...ph.map(p=>p.low||p.close),...ma20h.filter(Boolean),...ma50h.filter(Boolean)];
-  const mn=Math.min(...allVals)*0.998,mx=Math.max(...allVals)*1.002,range=mx-mn||1;
+  const ohlcVals=[...ph.map(p=>p.high||p.close),...ph.map(p=>p.low||p.close)];
+  const mn=Math.min(...ohlcVals)*0.997,mx=Math.max(...ohlcVals)*1.003,range=mx-mn||1;
   const toY=v=>pad.t+ch-(((v-mn)/range)*ch);
   const n=ph.length;
   const slotW=cw/n;
