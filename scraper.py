@@ -114,6 +114,9 @@ def scrape_stock(ticker_code):
         for idx_dt, row in hist.tail(30).iterrows():
             price_history.append({
                 'date':  str(idx_dt.date()),
+                'open':  round(float(row['Open']), 0),
+                'high':  round(float(row['High']), 0),
+                'low':   round(float(row['Low']), 0),
                 'close': round(float(row['Close']), 0),
                 'vol':   int(row['Volume']),
             })
