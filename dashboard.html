@@ -6,9 +6,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial@0.2.1/dist/chartjs-chart-financial.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1/dist/chartjs-adapter-luxon.umd.min.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -131,6 +128,8 @@ td.c{text-align:center}
 .chart-wrap{background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);padding:12px;margin-bottom:14px}
 .chart-canvas{width:100% !important;height:180px !important}
 .chart-canvas-sm{width:100% !important;height:140px !important}
+.candle-wrap{background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);padding:12px;margin-bottom:14px;position:relative}
+.candle-canvas{width:100%;height:200px;display:block}
 .div-timeline{display:flex;flex-direction:column;gap:6px}
 .div-event{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:var(--r-md);border:1px solid var(--border);background:var(--raised)}
 .div-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
@@ -215,7 +214,7 @@ td.c{text-align:center}
             <th class="r" style="width:12%">Cum Date</th>
             <th class="c" style="width:8%">Fdmt</th>
             <th class="c" style="width:8%">Tnkl</th>
-            <th class="c" style="width:6%">New</th>
+            <th class="c" style="width:6%">News</th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>
@@ -272,34 +271,23 @@ td.c{text-align:center}
 </div>
 
 <script>
-let allData=[],filtered=[],selStock=null,curFilter='all',curTab='ringkasan',chartPrice=null,chartDiv=null;
+let allData=[],filtered=[],selStock=null,curFilter='all',curTab='ringkasan',chartDiv=null;
 
-// ── Pembagian kriteria ────────────────────────────────────────────────────
-const CHECKS_F = {
-  yield_bersih_4pct:'Yield bersih ≥ 4%',
-  yield_tidak_abnormal:'Yield tidak abnormal',
-  div_konsisten_3thn:'Dividen konsisten ≥ 3 tahun',
-  div_konsisten_5thn:'Dividen konsisten ≥ 5 tahun',
-  dividen_aktif:'Dividen aktif (≤ 1 tahun lalu)',
-  pbv_wajar:'PBV wajar',
-  per_wajar:'PER wajar (0–25×)',
-  roe_positif:'ROE ≥ 10%',
-  der_aman:'DER aman',
+const CHECKS_F={
+  yield_bersih_4pct:'Yield bersih ≥ 4%',yield_tidak_abnormal:'Yield tidak abnormal',
+  div_konsisten_3thn:'Dividen konsisten ≥ 3 tahun',div_konsisten_5thn:'Dividen konsisten ≥ 5 tahun',
+  dividen_aktif:'Dividen aktif (≤ 1 tahun lalu)',pbv_wajar:'PBV wajar',
+  per_wajar:'PER wajar (0–25×)',roe_positif:'ROE ≥ 10%',der_aman:'DER aman',
 };
-const CHECKS_T = {
-  above_ma20:'Harga di atas MA20',
-  above_ma50:'Harga di atas MA50',
-  golden_cross:'Golden cross MA20 > MA50',
-  rsi_ideal:'RSI zona ideal (40–65)',
-  rsi_tidak_overbought:'RSI tidak overbought (< 70)',
-  macd_bullish:'MACD bullish',
-  volume_normal:'Volume normal (≥ 1×)',
-  volume_momentum:'Volume momentum (≥ 1.5×)',
-  candle_bullish:'Candle bullish',
-  candle_body_kuat:'Body candle kuat (≥ 40%)',
+const CHECKS_T={
+  above_ma20:'Harga di atas MA20',above_ma50:'Harga di atas MA50',
+  golden_cross:'Golden cross MA20 > MA50',rsi_ideal:'RSI zona ideal (40–65)',
+  rsi_tidak_overbought:'RSI tidak overbought (< 70)',macd_bullish:'MACD bullish',
+  volume_normal:'Volume normal (≥ 1×)',volume_momentum:'Volume momentum (≥ 1.5×)',
+  candle_bullish:'Candle bullish',candle_body_kuat:'Body candle kuat (≥ 40%)',
   upcoming_dividen:'Potensi dividen berikutnya',
 };
-const CHECKS_N = {
+const CHECKS_N={
   news_positif:'Berita/sentimen positif',
   news_tidak_major_neg:'Tidak ada berita major negatif',
 };
@@ -308,14 +296,13 @@ function calcScores(det){
   const f=Object.keys(CHECKS_F).reduce((a,k)=>a+(det[k]===1?1:0),0);
   const t=Object.keys(CHECKS_T).reduce((a,k)=>a+(det[k]===1?1:0),0);
   const n=Object.keys(CHECKS_N).reduce((a,k)=>a+(det[k]===1?1:0),0);
-  return {f,t,n,fMax:9,tMax:11,nMax:2};
+  return{f,t,n,fMax:9,tMax:11,nMax:2};
 }
 
-function klasBadge(k){const m={'STRONG BUY':'sb','BUY':'b','WATCH':'w','SKIP':'sk'};return `<span class="badge ${m[k]||'sk'}">${k}</span>`;}
-function fillClass(p){if(p>=75)return 'fg';if(p>=60)return 'fb';if(p>=45)return 'fa';return 'fr';}
-function fmtRp(n){return 'Rp '+(n||0).toLocaleString('id-ID');}
-function fmtDate(s){if(!s)return '—';try{return new Date(s).toLocaleDateString('id-ID',{day:'numeric',month:'short',year:'numeric'});}catch{return s;}}
-function daysLabel(d){if(d===null||d===undefined)return '—';if(d>0)return `${d} hari lagi`;if(d===0)return 'Hari ini';return `${Math.abs(d)} hari lalu`;}
+function klasBadge(k){const m={'STRONG BUY':'sb','BUY':'b','WATCH':'w','SKIP':'sk'};return`<span class="badge ${m[k]||'sk'}">${k}</span>`;}
+function fmtRp(n){return'Rp '+(n||0).toLocaleString('id-ID');}
+function fmtDate(s){if(!s)return'—';try{return new Date(s).toLocaleDateString('id-ID',{day:'numeric',month:'short',year:'numeric'});}catch{return s;}}
+function daysLabel(d){if(d===null||d===undefined)return'—';if(d>0)return`${d} hari lagi`;if(d===0)return'Hari ini';return`${Math.abs(d)} hari lalu`;}
 function estimateNextCum(stock){
   if(!stock.cum_date)return null;
   const last=new Date(stock.cum_date),today=new Date();
@@ -324,29 +311,111 @@ function estimateNextCum(stock){
 }
 function daysFrom(dt){if(!dt)return null;const t=new Date();t.setHours(0,0,0,0);return Math.round((dt-t)/86400000);}
 function ewStatus(d){
-  if(d===null)return{label:'—',color:'var(--txt3)',WS:45,WE:20};
+  if(d===null)return{label:'—',color:'var(--txt3)'};
   const WS=45,WE=20;
-  if(d<=0)return{label:'TERLEWAT',color:'var(--red-t)',WS,WE};
-  if(d<=WE)return{label:'URGENT',color:'var(--red-t)',WS,WE};
-  if(d<=WS)return{label:'AKTIF',color:'var(--green-t)',WS,WE};
-  if(d<=WS+14)return{label:'MENDEKATI',color:'var(--blue-t)',WS,WE};
-  return{label:'JAUH',color:'var(--txt3)',WS,WE};
+  if(d<=0)return{label:'TERLEWAT',color:'var(--red-t)'};
+  if(d<=WE)return{label:'URGENT',color:'var(--red-t)'};
+  if(d<=WS)return{label:'AKTIF',color:'var(--green-t)'};
+  if(d<=WS+14)return{label:'MENDEKATI',color:'var(--blue-t)'};
+  return{label:'JAUH',color:'var(--txt3)'};
 }
 function sparkline(prices,w=60,h=24){
-  if(!prices||prices.length<2)return `<svg width="${w}" height="${h}"></svg>`;
+  if(!prices||prices.length<2)return`<svg width="${w}" height="${h}"></svg>`;
   const vals=prices.map(p=>p.close||p),mn=Math.min(...vals),mx=Math.max(...vals),range=mx-mn||1;
   const pts=vals.map((v,i)=>`${((i/(vals.length-1))*w).toFixed(1)},${(h-((v-mn)/range)*(h-4)-2).toFixed(1)}`).join(' ');
   const col=vals[vals.length-1]>=vals[0]?'var(--green)':'var(--red)';
-  return `<svg class="spark" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.5" stroke-linejoin="round"/></svg>`;
+  return`<svg class="spark" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.5" stroke-linejoin="round"/></svg>`;
 }
-
 function scoreCell(val,max,color){
   const pct=(val/max)*100;
   const fc=pct>=75?'fg':pct>=60?'fb':pct>=45?'fa':'fr';
-  return `<div class="score-cell">
-    <span class="score-num" style="color:${color}">${val}/${max}</span>
-    <div class="score-bar"><div class="score-fill ${fc}" style="width:${pct}%"></div></div>
-  </div>`;
+  return`<div class="score-cell"><span class="score-num" style="color:${color}">${val}/${max}</span><div class="score-bar"><div class="score-fill ${fc}" style="width:${pct}%"></div></div></div>`;
+}
+
+function drawCandlestick(canvasEl, ph, ma20h, ma50h){
+  if(!canvasEl||!ph||!ph.length)return;
+  const dpr=window.devicePixelRatio||1;
+  const W=canvasEl.parentElement.clientWidth-24;
+  const H=200;
+  canvasEl.style.width=W+'px';
+  canvasEl.style.height=H+'px';
+  canvasEl.width=W*dpr;
+  canvasEl.height=H*dpr;
+  const ctx=canvasEl.getContext('2d');
+  ctx.scale(dpr,dpr);
+  const pad={l:52,r:12,t:20,b:28};
+  const cw=W-pad.l-pad.r,ch=H-pad.t-pad.b;
+  const allVals=[...ph.map(p=>p.high||p.close),...ph.map(p=>p.low||p.close),...ma20h.filter(Boolean),...ma50h.filter(Boolean)];
+  const mn=Math.min(...allVals)*0.998,mx=Math.max(...allVals)*1.002,range=mx-mn||1;
+  const toY=v=>pad.t+ch-(((v-mn)/range)*ch);
+  const n=ph.length;
+  const slotW=cw/n;
+  const barW=Math.max(2,Math.floor(slotW*0.6));
+  const toX=i=>pad.l+slotW*i+slotW/2;
+  // background
+  ctx.fillStyle='#1e2535';ctx.fillRect(0,0,W,H);
+  // grid lines
+  const gridSteps=4;
+  ctx.strokeStyle='rgba(255,255,255,.05)';ctx.lineWidth=1;
+  for(let i=0;i<=gridSteps;i++){
+    const y=pad.t+(ch/gridSteps)*i;
+    ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(W-pad.r,y);ctx.stroke();
+  }
+  // y labels
+  ctx.fillStyle='#4e5d78';ctx.font=`10px 'DM Mono',monospace`;ctx.textAlign='right';
+  for(let i=0;i<=gridSteps;i++){
+    const v=mx-(range/gridSteps)*i;
+    const y=pad.t+(ch/gridSteps)*i;
+    ctx.fillText((v/1000).toFixed(1)+'K',pad.l-4,y+4);
+  }
+  // x labels
+  ctx.textAlign='center';ctx.font=`10px 'DM Sans',sans-serif`;ctx.fillStyle='#4e5d78';
+  const xStep=Math.ceil(n/6);
+  ph.forEach((p,i)=>{if(i%xStep===0||i===n-1)ctx.fillText(p.date.slice(5),toX(i),H-8);});
+  // MA50
+  if(ma50h.length){
+    ctx.strokeStyle='#8b5cf6';ctx.lineWidth=1.5;ctx.setLineDash([4,3]);ctx.beginPath();
+    let started=false;
+    ma50h.forEach((v,i)=>{if(!v)return;const x=toX(i),y=toY(v);if(!started){ctx.moveTo(x,y);started=true;}else ctx.lineTo(x,y);});
+    ctx.stroke();
+  }
+  // MA20
+  if(ma20h.length){
+    ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.5;ctx.setLineDash([4,3]);ctx.beginPath();
+    let started=false;
+    ma20h.forEach((v,i)=>{if(!v)return;const x=toX(i),y=toY(v);if(!started){ctx.moveTo(x,y);started=true;}else ctx.lineTo(x,y);});
+    ctx.stroke();
+  }
+  ctx.setLineDash([]);
+  // candles
+  ph.forEach((p,i)=>{
+    const x=toX(i);
+    const o=p.open||p.close,c=p.close,hi=p.high||p.close,lo=p.low||p.close;
+    const bull=c>=o;
+    const colUp='#22c55e',colDn='#ef4444';
+    const col=bull?colUp:colDn;
+    // wick
+    ctx.strokeStyle=col;ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(x,toY(hi));ctx.lineTo(x,toY(lo));ctx.stroke();
+    // body
+    const yO=toY(o),yC=toY(c);
+    const bodyTop=Math.min(yO,yC),bodyH=Math.max(1,Math.abs(yO-yC));
+    ctx.fillStyle=bull?'rgba(34,197,94,.85)':'rgba(239,68,68,.85)';
+    ctx.fillRect(x-barW/2,bodyTop,barW,bodyH);
+    ctx.strokeStyle=col;ctx.lineWidth=0.5;
+    ctx.strokeRect(x-barW/2,bodyTop,barW,bodyH);
+  });
+  // legend
+  const ly=pad.t-6;
+  ctx.setLineDash([4,3]);
+  ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(pad.l,ly);ctx.lineTo(pad.l+18,ly);ctx.stroke();
+  ctx.fillStyle='#8896b0';ctx.font=`10px 'DM Sans',sans-serif`;ctx.textAlign='left';ctx.setLineDash([]);ctx.fillText('MA20',pad.l+22,ly+4);
+  ctx.setLineDash([4,3]);ctx.strokeStyle='#8b5cf6';ctx.beginPath();ctx.moveTo(pad.l+52,ly);ctx.lineTo(pad.l+70,ly);ctx.stroke();
+  ctx.setLineDash([]);ctx.fillText('MA50',pad.l+74,ly+4);
+  ctx.fillStyle='rgba(34,197,94,.85)';ctx.fillRect(pad.l+104,ly-4,8,8);
+  ctx.fillStyle='#8896b0';ctx.fillText('Naik',pad.l+116,ly+4);
+  ctx.fillStyle='rgba(239,68,68,.85)';ctx.fillRect(pad.l+140,ly-4,8,8);
+  ctx.fillText('Turun',pad.l+152,ly+4);
 }
 
 async function loadData(){
@@ -370,7 +439,7 @@ async function refreshData(){
   const btn=document.getElementById('btn-refresh');
   btn.disabled=true;btn.classList.add('btn-spin');
   btn.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Memuat...`;
-  try{ await loadData(); }catch(e){alert('Gagal memuat data: '+e.message);}
+  try{await loadData();}catch(e){alert('Gagal memuat data: '+e.message);}
   finally{
     btn.disabled=false;btn.classList.remove('btn-spin');
     btn.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>Refresh`;
@@ -405,7 +474,6 @@ function render(){
     if(sort==='skor')return b.total_skor-a.total_skor;
     if(sort==='yield')return b.yield_bersih-a.yield_bersih;
     if(sort==='rsi')return a.rsi-b.rsi;
-    if(sort==='harga')return b.harga-a.harga;
     if(sort==='cum'){
       const da=daysFrom(estimateNextCum(a)),db=daysFrom(estimateNextCum(b));
       if(da===null&&db===null)return 0;if(da===null)return 1;if(db===null)return -1;return da-db;
@@ -434,9 +502,9 @@ function render(){
       <td class="r mono" style="font-size:11px">
         ${(()=>{
           const nc=estimateNextCum(s),d=daysFrom(nc);
-          if(!nc)return '<span style="color:var(--txt3)">—</span>';
+          if(!nc)return'<span style="color:var(--txt3)">—</span>';
           const col=d<=30?'var(--red-t)':d<=90?'var(--amber-t)':d<=180?'var(--blue-t)':'var(--txt3)';
-          return `<span style="color:${col}">${nc.toLocaleDateString('id-ID',{day:'numeric',month:'short'})}</span><br><span style="font-size:10px;color:${col}">${d>0?d+'h lagi':Math.abs(d)+'h lalu'}</span>`;
+          return`<span style="color:${col}">${nc.toLocaleDateString('id-ID',{day:'numeric',month:'short'})}</span><br><span style="font-size:10px;color:${col}">${d>0?d+'h lagi':Math.abs(d)+'h lalu'}</span>`;
         })()}
       </td>
       <td class="c">${scoreCell(sc.f,sc.fMax,'var(--green-t)')}</td>
@@ -488,10 +556,10 @@ function renderTabContent(){
   if(curTab==='news')     renderNews(body);
 }
 
-function chkGroup(checks, det){
+function chkGroup(checks,det){
   return Object.entries(checks).map(([k,label])=>{
     const pass=det[k]===1;
-    return `<div class="chk-item ${pass?'pass':'fail'}"><span class="chk-lbl">${label}</span><span class="${pass?'chk-pass':'chk-fail'}">${pass?'✓':'✗'}</span></div>`;
+    return`<div class="chk-item ${pass?'pass':'fail'}"><span class="chk-lbl">${label}</span><span class="${pass?'chk-pass':'chk-fail'}">${pass?'✓':'✗'}</span></div>`;
   }).join('');
 }
 
@@ -503,19 +571,17 @@ function renderRingkasan(container){
   const wsP=Math.max(0,Math.min(100,((MAX-WS)/MAX)*100));
   const weP=Math.max(0,Math.min(100,((MAX-WE)/MAX)*100));
   const nwP=dTN!==null?Math.max(0,Math.min(100,((MAX-dTN)/MAX)*100)):null;
-  const fHTML=(s.flags||[]).length?`<div class="flags-wrap">${(s.flags).map(f=>`<span class="flag-item">${f.replace(/_/g,' ')}</span>`).join('')}</div>`:`<span style="font-size:12px;color:var(--txt3)">Tidak ada flag</span>`;
-
+  const fHTML=(s.flags||[]).length?`<div class="flags-wrap">${s.flags.map(f=>`<span class="flag-item">${f.replace(/_/g,' ')}</span>`).join('')}</div>`:`<span style="font-size:12px;color:var(--txt3)">Tidak ada flag</span>`;
   container.innerHTML=`
     <div class="grid3" style="margin-bottom:14px">
-      <div class="kpi"><div class="kpi-lbl">F · Fundamental</div><div class="kpi-val" style="color:var(--green-t)">${sc.f}/${sc.fMax}</div></div>
-      <div class="kpi"><div class="kpi-lbl">T · Teknikal</div><div class="kpi-val" style="color:var(--blue-t)">${sc.t}/${sc.tMax}</div></div>
-      <div class="kpi"><div class="kpi-lbl">N · News</div><div class="kpi-val" style="color:var(--amber-t)">${sc.n}/${sc.nMax}</div></div>
+      <div class="kpi"><div class="kpi-lbl">Fdmt · Fundamental</div><div class="kpi-val" style="color:var(--green-t)">${sc.f}/${sc.fMax}</div></div>
+      <div class="kpi"><div class="kpi-lbl">Tnkl · Teknikal</div><div class="kpi-val" style="color:var(--blue-t)">${sc.t}/${sc.tMax}</div></div>
+      <div class="kpi"><div class="kpi-lbl">News</div><div class="kpi-val" style="color:var(--amber-t)">${sc.n}/${sc.nMax}</div></div>
     </div>
     <div class="grid2" style="margin-bottom:14px">
       <div class="kpi"><div class="kpi-lbl">Total Score</div><div class="kpi-val c-blue">${s.total_skor}/${s.skor_maks} <span style="font-size:11px;color:var(--txt3)">(${s.pct}%)</span></div></div>
       <div class="kpi"><div class="kpi-lbl">Yield Bersih</div><div class="kpi-val" style="color:var(--green-t)">${s.yield_bersih}%</div></div>
     </div>
-
     <div class="sec">Entry Window Tracker</div>
     <div class="ew-wrap">
       <div class="ew-title"><span style="color:var(--txt2)">Default window H-${WS} s/d H-${WE} sebelum cum date</span>
@@ -529,27 +595,13 @@ function renderRingkasan(container){
         ${dTN!==null?(dTN>0?`Estimasi cum date berikutnya: ${fmtDate(nc?.toISOString?.()?.split('T')[0])} — ${daysLabel(dTN)}`:`Cum date terakhir sudah lewat ${Math.abs(dTN)} hari lalu`):'Data cum date tidak tersedia'}
       </div>
     </div>
-
-    <div class="sec">
-      <span>Fundamental</span>
-      <span class="sec-badge" style="background:var(--green-d);color:var(--green-t)">${sc.f}/${sc.fMax}</span>
-    </div>
-    ${chkGroup(CHECKS_F, det)}
-
-    <div class="sec">
-      <span>Teknikal</span>
-      <span class="sec-badge" style="background:var(--blue-d);color:var(--blue-t)">${sc.t}/${sc.tMax}</span>
-    </div>
-    ${chkGroup(CHECKS_T, det)}
-
-    <div class="sec">
-      <span>News</span>
-      <span class="sec-badge" style="background:var(--amber-d);color:var(--amber-t)">${sc.n}/${sc.nMax}</span>
-    </div>
-    ${chkGroup(CHECKS_N, det)}
-
-    <div class="sec">Warning Flags</div>
-    ${fHTML}`;
+    <div class="sec"><span>Fundamental</span><span class="sec-badge" style="background:var(--green-d);color:var(--green-t)">${sc.f}/${sc.fMax}</span></div>
+    ${chkGroup(CHECKS_F,det)}
+    <div class="sec"><span>Teknikal</span><span class="sec-badge" style="background:var(--blue-d);color:var(--blue-t)">${sc.t}/${sc.tMax}</span></div>
+    ${chkGroup(CHECKS_T,det)}
+    <div class="sec"><span>News</span><span class="sec-badge" style="background:var(--amber-d);color:var(--amber-t)">${sc.n}/${sc.nMax}</span></div>
+    ${chkGroup(CHECKS_N,det)}
+    <div class="sec">Warning Flags</div>${fHTML}`;
 }
 
 function renderDividen(container){
@@ -561,7 +613,6 @@ function renderDividen(container){
   const dpsShow=hasManual?(s.dps_manual||s.dps||0):(s.dps||0);
   const yieldShow=hasManual?(s.yield_bersih_cum||s.yield_bersih||0):(s.yield_bersih||0);
   const yieldLabel=hasManual?'Yield Bersih (Harga Cum)':'Yield Bersih (Harga Kini)';
-
   const manualTableHTML=hasManual?`
     <div class="sec">Riwayat Dividen Lengkap</div>
     <div style="background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden">
@@ -580,7 +631,7 @@ function renderDividen(container){
           const tipeColor=h.tipe==='INTERIM'?'var(--blue-d)':h.tipe==='FINAL'?'var(--purple-d)':'var(--green-d)';
           const tipeTxt=h.tipe==='INTERIM'?'var(--blue-t)':h.tipe==='FINAL'?'var(--purple-t)':'var(--green-t)';
           const yld=h.div_yield?(h.div_yield).toFixed(2)+'%':(h.dps&&h.harga_cum?((h.dps/h.harga_cum)*100).toFixed(2)+'%':'—');
-          return `<tr style="border-bottom:1px solid var(--border);${i%2===0?'background:rgba(255,255,255,.02)':''}">
+          return`<tr style="border-bottom:1px solid var(--border);${i%2===0?'background:rgba(255,255,255,.02)':''}">
             <td style="padding:5px 8px;font-size:11px;font-family:'DM Mono',monospace">${h.tahun||'—'}</td>
             <td style="padding:5px 8px;text-align:center"><span style="display:inline-flex;padding:1px 7px;border-radius:99px;font-size:10px;font-weight:600;background:${tipeColor};color:${tipeTxt}">${h.tipe||'—'}</span></td>
             <td style="padding:5px 8px;font-size:11px;text-align:right;font-family:'DM Mono',monospace;color:var(--green-t)">${h.dps?'Rp '+h.dps.toLocaleString('id-ID'):'—'}</td>
@@ -613,7 +664,6 @@ function renderDividen(container){
       </table>
       <div style="padding:6px 10px;font-size:10px;color:var(--txt3)">* Yield bersih dari harga saat ini</div>
     </div>`;
-
   container.innerHTML=`
     <div class="grid3">
       <div class="kpi"><div class="kpi-lbl">DPS Terakhir</div><div class="kpi-val" style="color:var(--green-t)">Rp ${(dpsShow||0).toLocaleString('id-ID')}</div></div>
@@ -624,34 +674,23 @@ function renderDividen(container){
     <div class="sec">Estimasi Dividen Berikutnya</div>
     <div style="background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(34,197,94,.08));border:1px solid var(--border);border-radius:var(--r-md);padding:12px;margin-bottom:14px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
-        <div class="kpi"><div class="kpi-lbl">Laba Bersih</div>
-          <div class="kpi-val" style="font-size:13px">${s.est_net_income>=1e12?'Rp '+(s.est_net_income/1e12).toFixed(1)+' T':s.est_net_income>=1e9?'Rp '+(s.est_net_income/1e9).toFixed(1)+' M':'Rp '+(s.est_net_income||0).toLocaleString('id-ID')}</div></div>
-        <div class="kpi"><div class="kpi-lbl">DPR Estimasi</div>
-          <div class="kpi-val" style="color:var(--blue-t)">${(s.est_dpr||0).toFixed(1)}%</div>
-          <div style="font-size:10px;color:var(--txt3)">rata-rata 3 thn terakhir</div></div>
-        <div class="kpi"><div class="kpi-lbl">Est. DPS</div>
-          <div class="kpi-val" style="color:var(--green-t)">Rp ${(s.est_dps||0).toLocaleString('id-ID',{maximumFractionDigits:0})}</div></div>
-        <div class="kpi"><div class="kpi-lbl">Est. Yield Bersih</div>
-          <div class="kpi-val" style="color:var(--amber-t)">${(s.est_yield_bersih||0).toFixed(2)}%</div>
-          <div style="font-size:10px;color:var(--txt3)">dari harga saat ini</div></div>
+        <div class="kpi"><div class="kpi-lbl">Laba Bersih</div><div class="kpi-val" style="font-size:13px">${s.est_net_income>=1e12?'Rp '+(s.est_net_income/1e12).toFixed(1)+' T':s.est_net_income>=1e9?'Rp '+(s.est_net_income/1e9).toFixed(1)+' M':'Rp '+(s.est_net_income||0).toLocaleString('id-ID')}</div></div>
+        <div class="kpi"><div class="kpi-lbl">DPR Estimasi</div><div class="kpi-val" style="color:var(--blue-t)">${(s.est_dpr||0).toFixed(1)}%</div><div style="font-size:10px;color:var(--txt3)">rata-rata 3 thn terakhir</div></div>
+        <div class="kpi"><div class="kpi-lbl">Est. DPS</div><div class="kpi-val" style="color:var(--green-t)">Rp ${(s.est_dps||0).toLocaleString('id-ID',{maximumFractionDigits:0})}</div></div>
+        <div class="kpi"><div class="kpi-lbl">Est. Yield Bersih</div><div class="kpi-val" style="color:var(--amber-t)">${(s.est_yield_bersih||0).toFixed(2)}%</div><div style="font-size:10px;color:var(--txt3)">dari harga saat ini</div></div>
       </div>
-      <div style="font-size:10px;color:var(--txt3);padding-top:6px;border-top:1px solid var(--border)">
-        ⚠ Estimasi — belum tentu akurat. Saham beredar: ${s.est_shares?(s.est_shares/1e9).toFixed(2)+' M lembar':'—'}
-      </div>
+      <div style="font-size:10px;color:var(--txt3);padding-top:6px;border-top:1px solid var(--border)">⚠ Estimasi — belum tentu akurat. Saham beredar: ${s.est_shares?(s.est_shares/1e9).toFixed(2)+' M lembar':'—'}</div>
     </div>`:''}
     <div class="sec">Tanggal Kunci</div>
     <div class="div-timeline">
       <div class="div-event"><div class="div-dot" style="background:var(--amber)"></div>
-        <div class="div-info"><div class="div-label">Cum Date (estimasi berikutnya)</div>
-          <div class="div-date">${nc?fmtDate(nc.toISOString().split('T')[0]):'—'}</div></div>
+        <div class="div-info"><div class="div-label">Cum Date (estimasi berikutnya)</div><div class="div-date">${nc?fmtDate(nc.toISOString().split('T')[0]):'—'}</div></div>
         <div class="div-days" style="color:${dTN&&dTN>0?'var(--amber-t)':'var(--txt3)'}">${daysLabel(dTN)}</div></div>
       <div class="div-event"><div class="div-dot" style="background:var(--purple)"></div>
-        <div class="div-info"><div class="div-label">Ex Date (terakhir)</div>
-          <div class="div-date">${fmtDate(s.ex_date_manual||s.ex_date)}</div></div>
+        <div class="div-info"><div class="div-label">Ex Date (terakhir)</div><div class="div-date">${fmtDate(s.ex_date_manual||s.ex_date)}</div></div>
         <div class="div-days" style="color:var(--txt3)">${hasManual?'Manual':'Yahoo Finance'}</div></div>
     </div>
     ${manualTableHTML}`;
-
   if(!hasManual){
     setTimeout(()=>{
       const ctx=document.getElementById('chart-div');if(!ctx||!histYF.length)return;destroyCharts();
@@ -670,8 +709,8 @@ function renderTeknikal(container){
       <div class="kpi"><div class="kpi-lbl">Volume Ratio</div><div class="kpi-val" style="color:${s.vol_ratio>=1.5?'var(--green-t)':s.vol_ratio>=1?'var(--txt)':'var(--txt3)'}">${s.vol_ratio}×</div></div>
       <div class="kpi"><div class="kpi-lbl">MA Status</div><div class="kpi-val" style="font-size:13px;color:${s.above_ma50?'var(--green-t)':'var(--red-t)'}">${s.above_ma50?'Di atas MA50':'Di bawah MA50'}</div></div>
     </div>
-    <div class="sec">Harga vs MA20 & MA50 (30 hari)</div>
-    <div class="chart-wrap"><canvas id="chart-price" class="chart-canvas"></canvas></div>
+    <div class="sec">Candlestick + MA20 & MA50 (30 hari)</div>
+    <div class="candle-wrap"><canvas id="chart-price" class="candle-canvas"></canvas></div>
     <div class="sec">Indikator Detail</div>
     <div style="background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);padding:12px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px">
@@ -683,22 +722,13 @@ function renderTeknikal(container){
       </div>
     </div>`;
   setTimeout(()=>{
-    const ctx=document.getElementById('chart-price');if(!ctx)return;
-    const ph=s.price_history||[];if(!ph.length)return;destroyCharts();
-    const ma20h=s.ma20_history||[],ma50h=s.ma50_history||[];
-    const ohlcData=ph.map(p=>({x:new Date(p.date).getTime(),o:p.open||p.close,h:p.high||p.close,l:p.low||p.close,c:p.close}));
-    const labels=ph.map(p=>p.date);
-    chartPrice=new Chart(ctx,{
-      data:{datasets:[
-        {type:'candlestick',label:'OHLC',data:ohlcData,color:{up:'#22c55e',down:'#ef4444',unchanged:'#8896b0'},borderColor:{up:'#22c55e',down:'#ef4444',unchanged:'#8896b0'}},
-        ...(ma20h.length?[{type:'line',label:'MA20',data:ph.map((p,i)=>({x:new Date(p.date).getTime(),y:ma20h[i]})),borderColor:'#f59e0b',borderWidth:1.5,borderDash:[4,3],pointRadius:0,fill:false,tension:0.3}]:[]),
-        ...(ma50h.length?[{type:'line',label:'MA50',data:ph.map((p,i)=>({x:new Date(p.date).getTime(),y:ma50h[i]})),borderColor:'#8b5cf6',borderWidth:1.5,borderDash:[4,3],pointRadius:0,fill:false,tension:0.3}]:[]),
-      ]},
-      options:{responsive:true,maintainAspectRatio:false,
-        plugins:{legend:{labels:{color:'#8896b0',font:{size:11},boxWidth:12}},tooltip:{callbacks:{label:c=>c.dataset.type==='candlestick'?`O:${c.raw.o} H:${c.raw.h} L:${c.raw.l} C:${c.raw.c}`:`${c.dataset.label}: Rp ${(c.raw.y||0).toLocaleString('id-ID')}`}}},
-        scales:{x:{type:'time',time:{unit:'day',displayFormats:{day:'dd MMM'}},ticks:{color:'#4e5d78',font:{size:10},maxTicksLimit:8},grid:{color:'rgba(255,255,255,.05)'}},
-          y:{ticks:{color:'#4e5d78',font:{size:10},callback:v=>`${(v/1000).toFixed(0)}K`},grid:{color:'rgba(255,255,255,.05)'}}}}});
-  },50)
+    const canvas=document.getElementById('chart-price');
+    if(!canvas)return;
+    const ph=s.price_history||[];
+    const ma20h=s.ma20_history||[];
+    const ma50h=s.ma50_history||[];
+    drawCandlestick(canvas,ph,ma20h,ma50h);
+  },80);
 }
 
 function renderNews(container){
@@ -711,14 +741,14 @@ function renderNews(container){
   const wHTML=warnings.map(w=>`<div style="padding:8px 10px;background:var(--amber-d);border-radius:var(--r-md);font-size:12px;color:var(--amber-t);margin-bottom:6px">⚠ ${w}</div>`).join('');
   const mHTML=matches.length?matches.map(m=>{
     const ip=m.bobot>0,in_=m.bobot<0,c=ip?'var(--green-t)':in_?'var(--red-t)':'var(--txt3)',b=ip?'var(--green-d)':in_?'var(--red-d)':'var(--raised)';
-    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;background:${b};border-radius:var(--r-sm);margin-bottom:4px;font-size:12px">
+    return`<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 10px;background:${b};border-radius:var(--r-sm);margin-bottom:4px;font-size:12px">
       <div><span style="font-weight:500;color:${c}">${m.nama}</span><span style="font-size:10px;color:var(--txt3);margin-left:6px">${m.level}</span></div>
       <span style="font-weight:600;color:${c}">${m.bobot>0?'+':''}${m.bobot}</span></div>`;
   }).join(''):`<div style="font-size:12px;color:var(--txt3)">Tidak ada kategori yang match</div>`;
   const hHTML=items.length?items.map(item=>{
     const im=item.matches||[],hb=im.some(m=>m.sentimen==='bullish'),hbr=im.some(m=>m.sentimen==='bearish');
     const dot=hb?'var(--green)':hbr?'var(--red)':'var(--txt3)';
-    return `<div style="display:flex;gap:8px;padding:8px 0;border-bottom:1px solid var(--border)">
+    return`<div style="display:flex;gap:8px;padding:8px 0;border-bottom:1px solid var(--border)">
       <div style="width:7px;height:7px;border-radius:50%;background:${dot};flex-shrink:0;margin-top:5px"></div>
       <div><div style="font-size:12px;color:var(--txt);line-height:1.4">${item.title||'—'}</div>
       <div style="font-size:10px;color:var(--txt3);margin-top:2px">${item.source||''} · ${item.published||''}</div></div></div>`;
@@ -731,10 +761,8 @@ function renderNews(container){
         <div style="font-size:20px;font-weight:600;font-family:'DM Mono',monospace;color:${oc}">${news.skor_normalized||5}/10</div></div>
     </div>
     <div class="grid2" style="margin-bottom:14px">
-      <div class="kpi"><div class="kpi-lbl">Skor Korporasi</div>
-        <div class="kpi-val" style="color:${(news.skor_korporasi||0)>=0?'var(--green-t)':'var(--red-t)'}">${(news.skor_korporasi||0)>=0?'+':''}${news.skor_korporasi||0}</div></div>
-      <div class="kpi"><div class="kpi-lbl">Skor Makro</div>
-        <div class="kpi-val" style="color:${(news.skor_makro||0)>=0?'var(--green-t)':'var(--red-t)'}">${(news.skor_makro||0)>=0?'+':''}${news.skor_makro||0}</div></div>
+      <div class="kpi"><div class="kpi-lbl">Skor Korporasi</div><div class="kpi-val" style="color:${(news.skor_korporasi||0)>=0?'var(--green-t)':'var(--red-t)'}">${(news.skor_korporasi||0)>=0?'+':''}${news.skor_korporasi||0}</div></div>
+      <div class="kpi"><div class="kpi-lbl">Skor Makro</div><div class="kpi-val" style="color:${(news.skor_makro||0)>=0?'var(--green-t)':'var(--red-t)'}">${(news.skor_makro||0)>=0?'+':''}${news.skor_makro||0}</div></div>
     </div>
     ${wHTML}
     <div class="sec">Kategori Terdeteksi (${matches.length})</div>${mHTML}
@@ -742,7 +770,6 @@ function renderNews(container){
 }
 
 function destroyCharts(){
-  if(chartPrice){chartPrice.destroy();chartPrice=null;}
   if(chartDiv){chartDiv.destroy();chartDiv=null;}
 }
 
