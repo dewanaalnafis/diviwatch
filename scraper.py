@@ -1,9 +1,12 @@
 import yfinance as yf
 import pandas as pd
+import requests
 import json
 from datetime import datetime, date, timedelta
 from ta.momentum import RSIIndicator
 from ta.trend import MACD
+
+yf.set_tz_cache_location("/tmp")
 
 UNIVERSE = [
     'BBCA.JK', 'BBRI.JK', 'BMRI.JK', 'BBNI.JK', 'BBTN.JK',
@@ -29,10 +32,19 @@ def days_until(dt_str):
     except:
         return None
 
-def scrape_stock(ticker_code):
+def make_session():
+    session = requests.Session()
+    session.headers.update({
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+    })
+    return session
+
+def scrape_stock(ticker_code, session):
     print(f'  Scraping {ticker_code}...', end=' ')
     try:
-        ticker = yf.Ticker(ticker_code)
+        ticker = yf.Ticker(ticker_code, session=session)
         kode   = ticker_code.replace('.JK', '')
 
         hist = ticker.history(period='90d')
@@ -110,7 +122,6 @@ def scrape_stock(ticker_code):
         yield_bersih = round(yield_kotor * 0.9, 2)
         div_years    = len(set([d['tanggal'][:4] for d in dps_list]))
 
-        # ── Price history (30 hari terakhir untuk chart) ──────────────────
         price_history = []
         for idx_dt, row in hist.tail(30).iterrows():
             price_history.append({
@@ -119,7 +130,6 @@ def scrape_stock(ticker_code):
                 'vol':   int(row['Volume']),
             })
 
-        # ── MA values harian untuk chart ──────────────────────────────────
         ma20_series = close.rolling(20).mean().tail(30)
         ma50_series = close.rolling(50).mean().tail(30) if len(close) >= 50 else None
 
@@ -176,10 +186,12 @@ def main():
     print('  DiviWatch Scraper — 40 saham IDX')
     print('=' * 55)
 
-    results, errors = [], []
+    session  = make_session()
+    results  = []
+    errors   = []
 
     for ticker_code in UNIVERSE:
-        data = scrape_stock(ticker_code)
+        data = scrape_stock(ticker_code, session)
         if data:
             results.append(data)
         else:
