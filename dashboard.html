@@ -405,7 +405,7 @@ function drawCandlestick(canvasEl,ph,ma20h,ma50h){
     // redraw base
     drawCandlestickBase(canvasEl,ph,ma20h,ma50h,p2);
     const ctx2=canvasEl.getContext('2d');
-    ctx2.scale(p2.dpr,p2.dpr);
+    ctx2.setTransform(dpr,0,0,dpr,0,0);
     const x=p2.toX(idx);
     // crosshair line
     ctx2.strokeStyle='rgba(255,255,255,.15)';ctx2.lineWidth=1;ctx2.setLineDash([3,3]);
@@ -438,7 +438,7 @@ function drawCandlestickBase(canvasEl,ph,ma20h,ma50h,p){
   // fast redraw without re-scaling event listeners
   const ctx=canvasEl.getContext('2d');
   ctx.clearRect(0,0,canvasEl.width,canvasEl.height);
-  ctx.save();ctx.scale(p.dpr,p.dpr);
+  ctx.setTransform(p.dpr,0,0,p.dpr,0,0);
   ctx.fillStyle='#1e2535';ctx.fillRect(0,0,p.W,p.H);
   const gridSteps=4;
   ctx.strokeStyle='rgba(255,255,255,.05)';ctx.lineWidth=1;
@@ -466,7 +466,6 @@ function drawCandlestickBase(canvasEl,ph,ma20h,ma50h,p){
   ctx.setLineDash([]);ctx.fillText('MA50',p.pad.l+74,ly+4);
   ctx.fillStyle='rgba(34,197,94,.85)';ctx.fillRect(p.pad.l+104,ly-4,8,8);ctx.fillStyle='#8896b0';ctx.fillText('Naik',p.pad.l+116,ly+4);
   ctx.fillStyle='rgba(239,68,68,.85)';ctx.fillRect(p.pad.l+140,ly-4,8,8);ctx.fillText('Turun',p.pad.l+152,ly+4);
-  ctx.restore();
 }
 
 async function loadData(){
