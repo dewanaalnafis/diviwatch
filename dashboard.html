@@ -129,7 +129,7 @@ td.c{text-align:center}
 .chart-canvas{width:100% !important;height:180px !important}
 .chart-canvas-sm{width:100% !important;height:140px !important}
 .candle-wrap{background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);padding:12px;margin-bottom:14px;position:relative}
-.candle-canvas{width:100%;height:200px;display:block}
+.candle-canvas{width:100%;height:200px;display:block;cursor:crosshair}
 .div-timeline{display:flex;flex-direction:column;gap:6px}
 .div-event{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:var(--r-md);border:1px solid var(--border);background:var(--raised)}
 .div-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
@@ -141,6 +141,8 @@ td.c{text-align:center}
 #loading{display:flex;align-items:center;justify-content:center;height:100%;flex-direction:column;gap:12px;color:var(--txt3)}
 .spin-icon{width:24px;height:24px;border:2px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite}
 .spark{display:block}
+.ext-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:var(--r-md);font-size:12px;font-weight:500;text-decoration:none;transition:.12s}
+.ext-btn:hover{opacity:.85}
 </style>
 </head>
 <body>
@@ -332,7 +334,7 @@ function scoreCell(val,max,color){
   return`<div class="score-cell"><span class="score-num" style="color:${color}">${val}/${max}</span><div class="score-bar"><div class="score-fill ${fc}" style="width:${pct}%"></div></div></div>`;
 }
 
-function drawCandlestick(canvasEl, ph, ma20h, ma50h){
+function drawCandlestick(canvasEl,ph,ma20h,ma50h){
   if(!canvasEl||!ph||!ph.length)return;
   const dpr=window.devicePixelRatio||1;
   const W=canvasEl.parentElement.clientWidth-24;
@@ -352,70 +354,119 @@ function drawCandlestick(canvasEl, ph, ma20h, ma50h){
   const slotW=cw/n;
   const barW=Math.max(2,Math.floor(slotW*0.6));
   const toX=i=>pad.l+slotW*i+slotW/2;
+
   // background
   ctx.fillStyle='#1e2535';ctx.fillRect(0,0,W,H);
-  // grid lines
+  // grid
   const gridSteps=4;
   ctx.strokeStyle='rgba(255,255,255,.05)';ctx.lineWidth=1;
-  for(let i=0;i<=gridSteps;i++){
-    const y=pad.t+(ch/gridSteps)*i;
-    ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(W-pad.r,y);ctx.stroke();
-  }
+  for(let i=0;i<=gridSteps;i++){const y=pad.t+(ch/gridSteps)*i;ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(W-pad.r,y);ctx.stroke();}
   // y labels
   ctx.fillStyle='#4e5d78';ctx.font=`10px 'DM Mono',monospace`;ctx.textAlign='right';
-  for(let i=0;i<=gridSteps;i++){
-    const v=mx-(range/gridSteps)*i;
-    const y=pad.t+(ch/gridSteps)*i;
-    ctx.fillText((v/1000).toFixed(1)+'K',pad.l-4,y+4);
-  }
+  for(let i=0;i<=gridSteps;i++){const v=mx-(range/gridSteps)*i;const y=pad.t+(ch/gridSteps)*i;ctx.fillText((v/1000).toFixed(1)+'K',pad.l-4,y+4);}
   // x labels
   ctx.textAlign='center';ctx.font=`10px 'DM Sans',sans-serif`;ctx.fillStyle='#4e5d78';
   const xStep=Math.ceil(n/6);
   ph.forEach((p,i)=>{if(i%xStep===0||i===n-1)ctx.fillText(p.date.slice(5),toX(i),H-8);});
   // MA50
-  if(ma50h.length){
-    ctx.strokeStyle='#8b5cf6';ctx.lineWidth=1.5;ctx.setLineDash([4,3]);ctx.beginPath();
-    let started=false;
-    ma50h.forEach((v,i)=>{if(!v)return;const x=toX(i),y=toY(v);if(!started){ctx.moveTo(x,y);started=true;}else ctx.lineTo(x,y);});
-    ctx.stroke();
-  }
+  if(ma50h.length){ctx.strokeStyle='#8b5cf6';ctx.lineWidth=1.5;ctx.setLineDash([4,3]);ctx.beginPath();let s=false;ma50h.forEach((v,i)=>{if(!v)return;const x=toX(i),y=toY(v);if(!s){ctx.moveTo(x,y);s=true;}else ctx.lineTo(x,y);});ctx.stroke();}
   // MA20
-  if(ma20h.length){
-    ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.5;ctx.setLineDash([4,3]);ctx.beginPath();
-    let started=false;
-    ma20h.forEach((v,i)=>{if(!v)return;const x=toX(i),y=toY(v);if(!started){ctx.moveTo(x,y);started=true;}else ctx.lineTo(x,y);});
-    ctx.stroke();
-  }
+  if(ma20h.length){ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.5;ctx.setLineDash([4,3]);ctx.beginPath();let s=false;ma20h.forEach((v,i)=>{if(!v)return;const x=toX(i),y=toY(v);if(!s){ctx.moveTo(x,y);s=true;}else ctx.lineTo(x,y);});ctx.stroke();}
   ctx.setLineDash([]);
   // candles
   ph.forEach((p,i)=>{
-    const x=toX(i);
-    const o=p.open||p.close,c=p.close,hi=p.high||p.close,lo=p.low||p.close;
-    const bull=c>=o;
-    const colUp='#22c55e',colDn='#ef4444';
-    const col=bull?colUp:colDn;
-    // wick
-    ctx.strokeStyle=col;ctx.lineWidth=1;
-    ctx.beginPath();ctx.moveTo(x,toY(hi));ctx.lineTo(x,toY(lo));ctx.stroke();
-    // body
-    const yO=toY(o),yC=toY(c);
-    const bodyTop=Math.min(yO,yC),bodyH=Math.max(1,Math.abs(yO-yC));
-    ctx.fillStyle=bull?'rgba(34,197,94,.85)':'rgba(239,68,68,.85)';
-    ctx.fillRect(x-barW/2,bodyTop,barW,bodyH);
-    ctx.strokeStyle=col;ctx.lineWidth=0.5;
-    ctx.strokeRect(x-barW/2,bodyTop,barW,bodyH);
+    const x=toX(i),o=p.open||p.close,c=p.close,hi=p.high||p.close,lo=p.low||p.close,bull=c>=o;
+    const col=bull?'#22c55e':'#ef4444';
+    ctx.strokeStyle=col;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,toY(hi));ctx.lineTo(x,toY(lo));ctx.stroke();
+    const yO=toY(o),yC=toY(c),bodyTop=Math.min(yO,yC),bodyH=Math.max(1,Math.abs(yO-yC));
+    ctx.fillStyle=bull?'rgba(34,197,94,.85)':'rgba(239,68,68,.85)';ctx.fillRect(x-barW/2,bodyTop,barW,bodyH);
+    ctx.strokeStyle=col;ctx.lineWidth=0.5;ctx.strokeRect(x-barW/2,bodyTop,barW,bodyH);
   });
   // legend
   const ly=pad.t-6;
-  ctx.setLineDash([4,3]);
-  ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(pad.l,ly);ctx.lineTo(pad.l+18,ly);ctx.stroke();
+  ctx.setLineDash([4,3]);ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(pad.l,ly);ctx.lineTo(pad.l+18,ly);ctx.stroke();
   ctx.fillStyle='#8896b0';ctx.font=`10px 'DM Sans',sans-serif`;ctx.textAlign='left';ctx.setLineDash([]);ctx.fillText('MA20',pad.l+22,ly+4);
   ctx.setLineDash([4,3]);ctx.strokeStyle='#8b5cf6';ctx.beginPath();ctx.moveTo(pad.l+52,ly);ctx.lineTo(pad.l+70,ly);ctx.stroke();
   ctx.setLineDash([]);ctx.fillText('MA50',pad.l+74,ly+4);
-  ctx.fillStyle='rgba(34,197,94,.85)';ctx.fillRect(pad.l+104,ly-4,8,8);
-  ctx.fillStyle='#8896b0';ctx.fillText('Naik',pad.l+116,ly+4);
-  ctx.fillStyle='rgba(239,68,68,.85)';ctx.fillRect(pad.l+140,ly-4,8,8);
-  ctx.fillText('Turun',pad.l+152,ly+4);
+  ctx.fillStyle='rgba(34,197,94,.85)';ctx.fillRect(pad.l+104,ly-4,8,8);ctx.fillStyle='#8896b0';ctx.fillText('Naik',pad.l+116,ly+4);
+  ctx.fillStyle='rgba(239,68,68,.85)';ctx.fillRect(pad.l+140,ly-4,8,8);ctx.fillText('Turun',pad.l+152,ly+4);
+
+  // Tooltip on hover
+  canvasEl._ph=ph;canvasEl._ma20h=ma20h;canvasEl._ma50h=ma50h;
+  canvasEl._params={pad,cw,ch,mn,mx,range,n,slotW,barW,toX,toY,W,H,dpr};
+  canvasEl.onmousemove=function(e){
+    const rect=canvasEl.getBoundingClientRect();
+    const scaleX=W/rect.width;
+    const mx2=(e.clientX-rect.left)*scaleX;
+    const p2=canvasEl._params;
+    const idx=Math.max(0,Math.min(p2.n-1,Math.floor((mx2-p2.pad.l)/p2.slotW)));
+    if(mx2<p2.pad.l||mx2>p2.W-p2.pad.r)return;
+    const pp=ph[idx];if(!pp)return;
+    // redraw base
+    drawCandlestickBase(canvasEl,ph,ma20h,ma50h,p2);
+    const ctx2=canvasEl.getContext('2d');
+    ctx2.scale(p2.dpr,p2.dpr);
+    const x=p2.toX(idx);
+    // crosshair line
+    ctx2.strokeStyle='rgba(255,255,255,.15)';ctx2.lineWidth=1;ctx2.setLineDash([3,3]);
+    ctx2.beginPath();ctx2.moveTo(x,p2.pad.t);ctx2.lineTo(x,p2.H-p2.pad.b);ctx2.stroke();
+    ctx2.setLineDash([]);
+    // tooltip box
+    const bull2=(pp.close||0)>=(pp.open||pp.close||0);
+    const bw=120,bh=80;
+    const bx=x+10>p2.W-bw-p2.pad.r?x-bw-10:x+10;
+    const by=p2.pad.t+4;
+    ctx2.fillStyle='rgba(15,17,23,.95)';ctx2.strokeStyle=bull2?'#22c55e':'#ef4444';ctx2.lineWidth=1;
+    ctx2.beginPath();if(ctx2.roundRect)ctx2.roundRect(bx,by,bw,bh,4);else ctx2.rect(bx,by,bw,bh);ctx2.fill();ctx2.stroke();
+    ctx2.fillStyle='#8896b0';ctx2.font=`10px 'DM Mono',monospace`;ctx2.textAlign='left';
+    ctx2.fillText(pp.date,bx+8,by+14);
+    const fmt=v=>v?(v/1000).toFixed(2)+'K':'—';
+    ctx2.fillStyle='#e8edf5';
+    ctx2.fillText(`O: ${fmt(pp.open||pp.close)}`,bx+8,by+30);
+    ctx2.fillText(`H: ${fmt(pp.high||pp.close)}   L: ${fmt(pp.low||pp.close)}`,bx+8,by+44);
+    ctx2.fillText(`C: ${fmt(pp.close)}`,bx+8,by+58);
+    const chg=pp.open?((pp.close-pp.open)/pp.open*100).toFixed(2):0;
+    ctx2.fillStyle=bull2?'#86efac':'#fca5a5';
+    ctx2.fillText(`${chg>0?'+':''}${chg}%`,bx+8,by+72);
+  };
+  canvasEl.onmouseleave=function(){
+    drawCandlestick(canvasEl,ph,ma20h,ma50h);
+  };
+}
+
+function drawCandlestickBase(canvasEl,ph,ma20h,ma50h,p){
+  // fast redraw without re-scaling event listeners
+  const ctx=canvasEl.getContext('2d');
+  ctx.clearRect(0,0,canvasEl.width,canvasEl.height);
+  ctx.save();ctx.scale(p.dpr,p.dpr);
+  ctx.fillStyle='#1e2535';ctx.fillRect(0,0,p.W,p.H);
+  const gridSteps=4;
+  ctx.strokeStyle='rgba(255,255,255,.05)';ctx.lineWidth=1;
+  for(let i=0;i<=gridSteps;i++){const y=p.pad.t+(p.ch/gridSteps)*i;ctx.beginPath();ctx.moveTo(p.pad.l,y);ctx.lineTo(p.W-p.pad.r,y);ctx.stroke();}
+  ctx.fillStyle='#4e5d78';ctx.font=`10px 'DM Mono',monospace`;ctx.textAlign='right';
+  for(let i=0;i<=gridSteps;i++){const v=p.mx-(p.range/gridSteps)*i;const y=p.pad.t+(p.ch/gridSteps)*i;ctx.fillText((v/1000).toFixed(1)+'K',p.pad.l-4,y+4);}
+  ctx.textAlign='center';ctx.font=`10px 'DM Sans',sans-serif`;ctx.fillStyle='#4e5d78';
+  const xStep=Math.ceil(p.n/6);
+  ph.forEach((pp,i)=>{if(i%xStep===0||i===p.n-1)ctx.fillText(pp.date.slice(5),p.toX(i),p.H-8);});
+  if(ma50h.length){ctx.strokeStyle='#8b5cf6';ctx.lineWidth=1.5;ctx.setLineDash([4,3]);ctx.beginPath();let s=false;ma50h.forEach((v,i)=>{if(!v)return;const x=p.toX(i),y=p.toY(v);if(!s){ctx.moveTo(x,y);s=true;}else ctx.lineTo(x,y);});ctx.stroke();}
+  if(ma20h.length){ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.5;ctx.setLineDash([4,3]);ctx.beginPath();let s=false;ma20h.forEach((v,i)=>{if(!v)return;const x=p.toX(i),y=p.toY(v);if(!s){ctx.moveTo(x,y);s=true;}else ctx.lineTo(x,y);});ctx.stroke();}
+  ctx.setLineDash([]);
+  ph.forEach((pp,i)=>{
+    const x=p.toX(i),o=pp.open||pp.close,c=pp.close,hi=pp.high||pp.close,lo=pp.low||pp.close,bull=c>=o;
+    const col=bull?'#22c55e':'#ef4444';
+    ctx.strokeStyle=col;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x,p.toY(hi));ctx.lineTo(x,p.toY(lo));ctx.stroke();
+    const yO=p.toY(o),yC=p.toY(c),bodyTop=Math.min(yO,yC),bodyH=Math.max(1,Math.abs(yO-yC));
+    ctx.fillStyle=bull?'rgba(34,197,94,.85)':'rgba(239,68,68,.85)';ctx.fillRect(x-p.barW/2,bodyTop,p.barW,bodyH);
+    ctx.strokeStyle=col;ctx.lineWidth=0.5;ctx.strokeRect(x-p.barW/2,bodyTop,p.barW,bodyH);
+  });
+  const ly=p.pad.t-6;
+  ctx.setLineDash([4,3]);ctx.strokeStyle='#f59e0b';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(p.pad.l,ly);ctx.lineTo(p.pad.l+18,ly);ctx.stroke();
+  ctx.fillStyle='#8896b0';ctx.font=`10px 'DM Sans',sans-serif`;ctx.textAlign='left';ctx.setLineDash([]);ctx.fillText('MA20',p.pad.l+22,ly+4);
+  ctx.setLineDash([4,3]);ctx.strokeStyle='#8b5cf6';ctx.beginPath();ctx.moveTo(p.pad.l+52,ly);ctx.lineTo(p.pad.l+70,ly);ctx.stroke();
+  ctx.setLineDash([]);ctx.fillText('MA50',p.pad.l+74,ly+4);
+  ctx.fillStyle='rgba(34,197,94,.85)';ctx.fillRect(p.pad.l+104,ly-4,8,8);ctx.fillStyle='#8896b0';ctx.fillText('Naik',p.pad.l+116,ly+4);
+  ctx.fillStyle='rgba(239,68,68,.85)';ctx.fillRect(p.pad.l+140,ly-4,8,8);ctx.fillText('Turun',p.pad.l+152,ly+4);
+  ctx.restore();
 }
 
 async function loadData(){
@@ -474,10 +525,7 @@ function render(){
     if(sort==='skor')return b.total_skor-a.total_skor;
     if(sort==='yield')return b.yield_bersih-a.yield_bersih;
     if(sort==='rsi')return a.rsi-b.rsi;
-    if(sort==='cum'){
-      const da=daysFrom(estimateNextCum(a)),db=daysFrom(estimateNextCum(b));
-      if(da===null&&db===null)return 0;if(da===null)return 1;if(db===null)return -1;return da-db;
-    }
+    if(sort==='cum'){const da=daysFrom(estimateNextCum(a)),db=daysFrom(estimateNextCum(b));if(da===null&&db===null)return 0;if(da===null)return 1;if(db===null)return -1;return da-db;}
     return 0;
   });
   const tbody=document.getElementById('tbody');tbody.innerHTML='';
@@ -485,28 +533,18 @@ function render(){
     const tr=document.createElement('tr');
     if(selStock&&s.kode===selStock.kode)tr.classList.add('sel');
     tr.onclick=()=>selectStock(s.kode);
-    const det=s.skor_detail||{};
-    const sc=calcScores(det);
+    const det=s.skor_detail||{};const sc=calcScores(det);
     const spark=sparkline(s.price_history||[]);
     const flags=(s.flags||[]).map(f=>`<span class="badge badge-flag" style="margin-left:3px">${f.replace(/_/g,' ')}</span>`).join('');
     const no=(s.news||{}).overall||'';
-    const ndot=no==='major_negative'?`<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--red);margin-left:4px;vertical-align:middle"></span>`:
-               no.includes('positive')?`<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-left:4px;vertical-align:middle"></span>`:'';
+    const ndot=no==='major_negative'?`<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--red);margin-left:4px;vertical-align:middle"></span>`:no.includes('positive')?`<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-left:4px;vertical-align:middle"></span>`:'';
     tr.innerHTML=`
-      <td><div style="font-weight:600;font-size:13px">${s.kode}${ndot}</div>
-          <div style="font-size:10px;color:var(--txt3)">${s.sektor||''}</div>${flags}</td>
+      <td><div style="font-weight:600;font-size:13px">${s.kode}${ndot}</div><div style="font-size:10px;color:var(--txt3)">${s.sektor||''}</div>${flags}</td>
       <td>${klasBadge(s.klasifikasi)}</td>
       <td class="r mono" style="font-size:12px;${s.yield_bersih>=4?'color:var(--green-t)':''}">${s.yield_bersih}%</td>
       <td class="r mono" style="font-size:12px;${s.rsi<40||s.rsi>70?'color:var(--amber-t)':''}">${s.rsi}</td>
       <td style="padding:4px 6px">${spark}</td>
-      <td class="r mono" style="font-size:11px">
-        ${(()=>{
-          const nc=estimateNextCum(s),d=daysFrom(nc);
-          if(!nc)return'<span style="color:var(--txt3)">—</span>';
-          const col=d<=30?'var(--red-t)':d<=90?'var(--amber-t)':d<=180?'var(--blue-t)':'var(--txt3)';
-          return`<span style="color:${col}">${nc.toLocaleDateString('id-ID',{day:'numeric',month:'short'})}</span><br><span style="font-size:10px;color:${col}">${d>0?d+'h lagi':Math.abs(d)+'h lalu'}</span>`;
-        })()}
-      </td>
+      <td class="r mono" style="font-size:11px">${(()=>{const nc=estimateNextCum(s),d=daysFrom(nc);if(!nc)return'<span style="color:var(--txt3)">—</span>';const col=d<=30?'var(--red-t)':d<=90?'var(--amber-t)':d<=180?'var(--blue-t)':'var(--txt3)';return`<span style="color:${col}">${nc.toLocaleDateString('id-ID',{day:'numeric',month:'short'})}</span><br><span style="font-size:10px;color:${col}">${d>0?d+'h lagi':Math.abs(d)+'h lalu'}</span>`;})()}</td>
       <td class="c">${scoreCell(sc.f,sc.fMax,'var(--green-t)')}</td>
       <td class="c">${scoreCell(sc.t,sc.tMax,'var(--blue-t)')}</td>
       <td class="c">${scoreCell(sc.n,sc.nMax,'var(--amber-t)')}</td>`;
@@ -529,8 +567,7 @@ function selectStock(kode){
   document.getElementById('d-sektor').textContent=selStock.sektor||'';
   document.getElementById('detail-placeholder').style.display='none';
   const panel=document.getElementById('detail-panel');
-  panel.style.display='flex';panel.style.flexDirection='column';
-  panel.style.overflow='hidden';panel.style.flex='1';
+  panel.style.display='flex';panel.style.flexDirection='column';panel.style.overflow='hidden';panel.style.flex='1';
   ['ringkasan','dividen','teknikal','news'].forEach(t=>document.getElementById('tab-'+t).classList.toggle('on',t==='ringkasan'));
   renderTabContent();
 }
@@ -606,8 +643,7 @@ function renderRingkasan(container){
 
 function renderDividen(container){
   const s=selStock;
-  const histManual=s.div_history_manual||[];
-  const histYF=s.div_history||[];
+  const histManual=s.div_history_manual||[];const histYF=s.div_history||[];
   const nc=estimateNextCum(s),dTN=daysFrom(nc);
   const hasManual=histManual.length>0;
   const dpsShow=hasManual?(s.dps_manual||s.dps||0):(s.dps||0);
@@ -703,6 +739,7 @@ function renderDividen(container){
 
 function renderTeknikal(container){
   const s=selStock;
+  const extIcon=`<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
   container.innerHTML=`
     <div class="grid3">
       <div class="kpi"><div class="kpi-lbl">RSI (14)</div><div class="kpi-val" style="color:${s.rsi>=40&&s.rsi<=65?'var(--green-t)':s.rsi>65?'var(--amber-t)':'var(--red-t)'}">${s.rsi}</div></div>
@@ -711,6 +748,11 @@ function renderTeknikal(container){
     </div>
     <div class="sec">Candlestick + MA20 & MA50 (30 hari)</div>
     <div class="candle-wrap"><canvas id="chart-price" class="candle-canvas"></canvas></div>
+    <div style="display:flex;gap:8px;margin-bottom:14px">
+      <a href="https://www.tradingview.com/chart/?symbol=IDX:${s.kode}" target="_blank" class="ext-btn" style="background:var(--blue-d);color:var(--blue-t);border:1px solid var(--blue)">${extIcon} TradingView</a>
+      <a href="https://stockbit.com/symbol/${s.kode}" target="_blank" class="ext-btn" style="background:var(--raised);color:var(--txt2);border:1px solid var(--border)">${extIcon} Stockbit</a>
+      <a href="https://finance.yahoo.com/quote/${s.kode}.JK" target="_blank" class="ext-btn" style="background:var(--raised);color:var(--txt2);border:1px solid var(--border)">${extIcon} Yahoo Finance</a>
+    </div>
     <div class="sec">Indikator Detail</div>
     <div style="background:var(--raised);border:1px solid var(--border);border-radius:var(--r-md);padding:12px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px">
@@ -724,10 +766,7 @@ function renderTeknikal(container){
   setTimeout(()=>{
     const canvas=document.getElementById('chart-price');
     if(!canvas)return;
-    const ph=s.price_history||[];
-    const ma20h=s.ma20_history||[];
-    const ma50h=s.ma50_history||[];
-    drawCandlestick(canvas,ph,ma20h,ma50h);
+    drawCandlestick(canvas,s.price_history||[],s.ma20_history||[],s.ma50_history||[]);
   },80);
 }
 
