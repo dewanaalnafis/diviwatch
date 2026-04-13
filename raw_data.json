@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02 18:25:16",
+  "generated_at": "2026-04-06 13:28:55",
   "total": 37,
   "errors": [],
   "data": [
@@ -7,27 +7,27 @@
       "kode": "BBCA",
       "nama": "PT Bank Central Asia Tbk",
       "sektor": "Financial Services",
-      "harga": 6575.0,
-      "change_pct": 1.15,
-      "ma20": 6602.0,
-      "ma50": 6978.0,
-      "rsi": 44.0,
-      "macd_line": -142.9,
-      "macd_signal": -162.21,
+      "harga": 6475.0,
+      "change_pct": -1.52,
+      "ma20": 6582.0,
+      "ma50": 6953.0,
+      "rsi": 40.3,
+      "macd_line": -138.25,
+      "macd_signal": -157.27,
       "macd_bullish": true,
-      "vol_ratio": 0.47,
+      "vol_ratio": 0.22,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
-      "bullish_candle": true,
-      "body_ratio": 0.25,
-      "pbv": 2.87,
-      "per": 14.09,
+      "bullish_candle": false,
+      "body_ratio": 0.71,
+      "pbv": 2.83,
+      "per": 13.87,
       "roe": 21.14,
       "der": 0,
       "dps": 281.0,
-      "yield_kotor": 4.27,
-      "yield_bersih": 3.84,
+      "yield_kotor": 4.34,
+      "yield_bersih": 3.91,
       "div_history": [
         {
           "tanggal": "2023-12-04",
@@ -58,16 +58,8 @@
       "div_konsisten": true,
       "ex_date": "2026-03-30",
       "cum_date": "2026-03-29",
-      "days_to_cum": -4,
+      "days_to_cum": -8,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 7161.0,
-          "high": 7209.0,
-          "low": 7090.0,
-          "close": 7138.0,
-          "vol": 213505000
-        },
         {
           "date": "2026-02-12",
           "open": 7138.0,
@@ -299,10 +291,17 @@
           "low": 6500.0,
           "close": 6575.0,
           "vol": 72725400
+        },
+        {
+          "date": "2026-04-06",
+          "open": 6600.0,
+          "high": 6625.0,
+          "low": 6450.0,
+          "close": 6475.0,
+          "vol": 32166200
         }
       ],
       "ma20_history": [
-        7326.0,
         7293.0,
         7251.0,
         7211.0,
@@ -331,10 +330,10 @@
         6672.0,
         6648.0,
         6623.0,
-        6602.0
+        6602.0,
+        6582.0
       ],
       "ma50_history": [
-        7608.0,
         7589.0,
         7570.0,
         7549.0,
@@ -363,37 +362,38 @@
         7051.0,
         7026.0,
         7000.0,
-        6978.0
+        6978.0,
+        6953.0
       ],
       "net_income": 57537286111232,
       "shares_outstanding": 123013033200,
-      "last_updated": "2026-04-02 18:24:58"
+      "last_updated": "2026-04-06 13:28:36"
     },
     {
       "kode": "BBRI",
       "nama": "PT Bank Rakyat Indonesia (Persero) Tbk",
       "sektor": "Financial Services",
-      "harga": 3320.0,
-      "change_pct": -0.9,
-      "ma20": 3558.0,
-      "ma50": 3713.0,
-      "rsi": 28.2,
-      "macd_line": -113.32,
-      "macd_signal": -89.6,
+      "harga": 3330.0,
+      "change_pct": 0.3,
+      "ma20": 3530.0,
+      "ma50": 3705.0,
+      "rsi": 29.4,
+      "macd_line": -114.42,
+      "macd_signal": -94.53,
       "macd_bullish": false,
-      "vol_ratio": 1.19,
+      "vol_ratio": 0.4,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.29,
-      "pbv": 1.54,
-      "per": 8.83,
+      "body_ratio": 0.25,
+      "pbv": 1.55,
+      "per": 8.85,
       "roe": 17.46,
       "der": 0,
       "dps": 137.0,
-      "yield_kotor": 4.13,
-      "yield_bersih": 3.72,
+      "yield_kotor": 4.11,
+      "yield_bersih": 3.7,
       "div_history": [
         {
           "tanggal": "2023-03-24",
@@ -424,16 +424,8 @@
       "div_konsisten": true,
       "ex_date": "2025-12-30",
       "cum_date": "2025-12-29",
-      "days_to_cum": -94,
+      "days_to_cum": -98,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 3790.0,
-          "high": 3800.0,
-          "low": 3740.0,
-          "close": 3800.0,
-          "vol": 147378100
-        },
         {
           "date": "2026-02-12",
           "open": 3780.0,
@@ -665,10 +657,17 @@
           "low": 3320.0,
           "close": 3320.0,
           "vol": 242569200
+        },
+        {
+          "date": "2026-04-06",
+          "open": 3340.0,
+          "high": 3360.0,
+          "low": 3320.0,
+          "close": 3330.0,
+          "vol": 77828600
         }
       ],
       "ma20_history": [
-        3802.0,
         3806.0,
         3804.0,
         3803.0,
@@ -697,10 +696,10 @@
         3648.0,
         3621.0,
         3590.0,
-        3558.0
+        3558.0,
+        3530.0
       ],
       "ma50_history": [
-        3685.0,
         3689.0,
         3693.0,
         3699.0,
@@ -729,36 +728,37 @@
         3734.0,
         3727.0,
         3720.0,
-        3713.0
+        3713.0,
+        3705.0
       ],
       "net_income": 56652384436224,
       "shares_outstanding": 151559001603,
-      "last_updated": "2026-04-02 18:24:59"
+      "last_updated": "2026-04-06 13:28:37"
     },
     {
       "kode": "BMRI",
       "nama": "PT Bank Mandiri (Persero) Tbk",
       "sektor": "Financial Services",
-      "harga": 4650.0,
-      "change_pct": -1.48,
-      "ma20": 4882.0,
-      "ma50": 4955.0,
-      "rsi": 39.7,
-      "macd_line": -89.56,
-      "macd_signal": -64.99,
+      "harga": 4620.0,
+      "change_pct": -0.65,
+      "ma20": 4850.0,
+      "ma50": 4951.0,
+      "rsi": 38.6,
+      "macd_line": -96.25,
+      "macd_signal": -71.17,
       "macd_bullish": false,
-      "vol_ratio": 0.66,
+      "vol_ratio": 0.24,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.78,
-      "pbv": 1.48,
-      "per": 7.71,
+      "body_ratio": 0.3,
+      "pbv": 1.47,
+      "per": 7.66,
       "roe": 19.14,
       "der": 0,
       "dps": 100.0,
-      "yield_kotor": 2.15,
+      "yield_kotor": 2.16,
       "yield_bersih": 1.94,
       "div_history": [
         {
@@ -790,16 +790,8 @@
       "div_konsisten": true,
       "ex_date": "2026-01-06",
       "cum_date": "2026-01-05",
-      "days_to_cum": -87,
+      "days_to_cum": -91,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 5075.0,
-          "high": 5100.0,
-          "low": 4990.0,
-          "close": 5025.0,
-          "vol": 201135900
-        },
         {
           "date": "2026-02-12",
           "open": 5025.0,
@@ -1031,10 +1023,17 @@
           "low": 4640.0,
           "close": 4650.0,
           "vol": 109496300
+        },
+        {
+          "date": "2026-04-06",
+          "open": 4650.0,
+          "high": 4700.0,
+          "low": 4600.0,
+          "close": 4620.0,
+          "vol": 37039500
         }
       ],
       "ma20_history": [
-        4920.0,
         4932.0,
         4936.0,
         4950.0,
@@ -1063,10 +1062,10 @@
         4978.0,
         4945.0,
         4916.0,
-        4882.0
+        4882.0,
+        4850.0
       ],
       "ma50_history": [
-        4888.0,
         4894.0,
         4901.0,
         4911.0,
@@ -1095,37 +1094,38 @@
         4960.0,
         4958.0,
         4958.0,
-        4955.0
+        4955.0,
+        4951.0
       ],
       "net_income": 56293951799296,
       "shares_outstanding": 93333333331,
-      "last_updated": "2026-04-02 18:24:59"
+      "last_updated": "2026-04-06 13:28:38"
     },
     {
       "kode": "BBNI",
       "nama": "PT Bank Negara Indonesia (Persero) Tbk",
       "sektor": "Financial Services",
-      "harga": 3700.0,
-      "change_pct": -0.54,
-      "ma20": 3915.0,
-      "ma50": 4055.0,
-      "rsi": 29.7,
-      "macd_line": -74.92,
-      "macd_signal": -50.41,
+      "harga": 3640.0,
+      "change_pct": -1.62,
+      "ma20": 3895.0,
+      "ma50": 4048.0,
+      "rsi": 27.0,
+      "macd_line": -87.19,
+      "macd_signal": -57.72,
       "macd_bullish": false,
-      "vol_ratio": 0.58,
+      "vol_ratio": 0.29,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.5,
-      "pbv": 0.8,
-      "per": 6.89,
+      "body_ratio": 0.75,
+      "pbv": 0.79,
+      "per": 6.78,
       "roe": 11.73,
       "der": 0,
       "dps": 349.0,
-      "yield_kotor": 9.43,
-      "yield_bersih": 8.49,
+      "yield_kotor": 9.59,
+      "yield_bersih": 8.63,
       "div_history": [
         {
           "tanggal": "2021-04-08",
@@ -1156,16 +1156,8 @@
       "div_konsisten": true,
       "ex_date": "2026-03-25",
       "cum_date": "2026-03-24",
-      "days_to_cum": -9,
+      "days_to_cum": -13,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 4142.0,
-          "high": 4151.0,
-          "low": 4105.0,
-          "close": 4123.0,
-          "vol": 54082900
-        },
         {
           "date": "2026-02-12",
           "open": 4123.0,
@@ -1397,10 +1389,17 @@
           "low": 3690.0,
           "close": 3700.0,
           "vol": 53750100
+        },
+        {
+          "date": "2026-04-06",
+          "open": 3700.0,
+          "high": 3720.0,
+          "low": 3640.0,
+          "close": 3640.0,
+          "vol": 26555100
         }
       ],
       "ma20_history": [
-        4169.0,
         4175.0,
         4173.0,
         4167.0,
@@ -1429,10 +1428,10 @@
         3973.0,
         3956.0,
         3935.0,
-        3915.0
+        3915.0,
+        3895.0
       ],
       "ma50_history": [
-        4038.0,
         4041.0,
         4045.0,
         4049.0,
@@ -1461,37 +1460,38 @@
         4064.0,
         4062.0,
         4059.0,
-        4055.0
+        4055.0,
+        4048.0
       ],
       "net_income": 20040703279104,
       "shares_outstanding": 578683733,
-      "last_updated": "2026-04-02 18:25:00"
+      "last_updated": "2026-04-06 13:28:38"
     },
     {
       "kode": "BBTN",
       "nama": "PT Bank Tabungan Negara (Persero) Tbk",
       "sektor": "Financial Services",
-      "harga": 1265.0,
-      "change_pct": -0.78,
-      "ma20": 1288.0,
-      "ma50": 1284.0,
-      "rsi": 46.2,
-      "macd_line": -10.04,
-      "macd_signal": -5.83,
+      "harga": 1250.0,
+      "change_pct": -1.19,
+      "ma20": 1280.0,
+      "ma50": 1286.0,
+      "rsi": 43.7,
+      "macd_line": -11.3,
+      "macd_signal": -6.91,
       "macd_bullish": false,
-      "vol_ratio": 0.32,
+      "vol_ratio": 0.28,
       "above_ma20": false,
       "above_ma50": false,
-      "golden_cross": true,
+      "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.4,
-      "pbv": 0.49,
-      "per": 5.5,
+      "body_ratio": 0.75,
+      "pbv": 0.48,
+      "per": 5.44,
       "roe": 10.18,
       "der": 0,
       "dps": 54.0,
-      "yield_kotor": 4.27,
-      "yield_bersih": 3.84,
+      "yield_kotor": 4.32,
+      "yield_bersih": 3.89,
       "div_history": [
         {
           "tanggal": "2019-05-28",
@@ -1522,16 +1522,8 @@
       "div_konsisten": true,
       "ex_date": "2025-04-15",
       "cum_date": "2025-04-14",
-      "days_to_cum": -353,
+      "days_to_cum": -357,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 1310.0,
-          "high": 1345.0,
-          "low": 1310.0,
-          "close": 1345.0,
-          "vol": 89168600
-        },
         {
           "date": "2026-02-12",
           "open": 1345.0,
@@ -1763,10 +1755,17 @@
           "low": 1260.0,
           "close": 1265.0,
           "vol": 7593900
+        },
+        {
+          "date": "2026-04-06",
+          "open": 1265.0,
+          "high": 1270.0,
+          "low": 1250.0,
+          "close": 1250.0,
+          "vol": 6540700
         }
       ],
       "ma20_history": [
-        1245.0,
         1253.0,
         1260.0,
         1268.0,
@@ -1795,10 +1794,10 @@
         1307.0,
         1300.0,
         1294.0,
-        1288.0
+        1288.0,
+        1280.0
       ],
       "ma50_history": [
-        1193.0,
         1196.0,
         1200.0,
         1204.0,
@@ -1827,37 +1826,38 @@
         1278.0,
         1280.0,
         1282.0,
-        1284.0
+        1284.0,
+        1286.0
       ],
       "net_income": 3501154107392,
       "shares_outstanding": 14034444412,
-      "last_updated": "2026-04-02 18:25:00"
+      "last_updated": "2026-04-06 13:28:39"
     },
     {
       "kode": "BNGA",
       "nama": "PT Bank CIMB Niaga Tbk",
       "sektor": "Financial Services",
-      "harga": 1805.0,
-      "change_pct": 0.84,
-      "ma20": 1779.0,
+      "harga": 1800.0,
+      "change_pct": -0.28,
+      "ma20": 1776.0,
       "ma50": 1824.0,
-      "rsi": 52.2,
-      "macd_line": -11.24,
-      "macd_signal": -15.68,
+      "rsi": 51.0,
+      "macd_line": -9.13,
+      "macd_signal": -14.37,
       "macd_bullish": true,
-      "vol_ratio": 0.52,
+      "vol_ratio": 0.18,
       "above_ma20": true,
       "above_ma50": false,
       "golden_cross": false,
-      "bullish_candle": true,
-      "body_ratio": 0.5,
+      "bullish_candle": false,
+      "body_ratio": 0.33,
       "pbv": 0.78,
-      "per": 6.6,
+      "per": 6.58,
       "roe": 12.46,
       "der": 0,
       "dps": 156.0,
-      "yield_kotor": 8.64,
-      "yield_bersih": 7.78,
+      "yield_kotor": 8.67,
+      "yield_bersih": 7.8,
       "div_history": [
         {
           "tanggal": "2020-04-21",
@@ -1888,16 +1888,8 @@
       "div_konsisten": true,
       "ex_date": "2025-04-24",
       "cum_date": "2025-04-23",
-      "days_to_cum": -344,
+      "days_to_cum": -348,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 1890.0,
-          "high": 1895.0,
-          "low": 1875.0,
-          "close": 1885.0,
-          "vol": 4089700
-        },
         {
           "date": "2026-02-12",
           "open": 1885.0,
@@ -2129,10 +2121,17 @@
           "low": 1780.0,
           "close": 1805.0,
           "vol": 3061100
+        },
+        {
+          "date": "2026-04-06",
+          "open": 1805.0,
+          "high": 1810.0,
+          "low": 1795.0,
+          "close": 1800.0,
+          "vol": 1038300
         }
       ],
       "ma20_history": [
-        1846.0,
         1850.0,
         1853.0,
         1856.0,
@@ -2161,10 +2160,10 @@
         1792.0,
         1787.0,
         1782.0,
-        1779.0
+        1779.0,
+        1776.0
       ],
       "ma50_history": [
-        1800.0,
         1802.0,
         1804.0,
         1806.0,
@@ -2193,37 +2192,38 @@
         1824.0,
         1824.0,
         1823.0,
+        1824.0,
         1824.0
       ],
       "net_income": 6876536766464,
       "shares_outstanding": 0,
-      "last_updated": "2026-04-02 18:25:01"
+      "last_updated": "2026-04-06 13:28:39"
     },
     {
       "kode": "BTPS",
       "nama": "PT Bank BTPN Syariah Tbk",
       "sektor": "Financial Services",
-      "harga": 1065.0,
-      "change_pct": -2.29,
-      "ma20": 1072.0,
-      "ma50": 1159.0,
-      "rsi": 43.5,
-      "macd_line": -28.94,
-      "macd_signal": -35.15,
+      "harga": 1060.0,
+      "change_pct": -0.47,
+      "ma20": 1067.0,
+      "ma50": 1156.0,
+      "rsi": 42.7,
+      "macd_line": -27.49,
+      "macd_signal": -33.62,
       "macd_bullish": true,
-      "vol_ratio": 1.26,
+      "vol_ratio": 0.15,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.56,
+      "body_ratio": 0.33,
       "pbv": 0.82,
-      "per": 6.83,
+      "per": 6.79,
       "roe": 12.46,
       "der": 0,
       "dps": 40.0,
-      "yield_kotor": 3.76,
-      "yield_bersih": 3.38,
+      "yield_kotor": 3.77,
+      "yield_bersih": 3.39,
       "div_history": [
         {
           "tanggal": "2021-04-30",
@@ -2254,16 +2254,8 @@
       "div_konsisten": true,
       "ex_date": "2025-11-28",
       "cum_date": "2025-11-27",
-      "days_to_cum": -126,
+      "days_to_cum": -130,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 1245.0,
-          "high": 1250.0,
-          "low": 1210.0,
-          "close": 1225.0,
-          "vol": 13883800
-        },
         {
           "date": "2026-02-12",
           "open": 1230.0,
@@ -2495,10 +2487,17 @@
           "low": 1050.0,
           "close": 1065.0,
           "vol": 8880700
+        },
+        {
+          "date": "2026-04-06",
+          "open": 1065.0,
+          "high": 1070.0,
+          "low": 1055.0,
+          "close": 1060.0,
+          "vol": 996100
         }
       ],
       "ma20_history": [
-        1230.0,
         1233.0,
         1233.0,
         1232.0,
@@ -2527,10 +2526,10 @@
         1086.0,
         1079.0,
         1075.0,
-        1072.0
+        1072.0,
+        1067.0
       ],
       "ma50_history": [
-        1238.0,
         1236.0,
         1234.0,
         1230.0,
@@ -2559,37 +2558,38 @@
         1170.0,
         1166.0,
         1163.0,
-        1159.0
+        1159.0,
+        1156.0
       ],
       "net_income": 1201230970880,
       "shares_outstanding": 7703700000,
-      "last_updated": "2026-04-02 18:25:01"
+      "last_updated": "2026-04-06 13:28:40"
     },
     {
       "kode": "BJTM",
       "nama": "PT Bank Pembangunan Daerah Jawa Timur Tbk",
       "sektor": "Financial Services",
-      "harga": 570.0,
-      "change_pct": 0.0,
-      "ma20": 567.0,
+      "harga": 575.0,
+      "change_pct": 0.88,
+      "ma20": 566.0,
       "ma50": 570.0,
-      "rsi": 51.8,
-      "macd_line": -1.53,
-      "macd_signal": -2.0,
+      "rsi": 55.1,
+      "macd_line": -0.7,
+      "macd_signal": -1.74,
       "macd_bullish": true,
-      "vol_ratio": 0.61,
+      "vol_ratio": 0.27,
       "above_ma20": true,
-      "above_ma50": false,
+      "above_ma50": true,
       "golden_cross": false,
-      "bullish_candle": false,
-      "body_ratio": 0.0,
+      "bullish_candle": true,
+      "body_ratio": 0.5,
       "pbv": 0.63,
-      "per": 6.06,
+      "per": 5.59,
       "roe": 8.72,
       "der": 0,
       "dps": 55.0,
-      "yield_kotor": 9.65,
-      "yield_bersih": 8.69,
+      "yield_kotor": 9.57,
+      "yield_bersih": 8.61,
       "div_history": [
         {
           "tanggal": "2020-05-06",
@@ -2620,16 +2620,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-04",
       "cum_date": "2025-06-03",
-      "days_to_cum": -303,
+      "days_to_cum": -307,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 570.0,
-          "high": 580.0,
-          "low": 570.0,
-          "close": 580.0,
-          "vol": 16717100
-        },
         {
           "date": "2026-02-12",
           "open": 580.0,
@@ -2861,10 +2853,17 @@
           "low": 565.0,
           "close": 570.0,
           "vol": 6010500
+        },
+        {
+          "date": "2026-04-06",
+          "open": 570.0,
+          "high": 575.0,
+          "low": 565.0,
+          "close": 575.0,
+          "vol": 2575600
         }
       ],
       "ma20_history": [
-        566.0,
         567.0,
         567.0,
         567.0,
@@ -2893,10 +2892,10 @@
         570.0,
         569.0,
         568.0,
-        567.0
+        567.0,
+        566.0
       ],
       "ma50_history": [
-        553.0,
         554.0,
         554.0,
         555.0,
@@ -2925,30 +2924,31 @@
         569.0,
         569.0,
         570.0,
+        570.0,
         570.0
       ],
       "net_income": 1545518055424,
       "shares_outstanding": 3081350100,
-      "last_updated": "2026-04-02 18:25:02"
+      "last_updated": "2026-04-06 13:28:40"
     },
     {
       "kode": "BFIN",
       "nama": "PT BFI Finance Indonesia Tbk",
       "sektor": "Financial Services",
       "harga": 685.0,
-      "change_pct": -2.14,
-      "ma20": 734.0,
+      "change_pct": 0.0,
+      "ma20": 728.0,
       "ma50": 726.0,
       "rsi": 37.0,
-      "macd_line": -9.94,
-      "macd_signal": -3.46,
+      "macd_line": -11.55,
+      "macd_signal": -5.08,
       "macd_bullish": false,
-      "vol_ratio": 0.49,
+      "vol_ratio": 0.18,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": true,
       "bullish_candle": false,
-      "body_ratio": 1.0,
+      "body_ratio": 0.5,
       "pbv": 0.95,
       "per": 6.65,
       "roe": 15.18,
@@ -2986,16 +2986,8 @@
       "div_konsisten": true,
       "ex_date": "2025-12-11",
       "cum_date": "2025-12-10",
-      "days_to_cum": -113,
+      "days_to_cum": -117,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 700.0,
-          "high": 715.0,
-          "low": 700.0,
-          "close": 710.0,
-          "vol": 24083300
-        },
         {
           "date": "2026-02-12",
           "open": 710.0,
@@ -3227,10 +3219,17 @@
           "low": 685.0,
           "close": 685.0,
           "vol": 11224200
+        },
+        {
+          "date": "2026-04-06",
+          "open": 690.0,
+          "high": 695.0,
+          "low": 685.0,
+          "close": 685.0,
+          "vol": 3699100
         }
       ],
       "ma20_history": [
-        712.0,
         712.0,
         712.0,
         711.0,
@@ -3259,10 +3258,10 @@
         744.0,
         742.0,
         738.0,
-        734.0
+        734.0,
+        728.0
       ],
       "ma50_history": [
-        713.0,
         713.0,
         713.0,
         713.0,
@@ -3291,37 +3290,38 @@
         727.0,
         727.0,
         727.0,
+        726.0,
         726.0
       ],
       "net_income": 1581840990208,
       "shares_outstanding": 14849383620,
-      "last_updated": "2026-04-02 18:25:02"
+      "last_updated": "2026-04-06 13:28:41"
     },
     {
       "kode": "ADRO",
       "nama": "PT Alamtri Resources Indonesia Tbk",
       "sektor": "Energy",
-      "harga": 2500.0,
+      "harga": 2510.0,
       "change_pct": 0.4,
-      "ma20": 2467.0,
-      "ma50": 2332.0,
-      "rsi": 55.3,
-      "macd_line": 73.86,
-      "macd_signal": 78.73,
+      "ma20": 2476.0,
+      "ma50": 2336.0,
+      "rsi": 56.0,
+      "macd_line": 68.67,
+      "macd_signal": 76.76,
       "macd_bullish": false,
-      "vol_ratio": 1.03,
+      "vol_ratio": 0.27,
       "above_ma20": true,
       "above_ma50": true,
       "golden_cross": true,
       "bullish_candle": true,
-      "body_ratio": 0.08,
-      "pbv": 16025.64,
-      "per": 9.64,
+      "body_ratio": 0.14,
+      "pbv": 16089.74,
+      "per": 9.7,
       "roe": 9.44,
       "der": 16.41,
       "dps": 145.0,
-      "yield_kotor": 5.8,
-      "yield_bersih": 5.22,
+      "yield_kotor": 5.78,
+      "yield_bersih": 5.2,
       "div_history": [
         {
           "tanggal": "2023-12-29",
@@ -3352,16 +3352,8 @@
       "div_konsisten": true,
       "ex_date": "2025-12-30",
       "cum_date": "2025-12-29",
-      "days_to_cum": -94,
+      "days_to_cum": -98,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 2170.0,
-          "high": 2230.0,
-          "low": 2160.0,
-          "close": 2220.0,
-          "vol": 118910500
-        },
         {
           "date": "2026-02-12",
           "open": 2230.0,
@@ -3593,10 +3585,17 @@
           "low": 2480.0,
           "close": 2500.0,
           "vol": 117721300
+        },
+        {
+          "date": "2026-04-06",
+          "open": 2500.0,
+          "high": 2570.0,
+          "low": 2500.0,
+          "close": 2510.0,
+          "vol": 29911300
         }
       ],
       "ma20_history": [
-        2218.0,
         2218.0,
         2218.0,
         2222.0,
@@ -3625,10 +3624,10 @@
         2438.0,
         2452.0,
         2458.0,
-        2467.0
+        2467.0,
+        2476.0
       ],
       "ma50_history": [
-        1963.0,
         1974.0,
         1985.0,
         1996.0,
@@ -3657,37 +3656,38 @@
         2306.0,
         2317.0,
         2325.0,
-        2332.0
+        2332.0,
+        2336.0
       ],
       "net_income": 447694016,
       "shares_outstanding": 28800494200,
-      "last_updated": "2026-04-02 18:25:03"
+      "last_updated": "2026-04-06 13:28:41"
     },
     {
       "kode": "PTBA",
       "nama": "PT Bukit Asam (Persero) Tbk",
       "sektor": "Energy",
-      "harga": 2910.0,
-      "change_pct": -2.35,
-      "ma20": 2956.0,
-      "ma50": 2707.0,
-      "rsi": 51.3,
-      "macd_line": 105.7,
-      "macd_signal": 118.27,
+      "harga": 2990.0,
+      "change_pct": 2.75,
+      "ma20": 2975.0,
+      "ma50": 2719.0,
+      "rsi": 55.8,
+      "macd_line": 96.86,
+      "macd_signal": 114.01,
       "macd_bullish": false,
-      "vol_ratio": 0.74,
-      "above_ma20": false,
+      "vol_ratio": 0.25,
+      "above_ma20": true,
       "above_ma50": true,
       "golden_cross": true,
-      "bullish_candle": false,
+      "bullish_candle": true,
       "body_ratio": 0.75,
-      "pbv": 1.62,
-      "per": 11.46,
-      "roe": 15.96,
-      "der": 19.58,
+      "pbv": 1.67,
+      "per": 11.77,
+      "roe": 13.08,
+      "der": 17.05,
       "dps": 332.0,
-      "yield_kotor": 11.41,
-      "yield_bersih": 10.27,
+      "yield_kotor": 11.1,
+      "yield_bersih": 9.99,
       "div_history": [
         {
           "tanggal": "2020-06-19",
@@ -3718,16 +3718,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-23",
       "cum_date": "2025-06-22",
-      "days_to_cum": -284,
+      "days_to_cum": -288,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 2580.0,
-          "high": 2590.0,
-          "low": 2550.0,
-          "close": 2550.0,
-          "vol": 17360100
-        },
         {
           "date": "2026-02-12",
           "open": 2550.0,
@@ -3959,10 +3951,17 @@
           "low": 2910.0,
           "close": 2910.0,
           "vol": 41964800
+        },
+        {
+          "date": "2026-04-06",
+          "open": 2930.0,
+          "high": 3010.0,
+          "low": 2930.0,
+          "close": 2990.0,
+          "vol": 14166300
         }
       ],
       "ma20_history": [
-        2520.0,
         2526.0,
         2530.0,
         2538.0,
@@ -3991,10 +3990,10 @@
         2894.0,
         2923.0,
         2940.0,
-        2956.0
+        2956.0,
+        2975.0
       ],
       "ma50_history": [
-        2395.0,
         2400.0,
         2405.0,
         2412.0,
@@ -4023,32 +4022,33 @@
         2669.0,
         2685.0,
         2697.0,
-        2707.0
+        2707.0,
+        2719.0
       ],
-      "net_income": 3267406069760,
+      "net_income": 2929957011456,
       "shares_outstanding": 11514357245,
-      "last_updated": "2026-04-02 18:25:03"
+      "last_updated": "2026-04-06 13:28:42"
     },
     {
       "kode": "ITMG",
       "nama": "PT Indo Tambangraya Megah Tbk",
       "sektor": "Energy",
-      "harga": 27325.0,
-      "change_pct": -1.62,
-      "ma20": 27318.0,
-      "ma50": 24286.0,
-      "rsi": 53.8,
-      "macd_line": 1393.08,
-      "macd_signal": 1528.59,
+      "harga": 27350.0,
+      "change_pct": 0.09,
+      "ma20": 27546.0,
+      "ma50": 24394.0,
+      "rsi": 54.0,
+      "macd_line": 1229.43,
+      "macd_signal": 1468.4,
       "macd_bullish": false,
-      "vol_ratio": 1.14,
-      "above_ma20": true,
+      "vol_ratio": 0.16,
+      "above_ma20": false,
       "above_ma50": true,
       "golden_cross": true,
       "bullish_candle": false,
-      "body_ratio": 0.15,
-      "pbv": 16178.21,
-      "per": 9.45,
+      "body_ratio": 0.85,
+      "pbv": 16193.01,
+      "per": 9.49,
       "roe": 10.13,
       "der": 4.65,
       "dps": 738.0,
@@ -4084,16 +4084,8 @@
       "div_konsisten": true,
       "ex_date": "2025-11-13",
       "cum_date": "2025-11-12",
-      "days_to_cum": -141,
+      "days_to_cum": -145,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 22100.0,
-          "high": 22300.0,
-          "low": 22000.0,
-          "close": 22250.0,
-          "vol": 1043600
-        },
         {
           "date": "2026-02-12",
           "open": 22250.0,
@@ -4325,10 +4317,17 @@
           "low": 27050.0,
           "close": 27325.0,
           "vol": 7979300
+        },
+        {
+          "date": "2026-04-06",
+          "open": 27900.0,
+          "high": 27900.0,
+          "low": 27250.0,
+          "close": 27350.0,
+          "vol": 1137800
         }
       ],
       "ma20_history": [
-        22201.0,
         22195.0,
         22191.0,
         22192.0,
@@ -4357,10 +4356,10 @@
         26460.0,
         26814.0,
         27074.0,
-        27318.0
+        27318.0,
+        27546.0
       ],
       "ma50_history": [
-        21984.0,
         21984.0,
         21988.0,
         21996.0,
@@ -4389,32 +4388,33 @@
         23906.0,
         24060.0,
         24177.0,
-        24286.0
+        24286.0,
+        24394.0
       ],
       "net_income": 190940000,
       "shares_outstanding": 1123887100,
-      "last_updated": "2026-04-02 18:25:04"
+      "last_updated": "2026-04-06 13:28:43"
     },
     {
       "kode": "MEDC",
       "nama": "PT Medco Energi Internasional Tbk",
       "sektor": "Energy",
       "harga": 1605.0,
-      "change_pct": -4.75,
-      "ma20": 1778.0,
-      "ma50": 1642.0,
+      "change_pct": 0.0,
+      "ma20": 1772.0,
+      "ma50": 1644.0,
       "rsi": 42.9,
-      "macd_line": 26.66,
-      "macd_signal": 47.58,
+      "macd_line": 12.76,
+      "macd_signal": 40.61,
       "macd_bullish": false,
-      "vol_ratio": 0.67,
+      "vol_ratio": 0.29,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": true,
       "bullish_candle": false,
-      "body_ratio": 0.81,
+      "body_ratio": 0.33,
       "pbv": 18238.64,
-      "per": 13.34,
+      "per": 23.25,
       "roe": 8.12,
       "der": 164.61,
       "dps": 28.0,
@@ -4450,16 +4450,8 @@
       "div_konsisten": true,
       "ex_date": "2025-11-11",
       "cum_date": "2025-11-10",
-      "days_to_cum": -143,
+      "days_to_cum": -147,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 1550.0,
-          "high": 1585.0,
-          "low": 1515.0,
-          "close": 1580.0,
-          "vol": 121328900
-        },
         {
           "date": "2026-02-12",
           "open": 1580.0,
@@ -4691,10 +4683,17 @@
           "low": 1605.0,
           "close": 1605.0,
           "vol": 174610000
+        },
+        {
+          "date": "2026-04-06",
+          "open": 1625.0,
+          "high": 1640.0,
+          "low": 1580.0,
+          "close": 1605.0,
+          "vol": 74167400
         }
       ],
       "ma20_history": [
-        1497.0,
         1502.0,
         1508.0,
         1518.0,
@@ -4723,10 +4722,10 @@
         1776.0,
         1784.0,
         1781.0,
-        1778.0
+        1778.0,
+        1772.0
       ],
       "ma50_history": [
-        1408.0,
         1413.0,
         1418.0,
         1425.0,
@@ -4755,11 +4754,12 @@
         1628.0,
         1636.0,
         1640.0,
-        1642.0
+        1642.0,
+        1644.0
       ],
       "net_income": 176621744,
       "shares_outstanding": 24683125994,
-      "last_updated": "2026-04-02 18:25:04"
+      "last_updated": "2026-04-06 13:28:43"
     },
     {
       "kode": "ELSA",
@@ -4767,18 +4767,18 @@
       "sektor": "Energy",
       "harga": 710.0,
       "change_pct": 0.0,
-      "ma20": 785.0,
-      "ma50": 727.0,
+      "ma20": 778.0,
+      "ma50": 731.0,
       "rsi": 43.0,
-      "macd_line": -11.35,
-      "macd_signal": 0.5,
+      "macd_line": -12.76,
+      "macd_signal": -2.15,
       "macd_bullish": false,
-      "vol_ratio": 0.23,
+      "vol_ratio": 0.09,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": true,
       "bullish_candle": false,
-      "body_ratio": 0.4,
+      "body_ratio": 0.33,
       "pbv": 0.98,
       "per": 7.21,
       "roe": 14.06,
@@ -4816,16 +4816,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-04",
       "cum_date": "2025-06-03",
-      "days_to_cum": -303,
+      "days_to_cum": -307,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 775.0,
-          "high": 785.0,
-          "low": 745.0,
-          "close": 770.0,
-          "vol": 85036500
-        },
         {
           "date": "2026-02-12",
           "open": 770.0,
@@ -5057,10 +5049,17 @@
           "low": 710.0,
           "close": 710.0,
           "vol": 44374600
+        },
+        {
+          "date": "2026-04-06",
+          "open": 715.0,
+          "high": 725.0,
+          "low": 710.0,
+          "close": 710.0,
+          "vol": 16555600
         }
       ],
       "ma20_history": [
-        648.0,
         658.0,
         668.0,
         682.0,
@@ -5089,10 +5088,10 @@
         800.0,
         798.0,
         792.0,
-        785.0
+        785.0,
+        778.0
       ],
       "ma50_history": [
-        562.0,
         566.0,
         571.0,
         577.0,
@@ -5121,37 +5120,38 @@
         715.0,
         720.0,
         723.0,
-        727.0
+        727.0,
+        731.0
       ],
       "net_income": 718406025216,
       "shares_outstanding": 7298500000,
-      "last_updated": "2026-04-02 18:25:04"
+      "last_updated": "2026-04-06 13:28:44"
     },
     {
       "kode": "PGAS",
       "nama": "PT Perusahaan Gas Negara Tbk",
       "sektor": "Utilities",
-      "harga": 1795.0,
-      "change_pct": -2.45,
-      "ma20": 2063.0,
-      "ma50": 2126.0,
-      "rsi": 33.3,
-      "macd_line": -98.01,
-      "macd_signal": -70.05,
+      "harga": 1775.0,
+      "change_pct": -1.11,
+      "ma20": 2032.0,
+      "ma50": 2122.0,
+      "rsi": 32.4,
+      "macd_line": -102.55,
+      "macd_signal": -76.51,
       "macd_bullish": false,
-      "vol_ratio": 0.7,
+      "vol_ratio": 0.28,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.92,
-      "pbv": 15884.96,
-      "per": 11.87,
+      "body_ratio": 0.5,
+      "pbv": 15707.97,
+      "per": 11.76,
       "roe": 9.52,
       "der": 30.46,
       "dps": 182.0,
-      "yield_kotor": 10.14,
-      "yield_bersih": 9.13,
+      "yield_kotor": 10.25,
+      "yield_bersih": 9.22,
       "div_history": [
         {
           "tanggal": "2019-05-08",
@@ -5182,16 +5182,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-12",
       "cum_date": "2025-06-11",
-      "days_to_cum": -295,
+      "days_to_cum": -299,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 2220.0,
-          "high": 2250.0,
-          "low": 2190.0,
-          "close": 2230.0,
-          "vol": 24828700
-        },
         {
           "date": "2026-02-12",
           "open": 2250.0,
@@ -5423,10 +5415,17 @@
           "low": 1790.0,
           "close": 1795.0,
           "vol": 47987400
+        },
+        {
+          "date": "2026-04-06",
+          "open": 1800.0,
+          "high": 1810.0,
+          "low": 1760.0,
+          "close": 1775.0,
+          "vol": 18297500
         }
       ],
       "ma20_history": [
-        2154.0,
         2163.0,
         2168.0,
         2174.0,
@@ -5455,10 +5454,10 @@
         2131.0,
         2111.0,
         2088.0,
-        2063.0
+        2063.0,
+        2032.0
       ],
       "ma50_history": [
-        1986.0,
         1996.0,
         2002.0,
         2008.0,
@@ -5487,30 +5486,31 @@
         2134.0,
         2132.0,
         2130.0,
-        2126.0
+        2126.0,
+        2122.0
       ],
       "net_income": 215364800,
       "shares_outstanding": 24241508195,
-      "last_updated": "2026-04-02 18:25:05"
+      "last_updated": "2026-04-06 13:28:44"
     },
     {
       "kode": "AKRA",
       "nama": "PT AKR Corporindo Tbk",
       "sektor": "Energy",
       "harga": 1350.0,
-      "change_pct": 0.37,
-      "ma20": 1302.0,
-      "ma50": 1294.0,
+      "change_pct": 0.0,
+      "ma20": 1304.0,
+      "ma50": 1296.0,
       "rsi": 55.2,
-      "macd_line": 22.76,
-      "macd_signal": 12.17,
+      "macd_line": 22.4,
+      "macd_signal": 14.23,
       "macd_bullish": true,
-      "vol_ratio": 1.04,
+      "vol_ratio": 0.32,
       "above_ma20": true,
       "above_ma50": true,
       "golden_cross": true,
       "bullish_candle": false,
-      "body_ratio": 0.09,
+      "body_ratio": 0.0,
       "pbv": 2.2,
       "per": 10.78,
       "roe": 18.68,
@@ -5548,16 +5548,8 @@
       "div_konsisten": true,
       "ex_date": "2025-08-06",
       "cum_date": "2025-08-05",
-      "days_to_cum": -240,
+      "days_to_cum": -244,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 1315.0,
-          "high": 1330.0,
-          "low": 1285.0,
-          "close": 1295.0,
-          "vol": 23827400
-        },
         {
           "date": "2026-02-12",
           "open": 1300.0,
@@ -5789,10 +5781,17 @@
           "low": 1340.0,
           "close": 1350.0,
           "vol": 34246400
+        },
+        {
+          "date": "2026-04-06",
+          "open": 1350.0,
+          "high": 1375.0,
+          "low": 1335.0,
+          "close": 1350.0,
+          "vol": 10078500
         }
       ],
       "ma20_history": [
-        1288.0,
         1290.0,
         1292.0,
         1292.0,
@@ -5821,10 +5820,10 @@
         1290.0,
         1295.0,
         1297.0,
-        1302.0
+        1302.0,
+        1304.0
       ],
       "ma50_history": [
-        1266.0,
         1267.0,
         1268.0,
         1270.0,
@@ -5853,37 +5852,38 @@
         1287.0,
         1290.0,
         1292.0,
-        1294.0
+        1294.0,
+        1296.0
       ],
       "net_income": 2472616132608,
       "shares_outstanding": 19799769600,
-      "last_updated": "2026-04-02 18:25:05"
+      "last_updated": "2026-04-06 13:28:45"
     },
     {
       "kode": "UNVR",
       "nama": "PT Unilever Indonesia Tbk",
       "sektor": "Consumer Defensive",
-      "harga": 1930.0,
-      "change_pct": 1.05,
-      "ma20": 1964.0,
-      "ma50": 2130.0,
-      "rsi": 44.4,
-      "macd_line": -85.68,
-      "macd_signal": -91.7,
+      "harga": 1895.0,
+      "change_pct": -1.81,
+      "ma20": 1940.0,
+      "ma50": 2116.0,
+      "rsi": 42.4,
+      "macd_line": -81.34,
+      "macd_signal": -89.55,
       "macd_bullish": true,
-      "vol_ratio": 0.69,
+      "vol_ratio": 0.14,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
-      "bullish_candle": true,
-      "body_ratio": 0.4,
-      "pbv": 16.38,
-      "per": 20.75,
+      "bullish_candle": false,
+      "body_ratio": 0.8,
+      "pbv": 16.08,
+      "per": 20.37,
       "roe": 106.8,
       "der": 14.41,
       "dps": 87.0,
-      "yield_kotor": 4.51,
-      "yield_bersih": 4.06,
+      "yield_kotor": 4.59,
+      "yield_bersih": 4.13,
       "div_history": [
         {
           "tanggal": "2023-07-06",
@@ -5914,16 +5914,8 @@
       "div_konsisten": true,
       "ex_date": "2025-12-15",
       "cum_date": "2025-12-14",
-      "days_to_cum": -109,
+      "days_to_cum": -113,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 2300.0,
-          "high": 2320.0,
-          "low": 2250.0,
-          "close": 2260.0,
-          "vol": 18622600
-        },
         {
           "date": "2026-02-12",
           "open": 2290.0,
@@ -6155,10 +6147,17 @@
           "low": 1910.0,
           "close": 1930.0,
           "vol": 17567700
+        },
+        {
+          "date": "2026-04-06",
+          "open": 1935.0,
+          "high": 1940.0,
+          "low": 1890.0,
+          "close": 1895.0,
+          "vol": 3122800
         }
       ],
       "ma20_history": [
-        2197.0,
         2183.0,
         2175.0,
         2172.0,
@@ -6187,10 +6186,10 @@
         2030.0,
         2004.0,
         1983.0,
-        1964.0
+        1964.0,
+        1940.0
       ],
       "ma50_history": [
-        2444.0,
         2439.0,
         2435.0,
         2430.0,
@@ -6219,37 +6218,38 @@
         2174.0,
         2158.0,
         2143.0,
-        2130.0
+        2130.0,
+        2116.0
       ],
       "net_income": 3537296949248,
       "shares_outstanding": 37981233300,
-      "last_updated": "2026-04-02 18:25:06"
+      "last_updated": "2026-04-06 13:28:45"
     },
     {
       "kode": "SIDO",
       "nama": "PT Industri Jamu dan Farmasi Sido Muncul Tbk",
       "sektor": "Healthcare",
-      "harga": 520.0,
-      "change_pct": 0.97,
-      "ma20": 516.0,
+      "harga": 510.0,
+      "change_pct": -1.92,
+      "ma20": 515.0,
       "ma50": 525.0,
-      "rsi": 51.1,
-      "macd_line": -2.99,
-      "macd_signal": -4.25,
+      "rsi": 42.1,
+      "macd_line": -3.23,
+      "macd_signal": -4.06,
       "macd_bullish": true,
-      "vol_ratio": 1.12,
-      "above_ma20": true,
+      "vol_ratio": 0.3,
+      "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
-      "bullish_candle": true,
-      "body_ratio": 0.33,
-      "pbv": 4.91,
-      "per": 12.58,
+      "bullish_candle": false,
+      "body_ratio": 0.67,
+      "pbv": 4.81,
+      "per": 12.34,
       "roe": 37.2,
       "der": 0.13,
       "dps": 22.0,
-      "yield_kotor": 4.23,
-      "yield_bersih": 3.81,
+      "yield_kotor": 4.31,
+      "yield_bersih": 3.88,
       "div_history": [
         {
           "tanggal": "2023-04-10",
@@ -6280,16 +6280,8 @@
       "div_konsisten": true,
       "ex_date": "2025-11-11",
       "cum_date": "2025-11-10",
-      "days_to_cum": -143,
+      "days_to_cum": -147,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 535.0,
-          "high": 535.0,
-          "low": 525.0,
-          "close": 525.0,
-          "vol": 5812700
-        },
         {
           "date": "2026-02-12",
           "open": 530.0,
@@ -6521,10 +6513,17 @@
           "low": 510.0,
           "close": 520.0,
           "vol": 13362600
+        },
+        {
+          "date": "2026-04-06",
+          "open": 520.0,
+          "high": 525.0,
+          "low": 510.0,
+          "close": 510.0,
+          "vol": 3444200
         }
       ],
       "ma20_history": [
-        531.0,
         530.0,
         530.0,
         528.0,
@@ -6553,10 +6552,10 @@
         519.0,
         518.0,
         518.0,
-        516.0
+        516.0,
+        515.0
       ],
       "ma50_history": [
-        538.0,
         537.0,
         537.0,
         537.0,
@@ -6585,37 +6584,38 @@
         527.0,
         526.0,
         526.0,
+        525.0,
         525.0
       ],
       "net_income": 1229201997824,
       "shares_outstanding": 29435200000,
-      "last_updated": "2026-04-02 18:25:06"
+      "last_updated": "2026-04-06 13:28:46"
     },
     {
       "kode": "ICBP",
       "nama": "PT Indofood CBP Sukses Makmur Tbk",
       "sektor": "Consumer Defensive",
-      "harga": 7375.0,
-      "change_pct": -0.34,
-      "ma20": 7358.0,
-      "ma50": 7817.0,
-      "rsi": 46.0,
-      "macd_line": -159.91,
-      "macd_signal": -197.38,
+      "harga": 7300.0,
+      "change_pct": -1.02,
+      "ma20": 7330.0,
+      "ma50": 7804.0,
+      "rsi": 43.8,
+      "macd_line": -150.25,
+      "macd_signal": -187.89,
       "macd_bullish": true,
-      "vol_ratio": 0.61,
-      "above_ma20": true,
+      "vol_ratio": 0.17,
+      "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.0,
-      "pbv": 0.88,
-      "per": 9.32,
+      "body_ratio": 0.6,
+      "pbv": 0.87,
+      "per": 9.22,
       "roe": 11.53,
       "der": 1.25,
       "dps": 250.0,
-      "yield_kotor": 3.39,
-      "yield_bersih": 3.05,
+      "yield_kotor": 3.42,
+      "yield_bersih": 3.08,
       "div_history": [
         {
           "tanggal": "2020-07-24",
@@ -6646,16 +6646,8 @@
       "div_konsisten": true,
       "ex_date": "2025-07-02",
       "cum_date": "2025-07-01",
-      "days_to_cum": -275,
+      "days_to_cum": -279,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 8150.0,
-          "high": 8250.0,
-          "low": 8125.0,
-          "close": 8175.0,
-          "vol": 4709900
-        },
         {
           "date": "2026-02-12",
           "open": 8200.0,
@@ -6887,10 +6879,17 @@
           "low": 7350.0,
           "close": 7375.0,
           "vol": 3685000
+        },
+        {
+          "date": "2026-04-06",
+          "open": 7375.0,
+          "high": 7375.0,
+          "low": 7250.0,
+          "close": 7300.0,
+          "vol": 952500
         }
       ],
       "ma20_history": [
-        8148.0,
         8160.0,
         8168.0,
         8172.0,
@@ -6919,10 +6918,10 @@
         7445.0,
         7415.0,
         7384.0,
-        7358.0
+        7358.0,
+        7330.0
       ],
       "ma50_history": [
-        8165.0,
         8158.0,
         8153.0,
         8149.0,
@@ -6951,37 +6950,38 @@
         7853.0,
         7840.0,
         7828.0,
-        7817.0
+        7817.0,
+        7804.0
       ],
       "net_income": 9224927051776,
       "shares_outstanding": 11661908000,
-      "last_updated": "2026-04-02 18:25:07"
+      "last_updated": "2026-04-06 13:28:46"
     },
     {
       "kode": "INDF",
       "nama": "PT Indofood Sukses Makmur Tbk",
       "sektor": "Consumer Defensive",
-      "harga": 6625.0,
-      "change_pct": 0.76,
-      "ma20": 6171.0,
-      "ma50": 6540.0,
-      "rsi": 61.2,
-      "macd_line": -58.79,
-      "macd_signal": -143.49,
+      "harga": 6575.0,
+      "change_pct": -0.75,
+      "ma20": 6178.0,
+      "ma50": 6538.0,
+      "rsi": 59.1,
+      "macd_line": -28.45,
+      "macd_signal": -120.45,
       "macd_bullish": true,
-      "vol_ratio": 0.5,
+      "vol_ratio": 0.35,
       "above_ma20": true,
       "above_ma50": true,
       "golden_cross": false,
-      "bullish_candle": true,
-      "body_ratio": 0.5,
-      "pbv": 0.8,
-      "per": 7.5,
+      "bullish_candle": false,
+      "body_ratio": 0.17,
+      "pbv": 0.79,
+      "per": 5.4,
       "roe": 13.57,
       "der": 62.46,
       "dps": 280.0,
-      "yield_kotor": 4.23,
-      "yield_bersih": 3.81,
+      "yield_kotor": 4.26,
+      "yield_bersih": 3.83,
       "div_history": [
         {
           "tanggal": "2020-07-24",
@@ -7012,16 +7012,8 @@
       "div_konsisten": true,
       "ex_date": "2025-07-02",
       "cum_date": "2025-07-01",
-      "days_to_cum": -275,
+      "days_to_cum": -279,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 6700.0,
-          "high": 6800.0,
-          "low": 6700.0,
-          "close": 6700.0,
-          "vol": 44043400
-        },
         {
           "date": "2026-02-12",
           "open": 6725.0,
@@ -7253,10 +7245,17 @@
           "low": 6525.0,
           "close": 6625.0,
           "vol": 17333500
+        },
+        {
+          "date": "2026-04-06",
+          "open": 6600.0,
+          "high": 6650.0,
+          "low": 6500.0,
+          "close": 6575.0,
+          "vol": 7233100
         }
       ],
       "ma20_history": [
-        6838.0,
         6840.0,
         6836.0,
         6832.0,
@@ -7285,10 +7284,10 @@
         6189.0,
         6176.0,
         6176.0,
-        6171.0
+        6171.0,
+        6178.0
       ],
       "ma50_history": [
-        6860.0,
         6848.0,
         6834.0,
         6822.0,
@@ -7317,32 +7316,33 @@
         6546.0,
         6540.0,
         6540.0,
-        6540.0
+        6540.0,
+        6538.0
       ],
       "net_income": 10684652847104,
       "shares_outstanding": 8780426500,
-      "last_updated": "2026-04-02 18:25:07"
+      "last_updated": "2026-04-06 13:28:47"
     },
     {
       "kode": "HMSP",
       "nama": "PT Hanjaya Mandala Sampoerna Tbk",
       "sektor": "Consumer Defensive",
       "harga": 735.0,
-      "change_pct": -0.68,
-      "ma20": 778.0,
+      "change_pct": 0.0,
+      "ma20": 769.0,
       "ma50": 813.0,
       "rsi": 40.7,
-      "macd_line": -30.15,
-      "macd_signal": -26.57,
+      "macd_line": -28.95,
+      "macd_signal": -27.03,
       "macd_bullish": false,
-      "vol_ratio": 0.21,
+      "vol_ratio": 0.13,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.6,
+      "body_ratio": 0.0,
       "pbv": 3.02,
-      "per": 12.9,
+      "per": 12.89,
       "roe": 23.31,
       "der": 1.47,
       "dps": 56.0,
@@ -7378,16 +7378,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-11",
       "cum_date": "2025-06-10",
-      "days_to_cum": -296,
+      "days_to_cum": -300,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 855.0,
-          "high": 860.0,
-          "low": 835.0,
-          "close": 840.0,
-          "vol": 44140100
-        },
         {
           "date": "2026-02-12",
           "open": 845.0,
@@ -7619,10 +7611,17 @@
           "low": 730.0,
           "close": 735.0,
           "vol": 7472800
+        },
+        {
+          "date": "2026-04-06",
+          "open": 735.0,
+          "high": 740.0,
+          "low": 720.0,
+          "close": 735.0,
+          "vol": 3941600
         }
       ],
       "ma20_history": [
-        819.0,
         822.0,
         826.0,
         833.0,
@@ -7651,10 +7650,10 @@
         800.0,
         792.0,
         785.0,
-        778.0
+        778.0,
+        769.0
       ],
       "ma50_history": [
-        784.0,
         784.0,
         785.0,
         788.0,
@@ -7683,37 +7682,38 @@
         816.0,
         815.0,
         814.0,
+        813.0,
         813.0
       ],
       "net_income": 6609456070656,
       "shares_outstanding": 116318076900,
-      "last_updated": "2026-04-02 18:25:08"
+      "last_updated": "2026-04-06 13:28:47"
     },
     {
       "kode": "KLBF",
       "nama": "PT Kalbe Farma Tbk.",
       "sektor": "Healthcare",
-      "harga": 970.0,
-      "change_pct": -1.02,
-      "ma20": 999.0,
-      "ma50": 1081.0,
-      "rsi": 39.6,
-      "macd_line": -33.11,
-      "macd_signal": -35.58,
+      "harga": 955.0,
+      "change_pct": -1.55,
+      "ma20": 992.0,
+      "ma50": 1076.0,
+      "rsi": 37.1,
+      "macd_line": -32.82,
+      "macd_signal": -35.05,
       "macd_bullish": true,
-      "vol_ratio": 0.4,
+      "vol_ratio": 0.21,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.6,
-      "pbv": 1.88,
-      "per": 12.04,
+      "body_ratio": 0.75,
+      "pbv": 1.86,
+      "per": 11.86,
       "roe": 15.18,
       "der": 1.21,
       "dps": 36.0,
-      "yield_kotor": 3.71,
-      "yield_bersih": 3.34,
+      "yield_kotor": 3.77,
+      "yield_bersih": 3.39,
       "div_history": [
         {
           "tanggal": "2020-12-04",
@@ -7744,16 +7744,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-04",
       "cum_date": "2025-06-03",
-      "days_to_cum": -303,
+      "days_to_cum": -307,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 1110.0,
-          "high": 1110.0,
-          "low": 1095.0,
-          "close": 1105.0,
-          "vol": 32635700
-        },
         {
           "date": "2026-02-12",
           "open": 1105.0,
@@ -7985,10 +7977,17 @@
           "low": 965.0,
           "close": 970.0,
           "vol": 17965800
+        },
+        {
+          "date": "2026-04-06",
+          "open": 970.0,
+          "high": 975.0,
+          "low": 955.0,
+          "close": 955.0,
+          "vol": 9019400
         }
       ],
       "ma20_history": [
-        1156.0,
         1149.0,
         1143.0,
         1136.0,
@@ -8017,10 +8016,10 @@
         1016.0,
         1011.0,
         1004.0,
-        999.0
+        999.0,
+        992.0
       ],
       "ma50_history": [
-        1181.0,
         1178.0,
         1176.0,
         1173.0,
@@ -8049,37 +8048,38 @@
         1094.0,
         1090.0,
         1086.0,
-        1081.0
+        1081.0,
+        1076.0
       ],
       "net_income": 3664998039552,
-      "shares_outstanding": 45315950110,
-      "last_updated": "2026-04-02 18:25:08"
+      "shares_outstanding": 45286528610,
+      "last_updated": "2026-04-06 13:28:48"
     },
     {
       "kode": "TLKM",
       "nama": "Perusahaan Perseroan (Persero) PT Telekomunikasi Indonesia Tbk",
       "sektor": "Communication Services",
-      "harga": 3130.0,
-      "change_pct": -0.63,
-      "ma20": 3152.0,
-      "ma50": 3394.0,
-      "rsi": 45.6,
-      "macd_line": -87.18,
-      "macd_signal": -102.48,
+      "harga": 3120.0,
+      "change_pct": -0.32,
+      "ma20": 3132.0,
+      "ma50": 3384.0,
+      "rsi": 45.1,
+      "macd_line": -80.79,
+      "macd_signal": -98.07,
       "macd_bullish": true,
-      "vol_ratio": 0.43,
+      "vol_ratio": 0.12,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.25,
-      "pbv": 2.26,
-      "per": 14.28,
+      "body_ratio": 1.0,
+      "pbv": 2.25,
+      "per": 14.22,
       "roe": 18.31,
       "der": 50.11,
       "dps": 212.0,
-      "yield_kotor": 6.77,
-      "yield_bersih": 6.09,
+      "yield_kotor": 6.79,
+      "yield_bersih": 6.11,
       "div_history": [
         {
           "tanggal": "2020-06-30",
@@ -8110,16 +8110,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-11",
       "cum_date": "2025-06-10",
-      "days_to_cum": -296,
+      "days_to_cum": -300,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 3430.0,
-          "high": 3530.0,
-          "low": 3420.0,
-          "close": 3530.0,
-          "vol": 151785400
-        },
         {
           "date": "2026-02-12",
           "open": 3500.0,
@@ -8351,10 +8343,17 @@
           "low": 3080.0,
           "close": 3130.0,
           "vol": 56283200
+        },
+        {
+          "date": "2026-04-06",
+          "open": 3200.0,
+          "high": 3200.0,
+          "low": 3120.0,
+          "close": 3120.0,
+          "vol": 15299900
         }
       ],
       "ma20_history": [
-        3559.0,
         3554.0,
         3544.0,
         3538.0,
@@ -8383,10 +8382,10 @@
         3227.0,
         3201.0,
         3178.0,
-        3152.0
+        3152.0,
+        3132.0
       ],
       "ma50_history": [
-        3546.0,
         3546.0,
         3545.0,
         3541.0,
@@ -8415,37 +8414,38 @@
         3417.0,
         3408.0,
         3402.0,
-        3394.0
+        3394.0,
+        3384.0
       ],
       "net_income": 21758000234496,
       "shares_outstanding": 99062216599,
-      "last_updated": "2026-04-02 18:25:09"
+      "last_updated": "2026-04-06 13:28:48"
     },
     {
       "kode": "EXCL",
       "nama": "PT XLSMART Telecom Sejahtera Tbk",
       "sektor": "Communication Services",
-      "harga": 2900.0,
-      "change_pct": -3.33,
-      "ma20": 2854.0,
-      "ma50": 3217.0,
-      "rsi": 48.1,
-      "macd_line": -62.34,
-      "macd_signal": -102.27,
+      "harga": 2910.0,
+      "change_pct": 0.34,
+      "ma20": 2840.0,
+      "ma50": 3197.0,
+      "rsi": 48.4,
+      "macd_line": -55.88,
+      "macd_signal": -92.99,
       "macd_bullish": true,
-      "vol_ratio": 0.52,
+      "vol_ratio": 0.29,
       "above_ma20": true,
       "above_ma50": false,
       "golden_cross": false,
-      "bullish_candle": false,
-      "body_ratio": 0.67,
-      "pbv": 1.77,
+      "bullish_candle": true,
+      "body_ratio": 0.08,
+      "pbv": 1.78,
       "per": 0,
       "roe": -15.7,
       "der": 209.36,
       "dps": 159.0,
-      "yield_kotor": 5.48,
-      "yield_bersih": 4.93,
+      "yield_kotor": 5.46,
+      "yield_bersih": 4.91,
       "div_history": [
         {
           "tanggal": "2021-05-04",
@@ -8476,16 +8476,8 @@
       "div_konsisten": true,
       "ex_date": "2025-12-02",
       "cum_date": "2025-12-01",
-      "days_to_cum": -122,
+      "days_to_cum": -126,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 2860.0,
-          "high": 3020.0,
-          "low": 2860.0,
-          "close": 3010.0,
-          "vol": 50191500
-        },
         {
           "date": "2026-02-12",
           "open": 3040.0,
@@ -8717,10 +8709,17 @@
           "low": 2900.0,
           "close": 2900.0,
           "vol": 14206800
+        },
+        {
+          "date": "2026-04-06",
+          "open": 2900.0,
+          "high": 2970.0,
+          "low": 2840.0,
+          "close": 2910.0,
+          "vol": 7602700
         }
       ],
       "ma20_history": [
-        3608.0,
         3553.0,
         3495.0,
         3442.0,
@@ -8749,10 +8748,10 @@
         2896.0,
         2886.0,
         2868.0,
-        2854.0
+        2854.0,
+        2840.0
       ],
       "ma50_history": [
-        3589.0,
         3595.0,
         3598.0,
         3601.0,
@@ -8781,37 +8780,38 @@
         3292.0,
         3265.0,
         3239.0,
-        3217.0
+        3217.0,
+        3197.0
       ],
       "net_income": -4426618109952,
       "shares_outstanding": 18199862451,
-      "last_updated": "2026-04-02 18:25:09"
+      "last_updated": "2026-04-06 13:28:49"
     },
     {
       "kode": "ISAT",
       "nama": "PT Indosat Ooredoo Hutchison Tbk",
       "sektor": "Communication Services",
-      "harga": 2080.0,
-      "change_pct": -0.95,
-      "ma20": 2128.0,
-      "ma50": 2203.0,
-      "rsi": 45.1,
-      "macd_line": -36.52,
-      "macd_signal": -37.78,
-      "macd_bullish": true,
-      "vol_ratio": 0.34,
+      "harga": 2040.0,
+      "change_pct": -1.92,
+      "ma20": 2114.0,
+      "ma50": 2201.0,
+      "rsi": 42.5,
+      "macd_line": -39.1,
+      "macd_signal": -37.97,
+      "macd_bullish": false,
+      "vol_ratio": 0.11,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.29,
-      "pbv": 1.85,
-      "per": 12.17,
+      "body_ratio": 0.67,
+      "pbv": 1.81,
+      "per": 11.95,
       "roe": 15.28,
       "der": 138.99,
       "dps": 84.0,
-      "yield_kotor": 4.04,
-      "yield_bersih": 3.64,
+      "yield_kotor": 4.12,
+      "yield_bersih": 3.71,
       "div_history": [
         {
           "tanggal": "2018-05-18",
@@ -8842,16 +8842,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-12",
       "cum_date": "2025-06-11",
-      "days_to_cum": -295,
+      "days_to_cum": -299,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 2220.0,
-          "high": 2230.0,
-          "low": 2180.0,
-          "close": 2210.0,
-          "vol": 48600500
-        },
         {
           "date": "2026-02-12",
           "open": 2230.0,
@@ -9083,10 +9075,17 @@
           "low": 2040.0,
           "close": 2080.0,
           "vol": 5695300
+        },
+        {
+          "date": "2026-04-06",
+          "open": 2080.0,
+          "high": 2090.0,
+          "low": 2030.0,
+          "close": 2040.0,
+          "vol": 1727300
         }
       ],
       "ma20_history": [
-        2246.0,
         2246.0,
         2244.0,
         2244.0,
@@ -9115,10 +9114,10 @@
         2166.0,
         2154.0,
         2140.0,
-        2128.0
+        2128.0,
+        2114.0
       ],
       "ma50_history": [
-        2300.0,
         2298.0,
         2295.0,
         2293.0,
@@ -9147,37 +9146,38 @@
         2208.0,
         2206.0,
         2205.0,
-        2203.0
+        2203.0,
+        2201.0
       ],
       "net_income": 5509702746112,
       "shares_outstanding": 32250810956,
-      "last_updated": "2026-04-02 18:25:10"
+      "last_updated": "2026-04-06 13:28:49"
     },
     {
       "kode": "ASII",
       "nama": "PT Astra International Tbk",
       "sektor": "Industrials",
-      "harga": 6075.0,
-      "change_pct": -2.8,
-      "ma20": 6149.0,
-      "ma50": 6500.0,
-      "rsi": 45.5,
-      "macd_line": -83.21,
-      "macd_signal": -117.05,
+      "harga": 6050.0,
+      "change_pct": -0.41,
+      "ma20": 6118.0,
+      "ma50": 6474.0,
+      "rsi": 44.9,
+      "macd_line": -87.16,
+      "macd_signal": -110.98,
       "macd_bullish": true,
-      "vol_ratio": 0.81,
+      "vol_ratio": 0.15,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.27,
-      "pbv": 1.07,
-      "per": 7.5,
+      "body_ratio": 0.33,
+      "pbv": 1.06,
+      "per": 7.47,
       "roe": 14.29,
       "der": 37.93,
       "dps": 98.0,
-      "yield_kotor": 1.61,
-      "yield_bersih": 1.45,
+      "yield_kotor": 1.62,
+      "yield_bersih": 1.46,
       "div_history": [
         {
           "tanggal": "2023-05-05",
@@ -9208,16 +9208,8 @@
       "div_konsisten": true,
       "ex_date": "2025-10-14",
       "cum_date": "2025-10-13",
-      "days_to_cum": -171,
+      "days_to_cum": -175,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 6800.0,
-          "high": 6825.0,
-          "low": 6700.0,
-          "close": 6750.0,
-          "vol": 41050100
-        },
         {
           "date": "2026-02-12",
           "open": 6775.0,
@@ -9449,10 +9441,17 @@
           "low": 6025.0,
           "close": 6075.0,
           "vol": 37842500
+        },
+        {
+          "date": "2026-04-06",
+          "open": 6075.0,
+          "high": 6100.0,
+          "low": 6025.0,
+          "close": 6050.0,
+          "vol": 6470100
         }
       ],
       "ma20_history": [
-        6744.0,
         6726.0,
         6706.0,
         6671.0,
@@ -9481,10 +9480,10 @@
         6216.0,
         6201.0,
         6181.0,
-        6149.0
+        6149.0,
+        6118.0
       ],
       "ma50_history": [
-        6714.0,
         6718.0,
         6720.0,
         6726.0,
@@ -9513,37 +9512,38 @@
         6546.0,
         6530.0,
         6518.0,
-        6500.0
+        6500.0,
+        6474.0
       ],
       "net_income": 32769000341504,
       "shares_outstanding": 40213715340,
-      "last_updated": "2026-04-02 18:25:10"
+      "last_updated": "2026-04-06 13:28:50"
     },
     {
       "kode": "SMGR",
       "nama": "PT Semen Indonesia (Persero) Tbk",
       "sektor": "Basic Materials",
-      "harga": 2460.0,
-      "change_pct": -0.81,
-      "ma20": 2578.0,
-      "ma50": 2677.0,
-      "rsi": 41.9,
-      "macd_line": -77.32,
-      "macd_signal": -66.47,
+      "harga": 2370.0,
+      "change_pct": -3.66,
+      "ma20": 2550.0,
+      "ma50": 2672.0,
+      "rsi": 38.2,
+      "macd_line": -84.05,
+      "macd_signal": -69.95,
       "macd_bullish": false,
-      "vol_ratio": 0.24,
+      "vol_ratio": 0.44,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.5,
-      "pbv": 0.4,
-      "per": 87.79,
+      "body_ratio": 0.82,
+      "pbv": 0.38,
+      "per": 84.52,
       "roe": 0.37,
       "der": 21.79,
       "dps": 96.0,
-      "yield_kotor": 3.9,
-      "yield_bersih": 3.51,
+      "yield_kotor": 4.05,
+      "yield_bersih": 3.65,
       "div_history": [
         {
           "tanggal": "2020-06-30",
@@ -9574,16 +9574,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-05",
       "cum_date": "2025-06-04",
-      "days_to_cum": -302,
+      "days_to_cum": -306,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 2800.0,
-          "high": 2830.0,
-          "low": 2720.0,
-          "close": 2830.0,
-          "vol": 15352100
-        },
         {
           "date": "2026-02-12",
           "open": 2830.0,
@@ -9815,10 +9807,17 @@
           "low": 2450.0,
           "close": 2460.0,
           "vol": 2521600
+        },
+        {
+          "date": "2026-04-06",
+          "open": 2460.0,
+          "high": 2470.0,
+          "low": 2360.0,
+          "close": 2370.0,
+          "vol": 4443300
         }
       ],
       "ma20_history": [
-        2618.0,
         2648.0,
         2666.0,
         2680.0,
@@ -9847,10 +9846,10 @@
         2659.0,
         2626.0,
         2599.0,
-        2578.0
+        2578.0,
+        2550.0
       ],
       "ma50_history": [
-        2691.0,
         2697.0,
         2699.0,
         2701.0,
@@ -9879,37 +9878,38 @@
         2687.0,
         2684.0,
         2681.0,
-        2677.0
+        2677.0,
+        2672.0
       ],
       "net_income": 190848008192,
       "shares_outstanding": 6751540089,
-      "last_updated": "2026-04-02 18:25:11"
+      "last_updated": "2026-04-06 13:28:50"
     },
     {
       "kode": "INTP",
       "nama": "PT Indocement Tunggal Prakarsa Tbk",
       "sektor": "Basic Materials",
-      "harga": 5125.0,
-      "change_pct": -3.76,
-      "ma20": 5545.0,
-      "ma50": 6246.0,
-      "rsi": 31.3,
-      "macd_line": -320.56,
-      "macd_signal": -313.24,
+      "harga": 5075.0,
+      "change_pct": -0.98,
+      "ma20": 5489.0,
+      "ma50": 6209.0,
+      "rsi": 30.3,
+      "macd_line": -320.32,
+      "macd_signal": -314.78,
       "macd_bullish": false,
-      "vol_ratio": 0.87,
+      "vol_ratio": 0.26,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 1.0,
-      "pbv": 0.77,
-      "per": 8.55,
+      "body_ratio": 0.5,
+      "pbv": 0.76,
+      "per": 7.52,
       "roe": 10.18,
       "der": 12.88,
       "dps": 259.0,
-      "yield_kotor": 5.05,
-      "yield_bersih": 4.54,
+      "yield_kotor": 5.1,
+      "yield_bersih": 4.59,
       "div_history": [
         {
           "tanggal": "2020-12-08",
@@ -9940,16 +9940,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-03",
       "cum_date": "2025-06-02",
-      "days_to_cum": -304,
+      "days_to_cum": -308,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 6700.0,
-          "high": 6750.0,
-          "low": 6575.0,
-          "close": 6675.0,
-          "vol": 759100
-        },
         {
           "date": "2026-02-12",
           "open": 6675.0,
@@ -10181,10 +10173,17 @@
           "low": 5125.0,
           "close": 5125.0,
           "vol": 997200
+        },
+        {
+          "date": "2026-04-06",
+          "open": 5125.0,
+          "high": 5125.0,
+          "low": 5025.0,
+          "close": 5075.0,
+          "vol": 277300
         }
       ],
       "ma20_history": [
-        6765.0,
         6766.0,
         6752.0,
         6732.0,
@@ -10213,10 +10212,10 @@
         5735.0,
         5664.0,
         5605.0,
-        5545.0
+        5545.0,
+        5489.0
       ],
       "ma50_history": [
-        6826.0,
         6828.0,
         6830.0,
         6832.0,
@@ -10245,37 +10244,38 @@
         6348.0,
         6313.0,
         6282.0,
-        6246.0
+        6246.0,
+        6209.0
       ],
       "net_income": 2248799944704,
       "shares_outstanding": 3309756099,
-      "last_updated": "2026-04-02 18:25:11"
+      "last_updated": "2026-04-06 13:28:51"
     },
     {
       "kode": "CPIN",
       "nama": "PT Charoen Pokphand Indonesia Tbk",
       "sektor": "Consumer Defensive",
-      "harga": 4250.0,
-      "change_pct": 2.41,
-      "ma20": 3890.0,
-      "ma50": 4209.0,
-      "rsi": 57.9,
-      "macd_line": -13.85,
-      "macd_signal": -83.16,
+      "harga": 4110.0,
+      "change_pct": -3.29,
+      "ma20": 3883.0,
+      "ma50": 4201.0,
+      "rsi": 52.0,
+      "macd_line": -6.91,
+      "macd_signal": -67.94,
       "macd_bullish": true,
-      "vol_ratio": 0.69,
+      "vol_ratio": 0.11,
       "above_ma20": true,
-      "above_ma50": true,
+      "above_ma50": false,
       "golden_cross": false,
-      "bullish_candle": true,
-      "body_ratio": 0.77,
-      "pbv": 2.04,
-      "per": 12.35,
+      "bullish_candle": false,
+      "body_ratio": 1.0,
+      "pbv": 1.97,
+      "per": 11.95,
       "roe": 17.52,
       "der": 19.51,
       "dps": 108.0,
-      "yield_kotor": 2.54,
-      "yield_bersih": 2.29,
+      "yield_kotor": 2.63,
+      "yield_bersih": 2.37,
       "div_history": [
         {
           "tanggal": "2020-09-03",
@@ -10306,16 +10306,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-03",
       "cum_date": "2025-06-02",
-      "days_to_cum": -304,
+      "days_to_cum": -308,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 4510.0,
-          "high": 4510.0,
-          "low": 4440.0,
-          "close": 4480.0,
-          "vol": 5136300
-        },
         {
           "date": "2026-02-12",
           "open": 4480.0,
@@ -10547,10 +10539,17 @@
           "low": 4120.0,
           "close": 4250.0,
           "vol": 9671800
+        },
+        {
+          "date": "2026-04-06",
+          "open": 4250.0,
+          "high": 4250.0,
+          "low": 4110.0,
+          "close": 4110.0,
+          "vol": 1486100
         }
       ],
       "ma20_history": [
-        4451.0,
         4444.0,
         4430.0,
         4422.0,
@@ -10579,10 +10578,10 @@
         3920.0,
         3908.0,
         3898.0,
-        3890.0
+        3890.0,
+        3883.0
       ],
       "ma50_history": [
-        4540.0,
         4535.0,
         4528.0,
         4519.0,
@@ -10611,37 +10610,38 @@
         4229.0,
         4221.0,
         4214.0,
-        4209.0
+        4209.0,
+        4201.0
       ],
       "net_income": 5643862802432,
       "shares_outstanding": 16398000000,
-      "last_updated": "2026-04-02 18:25:12"
+      "last_updated": "2026-04-06 13:28:51"
     },
     {
       "kode": "ANTM",
       "nama": "PT Aneka Tambang Tbk",
       "sektor": "Basic Materials",
-      "harga": 3640.0,
-      "change_pct": -1.89,
-      "ma20": 3870.0,
-      "ma50": 4038.0,
-      "rsi": 43.6,
-      "macd_line": -138.38,
-      "macd_signal": -110.42,
+      "harga": 3620.0,
+      "change_pct": -0.55,
+      "ma20": 3833.0,
+      "ma50": 4032.0,
+      "rsi": 43.0,
+      "macd_line": -133.56,
+      "macd_signal": -115.06,
       "macd_bullish": false,
-      "vol_ratio": 0.65,
+      "vol_ratio": 0.21,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.4,
-      "pbv": 4.3,
-      "per": 11.79,
-      "roe": 0,
+      "body_ratio": 0.25,
+      "pbv": 4.28,
+      "per": 12.07,
+      "roe": 23.03,
       "der": 12.85,
       "dps": 152.0,
-      "yield_kotor": 4.18,
-      "yield_bersih": 3.76,
+      "yield_kotor": 4.2,
+      "yield_bersih": 3.78,
       "div_history": [
         {
           "tanggal": "2020-06-22",
@@ -10672,16 +10672,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-23",
       "cum_date": "2025-06-22",
-      "days_to_cum": -284,
+      "days_to_cum": -288,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 3890.0,
-          "high": 4020.0,
-          "low": 3870.0,
-          "close": 3990.0,
-          "vol": 143161900
-        },
         {
           "date": "2026-02-12",
           "open": 4030.0,
@@ -10913,10 +10905,17 @@
           "low": 3590.0,
           "close": 3640.0,
           "vol": 71715300
+        },
+        {
+          "date": "2026-04-06",
+          "open": 3640.0,
+          "high": 3650.0,
+          "low": 3570.0,
+          "close": 3620.0,
+          "vol": 22721500
         }
       ],
       "ma20_history": [
-        4119.0,
         4120.0,
         4120.0,
         4123.0,
@@ -10945,10 +10944,10 @@
         3986.0,
         3942.0,
         3904.0,
-        3870.0
+        3870.0,
+        3833.0
       ],
       "ma50_history": [
-        3555.0,
         3577.0,
         3600.0,
         3621.0,
@@ -10977,37 +10976,38 @@
         4040.0,
         4040.0,
         4041.0,
-        4038.0
+        4038.0,
+        4032.0
       ],
-      "net_income": 2280612954112,
+      "net_income": 7208834170880,
       "shares_outstanding": 24030764724,
-      "last_updated": "2026-04-02 18:25:12"
+      "last_updated": "2026-04-06 13:28:52"
     },
     {
       "kode": "TINS",
       "nama": "PT TIMAH Tbk",
       "sektor": "Basic Materials",
-      "harga": 3380.0,
-      "change_pct": -6.37,
-      "ma20": 3628.0,
-      "ma50": 3660.0,
-      "rsi": 45.8,
-      "macd_line": -126.79,
-      "macd_signal": -105.48,
+      "harga": 3540.0,
+      "change_pct": 4.73,
+      "ma20": 3574.0,
+      "ma50": 3657.0,
+      "rsi": 49.6,
+      "macd_line": -108.51,
+      "macd_signal": -106.24,
       "macd_bullish": false,
-      "vol_ratio": 0.77,
+      "vol_ratio": 0.34,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
-      "bullish_candle": false,
-      "body_ratio": 0.47,
-      "pbv": 3.31,
-      "per": 28.63,
+      "bullish_candle": true,
+      "body_ratio": 0.57,
+      "pbv": 3.46,
+      "per": 30.01,
       "roe": 11.9,
       "der": 33.64,
       "dps": 64.0,
-      "yield_kotor": 1.89,
-      "yield_bersih": 1.7,
+      "yield_kotor": 1.81,
+      "yield_bersih": 1.63,
       "div_history": [
         {
           "tanggal": "2017-05-09",
@@ -11038,16 +11038,8 @@
       "div_konsisten": true,
       "ex_date": "2025-06-23",
       "cum_date": "2025-06-22",
-      "days_to_cum": -284,
+      "days_to_cum": -288,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 3390.0,
-          "high": 3890.0,
-          "low": 3370.0,
-          "close": 3810.0,
-          "vol": 113420300
-        },
         {
           "date": "2026-02-12",
           "open": 3850.0,
@@ -11279,10 +11271,17 @@
           "low": 3340.0,
           "close": 3380.0,
           "vol": 37259500
+        },
+        {
+          "date": "2026-04-06",
+          "open": 3380.0,
+          "high": 3550.0,
+          "low": 3270.0,
+          "close": 3540.0,
+          "vol": 15402000
         }
       ],
       "ma20_history": [
-        3478.0,
         3491.0,
         3500.0,
         3508.0,
@@ -11311,10 +11310,10 @@
         3758.0,
         3718.0,
         3681.0,
-        3628.0
+        3628.0,
+        3574.0
       ],
       "ma50_history": [
-        3371.0,
         3389.0,
         3404.0,
         3419.0,
@@ -11343,37 +11342,38 @@
         3661.0,
         3659.0,
         3662.0,
-        3660.0
+        3660.0,
+        3657.0
       ],
       "net_income": 880284991488,
       "shares_outstanding": 7447753453,
-      "last_updated": "2026-04-02 18:25:13"
+      "last_updated": "2026-04-06 13:28:52"
     },
     {
       "kode": "INCO",
       "nama": "PT Vale Indonesia Tbk",
       "sektor": "Basic Materials",
-      "harga": 5500.0,
-      "change_pct": -4.35,
-      "ma20": 6061.0,
-      "ma50": 6386.0,
-      "rsi": 42.7,
-      "macd_line": -301.88,
-      "macd_signal": -244.05,
+      "harga": 5650.0,
+      "change_pct": 2.73,
+      "ma20": 5949.0,
+      "ma50": 6368.0,
+      "rsi": 45.1,
+      "macd_line": -281.89,
+      "macd_signal": -251.63,
       "macd_bullish": false,
-      "vol_ratio": 0.41,
+      "vol_ratio": 0.14,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
-      "bullish_candle": false,
-      "body_ratio": 0.75,
-      "pbv": 20912.55,
-      "per": 44.91,
+      "bullish_candle": true,
+      "body_ratio": 0.88,
+      "pbv": 21482.89,
+      "per": 46.27,
       "roe": 2.76,
       "der": 0.12,
       "dps": 53.0,
-      "yield_kotor": 0.96,
-      "yield_bersih": 0.86,
+      "yield_kotor": 0.94,
+      "yield_bersih": 0.85,
       "div_history": [
         {
           "tanggal": "2013-05-15",
@@ -11404,16 +11404,8 @@
       "div_konsisten": true,
       "ex_date": "2025-05-27",
       "cum_date": "2025-05-26",
-      "days_to_cum": -311,
+      "days_to_cum": -315,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 6450.0,
-          "high": 6875.0,
-          "low": 6450.0,
-          "close": 6850.0,
-          "vol": 29182600
-        },
         {
           "date": "2026-02-12",
           "open": 6950.0,
@@ -11645,10 +11637,17 @@
           "low": 5450.0,
           "close": 5500.0,
           "vol": 11545400
+        },
+        {
+          "date": "2026-04-06",
+          "open": 5475.0,
+          "high": 5650.0,
+          "low": 5450.0,
+          "close": 5650.0,
+          "vol": 3497100
         }
       ],
       "ma20_history": [
-        6414.0,
         6449.0,
         6480.0,
         6502.0,
@@ -11677,10 +11676,10 @@
         6304.0,
         6221.0,
         6141.0,
-        6061.0
+        6061.0,
+        5949.0
       ],
       "ma50_history": [
-        5359.0,
         5422.0,
         5485.0,
         5545.0,
@@ -11709,32 +11708,33 @@
         6428.0,
         6415.0,
         6404.0,
-        6386.0
+        6386.0,
+        6368.0
       ],
       "net_income": 76063000,
       "shares_outstanding": 10539784534,
-      "last_updated": "2026-04-02 18:25:13"
+      "last_updated": "2026-04-06 13:28:53"
     },
     {
       "kode": "SCMA",
       "nama": "PT Surya Citra Media Tbk",
       "sektor": "Communication Services",
       "harga": 260.0,
-      "change_pct": -4.41,
-      "ma20": 258.0,
-      "ma50": 276.0,
+      "change_pct": 0.0,
+      "ma20": 257.0,
+      "ma50": 275.0,
       "rsi": 46.7,
-      "macd_line": -4.28,
-      "macd_signal": -6.44,
+      "macd_line": -4.22,
+      "macd_signal": -5.98,
       "macd_bullish": true,
-      "vol_ratio": 0.52,
+      "vol_ratio": 0.11,
       "above_ma20": true,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.86,
+      "body_ratio": 0.33,
       "pbv": 2.53,
-      "per": 21.38,
+      "per": 21.42,
       "roe": 9.14,
       "der": 0.48,
       "dps": 9.0,
@@ -11770,16 +11770,8 @@
       "div_konsisten": true,
       "ex_date": "2025-11-19",
       "cum_date": "2025-11-18",
-      "days_to_cum": -135,
+      "days_to_cum": -139,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 290.0,
-          "high": 312.0,
-          "low": 284.0,
-          "close": 308.0,
-          "vol": 268827900
-        },
         {
           "date": "2026-02-12",
           "open": 308.0,
@@ -12011,10 +12003,17 @@
           "low": 260.0,
           "close": 260.0,
           "vol": 64060200
+        },
+        {
+          "date": "2026-04-06",
+          "open": 262.0,
+          "high": 264.0,
+          "low": 258.0,
+          "close": 260.0,
+          "vol": 13555800
         }
       ],
       "ma20_history": [
-        281.0,
         280.0,
         279.0,
         278.0,
@@ -12043,10 +12042,10 @@
         261.0,
         259.0,
         258.0,
-        258.0
+        258.0,
+        257.0
       ],
       "ma50_history": [
-        336.0,
         335.0,
         333.0,
         332.0,
@@ -12075,36 +12074,37 @@
         280.0,
         279.0,
         277.0,
-        276.0
+        276.0,
+        275.0
       ],
       "net_income": 771016818688,
       "shares_outstanding": 63504703280,
-      "last_updated": "2026-04-02 18:25:14"
+      "last_updated": "2026-04-06 13:28:53"
     },
     {
       "kode": "BSDE",
       "nama": "PT Bumi Serpong Damai Tbk",
       "sektor": "Real Estate",
-      "harga": 765.0,
-      "change_pct": 2.0,
-      "ma20": 753.0,
-      "ma50": 848.0,
-      "rsi": 44.5,
-      "macd_line": -28.39,
-      "macd_signal": -35.28,
+      "harga": 755.0,
+      "change_pct": -1.31,
+      "ma20": 749.0,
+      "ma50": 844.0,
+      "rsi": 41.9,
+      "macd_line": -26.06,
+      "macd_signal": -33.44,
       "macd_bullish": true,
-      "vol_ratio": 0.46,
+      "vol_ratio": 0.44,
       "above_ma20": true,
       "above_ma50": false,
       "golden_cross": false,
-      "bullish_candle": true,
+      "bullish_candle": false,
       "body_ratio": 0.67,
-      "pbv": 0.37,
-      "per": 6.28,
+      "pbv": 0.36,
+      "per": 6.2,
       "roe": 5.72,
       "der": 31.14,
       "dps": 5.0,
-      "yield_kotor": 0.65,
+      "yield_kotor": 0.66,
       "yield_bersih": 0.59,
       "div_history": [
         {
@@ -12136,16 +12136,8 @@
       "div_konsisten": true,
       "ex_date": "2017-06-12",
       "cum_date": "2017-06-11",
-      "days_to_cum": -3217,
+      "days_to_cum": -3221,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 905.0,
-          "high": 910.0,
-          "low": 900.0,
-          "close": 910.0,
-          "vol": 3352400
-        },
         {
           "date": "2026-02-12",
           "open": 905.0,
@@ -12377,10 +12369,17 @@
           "low": 750.0,
           "close": 765.0,
           "vol": 7560400
+        },
+        {
+          "date": "2026-04-06",
+          "open": 765.0,
+          "high": 765.0,
+          "low": 750.0,
+          "close": 755.0,
+          "vol": 7023600
         }
       ],
       "ma20_history": [
-        924.0,
         921.0,
         918.0,
         915.0,
@@ -12409,10 +12408,10 @@
         769.0,
         763.0,
         757.0,
-        753.0
+        753.0,
+        749.0
       ],
       "ma50_history": [
-        928.0,
         928.0,
         927.0,
         925.0,
@@ -12441,25 +12440,26 @@
         859.0,
         855.0,
         851.0,
-        848.0
+        848.0,
+        844.0
       ],
       "net_income": 2545380753408,
       "shares_outstanding": 20913395112,
-      "last_updated": "2026-04-02 18:25:14"
+      "last_updated": "2026-04-06 13:28:54"
     },
     {
       "kode": "PWON",
       "nama": "PT Pakuwon Jati Tbk",
       "sektor": "Real Estate",
       "harga": 338.0,
-      "change_pct": -0.59,
-      "ma20": 342.0,
-      "ma50": 358.0,
+      "change_pct": 0.0,
+      "ma20": 340.0,
+      "ma50": 357.0,
       "rsi": 41.8,
-      "macd_line": -6.1,
-      "macd_signal": -6.65,
+      "macd_line": -5.73,
+      "macd_signal": -6.46,
       "macd_bullish": true,
-      "vol_ratio": 0.37,
+      "vol_ratio": 0.15,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
@@ -12502,16 +12502,8 @@
       "div_konsisten": true,
       "ex_date": "2025-07-07",
       "cum_date": "2025-07-06",
-      "days_to_cum": -270,
+      "days_to_cum": -274,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 364.0,
-          "high": 366.0,
-          "low": 360.0,
-          "close": 364.0,
-          "vol": 50597500
-        },
         {
           "date": "2026-02-12",
           "open": 364.0,
@@ -12743,10 +12735,17 @@
           "low": 336.0,
           "close": 338.0,
           "vol": 12702800
+        },
+        {
+          "date": "2026-04-06",
+          "open": 340.0,
+          "high": 340.0,
+          "low": 336.0,
+          "close": 338.0,
+          "vol": 4821200
         }
       ],
       "ma20_history": [
-        367.0,
         367.0,
         366.0,
         366.0,
@@ -12775,10 +12774,10 @@
         346.0,
         345.0,
         344.0,
-        342.0
+        342.0,
+        340.0
       ],
       "ma50_history": [
-        359.0,
         360.0,
         359.0,
         359.0,
@@ -12807,37 +12806,38 @@
         359.0,
         359.0,
         359.0,
-        358.0
+        358.0,
+        357.0
       ],
       "net_income": 2346120380416,
       "shares_outstanding": 48159602400,
-      "last_updated": "2026-04-02 18:25:15"
+      "last_updated": "2026-04-06 13:28:54"
     },
     {
       "kode": "JSMR",
       "nama": "PT Jasa Marga (Persero) Tbk",
       "sektor": "Industrials",
-      "harga": 3080.0,
-      "change_pct": -0.32,
-      "ma20": 3212.0,
-      "ma50": 3484.0,
-      "rsi": 32.1,
-      "macd_line": -129.59,
-      "macd_signal": -131.0,
+      "harga": 3010.0,
+      "change_pct": -2.27,
+      "ma20": 3177.0,
+      "ma50": 3475.0,
+      "rsi": 28.5,
+      "macd_line": -130.49,
+      "macd_signal": -130.9,
       "macd_bullish": true,
-      "vol_ratio": 0.46,
+      "vol_ratio": 0.39,
       "above_ma20": false,
       "above_ma50": false,
       "golden_cross": false,
       "bullish_candle": false,
-      "body_ratio": 0.14,
-      "pbv": 0.61,
-      "per": 6.11,
+      "body_ratio": 1.0,
+      "pbv": 0.6,
+      "per": 5.97,
       "roe": 7.93,
       "der": 120.6,
       "dps": 156.0,
-      "yield_kotor": 5.06,
-      "yield_bersih": 4.55,
+      "yield_kotor": 5.18,
+      "yield_bersih": 4.66,
       "div_history": [
         {
           "tanggal": "2018-04-18",
@@ -12868,16 +12868,8 @@
       "div_konsisten": true,
       "ex_date": "2025-05-20",
       "cum_date": "2025-05-19",
-      "days_to_cum": -318,
+      "days_to_cum": -322,
       "price_history": [
-        {
-          "date": "2026-02-11",
-          "open": 3750.0,
-          "high": 3770.0,
-          "low": 3720.0,
-          "close": 3720.0,
-          "vol": 4077300
-        },
         {
           "date": "2026-02-12",
           "open": 3720.0,
@@ -13109,10 +13101,17 @@
           "low": 3050.0,
           "close": 3080.0,
           "vol": 2689800
+        },
+        {
+          "date": "2026-04-06",
+          "open": 3080.0,
+          "high": 3080.0,
+          "low": 3010.0,
+          "close": 3010.0,
+          "vol": 2245000
         }
       ],
       "ma20_history": [
-        3630.0,
         3645.0,
         3652.0,
         3664.0,
@@ -13141,10 +13140,10 @@
         3312.0,
         3278.0,
         3244.0,
-        3212.0
+        3212.0,
+        3177.0
       ],
       "ma50_history": [
-        3504.0,
         3510.0,
         3516.0,
         3523.0,
@@ -13173,11 +13172,12 @@
         3508.0,
         3500.0,
         3492.0,
-        3484.0
+        3484.0,
+        3475.0
       ],
       "net_income": 3659534958592,
       "shares_outstanding": 7257871199,
-      "last_updated": "2026-04-02 18:25:15"
+      "last_updated": "2026-04-06 13:28:55"
     },
     {
       "kode": "WIKA",
@@ -13234,16 +13234,8 @@
       "div_konsisten": true,
       "ex_date": "2020-06-17",
       "cum_date": "2020-06-16",
-      "days_to_cum": -2116,
+      "days_to_cum": -2120,
       "price_history": [
-        {
-          "date": "2026-02-10",
-          "open": 204.0,
-          "high": 204.0,
-          "low": 204.0,
-          "close": 204.0,
-          "vol": 0
-        },
         {
           "date": "2026-02-11",
           "open": 204.0,
@@ -13475,6 +13467,14 @@
           "low": 204.0,
           "close": 204.0,
           "vol": 0
+        },
+        {
+          "date": "2026-04-02",
+          "open": 204.0,
+          "high": 204.0,
+          "low": 204.0,
+          "close": 204.0,
+          "vol": 0
         }
       ],
       "ma20_history": [
@@ -13543,7 +13543,7 @@
       ],
       "net_income": -6220014419968,
       "shares_outstanding": 39871963858,
-      "last_updated": "2026-04-02 18:25:16"
+      "last_updated": "2026-04-06 13:28:55"
     }
   ]
 }
