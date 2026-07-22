@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-22 02:54:08",
+  "generated_at": "2026-07-22 07:28:17",
   "summary": {
     "total": 36,
-    "strong_buy": 7,
-    "buy": 22,
-    "watch": 7,
+    "strong_buy": 1,
+    "buy": 21,
+    "watch": 14,
     "skip": 0
   },
   "strong_buy": [
@@ -395,18 +395,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 18,
+      "total_skor": 17,
       "skor_maks": 22,
-      "pct": 81.8,
+      "pct": 77.3,
       "klasifikasi": "STRONG BUY",
       "news": {
-        "overall": "strong_positive",
-        "skor_normalized": 8.8,
+        "overall": "neutral",
+        "skor_normalized": 5.0,
         "skor_korporasi": 4,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [
           {
             "id": 1,
@@ -471,7 +471,9 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "buy": [
     {
       "kode": "BJTM",
       "nama": "PT Bank Pembangunan Daerah Jawa Timur Tbk",
@@ -859,18 +861,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 17,
+      "total_skor": 16,
       "skor_maks": 22,
-      "pct": 77.3,
-      "klasifikasi": "STRONG BUY",
+      "pct": 72.7,
+      "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -914,6 +916,465 @@
             "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVWQxQ2xGVEFPYXotOFlNYkYyc2VPZzhkT0xrczU1MWtKSm90REtOSU5oRjFlQmpWeDR3ZTlBcndqSmpyaWo4SW9yeGlkbnNCT19YWkxtSmZGLXlDQ01oVHBTWlhwX2ZhdDNrcnZad2puVlJic2ZGbXZQaWFVYjFkRTBaUDFITmEyOUxyZHZ1VnZUcUZKTVZEbEFBc1Y?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
+          }
+        ]
+      }
+    },
+    {
+      "kode": "BFIN",
+      "nama": "PT BFI Finance Indonesia Tbk",
+      "sektor": "Financial Services",
+      "harga": 715.0,
+      "change_pct": 2.14,
+      "ma20": 711.0,
+      "ma50": 722.0,
+      "rsi": 50.9,
+      "macd_line": -11.22,
+      "macd_signal": -10.77,
+      "macd_bullish": false,
+      "vol_ratio": 0.41,
+      "above_ma20": true,
+      "above_ma50": false,
+      "golden_cross": false,
+      "bullish_candle": true,
+      "body_ratio": 0.75,
+      "pbv": 1.0,
+      "per": 6.94,
+      "roe": 15.18,
+      "der": 127.62,
+      "dps": 35.0,
+      "yield_kotor": 4.9,
+      "yield_bersih": 4.41,
+      "div_history": [
+        {
+          "tanggal": "2023-05-26",
+          "dps": 32.0
+        },
+        {
+          "tanggal": "2023-12-14",
+          "dps": 28.0
+        },
+        {
+          "tanggal": "2024-06-04",
+          "dps": 27.0
+        },
+        {
+          "tanggal": "2024-12-12",
+          "dps": 28.0
+        },
+        {
+          "tanggal": "2025-05-21",
+          "dps": 32.0
+        },
+        {
+          "tanggal": "2025-12-11",
+          "dps": 35.0
+        }
+      ],
+      "div_years": 3,
+      "div_konsisten": true,
+      "ex_date": "2025-12-11",
+      "cum_date": "2025-12-10",
+      "days_to_cum": -124,
+      "price_history": [
+        {
+          "date": "2026-02-23",
+          "open": 780.0,
+          "high": 785.0,
+          "low": 750.0,
+          "close": 770.0,
+          "vol": 38645000
+        },
+        {
+          "date": "2026-02-24",
+          "open": 775.0,
+          "high": 780.0,
+          "low": 760.0,
+          "close": 765.0,
+          "vol": 42596100
+        },
+        {
+          "date": "2026-02-25",
+          "open": 765.0,
+          "high": 780.0,
+          "low": 765.0,
+          "close": 775.0,
+          "vol": 30070200
+        },
+        {
+          "date": "2026-02-26",
+          "open": 780.0,
+          "high": 800.0,
+          "low": 770.0,
+          "close": 775.0,
+          "vol": 60111200
+        },
+        {
+          "date": "2026-02-27",
+          "open": 770.0,
+          "high": 795.0,
+          "low": 770.0,
+          "close": 785.0,
+          "vol": 50612100
+        },
+        {
+          "date": "2026-03-02",
+          "open": 775.0,
+          "high": 780.0,
+          "low": 760.0,
+          "close": 760.0,
+          "vol": 54379500
+        },
+        {
+          "date": "2026-03-03",
+          "open": 760.0,
+          "high": 775.0,
+          "low": 760.0,
+          "close": 765.0,
+          "vol": 24090300
+        },
+        {
+          "date": "2026-03-04",
+          "open": 765.0,
+          "high": 770.0,
+          "low": 740.0,
+          "close": 745.0,
+          "vol": 39635000
+        },
+        {
+          "date": "2026-03-05",
+          "open": 750.0,
+          "high": 770.0,
+          "low": 750.0,
+          "close": 760.0,
+          "vol": 8825200
+        },
+        {
+          "date": "2026-03-06",
+          "open": 760.0,
+          "high": 770.0,
+          "low": 750.0,
+          "close": 760.0,
+          "vol": 29344500
+        },
+        {
+          "date": "2026-03-09",
+          "open": 750.0,
+          "high": 750.0,
+          "low": 715.0,
+          "close": 725.0,
+          "vol": 41829000
+        },
+        {
+          "date": "2026-03-10",
+          "open": 725.0,
+          "high": 755.0,
+          "low": 725.0,
+          "close": 750.0,
+          "vol": 14550200
+        },
+        {
+          "date": "2026-03-11",
+          "open": 750.0,
+          "high": 760.0,
+          "low": 735.0,
+          "close": 745.0,
+          "vol": 11867100
+        },
+        {
+          "date": "2026-03-12",
+          "open": 750.0,
+          "high": 750.0,
+          "low": 715.0,
+          "close": 745.0,
+          "vol": 17793000
+        },
+        {
+          "date": "2026-03-13",
+          "open": 740.0,
+          "high": 740.0,
+          "low": 720.0,
+          "close": 725.0,
+          "vol": 26050900
+        },
+        {
+          "date": "2026-03-16",
+          "open": 720.0,
+          "high": 740.0,
+          "low": 710.0,
+          "close": 735.0,
+          "vol": 19580600
+        },
+        {
+          "date": "2026-03-17",
+          "open": 735.0,
+          "high": 740.0,
+          "low": 720.0,
+          "close": 720.0,
+          "vol": 6913200
+        },
+        {
+          "date": "2026-03-25",
+          "open": 715.0,
+          "high": 745.0,
+          "low": 715.0,
+          "close": 735.0,
+          "vol": 17349100
+        },
+        {
+          "date": "2026-03-26",
+          "open": 735.0,
+          "high": 740.0,
+          "low": 715.0,
+          "close": 715.0,
+          "vol": 6871500
+        },
+        {
+          "date": "2026-03-27",
+          "open": 720.0,
+          "high": 725.0,
+          "low": 700.0,
+          "close": 705.0,
+          "vol": 7554000
+        },
+        {
+          "date": "2026-03-30",
+          "open": 700.0,
+          "high": 720.0,
+          "low": 695.0,
+          "close": 700.0,
+          "vol": 22366800
+        },
+        {
+          "date": "2026-03-31",
+          "open": 700.0,
+          "high": 715.0,
+          "low": 695.0,
+          "close": 710.0,
+          "vol": 23107300
+        },
+        {
+          "date": "2026-04-01",
+          "open": 710.0,
+          "high": 715.0,
+          "low": 695.0,
+          "close": 700.0,
+          "vol": 19607100
+        },
+        {
+          "date": "2026-04-02",
+          "open": 700.0,
+          "high": 700.0,
+          "low": 685.0,
+          "close": 685.0,
+          "vol": 11224200
+        },
+        {
+          "date": "2026-04-06",
+          "open": 690.0,
+          "high": 695.0,
+          "low": 680.0,
+          "close": 680.0,
+          "vol": 11104000
+        },
+        {
+          "date": "2026-04-07",
+          "open": 680.0,
+          "high": 685.0,
+          "low": 650.0,
+          "close": 665.0,
+          "vol": 30703000
+        },
+        {
+          "date": "2026-04-08",
+          "open": 675.0,
+          "high": 685.0,
+          "low": 665.0,
+          "close": 680.0,
+          "vol": 31822300
+        },
+        {
+          "date": "2026-04-09",
+          "open": 680.0,
+          "high": 695.0,
+          "low": 675.0,
+          "close": 690.0,
+          "vol": 13033600
+        },
+        {
+          "date": "2026-04-10",
+          "open": 690.0,
+          "high": 705.0,
+          "low": 690.0,
+          "close": 700.0,
+          "vol": 8163000
+        },
+        {
+          "date": "2026-04-13",
+          "open": 700.0,
+          "high": 715.0,
+          "low": 695.0,
+          "close": 715.0,
+          "vol": 7187500
+        }
+      ],
+      "ma20_history": [
+        714.0,
+        716.0,
+        718.0,
+        720.0,
+        724.0,
+        727.0,
+        730.0,
+        732.0,
+        735.0,
+        738.0,
+        739.0,
+        742.0,
+        744.0,
+        747.0,
+        748.0,
+        749.0,
+        750.0,
+        751.0,
+        751.0,
+        748.0,
+        744.0,
+        742.0,
+        738.0,
+        734.0,
+        728.0,
+        724.0,
+        719.0,
+        716.0,
+        714.0,
+        711.0
+      ],
+      "ma50_history": [
+        714.0,
+        715.0,
+        716.0,
+        717.0,
+        718.0,
+        719.0,
+        720.0,
+        721.0,
+        722.0,
+        723.0,
+        723.0,
+        724.0,
+        725.0,
+        726.0,
+        726.0,
+        727.0,
+        727.0,
+        728.0,
+        728.0,
+        727.0,
+        727.0,
+        727.0,
+        727.0,
+        726.0,
+        726.0,
+        725.0,
+        724.0,
+        723.0,
+        723.0,
+        722.0
+      ],
+      "net_income": 1581840990208,
+      "shares_outstanding": 14849383620,
+      "last_updated": "2026-04-13 14:41:30",
+      "flags": [],
+      "skor_detail": {
+        "yield_bersih_4pct": 1,
+        "yield_tidak_abnormal": 1,
+        "div_konsisten_3thn": 1,
+        "div_konsisten_5thn": 0,
+        "dividen_aktif": 1,
+        "pbv_wajar": 1,
+        "per_wajar": 1,
+        "roe_positif": 1,
+        "der_aman": 1,
+        "above_ma20": 1,
+        "above_ma50": 0,
+        "golden_cross": 0,
+        "rsi_ideal": 1,
+        "rsi_tidak_overbought": 1,
+        "macd_bullish": 0,
+        "volume_normal": 0,
+        "volume_momentum": 0,
+        "candle_bullish": 1,
+        "candle_body_kuat": 1,
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
+      },
+      "total_skor": 16,
+      "skor_maks": 22,
+      "pct": 72.7,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 5.6,
+        "skor_korporasi": 5,
+        "skor_makro": -4,
+        "kategori_match": [
+          {
+            "id": 6,
+            "nama": "Akuisisi",
+            "sentimen": "bullish",
+            "bobot": 3,
+            "warning": "Tergantung valuasi — cek detail",
+            "level": "korporasi"
+          },
+          {
+            "id": 6,
+            "nama": "Akuisisi",
+            "sentimen": "bullish",
+            "bobot": 3,
+            "warning": "Tergantung valuasi — cek detail",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [
+          "Tergantung valuasi — cek detail"
+        ],
+        "total_berita": 2,
+        "items": [
+          {
+            "title": "IHSG naik 0,67%, saham ARTO dan BFIN melonjak di tengah kabar merger - MSN",
+            "published": "Thu, 16 Jul 2026 07:00:00 GMT",
+            "source": "MSN",
+            "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNaXdwRUN5NGZQZVlYY3ZSRldYQ1BKQXczX3pkSFpLOUIybW5jX19XS2ZBVl9qN1RUZlNjdjctUFNNZzFvRHBUUEh4X2YtN1ptOTZqYlltU1NHclViTDY2Rm1xTWFXellxRkFBOUw5YmRjV0VEcURMbFpMc3BwRkRjNW9kcGswc3cteU8wZnJLU2MtYnJRVmRDazVzSW9MTllOaHllZEhTbU5EeTBNR3NwN2I1d0tJaE50QXRv?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": [
+              {
+                "id": 6,
+                "nama": "Akuisisi",
+                "sentimen": "bullish",
+                "bobot": 3,
+                "warning": "Tergantung valuasi — cek detail",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Peluang Merger Bisnis Bank ARTO dan Pembiayaan BFIN Terbentur Regulasi? - Katadata.co.id",
+            "published": "Mon, 20 Jul 2026 06:30:00 GMT",
+            "source": "Katadata.co.id",
+            "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNUHVNMkpxNXloUUtQTGgtbEFnSFYwZ00yUUhxSVJMUHd6TDlIdXc3NHJwR3lBR0VHdG5HUGlVdW1obndRZmVURTBvMFp5ejR4YktHOGxIbUZiSkc3akZyLVUtZzRsWUxaTjkxVjVfWTNwWUtoWGFlU1pLYmljWnJvMUdoTWd1MXFhbDJVNGVqT3Vya1hHSnVxa211YWc1MnU3SWFGbnVqQktwd0lWM293dzNxaHFkQzhfRnFldnN0UTDSAcYBQVVfeXFMUGdncVNEa0FiRXlRSmNxdWFYX2I4Q0pUUFphcWM2UFFtSFBMQUJUeGRSdDZiazJ3aWpBQ3VXZzNNZTJDajlsQVQ1dm9mSVNiS2ZsTlM5UFVfZmI4MVNWMEtWRVlPVHI1dU40UC1LX0Rlb0EtRWN3QVo4bmdCN0gwTTM2VjhfMkgtX2RNUkgxOEVrUVJ1ZGprRHpJYkpsZUhTcnRwdHZGNkthb3RSZGkybTEwY3A1X2JIRTFZb3MwUGw0MFhaQnpn?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": [
+              {
+                "id": 6,
+                "nama": "Akuisisi",
+                "sentimen": "bullish",
+                "bobot": 3,
+                "warning": "Tergantung valuasi — cek detail",
+                "level": "korporasi"
+              }
+            ]
           }
         ]
       }
@@ -1305,18 +1766,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 17,
+      "total_skor": 16,
       "skor_maks": 22,
-      "pct": 77.3,
-      "klasifikasi": "STRONG BUY",
+      "pct": 72.7,
+      "klasifikasi": "BUY",
       "news": {
-        "overall": "strong_positive",
-        "skor_normalized": 8.8,
+        "overall": "neutral",
+        "skor_normalized": 5.0,
         "skor_korporasi": 4,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [
           {
             "id": 1,
@@ -1904,18 +2365,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 17,
+      "total_skor": 16,
       "skor_maks": 22,
-      "pct": 77.3,
-      "klasifikasi": "STRONG BUY",
+      "pct": 72.7,
+      "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -1932,7 +2393,7 @@
             "title": "Harga Minyak Tembus USD90, Saham ENRG-AKRA Cs Naik Lagi - RCTI+",
             "published": "Mon, 20 Jul 2026 02:44:05 GMT",
             "source": "RCTI+",
-            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWWhjMDdCeFpTZ3g3YzUyVE5KU0RieXlmNkhlY2hVaERHMUFHVV8zNWNWNG8za3NxRGstb0ZMcElvMHV6WXpEVHJOUUVuU1lkQUFwTWk3bTNoengyd19YbWNIMFVyaFFHXzZ4TS1TTDlrU1F2RWRCWDZFUmN0bkVoMlg1N1RGdVEzOEFGWEh1cFU2RDVQX1VQdzFqSjVKc19HUEJLSTZvWlZyRzln?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQ05LeTRjMURlbEVWTmJmVHN2QWJSaVdYVk1td2dDaE9ZMUNsOFhWeU44NlVNd2sxWG9ZcTZQSjFDSmJQdFNOcVNvempWd2VVWGEwelpVTjdiRkRtSGJmZ2hqUDRQeklpZ3h1ZW9TR0RmYVk1ZElTSFRfUTVvZmtvcEdtajRfNTk0SDRlZW9mMm01N3ZyS0ZlbnVUeXZURWJKeS1XN0lZd21aQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           },
@@ -1945,18 +2406,18 @@
             "matches": []
           },
           {
-            "title": "Pembukaan LQ45 Hari Ini: ANTM dan BBRI Naik, AKRA Turun - TrenAsia",
-            "published": "Wed, 15 Jul 2026 06:04:52 GMT",
-            "source": "TrenAsia",
-            "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQLWdjRE9WX3hfR3E2amJ5dm9heDZoVzJCRTljM0FobUJOT0EtZzNCOWQyT1k4Y0FpUFNzSGRUZW1kdUFEeTRNNlRWRXRmZmVsb0sxRk90dklSS1YyM1dmVjNNQWpuX2dSZi1uY3VTOVRsWHV1dDdrdzlCVjBXeDZzMjRHaEppZVBsX3fSAYoBQVVfeXFMUC1nY0RPVl94X0dxNmpieXZvYXg2aFcyQkU5YzNBaG1CTk9BLWczQjlkMk9ZOGNBaVBTc0hkVGVtZHVBRHk0TTZUVkV0ZmZlbG9LMUZPdHZJUktWMjNXZlYzTUFqbl9nUmYtbmN1UzlUbFh1dXQ3a3c5QlYwV3g2czI0R2hKaWVQbF93?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "title": "IHSG Dibuka Menguat di Posisi 6.112 - Bloomberg Technoz",
+            "published": "Fri, 17 Jul 2026 02:14:14 GMT",
+            "source": "Bloomberg Technoz",
+            "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxObjA1Nk9zQlk5b2FYU0xCN09rSHBWOW5xcmhWT29tV1dpLXRhdG10Y09lUkFGMTVqaDRoXzF6azdBRmtLX1NxUjNPQ0Zad0gtZGJFbGZWS1A0clowZmpxTG5PcF8xLVhtNUxtdmpBSEwwaWFOZ3psVjktM2RrcVFyd1BJdDAzN0Y0WWhhNG5nS2s?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           },
           {
-            "title": "Saham Pilihan untuk Trading 21 Juli dan Target Harganya - investor.id",
-            "published": "Tue, 21 Jul 2026 01:02:20 GMT",
+            "title": "IHSG Siap Tancap Gas, 6 Saham Bakal Cuan - investor.id",
+            "published": "Fri, 17 Jul 2026 01:43:35 GMT",
             "source": "investor.id",
-            "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQcFNRQ2tWUmFNQWZFWDBrSURlVWROckVzV3BCRUxvRVpWTXNPUVRfNjRkMnI0QVNOUmhob2xUZW9NVVlReWhqTUJ0NEtpOTdYT2JURXZWQVdvcndQWGxGOWNZbDVmWm1fWENwQi1MZEhQR0dzQnF6NjZod0tObk5IU1ZubTdqRTRKcjlDWE0wa0FxMHc?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBUZnRCWVFDWWh6bzVabG5EWUNoalZWQzU3emh5Sno1Y3VZQnRiRXREamhYZHV4ckpLLW1RdUphbHVFT1hLT0FNdEhfbWd2MFJaM3hhUkZZUjg0WjlwcWhuOVlDZzJENVgzS3lFODdONmloZlVmNFdNaE9pbG53UQ?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           }
@@ -2350,27 +2811,19 @@
         "candle_bullish": 1,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 17,
+      "total_skor": 16,
       "skor_maks": 22,
-      "pct": 77.3,
-      "klasifikasi": "STRONG BUY",
+      "pct": 72.7,
+      "klasifikasi": "BUY",
       "news": {
-        "overall": "strong_positive",
-        "skor_normalized": 9.4,
-        "skor_korporasi": 5,
-        "skor_makro": 2,
+        "overall": "neutral",
+        "skor_normalized": 5.0,
+        "skor_korporasi": 4,
+        "skor_makro": -4,
         "kategori_match": [
-          {
-            "id": 1,
-            "nama": "Dividen",
-            "sentimen": "bullish",
-            "bobot": 4,
-            "warning": "",
-            "level": "korporasi"
-          },
           {
             "id": 1,
             "nama": "Dividen",
@@ -2401,14 +2854,6 @@
             ]
           },
           {
-            "title": "Distribusi Saham Emiten Anthoni Salim & Jusuf Hamka Belum Merata - Bloomberg Technoz",
-            "published": "Wed, 15 Jul 2026 04:34:22 GMT",
-            "source": "Bloomberg Technoz",
-            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUld4NE9kLVF0SUI5eWZWUmhTTHBIMkpmaW5SUjgtOXdQb01FWUs4a1ZKcmN6aFpCUjZCTmFqazk3MlJadk8xS3loVWZsQWhZSjZsVTgwZTdKYVR6UFpkTDNjc3dKLU41eDlVR1JXOHJvcEs3N013dU1IdUEzM3F5S2VYalBaQi05WWczVkl0MTJnWklhVFFQckU2eWhaU1pPeDVUNjllYXFiZVQ2Vk9qdm94VjY?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
             "title": "IHSG Kembali Dibayangi Penutupan Selat Hormuz, Saham Energi Berpotensi Curi Perhatian - kontan.co.id",
             "published": "Sun, 19 Jul 2026 06:19:28 GMT",
             "source": "kontan.co.id",
@@ -2425,21 +2870,20 @@
             "matches": []
           },
           {
-            "title": "Catat Tanggalnya! 7 Emiten Bagikan Dividen Jumbo pada Akhir Juli 2026 - Akurat.co",
-            "published": "Wed, 15 Jul 2026 07:30:00 GMT",
-            "source": "Akurat.co",
-            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcUNZY21IcktxNlBSVUFkdEdzT244VWNoTDFkUEtsSGEtclJNRVRoNjdVNVVBYm9peWkyQUtFa1ROU3REcTZQZlFhZUxRTlAwVkNIWnNyTTBjUFZnZk9BSzlmUHhzNWUtekRtS2dCMUdYdFBDT3pwbG5kdTg3SzJIUmpKT1ZYQXF1SndUYmJoZU9vS3dYY3p4bHZfd0hVaE84WjhKOWFZZTk1Zw?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "title": "Daftar Saham PER Terendah & Tertinggi LQ45 (16 Juli 2026), HRTA dan AMMN Jadi Sorotan - kontan.co.id",
+            "published": "Thu, 16 Jul 2026 22:35:22 GMT",
+            "source": "kontan.co.id",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPNVZBYW5tY3R1S2lYZFQ0OHRyX3ZldG9SWDdfdDExM1dQY1FFNElISEFDSnNKSUxldFJCZ2g2UG5uTjVBUVhlQ2VIa2NZZTZoV3RXbEpjUVBoY01yS3hRZDlTbnN4U3E4b0wzMlhFMEFLS1ZnQmZONFBIeU4zb3JuOGVCY1RncGVNM1hNdjI1M3VxUlZWeVFwNm9oZE45NjVoVVotX29YMl85Nk9mcnliVGIyT2otbWvSAa8BQVVfeXFMUDdnLVlXTWVubGF5X1hJcERmVDliN1lTU1o5QThpNDBaczRMZDRZMHAwWUlsYlpPSkR2bDZEbXdBaDZfaXl1MldaSlVkbnZTd3YzNm83Wl9NQ1NPXzRKaVhhLVRSTGRRc3RxNV9CZWNMbXpXbFFQMkRiTXdnbFJkNXZUNE1IYkM4TUlOeW1IUXg3WDFqVmxPTUttMFRib2VsV1R3a25DcnM2cTh4T2NPRQ?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
-            "matches": [
-              {
-                "id": 1,
-                "nama": "Dividen",
-                "sentimen": "bullish",
-                "bobot": 4,
-                "warning": "",
-                "level": "korporasi"
-              }
-            ]
+            "matches": []
+          },
+          {
+            "title": "4 Saham HSC Milik Konglomerat Kuasai Top Kapitalisasi Pasar BEI - Katadata.co.id",
+            "published": "Thu, 16 Jul 2026 07:14:00 GMT",
+            "source": "Katadata.co.id",
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNREpwbGh6d0FhQ3FjYVNVR1h6dzRBVGM4V2lQT2FlNzZEZ1Q3YzZhWFVmaTBGZFlCMDdpcUMxeVlfR1JKWWhQbGxwNnVPM19pM2NXV0JWY0ttcmE0MmVKRm1qWFRmMlh3VmUxSzN6aE1VVC1pcTJRV0JyRUlYZmNFSHB4VFBDTWJDc1ROcjZzUEg1a0RzYm9SblIwT3ZZTjBfUjZkT1p2SDZuaFk1MmVSbGF5Sl9SMDDSAbwBQVVfeXFMTlowUWdQdFJ0TUpiMVlsTE1ZM2FrVVJZNlE5b3hFMDYteEhnUndoNXlRa1NUSWVtZEtjbFFWcUVhbVBmdjlfalAtLU9EclhXeHVqRG1DcFZiMXdXT2tGa2NGZXRnX2Z5bGJpSUpZVnVBT19fOUFXQm9OSEV3alFBd1pYbl9HYjhhLWxzRHFCUHc5RXBUYm55ZHpoOVp1bXo5NWowZEM4VDlibVFFVzZXV21SZUphYTc3YmNFUmw?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
           }
         ]
       },
@@ -2966,18 +3410,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 17,
+      "total_skor": 16,
       "skor_maks": 22,
-      "pct": 77.3,
-      "klasifikasi": "STRONG BUY",
+      "pct": 72.7,
+      "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 0,
@@ -3371,27 +3815,19 @@
         "candle_bullish": 1,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 17,
+      "total_skor": 16,
       "skor_maks": 22,
-      "pct": 77.3,
-      "klasifikasi": "STRONG BUY",
+      "pct": 72.7,
+      "klasifikasi": "BUY",
       "news": {
-        "overall": "strong_positive",
-        "skor_normalized": 9.4,
-        "skor_korporasi": 5,
-        "skor_makro": 2,
+        "overall": "neutral",
+        "skor_normalized": 5.0,
+        "skor_korporasi": 4,
+        "skor_makro": -4,
         "kategori_match": [
-          {
-            "id": 1,
-            "nama": "Dividen",
-            "sentimen": "bullish",
-            "bobot": 4,
-            "warning": "",
-            "level": "korporasi"
-          },
           {
             "id": 1,
             "nama": "Dividen",
@@ -3402,7 +3838,7 @@
           }
         ],
         "warnings": [],
-        "total_berita": 4,
+        "total_berita": 3,
         "items": [
           {
             "title": "Dihantui Suku Bunga Tinggi, Saham Properti Masih Lesu - KONTAN",
@@ -3411,23 +3847,6 @@
             "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTFJNb2xfYi1ZSTNPeFZLdGttOVhKamM4cXl1Vk9aTDBXclBOQzE0MWZ3TDVqaWJ3UXhNTE9BdjhxcDBmUnZQSkRfak1XYTZOQTJkMzJFUzRVN3puWDJ4TVRPX2VLSE1aZ0N6OXJQNjRibm1TRnhERHhCZnpxblZITVhJSmkzdnFpdXVHRGwtNA?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
-          },
-          {
-            "title": "14 Emiten BEI Cairkan Dividen Serentak Rp2,5 Triliun Hari Ini, Siapa Paling Royal? - Investing.com Indonesia",
-            "published": "Wed, 15 Jul 2026 05:06:22 GMT",
-            "source": "Investing.com Indonesia",
-            "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQVnZCamYyLTBwZktvN29rbUlKazhidWk0eXRhc0c1eS1LMEw5dmttSFBCcjFrbHJ6eUUwY3ExcG42V3BHN28tMXZISzJiTW5ab0JiTWFiYndraDdUVmpadE9yYnZFaEhCRGRhbUs3U2dPczAzb1BmZzd6X3ptQld0VVU3ZGh2QVJ6cFdXbjNORENhWUNtWXcxVGh3LVloaExsbGdua3R2ZF96cXN4SVNyZTIxNkVkZTFWMmtia0Rvb2RSRW9mVlpQNlNWWmxybWs1?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 1,
-                "nama": "Dividen",
-                "sentimen": "bullish",
-                "bobot": 4,
-                "warning": "",
-                "level": "korporasi"
-              }
-            ]
           },
           {
             "title": "Kinerja saham lesu, fundamental emiten properti dinilai masih kokoh - MSN",
@@ -3456,9 +3875,7 @@
           }
         ]
       }
-    }
-  ],
-  "buy": [
+    },
     {
       "kode": "BNGA",
       "nama": "PT Bank CIMB Niaga Tbk",
@@ -3846,18 +4263,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 16,
+      "total_skor": 15,
       "skor_maks": 22,
-      "pct": 72.7,
+      "pct": 68.2,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 0,
@@ -3932,490 +4349,6 @@
       "div_yield_cum": 9.17,
       "dpr_manual": null,
       "yield_bersih_cum": 0.08
-    },
-    {
-      "kode": "BFIN",
-      "nama": "PT BFI Finance Indonesia Tbk",
-      "sektor": "Financial Services",
-      "harga": 715.0,
-      "change_pct": 2.14,
-      "ma20": 711.0,
-      "ma50": 722.0,
-      "rsi": 50.9,
-      "macd_line": -11.22,
-      "macd_signal": -10.77,
-      "macd_bullish": false,
-      "vol_ratio": 0.41,
-      "above_ma20": true,
-      "above_ma50": false,
-      "golden_cross": false,
-      "bullish_candle": true,
-      "body_ratio": 0.75,
-      "pbv": 1.0,
-      "per": 6.94,
-      "roe": 15.18,
-      "der": 127.62,
-      "dps": 35.0,
-      "yield_kotor": 4.9,
-      "yield_bersih": 4.41,
-      "div_history": [
-        {
-          "tanggal": "2023-05-26",
-          "dps": 32.0
-        },
-        {
-          "tanggal": "2023-12-14",
-          "dps": 28.0
-        },
-        {
-          "tanggal": "2024-06-04",
-          "dps": 27.0
-        },
-        {
-          "tanggal": "2024-12-12",
-          "dps": 28.0
-        },
-        {
-          "tanggal": "2025-05-21",
-          "dps": 32.0
-        },
-        {
-          "tanggal": "2025-12-11",
-          "dps": 35.0
-        }
-      ],
-      "div_years": 3,
-      "div_konsisten": true,
-      "ex_date": "2025-12-11",
-      "cum_date": "2025-12-10",
-      "days_to_cum": -124,
-      "price_history": [
-        {
-          "date": "2026-02-23",
-          "open": 780.0,
-          "high": 785.0,
-          "low": 750.0,
-          "close": 770.0,
-          "vol": 38645000
-        },
-        {
-          "date": "2026-02-24",
-          "open": 775.0,
-          "high": 780.0,
-          "low": 760.0,
-          "close": 765.0,
-          "vol": 42596100
-        },
-        {
-          "date": "2026-02-25",
-          "open": 765.0,
-          "high": 780.0,
-          "low": 765.0,
-          "close": 775.0,
-          "vol": 30070200
-        },
-        {
-          "date": "2026-02-26",
-          "open": 780.0,
-          "high": 800.0,
-          "low": 770.0,
-          "close": 775.0,
-          "vol": 60111200
-        },
-        {
-          "date": "2026-02-27",
-          "open": 770.0,
-          "high": 795.0,
-          "low": 770.0,
-          "close": 785.0,
-          "vol": 50612100
-        },
-        {
-          "date": "2026-03-02",
-          "open": 775.0,
-          "high": 780.0,
-          "low": 760.0,
-          "close": 760.0,
-          "vol": 54379500
-        },
-        {
-          "date": "2026-03-03",
-          "open": 760.0,
-          "high": 775.0,
-          "low": 760.0,
-          "close": 765.0,
-          "vol": 24090300
-        },
-        {
-          "date": "2026-03-04",
-          "open": 765.0,
-          "high": 770.0,
-          "low": 740.0,
-          "close": 745.0,
-          "vol": 39635000
-        },
-        {
-          "date": "2026-03-05",
-          "open": 750.0,
-          "high": 770.0,
-          "low": 750.0,
-          "close": 760.0,
-          "vol": 8825200
-        },
-        {
-          "date": "2026-03-06",
-          "open": 760.0,
-          "high": 770.0,
-          "low": 750.0,
-          "close": 760.0,
-          "vol": 29344500
-        },
-        {
-          "date": "2026-03-09",
-          "open": 750.0,
-          "high": 750.0,
-          "low": 715.0,
-          "close": 725.0,
-          "vol": 41829000
-        },
-        {
-          "date": "2026-03-10",
-          "open": 725.0,
-          "high": 755.0,
-          "low": 725.0,
-          "close": 750.0,
-          "vol": 14550200
-        },
-        {
-          "date": "2026-03-11",
-          "open": 750.0,
-          "high": 760.0,
-          "low": 735.0,
-          "close": 745.0,
-          "vol": 11867100
-        },
-        {
-          "date": "2026-03-12",
-          "open": 750.0,
-          "high": 750.0,
-          "low": 715.0,
-          "close": 745.0,
-          "vol": 17793000
-        },
-        {
-          "date": "2026-03-13",
-          "open": 740.0,
-          "high": 740.0,
-          "low": 720.0,
-          "close": 725.0,
-          "vol": 26050900
-        },
-        {
-          "date": "2026-03-16",
-          "open": 720.0,
-          "high": 740.0,
-          "low": 710.0,
-          "close": 735.0,
-          "vol": 19580600
-        },
-        {
-          "date": "2026-03-17",
-          "open": 735.0,
-          "high": 740.0,
-          "low": 720.0,
-          "close": 720.0,
-          "vol": 6913200
-        },
-        {
-          "date": "2026-03-25",
-          "open": 715.0,
-          "high": 745.0,
-          "low": 715.0,
-          "close": 735.0,
-          "vol": 17349100
-        },
-        {
-          "date": "2026-03-26",
-          "open": 735.0,
-          "high": 740.0,
-          "low": 715.0,
-          "close": 715.0,
-          "vol": 6871500
-        },
-        {
-          "date": "2026-03-27",
-          "open": 720.0,
-          "high": 725.0,
-          "low": 700.0,
-          "close": 705.0,
-          "vol": 7554000
-        },
-        {
-          "date": "2026-03-30",
-          "open": 700.0,
-          "high": 720.0,
-          "low": 695.0,
-          "close": 700.0,
-          "vol": 22366800
-        },
-        {
-          "date": "2026-03-31",
-          "open": 700.0,
-          "high": 715.0,
-          "low": 695.0,
-          "close": 710.0,
-          "vol": 23107300
-        },
-        {
-          "date": "2026-04-01",
-          "open": 710.0,
-          "high": 715.0,
-          "low": 695.0,
-          "close": 700.0,
-          "vol": 19607100
-        },
-        {
-          "date": "2026-04-02",
-          "open": 700.0,
-          "high": 700.0,
-          "low": 685.0,
-          "close": 685.0,
-          "vol": 11224200
-        },
-        {
-          "date": "2026-04-06",
-          "open": 690.0,
-          "high": 695.0,
-          "low": 680.0,
-          "close": 680.0,
-          "vol": 11104000
-        },
-        {
-          "date": "2026-04-07",
-          "open": 680.0,
-          "high": 685.0,
-          "low": 650.0,
-          "close": 665.0,
-          "vol": 30703000
-        },
-        {
-          "date": "2026-04-08",
-          "open": 675.0,
-          "high": 685.0,
-          "low": 665.0,
-          "close": 680.0,
-          "vol": 31822300
-        },
-        {
-          "date": "2026-04-09",
-          "open": 680.0,
-          "high": 695.0,
-          "low": 675.0,
-          "close": 690.0,
-          "vol": 13033600
-        },
-        {
-          "date": "2026-04-10",
-          "open": 690.0,
-          "high": 705.0,
-          "low": 690.0,
-          "close": 700.0,
-          "vol": 8163000
-        },
-        {
-          "date": "2026-04-13",
-          "open": 700.0,
-          "high": 715.0,
-          "low": 695.0,
-          "close": 715.0,
-          "vol": 7187500
-        }
-      ],
-      "ma20_history": [
-        714.0,
-        716.0,
-        718.0,
-        720.0,
-        724.0,
-        727.0,
-        730.0,
-        732.0,
-        735.0,
-        738.0,
-        739.0,
-        742.0,
-        744.0,
-        747.0,
-        748.0,
-        749.0,
-        750.0,
-        751.0,
-        751.0,
-        748.0,
-        744.0,
-        742.0,
-        738.0,
-        734.0,
-        728.0,
-        724.0,
-        719.0,
-        716.0,
-        714.0,
-        711.0
-      ],
-      "ma50_history": [
-        714.0,
-        715.0,
-        716.0,
-        717.0,
-        718.0,
-        719.0,
-        720.0,
-        721.0,
-        722.0,
-        723.0,
-        723.0,
-        724.0,
-        725.0,
-        726.0,
-        726.0,
-        727.0,
-        727.0,
-        728.0,
-        728.0,
-        727.0,
-        727.0,
-        727.0,
-        727.0,
-        726.0,
-        726.0,
-        725.0,
-        724.0,
-        723.0,
-        723.0,
-        722.0
-      ],
-      "net_income": 1581840990208,
-      "shares_outstanding": 14849383620,
-      "last_updated": "2026-04-13 14:41:30",
-      "flags": [],
-      "skor_detail": {
-        "yield_bersih_4pct": 1,
-        "yield_tidak_abnormal": 1,
-        "div_konsisten_3thn": 1,
-        "div_konsisten_5thn": 0,
-        "dividen_aktif": 1,
-        "pbv_wajar": 1,
-        "per_wajar": 1,
-        "roe_positif": 1,
-        "der_aman": 1,
-        "above_ma20": 1,
-        "above_ma50": 0,
-        "golden_cross": 0,
-        "rsi_ideal": 1,
-        "rsi_tidak_overbought": 1,
-        "macd_bullish": 0,
-        "volume_normal": 0,
-        "volume_momentum": 0,
-        "candle_bullish": 1,
-        "candle_body_kuat": 1,
-        "upcoming_dividen": 1,
-        "news_positif": 1,
-        "news_tidak_major_neg": 1
-      },
-      "total_skor": 16,
-      "skor_maks": 22,
-      "pct": 72.7,
-      "klasifikasi": "BUY",
-      "news": {
-        "overall": "strong_positive",
-        "skor_normalized": 9.4,
-        "skor_korporasi": 5,
-        "skor_makro": 2,
-        "kategori_match": [
-          {
-            "id": 6,
-            "nama": "Akuisisi",
-            "sentimen": "bullish",
-            "bobot": 3,
-            "warning": "Tergantung valuasi — cek detail",
-            "level": "korporasi"
-          },
-          {
-            "id": 6,
-            "nama": "Akuisisi",
-            "sentimen": "bullish",
-            "bobot": 3,
-            "warning": "Tergantung valuasi — cek detail",
-            "level": "korporasi"
-          },
-          {
-            "id": 6,
-            "nama": "Akuisisi",
-            "sentimen": "bullish",
-            "bobot": 3,
-            "warning": "Tergantung valuasi — cek detail",
-            "level": "korporasi"
-          }
-        ],
-        "warnings": [
-          "Tergantung valuasi — cek detail"
-        ],
-        "total_berita": 3,
-        "items": [
-          {
-            "title": "Buka-Bukaan BFIN Soal Kabar Kongsi Bisnis dan Rencana Merger dengan Bank Jago - Stabilitas.id",
-            "published": "Wed, 15 Jul 2026 06:53:37 GMT",
-            "source": "Stabilitas.id",
-            "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQcFc4cEREalRJR2hMV2lrTllxbTd4MHhnUFBlRDBUV2VjX3BqU3NUaVE2V0JVS0JZWDNFQU15a2ZmNkdtVW95WGx3Sjd5TGJ0eFc0YTNqUExPcjhRZ2FFaGdOaTJZbmhqQzZkWGU2bWdHS3lOWUQ0Ml9YLUk3RmJ6Mk1zTExHNFFkTzczcFZhdkYyVVo4YlUyMms3WG5KWEpyZzR6VUVFSQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 6,
-                "nama": "Akuisisi",
-                "sentimen": "bullish",
-                "bobot": 3,
-                "warning": "Tergantung valuasi — cek detail",
-                "level": "korporasi"
-              }
-            ]
-          },
-          {
-            "title": "IHSG naik 0,67%, saham ARTO dan BFIN melonjak di tengah kabar merger - MSN",
-            "published": "Thu, 16 Jul 2026 07:00:00 GMT",
-            "source": "MSN",
-            "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNaXdwRUN5NGZQZVlYY3ZSRldYQ1BKQXczX3pkSFpLOUIybW5jX19XS2ZBVl9qN1RUZlNjdjctUFNNZzFvRHBUUEh4X2YtN1ptOTZqYlltU1NHclViTDY2Rm1xTWFXellxRkFBOUw5YmRjV0VEcURMbFpMc3BwRkRjNW9kcGswc3cteU8wZnJLU2MtYnJRVmRDazVzSW9MTllOaHllZEhTbU5EeTBNR3NwN2I1d0tJaE50QXRv?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 6,
-                "nama": "Akuisisi",
-                "sentimen": "bullish",
-                "bobot": 3,
-                "warning": "Tergantung valuasi — cek detail",
-                "level": "korporasi"
-              }
-            ]
-          },
-          {
-            "title": "Peluang Merger Bisnis Bank ARTO dan Pembiayaan BFIN Terbentur Regulasi? - Katadata.co.id",
-            "published": "Mon, 20 Jul 2026 06:30:00 GMT",
-            "source": "Katadata.co.id",
-            "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNUHVNMkpxNXloUUtQTGgtbEFnSFYwZ00yUUhxSVJMUHd6TDlIdXc3NHJwR3lBR0VHdG5HUGlVdW1obndRZmVURTBvMFp5ejR4YktHOGxIbUZiSkc3akZyLVUtZzRsWUxaTjkxVjVfWTNwWUtoWGFlU1pLYmljWnJvMUdoTWd1MXFhbDJVNGVqT3Vya1hHSnVxa211YWc1MnU3SWFGbnVqQktwd0lWM293dzNxaHFkQzhfRnFldnN0UTDSAcYBQVVfeXFMUGdncVNEa0FiRXlRSmNxdWFYX2I4Q0pUUFphcWM2UFFtSFBMQUJUeGRSdDZiazJ3aWpBQ3VXZzNNZTJDajlsQVQ1dm9mSVNiS2ZsTlM5UFVfZmI4MVNWMEtWRVlPVHI1dU40UC1LX0Rlb0EtRWN3QVo4bmdCN0gwTTM2VjhfMkgtX2RNUkgxOEVrUVJ1ZGprRHpJYkpsZUhTcnRwdHZGNkthb3RSZGkybTEwY3A1X2JIRTFZb3MwUGw0MFhaQnpn?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 6,
-                "nama": "Akuisisi",
-                "sentimen": "bullish",
-                "bobot": 3,
-                "warning": "Tergantung valuasi — cek detail",
-                "level": "korporasi"
-              }
-            ]
-          }
-        ]
-      }
     },
     {
       "kode": "ELSA",
@@ -4804,18 +4737,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 16,
+      "total_skor": 15,
       "skor_maks": 22,
-      "pct": 72.7,
+      "pct": 68.2,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -5250,18 +5183,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 16,
+      "total_skor": 15,
       "skor_maks": 22,
-      "pct": 72.7,
+      "pct": 68.2,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -5696,18 +5629,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 16,
+      "total_skor": 15,
       "skor_maks": 22,
-      "pct": 72.7,
+      "pct": 68.2,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -5737,10 +5670,10 @@
             "matches": []
           },
           {
-            "title": "Indeks Bisnis-27 Dibuka Menguat Terdorong Saham AKRA, INCO, hingga DEWA - Bisnis.com - Market",
-            "published": "Tue, 21 Jul 2026 02:35:43 GMT",
-            "source": "Bisnis.com - Market",
-            "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdURyeGliMi1xRWs1cWRwS3N6aVVBcUU3T0VJVUJpNGFJTGlST2xzTC1yQ3ZtcldScGlheHMxVzdaUGRlOHBZRDVuMDNhZTRQMHZ5YU1vbnNnVlBTYWM3STByaHQ4UURNdXVCUVcybGRucFBJM0tyUzdtbV9mSUlwT2NObnpTWDRUaW1HcV9fTHBSTVY1azktUGEyNGxHekpGNnNZdDhEeUlIb1pvMzdMOTRNX1pFbzZCbGww?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "title": "IHSG Ditutup Naik 1,1% ke 6.175 pada Jumat (17/7), KLBF, TLKM, TOWR Top Gainers LQ45 - kontan.co.id",
+            "published": "Fri, 17 Jul 2026 09:09:44 GMT",
+            "source": "kontan.co.id",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZTEycEZQTG1MaGc4RHN4WjV2anAxbE43OXIzRGQwZUNIaENBM3Nha1RmakNDQTBiMGE4WjRVRVVyZmE1SXpsekppZ2JVaGZmOXN6ZkRxSzZDdkV2dG9RR2xoWVhMajFMVVkyaDVUMWtWcERzRzctTm1NVVoxMVhiYTJlVHVtTXd4STl6bmJFbDBRSG1CU1dYaWgtZTlYYmxBY1BTNk5YeTAyVXk3c2V6OdIBqAFBVV95cUxNYjZqdFZQaWJ3bENsdXAxYW54SXIya2xUd2JWVnBCZnBhMFNuZWFncjBWaHBZVjZmX3lfbDMzN0NZdndsSjU3c0dCTHBmWWp2aW9iVkZRVTgteVltS1M0dVFEVDcydHc5ODIwamphX2dETFg5MFJ6ellPNk9waG05MlBobzBPaUM0dGQyWGsxakRTNGNjUmtObW11THNyYU9kbzdwNVc3Y04?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           },
@@ -6145,18 +6078,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 16,
+      "total_skor": 15,
       "skor_maks": 22,
-      "pct": 72.7,
+      "pct": 68.2,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -6200,6 +6133,496 @@
             "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNQ2czVTE5SThyY2FFS0FTSVpLdjUwZ1JJMFF4eEZrUFZUMDFhd1dLQmtORVcwWkxxd0JBWnZtVFY1U04yMkhERDluQlBCNHVLNkpSXzhweDEyM0QxQVM5Qk9PRG0xejNtaXc5ZzdscUsydUFUZnN3Y21Va3NRdEhuVVNjYVVHQ3pMaDRuVjcxNFUzWV9uSHJvbE55RUFTWnpvczNUZ0t3SjZrRGExc3VUeDA1aV93Y2hqczBBdzdTLUs?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
+          }
+        ]
+      }
+    },
+    {
+      "kode": "ASII",
+      "nama": "PT Astra International Tbk",
+      "sektor": "Industrials",
+      "harga": 6150.0,
+      "change_pct": -2.38,
+      "ma20": 6098.0,
+      "ma50": 6381.0,
+      "rsi": 48.2,
+      "macd_line": -54.5,
+      "macd_signal": -82.65,
+      "macd_bullish": true,
+      "vol_ratio": 0.36,
+      "above_ma20": true,
+      "above_ma50": false,
+      "golden_cross": false,
+      "bullish_candle": false,
+      "body_ratio": 1.0,
+      "pbv": 1.08,
+      "per": 7.59,
+      "roe": 14.29,
+      "der": 37.93,
+      "dps": 98.0,
+      "yield_kotor": 1.59,
+      "yield_bersih": 1.43,
+      "div_history": [
+        {
+          "tanggal": "2023-05-05",
+          "dps": 552.0
+        },
+        {
+          "tanggal": "2023-10-12",
+          "dps": 98.0
+        },
+        {
+          "tanggal": "2024-05-14",
+          "dps": 421.0
+        },
+        {
+          "tanggal": "2024-10-14",
+          "dps": 98.0
+        },
+        {
+          "tanggal": "2025-05-21",
+          "dps": 308.0
+        },
+        {
+          "tanggal": "2025-10-14",
+          "dps": 98.0
+        }
+      ],
+      "div_years": 3,
+      "div_konsisten": true,
+      "ex_date": "2025-10-14",
+      "cum_date": "2025-10-13",
+      "days_to_cum": -182,
+      "price_history": [
+        {
+          "date": "2026-02-23",
+          "open": 6625.0,
+          "high": 6650.0,
+          "low": 6550.0,
+          "close": 6625.0,
+          "vol": 38075400
+        },
+        {
+          "date": "2026-02-24",
+          "open": 6650.0,
+          "high": 6725.0,
+          "low": 6550.0,
+          "close": 6550.0,
+          "vol": 51297100
+        },
+        {
+          "date": "2026-02-25",
+          "open": 6600.0,
+          "high": 6675.0,
+          "low": 6575.0,
+          "close": 6650.0,
+          "vol": 45214100
+        },
+        {
+          "date": "2026-02-26",
+          "open": 6700.0,
+          "high": 6725.0,
+          "low": 6575.0,
+          "close": 6725.0,
+          "vol": 30901600
+        },
+        {
+          "date": "2026-02-27",
+          "open": 6725.0,
+          "high": 6750.0,
+          "low": 6575.0,
+          "close": 6675.0,
+          "vol": 68396400
+        },
+        {
+          "date": "2026-03-02",
+          "open": 6600.0,
+          "high": 6625.0,
+          "low": 6275.0,
+          "close": 6300.0,
+          "vol": 60477400
+        },
+        {
+          "date": "2026-03-03",
+          "open": 6400.0,
+          "high": 6425.0,
+          "low": 6250.0,
+          "close": 6275.0,
+          "vol": 31573300
+        },
+        {
+          "date": "2026-03-04",
+          "open": 6275.0,
+          "high": 6325.0,
+          "low": 6000.0,
+          "close": 6150.0,
+          "vol": 49747800
+        },
+        {
+          "date": "2026-03-05",
+          "open": 6300.0,
+          "high": 6350.0,
+          "low": 6200.0,
+          "close": 6325.0,
+          "vol": 38471400
+        },
+        {
+          "date": "2026-03-06",
+          "open": 6300.0,
+          "high": 6300.0,
+          "low": 6050.0,
+          "close": 6125.0,
+          "vol": 38071100
+        },
+        {
+          "date": "2026-03-09",
+          "open": 5900.0,
+          "high": 5900.0,
+          "low": 5800.0,
+          "close": 5850.0,
+          "vol": 46625500
+        },
+        {
+          "date": "2026-03-10",
+          "open": 5900.0,
+          "high": 6150.0,
+          "low": 5900.0,
+          "close": 6000.0,
+          "vol": 33964900
+        },
+        {
+          "date": "2026-03-11",
+          "open": 6000.0,
+          "high": 6050.0,
+          "low": 5875.0,
+          "close": 5950.0,
+          "vol": 18403300
+        },
+        {
+          "date": "2026-03-12",
+          "open": 5975.0,
+          "high": 6050.0,
+          "low": 5900.0,
+          "close": 5950.0,
+          "vol": 20628100
+        },
+        {
+          "date": "2026-03-13",
+          "open": 5900.0,
+          "high": 5950.0,
+          "low": 5775.0,
+          "close": 5825.0,
+          "vol": 27856000
+        },
+        {
+          "date": "2026-03-16",
+          "open": 5875.0,
+          "high": 5900.0,
+          "low": 5675.0,
+          "close": 5850.0,
+          "vol": 37696400
+        },
+        {
+          "date": "2026-03-17",
+          "open": 5925.0,
+          "high": 5925.0,
+          "low": 5750.0,
+          "close": 5800.0,
+          "vol": 89895700
+        },
+        {
+          "date": "2026-03-25",
+          "open": 6300.0,
+          "high": 6600.0,
+          "low": 6100.0,
+          "close": 6600.0,
+          "vol": 134276600
+        },
+        {
+          "date": "2026-03-26",
+          "open": 6575.0,
+          "high": 6575.0,
+          "low": 6225.0,
+          "close": 6250.0,
+          "vol": 45012000
+        },
+        {
+          "date": "2026-03-27",
+          "open": 6200.0,
+          "high": 6225.0,
+          "low": 6050.0,
+          "close": 6125.0,
+          "vol": 32993200
+        },
+        {
+          "date": "2026-03-30",
+          "open": 6100.0,
+          "high": 6400.0,
+          "low": 6000.0,
+          "close": 6350.0,
+          "vol": 48246100
+        },
+        {
+          "date": "2026-03-31",
+          "open": 6350.0,
+          "high": 6350.0,
+          "low": 6175.0,
+          "close": 6250.0,
+          "vol": 31516100
+        },
+        {
+          "date": "2026-04-01",
+          "open": 6275.0,
+          "high": 6350.0,
+          "low": 6125.0,
+          "close": 6250.0,
+          "vol": 37708800
+        },
+        {
+          "date": "2026-04-02",
+          "open": 6150.0,
+          "high": 6300.0,
+          "low": 6025.0,
+          "close": 6075.0,
+          "vol": 37842500
+        },
+        {
+          "date": "2026-04-06",
+          "open": 6075.0,
+          "high": 6125.0,
+          "low": 6025.0,
+          "close": 6100.0,
+          "vol": 15705000
+        },
+        {
+          "date": "2026-04-07",
+          "open": 6075.0,
+          "high": 6075.0,
+          "low": 5875.0,
+          "close": 5900.0,
+          "vol": 22912400
+        },
+        {
+          "date": "2026-04-08",
+          "open": 6050.0,
+          "high": 6250.0,
+          "low": 6025.0,
+          "close": 6200.0,
+          "vol": 28419500
+        },
+        {
+          "date": "2026-04-09",
+          "open": 6150.0,
+          "high": 6175.0,
+          "low": 6050.0,
+          "close": 6175.0,
+          "vol": 25785600
+        },
+        {
+          "date": "2026-04-10",
+          "open": 6225.0,
+          "high": 6350.0,
+          "low": 6200.0,
+          "close": 6300.0,
+          "vol": 37451300
+        },
+        {
+          "date": "2026-04-13",
+          "open": 6275.0,
+          "high": 6275.0,
+          "low": 6150.0,
+          "close": 6150.0,
+          "vol": 14187300
+        }
+      ],
+      "ma20_history": [
+        6628.0,
+        6614.0,
+        6602.0,
+        6624.0,
+        6649.0,
+        6640.0,
+        6636.0,
+        6630.0,
+        6606.0,
+        6579.0,
+        6524.0,
+        6489.0,
+        6454.0,
+        6409.0,
+        6362.0,
+        6316.0,
+        6274.0,
+        6269.0,
+        6251.0,
+        6230.0,
+        6216.0,
+        6201.0,
+        6181.0,
+        6149.0,
+        6120.0,
+        6100.0,
+        6096.0,
+        6098.0,
+        6096.0,
+        6098.0
+      ],
+      "ma50_history": [
+        6723.0,
+        6720.0,
+        6718.0,
+        6721.0,
+        6722.0,
+        6719.0,
+        6712.0,
+        6704.0,
+        6698.0,
+        6688.0,
+        6676.0,
+        6665.0,
+        6652.0,
+        6642.0,
+        6626.0,
+        6609.0,
+        6591.0,
+        6587.0,
+        6574.0,
+        6559.0,
+        6546.0,
+        6530.0,
+        6518.0,
+        6500.0,
+        6476.0,
+        6451.0,
+        6434.0,
+        6410.0,
+        6390.0,
+        6381.0
+      ],
+      "net_income": 32769000341504,
+      "shares_outstanding": 40213715340,
+      "last_updated": "2026-04-13 14:41:40",
+      "flags": [],
+      "skor_detail": {
+        "yield_bersih_4pct": 0,
+        "yield_tidak_abnormal": 1,
+        "div_konsisten_3thn": 1,
+        "div_konsisten_5thn": 0,
+        "dividen_aktif": 1,
+        "pbv_wajar": 1,
+        "per_wajar": 1,
+        "roe_positif": 1,
+        "der_aman": 1,
+        "above_ma20": 1,
+        "above_ma50": 0,
+        "golden_cross": 0,
+        "rsi_ideal": 1,
+        "rsi_tidak_overbought": 1,
+        "macd_bullish": 1,
+        "volume_normal": 0,
+        "volume_momentum": 0,
+        "candle_bullish": 0,
+        "candle_body_kuat": 1,
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
+      },
+      "total_skor": 15,
+      "skor_maks": 22,
+      "pct": 68.2,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 5.6,
+        "skor_korporasi": 5,
+        "skor_makro": -4,
+        "kategori_match": [
+          {
+            "id": 1,
+            "nama": "Dividen",
+            "sentimen": "bullish",
+            "bobot": 4,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 4,
+        "items": [
+          {
+            "title": "Saham ASII: Profil Astra, Dividen & Prospek 2026 - Pluang",
+            "published": "Mon, 20 Jul 2026 00:57:41 GMT",
+            "source": "Pluang",
+            "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdW5PR0cyWFpRdmhvMGdtS2ZvWTh1LU1YaTRELUNOZmRkZ1JNaHNzbURXVThZbk1sQURHaFlUTENWdzFwQVg3akJyRXFnbGVaVXBveGI3N1VKcm4wVHdsOUJxakpRRndsdUFxcEJyVDFweDVrSWpocENvdFpMa1ZPZW8zRENwRXZ0cTJicUtuTjBwN0hTMGRXczZKOFpIR2pteDBUaThPcnZYUUNNNS01M1RYMzVvYTVi?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": [
+              {
+                "id": 1,
+                "nama": "Dividen",
+                "sentimen": "bullish",
+                "bobot": 4,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "ASII berencana alihkan saham treasury lewat MSOP tanpa lock-up - IDNFinancials.com",
+            "published": "Thu, 16 Jul 2026 01:45:00 GMT",
+            "source": "IDNFinancials.com",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWHZZMDhfeXRTektJMWczLU11NXpOMk0xQ0FfSWlRTVpvOU1yR29mNGQ2QjhQeW83UHNob2dMT204OG9kQWxqVVNkdE04bUNwZm9KdWxnaWUwbTF2NWRPVVBLQVFOM3g1MGY4dExkczFHTVJ6SU1HTkxkczF3elNuQ2NnZmlYRUpoWUduNVdidXgtb0lLWDZ3Nzh2enZxRVhEMUlXeTVXS2duQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
+          {
+            "title": "ASII Siap Buyback Saham Rp8 Triliun: Intip Profil Emiten hingga Kinerja Terbarunya - kontan.co.id",
+            "published": "Mon, 20 Jul 2026 04:43:08 GMT",
+            "source": "kontan.co.id",
+            "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUENSdWhNdUphMTRaWGFPV1R0bk04N0ZHUVlYaXhUVndFMDRPMFFLVFlJTzB3bFc4RkVkYUF1MVd4dnloVzdSTk1scDJ6WXE4YjZScjN4UkhtMVVZSFlaQmMyOTc0WXg1eTF1ckQxbTVURW5BMlhESk43Y1NGTlkyeTN1QS12S2gtT3Rva0g1VEpYRlFHMTR4Ukw2bWtUc2RVRlVxYUgyTkVHQXRVeW15b25aQ3RoOGJK0gGwAUFVX3lxTE9fUFRMOHpjcXEwbGRKTzZTUUU1XzlwVWlfRVpLdEN2NzJtRTRId3pETFdxYXBUbVFzX25nbVp1UXB1VTBjUXZERmNRN3lKNGdzbVloSDY3OHY5dnpOZ3RnOE5MYjNQQ3N0bG9UOWVKWldoVktTckQ4UHpHd3NZZU9KY21XS2o0XzRPT3hjcmUzRS10NG02VXU0ME1Yb2ludVM4ZGZPTGF4MHJiYXBaU1pW?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Astra Mulai Buyback Rp8 Triliun Hari Ini, Intip Gerak Saham ASII - Bisnis.com - Market",
+            "published": "Mon, 20 Jul 2026 02:32:51 GMT",
+            "source": "Bisnis.com - Market",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTmgzaFRfbHVwWHNSUjB0RS1PbmZOUnVxYlpsVEVRWkx3TWhLOWRaZzk1eDhzU1NOYXExdURwTmR1TjU0c3BwTkE0WEstQnMxWTFfQTZVVGxXRFpUVnpTaHl3b0JfbU1WdmtZZkJmOEo3QkNfY3d1a296NjEyX0p1bGtWanV2SUpXUGtNOU51YU1PbmtOeUpSVjRSWGNpQ2w3b0YyRmhZdlVHN0FmRk9seEFzSXA1QQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
           }
         ]
       }
@@ -6591,19 +7014,28 @@
         "candle_bullish": 0,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 16,
+      "total_skor": 15,
       "skor_maks": 22,
-      "pct": 72.7,
+      "pct": 68.2,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
-        "skor_korporasi": 0,
-        "skor_makro": 2,
-        "kategori_match": [],
+        "overall": "strong_negative",
+        "skor_normalized": 0.6,
+        "skor_korporasi": -3,
+        "skor_makro": -4,
+        "kategori_match": [
+          {
+            "id": 10,
+            "nama": "Direksi Mundur",
+            "sentimen": "bearish",
+            "bobot": -3,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
         "warnings": [],
         "total_berita": 5,
         "items": [
@@ -6632,23 +7064,633 @@
             "matches": []
           },
           {
+            "title": "Reaksi Saham Unggas JPFA CPIN Cs saat Kepala BGN Nanik S. Deyang Mundur - Bisnis.com - Market",
+            "published": "Wed, 22 Jul 2026 03:56:20 GMT",
+            "source": "Bisnis.com - Market",
+            "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNUVscHY0ZHdWMWxhbi1QeHZBcFY3NVRxcEdNLVgwODdQZF9KTjBaQzJGaUJpR0dSdVZBY2RCTVZobzJ3SzZWUEV3TVRnZm9pMXN2c0wxb1dSUllqcmVfUV9hdDAtSWdfMWFXV2liQUV0QmtsaTl2eElkU1VUaVkwc1o5OU01eU41UTEwZ0ZwZy1LZUs2X28tVmVieHF2azhoMHVidktMaWYyQ0hMUjBHTkM5dDJSMHNHNGQ0Mg?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": [
+              {
+                "id": 10,
+                "nama": "Direksi Mundur",
+                "sentimen": "bearish",
+                "bobot": -3,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
             "title": "Cek Saham yang Bisa Cuan Hari Ini, Ada BBCA hingga Saham Telekomunikasi - Suara.com",
             "published": "Tue, 21 Jul 2026 02:00:30 GMT",
             "source": "Suara.com",
             "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQOUgtVzl3UXZzR19ycGthYkRzUG9wYk1KSGh1TUF2Rm55SF9HSHBzUUVSekx1WDBqNFd2ZGsySDFTajFydThudHp3NlRmQWRadVlIdE1mbm1FVElSU0g1bEZQQTZNX0U2bU1VUXNzT0dxQjQ4VjlNOE56dUFGdEViaGFCVmtyVnZwVVVjV0w4MW83V0djVF9TLUEzY25WS2hOWE9FeWhyY1NPWENYdTRrZUYzVnF0c0Ni0gG4AUFVX3lxTFA5SC1XOXdRdnNHX3Jwa2FiRHNQb3BiTUpIaHVNQXZGbnlIX0dIcHNRRVJ6THVYMGo0V3ZkazJIMVNqMXJ1OG50enc2VGZBZFp1WUh0TWZubUVUSVJTSDVsRlBBNk1fRTZtTVVRc3NPR3FCNDhWOU04Tnp1QUZ0RWJoYUJWa3JWdnBVVWNXTDgxbzdXR2NUX1MtQTNjblZLaE5YT0V5aHJjU09YQ1h1NGtlRjNWcXRzQ2I?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
-          },
-          {
-            "title": "IHSG Melonjak 4,24% Sepekan, Kapitalisasi Pasar BEI Tembus Rp10.749 Triliun - Digivestasi",
-            "published": "Sat, 18 Jul 2026 07:13:42 GMT",
-            "source": "Digivestasi",
-            "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPWU5EdlpqdUZ4MkRZbDJHbzMyUjczMnE0NlVCV0U2Tjl2S1gyMXJTNUpaUHlLNVFDc2k0N3F2TVpaaFEyaFFMLV9ndzZSenlmU09vVEV4ZUN4cGNJTW9RbmhVOUpBRDZrYjBPcUloRjVkS3VMN0lPQUlVWjlwWVdTQzVta01EMWJDNG1CZzEyaG5jYUtsS25mTVlGczBNRE5ET0FjclNJTHc4enh4MWpYQ1RoczN6WG9KTlBuS3RmR1JHYlZaVlE?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
           }
         ]
       }
+    },
+    {
+      "kode": "BBNI",
+      "nama": "PT Bank Negara Indonesia (Persero) Tbk",
+      "sektor": "Financial Services",
+      "harga": 3700.0,
+      "change_pct": -0.8,
+      "ma20": 3836.0,
+      "ma50": 3999.0,
+      "rsi": 40.8,
+      "macd_line": -90.9,
+      "macd_signal": -83.11,
+      "macd_bullish": false,
+      "vol_ratio": 0.29,
+      "above_ma20": false,
+      "above_ma50": false,
+      "golden_cross": false,
+      "bullish_candle": false,
+      "body_ratio": 0.2,
+      "pbv": 0.8,
+      "per": 6.89,
+      "roe": 11.73,
+      "der": 0,
+      "dps": 349.0,
+      "yield_kotor": 9.43,
+      "yield_bersih": 8.49,
+      "div_history": [
+        {
+          "tanggal": "2021-04-08",
+          "dps": 22.0
+        },
+        {
+          "tanggal": "2022-03-24",
+          "dps": 73.0
+        },
+        {
+          "tanggal": "2023-03-28",
+          "dps": 196.0
+        },
+        {
+          "tanggal": "2024-03-15",
+          "dps": 280.0
+        },
+        {
+          "tanggal": "2025-04-15",
+          "dps": 374.0
+        },
+        {
+          "tanggal": "2026-03-25",
+          "dps": 349.0
+        }
+      ],
+      "div_years": 6,
+      "div_konsisten": true,
+      "ex_date": "2026-03-25",
+      "cum_date": "2026-03-24",
+      "days_to_cum": -20,
+      "price_history": [
+        {
+          "date": "2026-02-23",
+          "open": 4114.0,
+          "high": 4151.0,
+          "low": 4105.0,
+          "close": 4142.0,
+          "vol": 34453500
+        },
+        {
+          "date": "2026-02-24",
+          "open": 4123.0,
+          "high": 4133.0,
+          "low": 4077.0,
+          "close": 4096.0,
+          "vol": 58150200
+        },
+        {
+          "date": "2026-02-25",
+          "open": 4114.0,
+          "high": 4160.0,
+          "low": 4087.0,
+          "close": 4142.0,
+          "vol": 53012100
+        },
+        {
+          "date": "2026-02-26",
+          "open": 4142.0,
+          "high": 4151.0,
+          "low": 4068.0,
+          "close": 4105.0,
+          "vol": 53377800
+        },
+        {
+          "date": "2026-02-27",
+          "open": 4105.0,
+          "high": 4105.0,
+          "low": 4050.0,
+          "close": 4050.0,
+          "vol": 83010300
+        },
+        {
+          "date": "2026-03-02",
+          "open": 4004.0,
+          "high": 4031.0,
+          "low": 3958.0,
+          "close": 3958.0,
+          "vol": 77493000
+        },
+        {
+          "date": "2026-03-03",
+          "open": 3967.0,
+          "high": 4013.0,
+          "low": 3958.0,
+          "close": 3958.0,
+          "vol": 34412500
+        },
+        {
+          "date": "2026-03-04",
+          "open": 3939.0,
+          "high": 3949.0,
+          "low": 3792.0,
+          "close": 3820.0,
+          "vol": 101732000
+        },
+        {
+          "date": "2026-03-05",
+          "open": 3884.0,
+          "high": 3976.0,
+          "low": 3866.0,
+          "close": 3939.0,
+          "vol": 52177600
+        },
+        {
+          "date": "2026-03-06",
+          "open": 3930.0,
+          "high": 3958.0,
+          "low": 3875.0,
+          "close": 3930.0,
+          "vol": 47786400
+        },
+        {
+          "date": "2026-03-09",
+          "open": 3820.0,
+          "high": 3985.0,
+          "low": 3801.0,
+          "close": 3949.0,
+          "vol": 102376100
+        },
+        {
+          "date": "2026-03-10",
+          "open": 4004.0,
+          "high": 4022.0,
+          "low": 3912.0,
+          "close": 3921.0,
+          "vol": 66622300
+        },
+        {
+          "date": "2026-03-11",
+          "open": 3958.0,
+          "high": 3985.0,
+          "low": 3939.0,
+          "close": 3949.0,
+          "vol": 54719700
+        },
+        {
+          "date": "2026-03-12",
+          "open": 3958.0,
+          "high": 4004.0,
+          "low": 3930.0,
+          "close": 3939.0,
+          "vol": 87013000
+        },
+        {
+          "date": "2026-03-13",
+          "open": 3949.0,
+          "high": 3967.0,
+          "low": 3884.0,
+          "close": 3903.0,
+          "vol": 99440600
+        },
+        {
+          "date": "2026-03-16",
+          "open": 3912.0,
+          "high": 3995.0,
+          "low": 3893.0,
+          "close": 3976.0,
+          "vol": 126138200
+        },
+        {
+          "date": "2026-03-17",
+          "open": 3985.0,
+          "high": 4041.0,
+          "low": 3976.0,
+          "close": 4041.0,
+          "vol": 209818800
+        },
+        {
+          "date": "2026-03-25",
+          "open": 4050.0,
+          "high": 4090.0,
+          "low": 3980.0,
+          "close": 4040.0,
+          "vol": 247976300
+        },
+        {
+          "date": "2026-03-26",
+          "open": 4050.0,
+          "high": 4060.0,
+          "low": 3970.0,
+          "close": 4000.0,
+          "vol": 90175900
+        },
+        {
+          "date": "2026-03-27",
+          "open": 3980.0,
+          "high": 3990.0,
+          "low": 3900.0,
+          "close": 3900.0,
+          "vol": 76824500
+        },
+        {
+          "date": "2026-03-30",
+          "open": 3860.0,
+          "high": 3860.0,
+          "low": 3780.0,
+          "close": 3850.0,
+          "vol": 82872100
+        },
+        {
+          "date": "2026-03-31",
+          "open": 3850.0,
+          "high": 3880.0,
+          "low": 3760.0,
+          "close": 3760.0,
+          "vol": 76852900
+        },
+        {
+          "date": "2026-04-01",
+          "open": 3830.0,
+          "high": 3840.0,
+          "low": 3720.0,
+          "close": 3720.0,
+          "vol": 88881000
+        },
+        {
+          "date": "2026-04-02",
+          "open": 3730.0,
+          "high": 3750.0,
+          "low": 3690.0,
+          "close": 3700.0,
+          "vol": 53750100
+        },
+        {
+          "date": "2026-04-06",
+          "open": 3700.0,
+          "high": 3720.0,
+          "low": 3630.0,
+          "close": 3640.0,
+          "vol": 45425200
+        },
+        {
+          "date": "2026-04-07",
+          "open": 3640.0,
+          "high": 3660.0,
+          "low": 3510.0,
+          "close": 3510.0,
+          "vol": 101448300
+        },
+        {
+          "date": "2026-04-08",
+          "open": 3650.0,
+          "high": 3800.0,
+          "low": 3630.0,
+          "close": 3780.0,
+          "vol": 112845200
+        },
+        {
+          "date": "2026-04-09",
+          "open": 3760.0,
+          "high": 3770.0,
+          "low": 3680.0,
+          "close": 3710.0,
+          "vol": 55090400
+        },
+        {
+          "date": "2026-04-10",
+          "open": 3730.0,
+          "high": 3820.0,
+          "low": 3700.0,
+          "close": 3730.0,
+          "vol": 58848500
+        },
+        {
+          "date": "2026-04-13",
+          "open": 3710.0,
+          "high": 3710.0,
+          "low": 3660.0,
+          "close": 3700.0,
+          "vol": 27178400
+        }
+      ],
+      "ma20_history": [
+        4151.0,
+        4145.0,
+        4143.0,
+        4141.0,
+        4140.0,
+        4134.0,
+        4125.0,
+        4109.0,
+        4095.0,
+        4078.0,
+        4065.0,
+        4053.0,
+        4042.0,
+        4032.0,
+        4021.0,
+        4012.0,
+        4008.0,
+        4003.0,
+        3998.0,
+        3988.0,
+        3973.0,
+        3956.0,
+        3935.0,
+        3915.0,
+        3895.0,
+        3872.0,
+        3863.0,
+        3858.0,
+        3847.0,
+        3836.0
+      ],
+      "ma50_history": [
+        4059.0,
+        4062.0,
+        4066.0,
+        4068.0,
+        4070.0,
+        4071.0,
+        4072.0,
+        4067.0,
+        4065.0,
+        4063.0,
+        4061.0,
+        4060.0,
+        4059.0,
+        4059.0,
+        4058.0,
+        4059.0,
+        4060.0,
+        4062.0,
+        4064.0,
+        4064.0,
+        4064.0,
+        4062.0,
+        4059.0,
+        4055.0,
+        4048.0,
+        4038.0,
+        4030.0,
+        4019.0,
+        4010.0,
+        3999.0
+      ],
+      "net_income": 20040703279104,
+      "shares_outstanding": 578683733,
+      "last_updated": "2026-04-13 14:41:27",
+      "flags": [],
+      "skor_detail": {
+        "yield_bersih_4pct": 1,
+        "yield_tidak_abnormal": 1,
+        "div_konsisten_3thn": 1,
+        "div_konsisten_5thn": 1,
+        "dividen_aktif": 1,
+        "pbv_wajar": 1,
+        "per_wajar": 1,
+        "roe_positif": 1,
+        "der_aman": 1,
+        "above_ma20": 0,
+        "above_ma50": 0,
+        "golden_cross": 0,
+        "rsi_ideal": 1,
+        "rsi_tidak_overbought": 1,
+        "macd_bullish": 0,
+        "volume_normal": 0,
+        "volume_momentum": 0,
+        "candle_bullish": 0,
+        "candle_body_kuat": 0,
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
+      },
+      "total_skor": 14,
+      "skor_maks": 22,
+      "pct": 63.6,
+      "klasifikasi": "BUY",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 5.6,
+        "skor_korporasi": 5,
+        "skor_makro": -4,
+        "kategori_match": [
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          },
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Reliance Sekuritas: Buy Saham BBNI, SMRA, EMTK, RAJA Saat Kans Pasar Masih Bullish - TopBusiness.id",
+            "published": "Mon, 20 Jul 2026 01:37:00 GMT",
+            "source": "TopBusiness.id",
+            "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOMW1VSDZQUFdRUEZzeEp6UjRYbGt5LVBJd0JlWGltVlZxRGM0dHNQd1RpOURlYzI2MVdQeG9IRlQwSUJMeGFHbmVqeTFkQjE4UGY3RXZfODFQT1lFNXc0Yk1SVFNjTVVVOEZRaVpMVHVZVHA2M2Q3bV9OYTlDNEIwU2RMSVh0ZExkdHhldTFBR0w5SXNRaGQ4MmJUb0tBX0xHMGlaeW1VLWhRUjk4SzkyR0d5UkxueG9i?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
+          {
+            "title": "BNI Tuntaskan Pengalihan 77,86 Juta Saham Buyback ke Program ESOP - SWA.co.id",
+            "published": "Sat, 18 Jul 2026 02:00:00 GMT",
+            "source": "SWA.co.id",
+            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxON2JleEl2a0V4MHkydUtweWE0MExxZzFLYmU1YTFhSC1lcDhRTDZFNm5LbDRSY25FSGgzMHo1Z1FvMGJqdzFXM2RCdER0U043M3ZTOUNaNkNJV3dJV0FheEJGdUcxUjA3WjBXX1MxM3dpU1JsbHJZcmVwVWR4NE9HNmF2bVdDWUxzeDh6eXhCdUttOXBzS3lZNVZ3?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "BNI Alihkan 77,8 Juta Saham Buyback ke Program Saham Pegawai - kontan.co.id",
+            "published": "Sun, 19 Jul 2026 13:48:32 GMT",
+            "source": "kontan.co.id",
+            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTk13Y0RQYzZKV3R1NVNzS1JtWGw5U3l5QVNlbTJLa3pPcGZLcU9YVDc2QkNOSjhNRG03ZXNqQWZjem0zdW9Oay1LZ2RkNE9xdXREVzlXdDBWNmR3dm16bEJiZmJ2X3dJS0IxTVJLZFZ3QjR0TDJDVGlNMHlwaE9QbG1lNXkzTE1YVVZwZFV0OFBCX2U5Rzl0UC1B0gGTAUFVX3lxTFBuYkV4bWttaEdQaVhWbDNmclBWM3FYY05GVFlzUjNZTC1YQkZqc1hCZ2NFYzQ1TDQ4M3MyVHVDU25WT1I1UUl4d19wdlRPNDJsWkYybEt4SGNtUXlQZndCZ0VPU0ROdmZrTWdnTS1nVDlnM2FCck96WnFld19VM0NNek9Ed015TEIxQnl4dTRValZ3SQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "BBNI Tuntaskan Pengalihan 77,8 Juta Saham Hasil Buyback 2026 - Kompas.com",
+            "published": "Sun, 19 Jul 2026 03:00:00 GMT",
+            "source": "Kompas.com",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNNUxMQ05ReXFRaEk0UXQ3UUJoaWpkd0s0MU10NlJDSm5PeDdPQlNITTlzdF9ydGs4dkl6TnRjU1pTOFdJQkRjcnBHV2hCUlNaS3ptZ2FFZzcwTGdMYVJsRkF1T21jOXFqRFNhaEl2VjJFTFVqTE95bi11aktnWFN4X0duUEVMMjEzcUVrM1VPbjBHaHhWYml6Zl9DUmZFUThWaTNMQUtSSjdXZzd0SXRRdA?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "BNI Alihkan 77,8 Juta Saham Buyback untuk Program Kepemilikan Saham Pegawai - Rmol.id",
+            "published": "Mon, 20 Jul 2026 08:00:00 GMT",
+            "source": "Rmol.id",
+            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPVlIwRkFRQTRYc1FYVUloZXRMb2FILVJUZ29aZl90dUw2SWc0enhKRVRWS2YxaWI3UnZNenp0RlZnTGY5MGR1QWc5bENmV2MzRkR1ejJXdko3ZUpXTDEzajVNVlBGdm5aYlktUGF4Z1BGWE4xZjJHQlVyeTFUeEdWekZaWlBUYjVBbTQ1M215RkE3TkF2VENveFR2Nk1relhpTXRXS3E0aTlkOFJiNzA2TGhGN3lDMTNaOGJrT3pB?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          }
+        ]
+      },
+      "div_history_manual": [
+        {
+          "kode": "BBNI",
+          "tahun": "2020",
+          "tipe": "TAHUNAN",
+          "dps": 44.02,
+          "harga_cum": 2175.0,
+          "div_yield": 2.02,
+          "dpr": null,
+          "ex_date": "2021-04-08",
+          "cum_date": "2021-04-07",
+          "yield_1th": 2.02
+        },
+        {
+          "kode": "BBNI",
+          "tahun": "2021",
+          "tipe": "TAHUNAN",
+          "dps": 146.3,
+          "harga_cum": 3064.0,
+          "div_yield": 4.77,
+          "dpr": 25.03,
+          "ex_date": "2022-03-24",
+          "cum_date": "2022-03-23",
+          "yield_1th": 4.77
+        },
+        {
+          "kode": "BBNI",
+          "tahun": "2022",
+          "tipe": "TAHUNAN",
+          "dps": 392.78,
+          "harga_cum": 3671.0,
+          "div_yield": 10.7,
+          "dpr": 40.0,
+          "ex_date": "2023-03-28",
+          "cum_date": "2023-03-27",
+          "yield_1th": 10.7
+        },
+        {
+          "kode": "BBNI",
+          "tahun": "2023",
+          "tipe": "TAHUNAN",
+          "dps": 280.5,
+          "harga_cum": 4958.0,
+          "div_yield": 5.66,
+          "dpr": 50.03,
+          "ex_date": "2024-03-15",
+          "cum_date": "2024-03-14",
+          "yield_1th": 5.66
+        },
+        {
+          "kode": "BBNI",
+          "tahun": "2024",
+          "tipe": "TAHUNAN",
+          "dps": 374.06,
+          "harga_cum": 3844.0,
+          "div_yield": 9.73,
+          "dpr": 65.0,
+          "ex_date": "2025-04-15",
+          "cum_date": "2025-04-14",
+          "yield_1th": 9.73
+        },
+        {
+          "kode": "BBNI",
+          "tahun": "2025",
+          "tipe": "TAHUNAN",
+          "dps": 349.41,
+          "harga_cum": null,
+          "div_yield": null,
+          "dpr": 65.03,
+          "ex_date": "2026-03-25",
+          "cum_date": "2026-03-24",
+          "yield_1th": null
+        }
+      ],
+      "ex_date_manual": "2026-03-25",
+      "cum_date_manual": "2026-03-24",
+      "dps_manual": 349.41,
+      "harga_cum": null,
+      "div_yield_cum": null,
+      "dpr_manual": 65.03,
+      "est_dpr": 60.02,
+      "est_dps": 20785.84,
+      "est_yield_kotor": 561.78,
+      "est_yield_bersih": 505.6,
+      "est_net_income": 20040703279104,
+      "est_shares": 578683733
     },
     {
       "kode": "BTPS",
@@ -7037,18 +8079,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 15,
+      "total_skor": 14,
       "skor_maks": 22,
-      "pct": 68.2,
+      "pct": 63.6,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 1,
@@ -7451,18 +8493,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 15,
+      "total_skor": 14,
       "skor_maks": 22,
-      "pct": 68.2,
+      "pct": 63.6,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -7484,6 +8526,14 @@
             "matches": []
           },
           {
+            "title": "Ekspansi Bisnis Hidrogen, Jadi Katalis Positif Bagi Perusahaan Gas Negara (PGAS) - kontan.co.id",
+            "published": "Tue, 21 Jul 2026 08:22:18 GMT",
+            "source": "kontan.co.id",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOeXNfSEtCNUxDMkhGR1lkVWU5NnJZa2t5QmxrTUc0elNPZXVqUFZYaWpYajVMWWJtSnFaZlA0WFRTb2F4RlRhRjNHUkdfUVFJRXdnUGlaeXdHQUlWMUt1X2I0ZFJCdzMtaWhGbk9jd19wVmg5V3dpUGt0dG9KMnBSR0w3UG9KUXRnazVzdG5QbVFQdkt1UU1LeW1WbTE0UDBZalkycGQ1MmJFTjRsN2hEa1BSZ9IBqwFBVV95cUxPd0RNT0FGR2QzOVJBNHhDWFd5aS11eXpmVmN5NE1panhPaFRXZXlZYU1sOEQxU3o1Y2ZsbUxVRUpwcmoxYlRmb3gtMjlxNFpBNnQ4VHNtQ3RjRU1hdkFqQTlkSFRPRlhFWDNZZVlqZUlBMU9uR1Y1UU9tTVRlNlR5YnJfOVlfLW5HZjBVSmFNWWo4Yzc0ZTd4ZnJZVEtLM0NTbFF2bHdpNXVqX0k?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
+          {
             "title": "IHSG Konsisten Jalur Hijau, Borong Saham ANTM, SSIA, ENRG, dan PGAS - Emitennews.com",
             "published": "Wed, 22 Jul 2026 01:40:00 GMT",
             "source": "Emitennews.com",
@@ -7496,14 +8546,6 @@
             "published": "Fri, 17 Jul 2026 03:03:25 GMT",
             "source": "mitrapost.com",
             "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVEczRVF1bnJYUmw3NV8yZFJNWFRnWE50cWZxU2hEdEZXNlNPTWdnWTd1WkxoaEVmX2FqT3JMQ3hVMXZMQnZ2dEU1cDFCbVctdHd1OTZHMzdZYV9hMExITlp2Si16V3FmbjlyTXY2UHo2ZlZrTWRTOExUYUFLYW9NSXNCS2tvWGZ3YWxBSWVhN3lJb0hFZEdHMzF6Mml4ZDBmQzMxbHoxTV83c25ZQTBMRkliR1ZHb2x0SzBMSg?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
-            "title": "Asing Borong Saham Big Banks, IHSG Menguat pada Awal Perdagangan Senin (20/7) - kontan.co.id",
-            "published": "Mon, 20 Jul 2026 03:24:22 GMT",
-            "source": "kontan.co.id",
-            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOTmU5cE51SzFmSFc1YkgxYlc2REJvWWc5Q041T21SZ0dWLU9pLVVJaEExam1pZEJsSTlBRVpUQ2xfWEJUbkdmTEdDNXFOcnJoTGdxV2ZjbEdEN3N2S1RYWmxFcWV2cGpyZmExSUQ0V3BNdk1qc2JicnhScllGRTlBQ0RzYjBhNEFKR2JBZGRpSjNQaGlhekliNHJfYWRWYjZlT0tOb1NtRWlDNmFoeGfSAaYBQVVfeXFMUGxyekVtcDIxTkQwUzl2X08xRTZRaVk4dDhiZVhKS3lJLXZJMnZid24tYnJxeXAxaFJWNmlCbnVNbUdfbHVaMDFYQzZxX05XR3FYZDhaaGFsSkhJRGZ1LTA4bk1leDhkNzBJMFl0RHotTEFCWWk5dWYzTklPSUFvVnpkdWJFcW1DNXViS1M4Mko5VldjeTh6TVpPY2NvLThRZHcxaHJ4UQ?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           }
@@ -7897,18 +8939,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 15,
+      "total_skor": 14,
       "skor_maks": 22,
-      "pct": 68.2,
+      "pct": 63.6,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "strong_positive",
-        "skor_normalized": 8.8,
+        "overall": "neutral",
+        "skor_normalized": 5.0,
         "skor_korporasi": 4,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [
           {
             "id": 1,
@@ -7970,496 +9012,6 @@
             "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQREU2djdWVDJYRmk5ZWFmTVJPV0JGTUJLa05kRzFCeWNFRXJ3dFIxbU1TdWhYWHY4eUpoaWhJa1lvTnNrQkVDQjFVQWdtVGUyYkhtOU00YjF4aEQzLUpjWVdjYVVXLUxRZ0lzMzg0bEZPVnN3SHdxYjlTVHVPX0dQYUpIcXE3VlJaWGJrRVE1R0d0dDZoSWhVd09tVFRycmJ5X0dEc2ZJZFV0V2R1VTBnTXV4MXZSMVRIZnJ1T3BkQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
-          }
-        ]
-      }
-    },
-    {
-      "kode": "ASII",
-      "nama": "PT Astra International Tbk",
-      "sektor": "Industrials",
-      "harga": 6150.0,
-      "change_pct": -2.38,
-      "ma20": 6098.0,
-      "ma50": 6381.0,
-      "rsi": 48.2,
-      "macd_line": -54.5,
-      "macd_signal": -82.65,
-      "macd_bullish": true,
-      "vol_ratio": 0.36,
-      "above_ma20": true,
-      "above_ma50": false,
-      "golden_cross": false,
-      "bullish_candle": false,
-      "body_ratio": 1.0,
-      "pbv": 1.08,
-      "per": 7.59,
-      "roe": 14.29,
-      "der": 37.93,
-      "dps": 98.0,
-      "yield_kotor": 1.59,
-      "yield_bersih": 1.43,
-      "div_history": [
-        {
-          "tanggal": "2023-05-05",
-          "dps": 552.0
-        },
-        {
-          "tanggal": "2023-10-12",
-          "dps": 98.0
-        },
-        {
-          "tanggal": "2024-05-14",
-          "dps": 421.0
-        },
-        {
-          "tanggal": "2024-10-14",
-          "dps": 98.0
-        },
-        {
-          "tanggal": "2025-05-21",
-          "dps": 308.0
-        },
-        {
-          "tanggal": "2025-10-14",
-          "dps": 98.0
-        }
-      ],
-      "div_years": 3,
-      "div_konsisten": true,
-      "ex_date": "2025-10-14",
-      "cum_date": "2025-10-13",
-      "days_to_cum": -182,
-      "price_history": [
-        {
-          "date": "2026-02-23",
-          "open": 6625.0,
-          "high": 6650.0,
-          "low": 6550.0,
-          "close": 6625.0,
-          "vol": 38075400
-        },
-        {
-          "date": "2026-02-24",
-          "open": 6650.0,
-          "high": 6725.0,
-          "low": 6550.0,
-          "close": 6550.0,
-          "vol": 51297100
-        },
-        {
-          "date": "2026-02-25",
-          "open": 6600.0,
-          "high": 6675.0,
-          "low": 6575.0,
-          "close": 6650.0,
-          "vol": 45214100
-        },
-        {
-          "date": "2026-02-26",
-          "open": 6700.0,
-          "high": 6725.0,
-          "low": 6575.0,
-          "close": 6725.0,
-          "vol": 30901600
-        },
-        {
-          "date": "2026-02-27",
-          "open": 6725.0,
-          "high": 6750.0,
-          "low": 6575.0,
-          "close": 6675.0,
-          "vol": 68396400
-        },
-        {
-          "date": "2026-03-02",
-          "open": 6600.0,
-          "high": 6625.0,
-          "low": 6275.0,
-          "close": 6300.0,
-          "vol": 60477400
-        },
-        {
-          "date": "2026-03-03",
-          "open": 6400.0,
-          "high": 6425.0,
-          "low": 6250.0,
-          "close": 6275.0,
-          "vol": 31573300
-        },
-        {
-          "date": "2026-03-04",
-          "open": 6275.0,
-          "high": 6325.0,
-          "low": 6000.0,
-          "close": 6150.0,
-          "vol": 49747800
-        },
-        {
-          "date": "2026-03-05",
-          "open": 6300.0,
-          "high": 6350.0,
-          "low": 6200.0,
-          "close": 6325.0,
-          "vol": 38471400
-        },
-        {
-          "date": "2026-03-06",
-          "open": 6300.0,
-          "high": 6300.0,
-          "low": 6050.0,
-          "close": 6125.0,
-          "vol": 38071100
-        },
-        {
-          "date": "2026-03-09",
-          "open": 5900.0,
-          "high": 5900.0,
-          "low": 5800.0,
-          "close": 5850.0,
-          "vol": 46625500
-        },
-        {
-          "date": "2026-03-10",
-          "open": 5900.0,
-          "high": 6150.0,
-          "low": 5900.0,
-          "close": 6000.0,
-          "vol": 33964900
-        },
-        {
-          "date": "2026-03-11",
-          "open": 6000.0,
-          "high": 6050.0,
-          "low": 5875.0,
-          "close": 5950.0,
-          "vol": 18403300
-        },
-        {
-          "date": "2026-03-12",
-          "open": 5975.0,
-          "high": 6050.0,
-          "low": 5900.0,
-          "close": 5950.0,
-          "vol": 20628100
-        },
-        {
-          "date": "2026-03-13",
-          "open": 5900.0,
-          "high": 5950.0,
-          "low": 5775.0,
-          "close": 5825.0,
-          "vol": 27856000
-        },
-        {
-          "date": "2026-03-16",
-          "open": 5875.0,
-          "high": 5900.0,
-          "low": 5675.0,
-          "close": 5850.0,
-          "vol": 37696400
-        },
-        {
-          "date": "2026-03-17",
-          "open": 5925.0,
-          "high": 5925.0,
-          "low": 5750.0,
-          "close": 5800.0,
-          "vol": 89895700
-        },
-        {
-          "date": "2026-03-25",
-          "open": 6300.0,
-          "high": 6600.0,
-          "low": 6100.0,
-          "close": 6600.0,
-          "vol": 134276600
-        },
-        {
-          "date": "2026-03-26",
-          "open": 6575.0,
-          "high": 6575.0,
-          "low": 6225.0,
-          "close": 6250.0,
-          "vol": 45012000
-        },
-        {
-          "date": "2026-03-27",
-          "open": 6200.0,
-          "high": 6225.0,
-          "low": 6050.0,
-          "close": 6125.0,
-          "vol": 32993200
-        },
-        {
-          "date": "2026-03-30",
-          "open": 6100.0,
-          "high": 6400.0,
-          "low": 6000.0,
-          "close": 6350.0,
-          "vol": 48246100
-        },
-        {
-          "date": "2026-03-31",
-          "open": 6350.0,
-          "high": 6350.0,
-          "low": 6175.0,
-          "close": 6250.0,
-          "vol": 31516100
-        },
-        {
-          "date": "2026-04-01",
-          "open": 6275.0,
-          "high": 6350.0,
-          "low": 6125.0,
-          "close": 6250.0,
-          "vol": 37708800
-        },
-        {
-          "date": "2026-04-02",
-          "open": 6150.0,
-          "high": 6300.0,
-          "low": 6025.0,
-          "close": 6075.0,
-          "vol": 37842500
-        },
-        {
-          "date": "2026-04-06",
-          "open": 6075.0,
-          "high": 6125.0,
-          "low": 6025.0,
-          "close": 6100.0,
-          "vol": 15705000
-        },
-        {
-          "date": "2026-04-07",
-          "open": 6075.0,
-          "high": 6075.0,
-          "low": 5875.0,
-          "close": 5900.0,
-          "vol": 22912400
-        },
-        {
-          "date": "2026-04-08",
-          "open": 6050.0,
-          "high": 6250.0,
-          "low": 6025.0,
-          "close": 6200.0,
-          "vol": 28419500
-        },
-        {
-          "date": "2026-04-09",
-          "open": 6150.0,
-          "high": 6175.0,
-          "low": 6050.0,
-          "close": 6175.0,
-          "vol": 25785600
-        },
-        {
-          "date": "2026-04-10",
-          "open": 6225.0,
-          "high": 6350.0,
-          "low": 6200.0,
-          "close": 6300.0,
-          "vol": 37451300
-        },
-        {
-          "date": "2026-04-13",
-          "open": 6275.0,
-          "high": 6275.0,
-          "low": 6150.0,
-          "close": 6150.0,
-          "vol": 14187300
-        }
-      ],
-      "ma20_history": [
-        6628.0,
-        6614.0,
-        6602.0,
-        6624.0,
-        6649.0,
-        6640.0,
-        6636.0,
-        6630.0,
-        6606.0,
-        6579.0,
-        6524.0,
-        6489.0,
-        6454.0,
-        6409.0,
-        6362.0,
-        6316.0,
-        6274.0,
-        6269.0,
-        6251.0,
-        6230.0,
-        6216.0,
-        6201.0,
-        6181.0,
-        6149.0,
-        6120.0,
-        6100.0,
-        6096.0,
-        6098.0,
-        6096.0,
-        6098.0
-      ],
-      "ma50_history": [
-        6723.0,
-        6720.0,
-        6718.0,
-        6721.0,
-        6722.0,
-        6719.0,
-        6712.0,
-        6704.0,
-        6698.0,
-        6688.0,
-        6676.0,
-        6665.0,
-        6652.0,
-        6642.0,
-        6626.0,
-        6609.0,
-        6591.0,
-        6587.0,
-        6574.0,
-        6559.0,
-        6546.0,
-        6530.0,
-        6518.0,
-        6500.0,
-        6476.0,
-        6451.0,
-        6434.0,
-        6410.0,
-        6390.0,
-        6381.0
-      ],
-      "net_income": 32769000341504,
-      "shares_outstanding": 40213715340,
-      "last_updated": "2026-04-13 14:41:40",
-      "flags": [],
-      "skor_detail": {
-        "yield_bersih_4pct": 0,
-        "yield_tidak_abnormal": 1,
-        "div_konsisten_3thn": 1,
-        "div_konsisten_5thn": 0,
-        "dividen_aktif": 1,
-        "pbv_wajar": 1,
-        "per_wajar": 1,
-        "roe_positif": 1,
-        "der_aman": 1,
-        "above_ma20": 1,
-        "above_ma50": 0,
-        "golden_cross": 0,
-        "rsi_ideal": 1,
-        "rsi_tidak_overbought": 1,
-        "macd_bullish": 1,
-        "volume_normal": 0,
-        "volume_momentum": 0,
-        "candle_bullish": 0,
-        "candle_body_kuat": 1,
-        "upcoming_dividen": 1,
-        "news_positif": 1,
-        "news_tidak_major_neg": 1
-      },
-      "total_skor": 15,
-      "skor_maks": 22,
-      "pct": 68.2,
-      "klasifikasi": "BUY",
-      "news": {
-        "overall": "strong_positive",
-        "skor_normalized": 9.4,
-        "skor_korporasi": 5,
-        "skor_makro": 2,
-        "kategori_match": [
-          {
-            "id": 1,
-            "nama": "Dividen",
-            "sentimen": "bullish",
-            "bobot": 4,
-            "warning": "",
-            "level": "korporasi"
-          },
-          {
-            "id": 4,
-            "nama": "Buyback",
-            "sentimen": "bullish",
-            "bobot": 5,
-            "warning": "",
-            "level": "korporasi"
-          },
-          {
-            "id": 4,
-            "nama": "Buyback",
-            "sentimen": "bullish",
-            "bobot": 5,
-            "warning": "",
-            "level": "korporasi"
-          }
-        ],
-        "warnings": [],
-        "total_berita": 4,
-        "items": [
-          {
-            "title": "Saham ASII: Profil Astra, Dividen & Prospek 2026 - Pluang",
-            "published": "Mon, 20 Jul 2026 00:57:41 GMT",
-            "source": "Pluang",
-            "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdW5PR0cyWFpRdmhvMGdtS2ZvWTh1LU1YaTRELUNOZmRkZ1JNaHNzbURXVThZbk1sQURHaFlUTENWdzFwQVg3akJyRXFnbGVaVXBveGI3N1VKcm4wVHdsOUJxakpRRndsdUFxcEJyVDFweDVrSWpocENvdFpMa1ZPZW8zRENwRXZ0cTJicUtuTjBwN0hTMGRXczZKOFpIR2pteDBUaThPcnZYUUNNNS01M1RYMzVvYTVi?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 1,
-                "nama": "Dividen",
-                "sentimen": "bullish",
-                "bobot": 4,
-                "warning": "",
-                "level": "korporasi"
-              }
-            ]
-          },
-          {
-            "title": "ASII berencana alihkan saham treasury lewat MSOP tanpa lock-up - IDNFinancials.com",
-            "published": "Thu, 16 Jul 2026 01:45:00 GMT",
-            "source": "IDNFinancials.com",
-            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWHZZMDhfeXRTektJMWczLU11NXpOMk0xQ0FfSWlRTVpvOU1yR29mNGQ2QjhQeW83UHNob2dMT204OG9kQWxqVVNkdE04bUNwZm9KdWxnaWUwbTF2NWRPVVBLQVFOM3g1MGY4dExkczFHTVJ6SU1HTkxkczF3elNuQ2NnZmlYRUpoWUduNVdidXgtb0lLWDZ3Nzh2enZxRVhEMUlXeTVXS2duQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
-            "title": "ASII Siap Buyback Saham Rp8 Triliun: Intip Profil Emiten hingga Kinerja Terbarunya - kontan.co.id",
-            "published": "Mon, 20 Jul 2026 04:43:08 GMT",
-            "source": "kontan.co.id",
-            "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUENSdWhNdUphMTRaWGFPV1R0bk04N0ZHUVlYaXhUVndFMDRPMFFLVFlJTzB3bFc4RkVkYUF1MVd4dnloVzdSTk1scDJ6WXE4YjZScjN4UkhtMVVZSFlaQmMyOTc0WXg1eTF1ckQxbTVURW5BMlhESk43Y1NGTlkyeTN1QS12S2gtT3Rva0g1VEpYRlFHMTR4Ukw2bWtUc2RVRlVxYUgyTkVHQXRVeW15b25aQ3RoOGJK0gGwAUFVX3lxTE9fUFRMOHpjcXEwbGRKTzZTUUU1XzlwVWlfRVpLdEN2NzJtRTRId3pETFdxYXBUbVFzX25nbVp1UXB1VTBjUXZERmNRN3lKNGdzbVloSDY3OHY5dnpOZ3RnOE5MYjNQQ3N0bG9UOWVKWldoVktTckQ4UHpHd3NZZU9KY21XS2o0XzRPT3hjcmUzRS10NG02VXU0ME1Yb2ludVM4ZGZPTGF4MHJiYXBaU1pW?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 4,
-                "nama": "Buyback",
-                "sentimen": "bullish",
-                "bobot": 5,
-                "warning": "",
-                "level": "korporasi"
-              }
-            ]
-          },
-          {
-            "title": "Astra Mulai Buyback Rp8 Triliun Hari Ini, Intip Gerak Saham ASII - Bisnis.com - Market",
-            "published": "Mon, 20 Jul 2026 02:32:51 GMT",
-            "source": "Bisnis.com - Market",
-            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTmgzaFRfbHVwWHNSUjB0RS1PbmZOUnVxYlpsVEVRWkx3TWhLOWRaZzk1eDhzU1NOYXExdURwTmR1TjU0c3BwTkE0WEstQnMxWTFfQTZVVGxXRFpUVnpTaHl3b0JfbU1WdmtZZkJmOEo3QkNfY3d1a296NjEyX0p1bGtWanV2SUpXUGtNOU51YU1PbmtOeUpSVjRSWGNpQ2w3b0YyRmhZdlVHN0FmRk9seEFzSXA1QQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 4,
-                "nama": "Buyback",
-                "sentimen": "bullish",
-                "bobot": 5,
-                "warning": "",
-                "level": "korporasi"
-              }
-            ]
           }
         ]
       }
@@ -8851,18 +9403,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 15,
+      "total_skor": 14,
       "skor_maks": 22,
-      "pct": 68.2,
+      "pct": 63.6,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "strong_positive",
-        "skor_normalized": 8.8,
+        "overall": "neutral",
+        "skor_normalized": 5.0,
         "skor_korporasi": 4,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [
           {
             "id": 1,
@@ -8874,7 +9426,7 @@
           }
         ],
         "warnings": [],
-        "total_berita": 5,
+        "total_berita": 4,
         "items": [
           {
             "title": "Saham ANTM Punya Potensi - investor.id",
@@ -8885,26 +9437,18 @@
             "matches": []
           },
           {
+            "title": "Harga Emas Dekati Level Tertinggi 2 Pekan, Saham ANTM-ARCI Cs Menguat - IDX Channel",
+            "published": "Wed, 22 Jul 2026 02:27:00 GMT",
+            "source": "IDX Channel",
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNU3JZOXpReGtHV09xdkV2V0tVMkVmZVAtNDJiS0c4aWsxeG5DbnY3eHlFU1RpbnFGYmgyandKc1FkZ1BsUFNDczVmVTMwSXRRenk4WVo0VVU1aXU5cHdYWTNBbV9WUVVLWkNia2VBY3FNZThMemE0SlJTZ1pHbnZqc2h6NmVBeWFFT2laanJUY1B5cTI5Q19sVVpIOXl6Z3YwbGFEczhWX3J3MEFMWEZYZdIBsAFBVV95cUxNU3JZOXpReGtHV09xdkV2V0tVMkVmZVAtNDJiS0c4aWsxeG5DbnY3eHlFU1RpbnFGYmgyandKc1FkZ1BsUFNDczVmVTMwSXRRenk4WVo0VVU1aXU5cHdYWTNBbV9WUVVLWkNia2VBY3FNZThMemE0SlJTZ1pHbnZqc2h6NmVBeWFFT2laanJUY1B5cTI5Q19sVVpIOXl6Z3YwbGFEczhWX3J3MEFMWEZYZQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
+          {
             "title": "BlackRock Balik Akumulasi Saham Aneka Tambang (ANTM) - Bloomberg Technoz",
             "published": "Tue, 21 Jul 2026 08:16:05 GMT",
             "source": "Bloomberg Technoz",
             "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPODRiOExBMnFIc0thQmNEX0VLNS1HX3ZXMDRGX0tweUN5YjE3TWIzVDJFVXNCWVU5VjdJd1JrSkhJeDN4TzN3SFdTYmczbGxQQnRIWUxERTRNbHJqOWc4cVhUMlJYR2lXVkZkdjJyaU1yclNhSl9nTjJUUXFyaEZmVDVVeThvb2Vaa1ZuMTRIWWlkbjVhcXRYRnQzbjJwOXRpemQxXw?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
-            "title": "Harga Emas Dekati Level Tertinggi 2 Pekan, Saham ANTM-ARCI Cs Menguat - RCTI+",
-            "published": "Wed, 22 Jul 2026 02:40:06 GMT",
-            "source": "RCTI+",
-            "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQamxPUlVGdGRPV2dnOFQ5ZzRzazNpY05SdHdGTEU2ZHpHRjFRZmlJQUUtY0JFU20yXzdpaWxSdThHUHRONW9OeGE3WjVsRkNTbnVVdHc0MlJJM2gydnRHV01QRTlMOTNzVEtfZ2ZRVFUyYjRMRWdtdnViN3NySVlyMEpBNUMtWE16QjRMNFZOTFdmd1l5OXJHYlBSYV9qclBKQ0tVTFlETDBYQjlZbzk1QlFuYXlZWWl5TWdCMzFSVFNydWs?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
-            "title": "Investor Asing Catat Beli Bersih Saham Mandiri dan Antam - achmadnurhidayat.id",
-            "published": "Wed, 15 Jul 2026 06:31:20 GMT",
-            "source": "achmadnurhidayat.id",
-            "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBFTUtUN2xYS0hrVFlyNlVwT0MyWE51a21FSTl5blQydFl1SW40SGk5NWRLQ2ZYUXh4Y3RiTldhT0pURlVrVTd6MUdmZ1N0bUFwRk1UVWp4QTB2QlozaVhCaXlFcUVZd2FUbDczS2dlcHc4N3FXel90cEJYNA?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           },
@@ -9498,18 +10042,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 15,
+      "total_skor": 14,
       "skor_maks": 22,
-      "pct": 68.2,
+      "pct": 63.6,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 2,
@@ -9920,18 +10464,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 15,
+      "total_skor": 14,
       "skor_maks": 22,
-      "pct": 68.2,
+      "pct": 63.6,
       "klasifikasi": "BUY",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 3,
@@ -9962,7 +10506,9 @@
           }
         ]
       }
-    },
+    }
+  ],
+  "watch": [
     {
       "kode": "BBCA",
       "nama": "PT Bank Central Asia Tbk",
@@ -10350,18 +10896,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
+      "total_skor": 13,
       "skor_maks": 22,
-      "pct": 63.6,
-      "klasifikasi": "BUY",
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -10408,607 +10954,6 @@
           }
         ]
       }
-    },
-    {
-      "kode": "BBNI",
-      "nama": "PT Bank Negara Indonesia (Persero) Tbk",
-      "sektor": "Financial Services",
-      "harga": 3700.0,
-      "change_pct": -0.8,
-      "ma20": 3836.0,
-      "ma50": 3999.0,
-      "rsi": 40.8,
-      "macd_line": -90.9,
-      "macd_signal": -83.11,
-      "macd_bullish": false,
-      "vol_ratio": 0.29,
-      "above_ma20": false,
-      "above_ma50": false,
-      "golden_cross": false,
-      "bullish_candle": false,
-      "body_ratio": 0.2,
-      "pbv": 0.8,
-      "per": 6.89,
-      "roe": 11.73,
-      "der": 0,
-      "dps": 349.0,
-      "yield_kotor": 9.43,
-      "yield_bersih": 8.49,
-      "div_history": [
-        {
-          "tanggal": "2021-04-08",
-          "dps": 22.0
-        },
-        {
-          "tanggal": "2022-03-24",
-          "dps": 73.0
-        },
-        {
-          "tanggal": "2023-03-28",
-          "dps": 196.0
-        },
-        {
-          "tanggal": "2024-03-15",
-          "dps": 280.0
-        },
-        {
-          "tanggal": "2025-04-15",
-          "dps": 374.0
-        },
-        {
-          "tanggal": "2026-03-25",
-          "dps": 349.0
-        }
-      ],
-      "div_years": 6,
-      "div_konsisten": true,
-      "ex_date": "2026-03-25",
-      "cum_date": "2026-03-24",
-      "days_to_cum": -20,
-      "price_history": [
-        {
-          "date": "2026-02-23",
-          "open": 4114.0,
-          "high": 4151.0,
-          "low": 4105.0,
-          "close": 4142.0,
-          "vol": 34453500
-        },
-        {
-          "date": "2026-02-24",
-          "open": 4123.0,
-          "high": 4133.0,
-          "low": 4077.0,
-          "close": 4096.0,
-          "vol": 58150200
-        },
-        {
-          "date": "2026-02-25",
-          "open": 4114.0,
-          "high": 4160.0,
-          "low": 4087.0,
-          "close": 4142.0,
-          "vol": 53012100
-        },
-        {
-          "date": "2026-02-26",
-          "open": 4142.0,
-          "high": 4151.0,
-          "low": 4068.0,
-          "close": 4105.0,
-          "vol": 53377800
-        },
-        {
-          "date": "2026-02-27",
-          "open": 4105.0,
-          "high": 4105.0,
-          "low": 4050.0,
-          "close": 4050.0,
-          "vol": 83010300
-        },
-        {
-          "date": "2026-03-02",
-          "open": 4004.0,
-          "high": 4031.0,
-          "low": 3958.0,
-          "close": 3958.0,
-          "vol": 77493000
-        },
-        {
-          "date": "2026-03-03",
-          "open": 3967.0,
-          "high": 4013.0,
-          "low": 3958.0,
-          "close": 3958.0,
-          "vol": 34412500
-        },
-        {
-          "date": "2026-03-04",
-          "open": 3939.0,
-          "high": 3949.0,
-          "low": 3792.0,
-          "close": 3820.0,
-          "vol": 101732000
-        },
-        {
-          "date": "2026-03-05",
-          "open": 3884.0,
-          "high": 3976.0,
-          "low": 3866.0,
-          "close": 3939.0,
-          "vol": 52177600
-        },
-        {
-          "date": "2026-03-06",
-          "open": 3930.0,
-          "high": 3958.0,
-          "low": 3875.0,
-          "close": 3930.0,
-          "vol": 47786400
-        },
-        {
-          "date": "2026-03-09",
-          "open": 3820.0,
-          "high": 3985.0,
-          "low": 3801.0,
-          "close": 3949.0,
-          "vol": 102376100
-        },
-        {
-          "date": "2026-03-10",
-          "open": 4004.0,
-          "high": 4022.0,
-          "low": 3912.0,
-          "close": 3921.0,
-          "vol": 66622300
-        },
-        {
-          "date": "2026-03-11",
-          "open": 3958.0,
-          "high": 3985.0,
-          "low": 3939.0,
-          "close": 3949.0,
-          "vol": 54719700
-        },
-        {
-          "date": "2026-03-12",
-          "open": 3958.0,
-          "high": 4004.0,
-          "low": 3930.0,
-          "close": 3939.0,
-          "vol": 87013000
-        },
-        {
-          "date": "2026-03-13",
-          "open": 3949.0,
-          "high": 3967.0,
-          "low": 3884.0,
-          "close": 3903.0,
-          "vol": 99440600
-        },
-        {
-          "date": "2026-03-16",
-          "open": 3912.0,
-          "high": 3995.0,
-          "low": 3893.0,
-          "close": 3976.0,
-          "vol": 126138200
-        },
-        {
-          "date": "2026-03-17",
-          "open": 3985.0,
-          "high": 4041.0,
-          "low": 3976.0,
-          "close": 4041.0,
-          "vol": 209818800
-        },
-        {
-          "date": "2026-03-25",
-          "open": 4050.0,
-          "high": 4090.0,
-          "low": 3980.0,
-          "close": 4040.0,
-          "vol": 247976300
-        },
-        {
-          "date": "2026-03-26",
-          "open": 4050.0,
-          "high": 4060.0,
-          "low": 3970.0,
-          "close": 4000.0,
-          "vol": 90175900
-        },
-        {
-          "date": "2026-03-27",
-          "open": 3980.0,
-          "high": 3990.0,
-          "low": 3900.0,
-          "close": 3900.0,
-          "vol": 76824500
-        },
-        {
-          "date": "2026-03-30",
-          "open": 3860.0,
-          "high": 3860.0,
-          "low": 3780.0,
-          "close": 3850.0,
-          "vol": 82872100
-        },
-        {
-          "date": "2026-03-31",
-          "open": 3850.0,
-          "high": 3880.0,
-          "low": 3760.0,
-          "close": 3760.0,
-          "vol": 76852900
-        },
-        {
-          "date": "2026-04-01",
-          "open": 3830.0,
-          "high": 3840.0,
-          "low": 3720.0,
-          "close": 3720.0,
-          "vol": 88881000
-        },
-        {
-          "date": "2026-04-02",
-          "open": 3730.0,
-          "high": 3750.0,
-          "low": 3690.0,
-          "close": 3700.0,
-          "vol": 53750100
-        },
-        {
-          "date": "2026-04-06",
-          "open": 3700.0,
-          "high": 3720.0,
-          "low": 3630.0,
-          "close": 3640.0,
-          "vol": 45425200
-        },
-        {
-          "date": "2026-04-07",
-          "open": 3640.0,
-          "high": 3660.0,
-          "low": 3510.0,
-          "close": 3510.0,
-          "vol": 101448300
-        },
-        {
-          "date": "2026-04-08",
-          "open": 3650.0,
-          "high": 3800.0,
-          "low": 3630.0,
-          "close": 3780.0,
-          "vol": 112845200
-        },
-        {
-          "date": "2026-04-09",
-          "open": 3760.0,
-          "high": 3770.0,
-          "low": 3680.0,
-          "close": 3710.0,
-          "vol": 55090400
-        },
-        {
-          "date": "2026-04-10",
-          "open": 3730.0,
-          "high": 3820.0,
-          "low": 3700.0,
-          "close": 3730.0,
-          "vol": 58848500
-        },
-        {
-          "date": "2026-04-13",
-          "open": 3710.0,
-          "high": 3710.0,
-          "low": 3660.0,
-          "close": 3700.0,
-          "vol": 27178400
-        }
-      ],
-      "ma20_history": [
-        4151.0,
-        4145.0,
-        4143.0,
-        4141.0,
-        4140.0,
-        4134.0,
-        4125.0,
-        4109.0,
-        4095.0,
-        4078.0,
-        4065.0,
-        4053.0,
-        4042.0,
-        4032.0,
-        4021.0,
-        4012.0,
-        4008.0,
-        4003.0,
-        3998.0,
-        3988.0,
-        3973.0,
-        3956.0,
-        3935.0,
-        3915.0,
-        3895.0,
-        3872.0,
-        3863.0,
-        3858.0,
-        3847.0,
-        3836.0
-      ],
-      "ma50_history": [
-        4059.0,
-        4062.0,
-        4066.0,
-        4068.0,
-        4070.0,
-        4071.0,
-        4072.0,
-        4067.0,
-        4065.0,
-        4063.0,
-        4061.0,
-        4060.0,
-        4059.0,
-        4059.0,
-        4058.0,
-        4059.0,
-        4060.0,
-        4062.0,
-        4064.0,
-        4064.0,
-        4064.0,
-        4062.0,
-        4059.0,
-        4055.0,
-        4048.0,
-        4038.0,
-        4030.0,
-        4019.0,
-        4010.0,
-        3999.0
-      ],
-      "net_income": 20040703279104,
-      "shares_outstanding": 578683733,
-      "last_updated": "2026-04-13 14:41:27",
-      "flags": [],
-      "skor_detail": {
-        "yield_bersih_4pct": 1,
-        "yield_tidak_abnormal": 1,
-        "div_konsisten_3thn": 1,
-        "div_konsisten_5thn": 1,
-        "dividen_aktif": 1,
-        "pbv_wajar": 1,
-        "per_wajar": 1,
-        "roe_positif": 1,
-        "der_aman": 1,
-        "above_ma20": 0,
-        "above_ma50": 0,
-        "golden_cross": 0,
-        "rsi_ideal": 1,
-        "rsi_tidak_overbought": 1,
-        "macd_bullish": 0,
-        "volume_normal": 0,
-        "volume_momentum": 0,
-        "candle_bullish": 0,
-        "candle_body_kuat": 0,
-        "upcoming_dividen": 1,
-        "news_positif": 1,
-        "news_tidak_major_neg": 1
-      },
-      "total_skor": 14,
-      "skor_maks": 22,
-      "pct": 63.6,
-      "klasifikasi": "BUY",
-      "news": {
-        "overall": "strong_positive",
-        "skor_normalized": 9.4,
-        "skor_korporasi": 5,
-        "skor_makro": 2,
-        "kategori_match": [
-          {
-            "id": 4,
-            "nama": "Buyback",
-            "sentimen": "bullish",
-            "bobot": 5,
-            "warning": "",
-            "level": "korporasi"
-          },
-          {
-            "id": 4,
-            "nama": "Buyback",
-            "sentimen": "bullish",
-            "bobot": 5,
-            "warning": "",
-            "level": "korporasi"
-          },
-          {
-            "id": 4,
-            "nama": "Buyback",
-            "sentimen": "bullish",
-            "bobot": 5,
-            "warning": "",
-            "level": "korporasi"
-          },
-          {
-            "id": 4,
-            "nama": "Buyback",
-            "sentimen": "bullish",
-            "bobot": 5,
-            "warning": "",
-            "level": "korporasi"
-          }
-        ],
-        "warnings": [],
-        "total_berita": 5,
-        "items": [
-          {
-            "title": "Reliance Sekuritas: Buy Saham BBNI, SMRA, EMTK, RAJA Saat Kans Pasar Masih Bullish - TopBusiness.id",
-            "published": "Mon, 20 Jul 2026 01:37:00 GMT",
-            "source": "TopBusiness.id",
-            "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOMW1VSDZQUFdRUEZzeEp6UjRYbGt5LVBJd0JlWGltVlZxRGM0dHNQd1RpOURlYzI2MVdQeG9IRlQwSUJMeGFHbmVqeTFkQjE4UGY3RXZfODFQT1lFNXc0Yk1SVFNjTVVVOEZRaVpMVHVZVHA2M2Q3bV9OYTlDNEIwU2RMSVh0ZExkdHhldTFBR0w5SXNRaGQ4MmJUb0tBX0xHMGlaeW1VLWhRUjk4SzkyR0d5UkxueG9i?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
-            "title": "BNI Tuntaskan Pengalihan 77,86 Juta Saham Buyback ke Program ESOP - SWA.co.id",
-            "published": "Sat, 18 Jul 2026 02:00:00 GMT",
-            "source": "SWA.co.id",
-            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxON2JleEl2a0V4MHkydUtweWE0MExxZzFLYmU1YTFhSC1lcDhRTDZFNm5LbDRSY25FSGgzMHo1Z1FvMGJqdzFXM2RCdER0U043M3ZTOUNaNkNJV3dJV0FheEJGdUcxUjA3WjBXX1MxM3dpU1JsbHJZcmVwVWR4NE9HNmF2bVdDWUxzeDh6eXhCdUttOXBzS3lZNVZ3?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 4,
-                "nama": "Buyback",
-                "sentimen": "bullish",
-                "bobot": 5,
-                "warning": "",
-                "level": "korporasi"
-              }
-            ]
-          },
-          {
-            "title": "BNI Alihkan 77,8 Juta Saham Buyback ke Program Saham Pegawai - kontan.co.id",
-            "published": "Sun, 19 Jul 2026 13:48:32 GMT",
-            "source": "kontan.co.id",
-            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTk13Y0RQYzZKV3R1NVNzS1JtWGw5U3l5QVNlbTJLa3pPcGZLcU9YVDc2QkNOSjhNRG03ZXNqQWZjem0zdW9Oay1LZ2RkNE9xdXREVzlXdDBWNmR3dm16bEJiZmJ2X3dJS0IxTVJLZFZ3QjR0TDJDVGlNMHlwaE9QbG1lNXkzTE1YVVZwZFV0OFBCX2U5Rzl0UC1B0gGTAUFVX3lxTFBuYkV4bWttaEdQaVhWbDNmclBWM3FYY05GVFlzUjNZTC1YQkZqc1hCZ2NFYzQ1TDQ4M3MyVHVDU25WT1I1UUl4d19wdlRPNDJsWkYybEt4SGNtUXlQZndCZ0VPU0ROdmZrTWdnTS1nVDlnM2FCck96WnFld19VM0NNek9Ed015TEIxQnl4dTRValZ3SQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 4,
-                "nama": "Buyback",
-                "sentimen": "bullish",
-                "bobot": 5,
-                "warning": "",
-                "level": "korporasi"
-              }
-            ]
-          },
-          {
-            "title": "BBNI Tuntaskan Pengalihan 77,8 Juta Saham Hasil Buyback 2026 - Kompas.com",
-            "published": "Sun, 19 Jul 2026 03:00:00 GMT",
-            "source": "Kompas.com",
-            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNNUxMQ05ReXFRaEk0UXQ3UUJoaWpkd0s0MU10NlJDSm5PeDdPQlNITTlzdF9ydGs4dkl6TnRjU1pTOFdJQkRjcnBHV2hCUlNaS3ptZ2FFZzcwTGdMYVJsRkF1T21jOXFqRFNhaEl2VjJFTFVqTE95bi11aktnWFN4X0duUEVMMjEzcUVrM1VPbjBHaHhWYml6Zl9DUmZFUThWaTNMQUtSSjdXZzd0SXRRdA?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 4,
-                "nama": "Buyback",
-                "sentimen": "bullish",
-                "bobot": 5,
-                "warning": "",
-                "level": "korporasi"
-              }
-            ]
-          },
-          {
-            "title": "BNI Alihkan 77,8 Juta Saham Buyback untuk Program Kepemilikan Saham Pegawai - Rmol.id",
-            "published": "Mon, 20 Jul 2026 08:00:00 GMT",
-            "source": "Rmol.id",
-            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPVlIwRkFRQTRYc1FYVUloZXRMb2FILVJUZ29aZl90dUw2SWc0enhKRVRWS2YxaWI3UnZNenp0RlZnTGY5MGR1QWc5bENmV2MzRkR1ejJXdko3ZUpXTDEzajVNVlBGdm5aYlktUGF4Z1BGWE4xZjJHQlVyeTFUeEdWekZaWlBUYjVBbTQ1M215RkE3TkF2VENveFR2Nk1relhpTXRXS3E0aTlkOFJiNzA2TGhGN3lDMTNaOGJrT3pB?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 4,
-                "nama": "Buyback",
-                "sentimen": "bullish",
-                "bobot": 5,
-                "warning": "",
-                "level": "korporasi"
-              }
-            ]
-          }
-        ]
-      },
-      "div_history_manual": [
-        {
-          "kode": "BBNI",
-          "tahun": "2020",
-          "tipe": "TAHUNAN",
-          "dps": 44.02,
-          "harga_cum": 2175.0,
-          "div_yield": 2.02,
-          "dpr": null,
-          "ex_date": "2021-04-08",
-          "cum_date": "2021-04-07",
-          "yield_1th": 2.02
-        },
-        {
-          "kode": "BBNI",
-          "tahun": "2021",
-          "tipe": "TAHUNAN",
-          "dps": 146.3,
-          "harga_cum": 3064.0,
-          "div_yield": 4.77,
-          "dpr": 25.03,
-          "ex_date": "2022-03-24",
-          "cum_date": "2022-03-23",
-          "yield_1th": 4.77
-        },
-        {
-          "kode": "BBNI",
-          "tahun": "2022",
-          "tipe": "TAHUNAN",
-          "dps": 392.78,
-          "harga_cum": 3671.0,
-          "div_yield": 10.7,
-          "dpr": 40.0,
-          "ex_date": "2023-03-28",
-          "cum_date": "2023-03-27",
-          "yield_1th": 10.7
-        },
-        {
-          "kode": "BBNI",
-          "tahun": "2023",
-          "tipe": "TAHUNAN",
-          "dps": 280.5,
-          "harga_cum": 4958.0,
-          "div_yield": 5.66,
-          "dpr": 50.03,
-          "ex_date": "2024-03-15",
-          "cum_date": "2024-03-14",
-          "yield_1th": 5.66
-        },
-        {
-          "kode": "BBNI",
-          "tahun": "2024",
-          "tipe": "TAHUNAN",
-          "dps": 374.06,
-          "harga_cum": 3844.0,
-          "div_yield": 9.73,
-          "dpr": 65.0,
-          "ex_date": "2025-04-15",
-          "cum_date": "2025-04-14",
-          "yield_1th": 9.73
-        },
-        {
-          "kode": "BBNI",
-          "tahun": "2025",
-          "tipe": "TAHUNAN",
-          "dps": 349.41,
-          "harga_cum": null,
-          "div_yield": null,
-          "dpr": 65.03,
-          "ex_date": "2026-03-25",
-          "cum_date": "2026-03-24",
-          "yield_1th": null
-        }
-      ],
-      "ex_date_manual": "2026-03-25",
-      "cum_date_manual": "2026-03-24",
-      "dps_manual": 349.41,
-      "harga_cum": null,
-      "div_yield_cum": null,
-      "dpr_manual": 65.03,
-      "est_dpr": 60.02,
-      "est_dps": 20785.84,
-      "est_yield_kotor": 561.78,
-      "est_yield_bersih": 505.6,
-      "est_net_income": 20040703279104,
-      "est_shares": 578683733
     },
     {
       "kode": "BBTN",
@@ -11397,18 +11342,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
+      "total_skor": 13,
       "skor_maks": 22,
-      "pct": 63.6,
-      "klasifikasi": "BUY",
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.9,
+        "overall": "negative",
+        "skor_normalized": 3.1,
         "skor_korporasi": 1,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [
           {
             "id": 2,
@@ -11926,22 +11871,30 @@
         "candle_bullish": 0,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
+      "total_skor": 13,
       "skor_maks": 22,
-      "pct": 63.6,
-      "klasifikasi": "BUY",
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
         "items": [
+          {
+            "title": "BRI Danareksa Sekuritas Unggul Saham AADI dan ITMG - achmadnurhidayat.id",
+            "published": "Wed, 22 Jul 2026 06:28:21 GMT",
+            "source": "achmadnurhidayat.id",
+            "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPSTJwODRST05RRFE4QVFKMlNUQ3l1X3huWHI0alZkNmJJSnBteVRoTG4zUGhWYjJtMmUtYXFHeXpNQ01zaWpwdEMxNGRIcms4VkJXMVFRWDB0QUpaWTlyR0hpNHRvMU1ZMlVQZmhMamlIWk4tMW5NdS1jNGc4WFp4aVVTRQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
           {
             "title": "Simak Rekomendasi Teknikal Saham MAPA, ITMG, dan PGEO untuk Jumat (17/7) - kontan.co.id",
             "published": "Thu, 16 Jul 2026 11:40:47 GMT",
@@ -11973,12 +11926,468 @@
             "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOUzE5MmhXY2Fmc0JaRURrTjdmRzR4cG04dnoyaEgtY1l2TVhLQk5OOWVFTVl1Y0lNamR6RUo4ZmVOTFRRdTFXdkpUZEVzQkxVV1lyWnZXQ2dvSks5X3RjVUFVOTZ0QklsalZXOXdlQldlRkp0QkFQQ2JGSVRTRk5xbTBFaENYaG9HRzYwSTdmUmFybkNnU21PNXBmR3ZvM0l2di00?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
+          }
+        ]
+      }
+    },
+    {
+      "kode": "UNVR",
+      "nama": "PT Unilever Indonesia Tbk",
+      "sektor": "Consumer Defensive",
+      "harga": 1905.0,
+      "change_pct": -0.78,
+      "ma20": 1909.0,
+      "ma50": 2069.0,
+      "rsi": 43.7,
+      "macd_line": -55.16,
+      "macd_signal": -70.65,
+      "macd_bullish": true,
+      "vol_ratio": 0.17,
+      "above_ma20": false,
+      "above_ma50": false,
+      "golden_cross": false,
+      "bullish_candle": false,
+      "body_ratio": 0.17,
+      "pbv": 16.17,
+      "per": 20.5,
+      "roe": 106.8,
+      "der": 14.41,
+      "dps": 87.0,
+      "yield_kotor": 4.57,
+      "yield_bersih": 4.11,
+      "div_history": [
+        {
+          "tanggal": "2023-07-06",
+          "dps": 71.0
+        },
+        {
+          "tanggal": "2023-12-05",
+          "dps": 63.0
+        },
+        {
+          "tanggal": "2024-07-01",
+          "dps": 77.0
+        },
+        {
+          "tanggal": "2024-12-05",
+          "dps": 41.0
+        },
+        {
+          "tanggal": "2025-06-16",
+          "dps": 47.0
+        },
+        {
+          "tanggal": "2025-12-15",
+          "dps": 87.0
+        }
+      ],
+      "div_years": 3,
+      "div_konsisten": true,
+      "ex_date": "2025-12-15",
+      "cum_date": "2025-12-14",
+      "days_to_cum": -120,
+      "price_history": [
+        {
+          "date": "2026-02-23",
+          "open": 2260.0,
+          "high": 2370.0,
+          "low": 2250.0,
+          "close": 2370.0,
+          "vol": 34184100
+        },
+        {
+          "date": "2026-02-24",
+          "open": 2370.0,
+          "high": 2380.0,
+          "low": 2320.0,
+          "close": 2350.0,
+          "vol": 24678900
+        },
+        {
+          "date": "2026-02-25",
+          "open": 2350.0,
+          "high": 2370.0,
+          "low": 2320.0,
+          "close": 2330.0,
+          "vol": 15559900
+        },
+        {
+          "date": "2026-02-26",
+          "open": 2350.0,
+          "high": 2360.0,
+          "low": 2300.0,
+          "close": 2310.0,
+          "vol": 15417900
+        },
+        {
+          "date": "2026-02-27",
+          "open": 2320.0,
+          "high": 2410.0,
+          "low": 2310.0,
+          "close": 2380.0,
+          "vol": 68472600
+        },
+        {
+          "date": "2026-03-02",
+          "open": 2310.0,
+          "high": 2320.0,
+          "low": 2240.0,
+          "close": 2250.0,
+          "vol": 23912200
+        },
+        {
+          "date": "2026-03-03",
+          "open": 2260.0,
+          "high": 2280.0,
+          "low": 2080.0,
+          "close": 2080.0,
+          "vol": 29682000
+        },
+        {
+          "date": "2026-03-04",
+          "open": 2090.0,
+          "high": 2090.0,
+          "low": 1920.0,
+          "close": 1935.0,
+          "vol": 31919800
+        },
+        {
+          "date": "2026-03-05",
+          "open": 1975.0,
+          "high": 2040.0,
+          "low": 1975.0,
+          "close": 1990.0,
+          "vol": 14954200
+        },
+        {
+          "date": "2026-03-06",
+          "open": 1990.0,
+          "high": 2040.0,
+          "low": 1955.0,
+          "close": 1975.0,
+          "vol": 11788500
+        },
+        {
+          "date": "2026-03-09",
+          "open": 1955.0,
+          "high": 1955.0,
+          "low": 1845.0,
+          "close": 1880.0,
+          "vol": 20756600
+        },
+        {
+          "date": "2026-03-10",
+          "open": 1910.0,
+          "high": 1945.0,
+          "low": 1890.0,
+          "close": 1945.0,
+          "vol": 11695700
+        },
+        {
+          "date": "2026-03-11",
+          "open": 1965.0,
+          "high": 2050.0,
+          "low": 1945.0,
+          "close": 2000.0,
+          "vol": 19351000
+        },
+        {
+          "date": "2026-03-12",
+          "open": 2010.0,
+          "high": 2020.0,
+          "low": 1890.0,
+          "close": 1890.0,
+          "vol": 27876700
+        },
+        {
+          "date": "2026-03-13",
+          "open": 1890.0,
+          "high": 1910.0,
+          "low": 1870.0,
+          "close": 1870.0,
+          "vol": 12154900
+        },
+        {
+          "date": "2026-03-16",
+          "open": 1870.0,
+          "high": 1880.0,
+          "low": 1820.0,
+          "close": 1855.0,
+          "vol": 10659400
+        },
+        {
+          "date": "2026-03-17",
+          "open": 1865.0,
+          "high": 2080.0,
+          "low": 1865.0,
+          "close": 2000.0,
+          "vol": 50594200
+        },
+        {
+          "date": "2026-03-25",
+          "open": 1930.0,
+          "high": 1950.0,
+          "low": 1905.0,
+          "close": 1935.0,
+          "vol": 34597400
+        },
+        {
+          "date": "2026-03-26",
+          "open": 1935.0,
+          "high": 1960.0,
+          "low": 1920.0,
+          "close": 1940.0,
+          "vol": 20185700
+        },
+        {
+          "date": "2026-03-27",
+          "open": 1940.0,
+          "high": 1940.0,
+          "low": 1855.0,
+          "close": 1860.0,
+          "vol": 20510900
+        },
+        {
+          "date": "2026-03-30",
+          "open": 1820.0,
+          "high": 1845.0,
+          "low": 1810.0,
+          "close": 1835.0,
+          "vol": 14256600
+        },
+        {
+          "date": "2026-03-31",
+          "open": 1860.0,
+          "high": 1865.0,
+          "low": 1815.0,
+          "close": 1820.0,
+          "vol": 21371200
+        },
+        {
+          "date": "2026-04-01",
+          "open": 1845.0,
+          "high": 1970.0,
+          "low": 1845.0,
+          "close": 1910.0,
+          "vol": 46209400
+        },
+        {
+          "date": "2026-04-02",
+          "open": 1910.0,
+          "high": 1960.0,
+          "low": 1910.0,
+          "close": 1930.0,
+          "vol": 17567700
+        },
+        {
+          "date": "2026-04-06",
+          "open": 1935.0,
+          "high": 1940.0,
+          "low": 1885.0,
+          "close": 1915.0,
+          "vol": 5661100
+        },
+        {
+          "date": "2026-04-07",
+          "open": 1915.0,
+          "high": 1920.0,
+          "low": 1890.0,
+          "close": 1905.0,
+          "vol": 3248600
+        },
+        {
+          "date": "2026-04-08",
+          "open": 1925.0,
+          "high": 1960.0,
+          "low": 1915.0,
+          "close": 1955.0,
+          "vol": 11687600
+        },
+        {
+          "date": "2026-04-09",
+          "open": 1945.0,
+          "high": 1945.0,
+          "low": 1905.0,
+          "close": 1910.0,
+          "vol": 10902500
+        },
+        {
+          "date": "2026-04-10",
+          "open": 1920.0,
+          "high": 1935.0,
+          "low": 1910.0,
+          "close": 1920.0,
+          "vol": 8206300
+        },
+        {
+          "date": "2026-04-13",
+          "open": 1910.0,
+          "high": 1915.0,
+          "low": 1885.0,
+          "close": 1905.0,
+          "vol": 3201600
+        }
+      ],
+      "ma20_history": [
+        2169.0,
+        2174.0,
+        2183.0,
+        2195.0,
+        2215.0,
+        2235.0,
+        2242.0,
+        2238.0,
+        2237.0,
+        2233.0,
+        2216.0,
+        2199.0,
+        2184.0,
+        2163.0,
+        2144.0,
+        2122.0,
+        2106.0,
+        2090.0,
+        2076.0,
+        2057.0,
+        2030.0,
+        2004.0,
+        1983.0,
+        1964.0,
+        1941.0,
+        1924.0,
+        1917.0,
+        1916.0,
+        1912.0,
+        1909.0
+      ],
+      "ma50_history": [
+        2408.0,
+        2403.0,
+        2398.0,
+        2393.0,
+        2388.0,
+        2382.0,
+        2372.0,
+        2360.0,
+        2345.0,
+        2332.0,
+        2317.0,
+        2300.0,
+        2286.0,
+        2272.0,
+        2257.0,
+        2242.0,
+        2230.0,
+        2217.0,
+        2204.0,
+        2189.0,
+        2174.0,
+        2158.0,
+        2143.0,
+        2130.0,
+        2116.0,
+        2103.0,
+        2093.0,
+        2084.0,
+        2076.0,
+        2069.0
+      ],
+      "net_income": 3537296949248,
+      "shares_outstanding": 37981233300,
+      "last_updated": "2026-04-13 14:41:34",
+      "flags": [],
+      "skor_detail": {
+        "yield_bersih_4pct": 1,
+        "yield_tidak_abnormal": 1,
+        "div_konsisten_3thn": 1,
+        "div_konsisten_5thn": 0,
+        "dividen_aktif": 1,
+        "pbv_wajar": 0,
+        "per_wajar": 1,
+        "roe_positif": 1,
+        "der_aman": 1,
+        "above_ma20": 0,
+        "above_ma50": 0,
+        "golden_cross": 0,
+        "rsi_ideal": 1,
+        "rsi_tidak_overbought": 1,
+        "macd_bullish": 1,
+        "volume_normal": 0,
+        "volume_momentum": 0,
+        "candle_bullish": 0,
+        "candle_body_kuat": 0,
+        "upcoming_dividen": 1,
+        "news_positif": 1,
+        "news_tidak_major_neg": 1
+      },
+      "total_skor": 13,
+      "skor_maks": 22,
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
+      "news": {
+        "overall": "positive",
+        "skor_normalized": 5.6,
+        "skor_korporasi": 5,
+        "skor_makro": -4,
+        "kategori_match": [
+          {
+            "id": 4,
+            "nama": "Buyback",
+            "sentimen": "bullish",
+            "bobot": 5,
+            "warning": "",
+            "level": "korporasi"
+          }
+        ],
+        "warnings": [],
+        "total_berita": 5,
+        "items": [
+          {
+            "title": "Saham UNVR: Profil, Kinerja & Prospek Unilever - Pluang",
+            "published": "Mon, 20 Jul 2026 11:27:29 GMT",
+            "source": "Pluang",
+            "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9zUjl4bUFQQ1VXa3BhRWJ4cmJmRXBaNzRrVi1mYlRwWk4wY3Vpd0Mzb3R6WlNfQm82aFkwVVdUcFMzUFlUaVcwVzh0WjViVEsyWjl5R1VhMWVXZXB0QWZwcmpoRQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
           },
           {
-            "title": "IHSG Diproyeksi Lanjut Menguat Senin (20/7), Cermati Saham Migas ADRO hingga ITMG - Bisnis.com - Market",
-            "published": "Mon, 20 Jul 2026 23:03:01 GMT",
-            "source": "Bisnis.com - Market",
-            "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQcjNlY1JySXRFQTNqaWVnYTZ0cXZvWEllaV9mVFlGZTg2SDc3NkNkUVItQnNidjN5YmV3VHNZNG03SXQwdkNQUDRBb2NYdlJ6a1pIajdKTG9WODZ3Ui1kVXBIaTJNMWZ5dXNyZS1RbkRRMVcyeWRLdTlIYjJPbEg2ajJoZ1JUdm1UVjN5ZGRFQmlDZGpqLU43Z3p4TTl3bTBJQTh6eGZNT0FkTUxjTWhxWTItdXp5blhpUVI4SWRSbURLRV9Ha1E?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "title": "Rekomendasi Saham Ajaib Sekuritas Hari Ini (UNVR, PTBA, ESSA) - Ajaib",
+            "published": "Mon, 20 Jul 2026 02:00:30 GMT",
+            "source": "Ajaib",
+            "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBYSHNud25XWEJ6eFpqTk5LV25HMjVfQ24yR2l5dHQ3bVZNb2FZRDZBbTRMdmI4TWJmVWYxYVZKX0pNa0gtaEtaWmJJYkNxb0FhVm84NncxN1NkNlhIYTdXZGlPdHN4N0hHdV9JcExEbTlDdUli?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
+          {
+            "title": "UNVR Realisasikan Buyback Rp 285 Miliar, Baru Serap 14% dari Dana yang Disiapkan - kontan.co.id",
+            "published": "Thu, 16 Jul 2026 00:40:13 GMT",
+            "source": "kontan.co.id",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMEwwNUxvb2VBSm1JcXcxN2VZTlFSV25FTVlJYkVueVhtZDZzVFhKMmxOdXhVM196bGdLNXhoYWFiMGtjeGdHcU1yUmVaMzY1QVF4QldmVEE2QnFBcmFpVHhCN2tsZllRcFFZVjI2UnNHb2xwbHliblhhdE1lRlZUNkJ5ZUhkX1BlNVZjaWlIVVlvU1RTb1FMc2dJZjFVZWxOYm1iTjFGLWNqbkRGanFpWVIxRXjSAawBQVVfeXFMTXY3a0NSN1M1NDF2c25ueFhuUkNSdkh2VlcwcFpPNFctQ05QLW5pRjFtV0swbFVDM2g4ejZiRHFYSkpqb2xHQ3dVaEc2eHdabXMxTnhLWFo4VFE5VjV2R1MwX0ZrTTdTcWZUSVEtSFBZNXdORnRZdnhwNTRKVWp2b2ttNVJiSnJ0WnhfOXdtUzRXVWEzR0Z6YmVXVEdZd1JPdDAzdjdfUWYxQlNGcg?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": [
+              {
+                "id": 4,
+                "nama": "Buyback",
+                "sentimen": "bullish",
+                "bobot": 5,
+                "warning": "",
+                "level": "korporasi"
+              }
+            ]
+          },
+          {
+            "title": "Rumor Divestasi Bango Beredar, Arah UNVR Belum Sepenunya Bullish - Bloomberg Technoz",
+            "published": "Wed, 22 Jul 2026 06:50:00 GMT",
+            "source": "Bloomberg Technoz",
+            "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQLVpNR0pzenJMMUk0ZWowSk16T2ZROWpVSTZzbnd5TzhHTGFQZDhwN1FJMVdMcmpUVkk3OFhlbGVLbklhLTZaSFRzSko5UFhROThsamxJeWw2WTFtYlVQVGFfX0Z3MGlTc3JEM2EtN20wVjViYkU1X0prRThJQy0tVEtMUHJIZWdEU1F0SWdCYUpmUDhGaDkxUDR3MnBWdTVNM0g3WmFVbE5zaU9faG04NGRrY0t1Zw?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
+          {
+            "title": "Rekomendasi Saham Ajaib Sekuritas Hari Ini (PTBA, UNVR, KIJA) - Ajaib",
+            "published": "Thu, 16 Jul 2026 02:02:26 GMT",
+            "source": "Ajaib",
+            "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9uSkZpWmNwejk2dW5WR2dXU1lqcmVPNFI0cWI3YXFKWWVTUVk4Z1dmLXZIZjVfQ0Zjd3Q4ekFXX01ybm9SVzhweExEVlhieEVXOGlQMm43Y2Z2X2FYMGQtUnBLbjlWYWluVThpOWl5MXZVMXFo?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           }
@@ -12372,18 +12781,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
+      "total_skor": 13,
       "skor_maks": 22,
-      "pct": 63.6,
-      "klasifikasi": "BUY",
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.9,
+        "overall": "negative",
+        "skor_normalized": 3.1,
         "skor_korporasi": 1,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [
           {
             "id": 2,
@@ -12397,8 +12806,16 @@
         "warnings": [
           "Bisa dilutif — analisis lebih lanjut"
         ],
-        "total_berita": 2,
+        "total_berita": 3,
         "items": [
+          {
+            "title": "SIDO Agresif Pacu Pasar Ekspor, Analis Ingatkan Penjualan Domestik - kontan.co.id",
+            "published": "Tue, 21 Jul 2026 11:12:16 GMT",
+            "source": "kontan.co.id",
+            "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbzVXNGRoeW9tbVYyTmE5Z3lWYnViZTdubWlGVmE3bU9VU3d6VHRBUE1mcFQtZFBYbE1uS3VxdjcySlZsc29kdng5bHY1djhmV1hKbTJxakhULXRLWWhJelI2UV80a1VhS0xENmVXbkllSkQ1Tm1mT2pYbFhqc0w4QkNUOXV3RG9jLWs0bG82TzlsdFdUYlhjbTNraWZiTEhBaHJJ0gGbAUFVX3lxTFBsT2Y3NlpkN3BwdXFhbUVQQk56YXpocExhWnB5M0YwMWNCNDMyZGVvRlpod1ZmVEU5bHdNMVdrMEN4SG1DV0tlaFRpNVgzaXp5WmY3VTRpQzA0TFp5TVczVk1QTVE3SjZ1MmJza3hlR0traU5KazB3dmF5OHZIR0F2Uk05V1FleWk5UW5MSzJyRDdySnpkX0hNMFNV?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
           {
             "title": "IHSG Hari Ini 16 Juli 2026 Melambung ke 6.108 - Liputan6.com",
             "published": "Thu, 16 Jul 2026 09:51:15 GMT",
@@ -12814,18 +13231,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
+      "total_skor": 13,
       "skor_maks": 22,
-      "pct": 63.6,
-      "klasifikasi": "BUY",
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -12839,10 +13256,10 @@
             "matches": []
           },
           {
-            "title": "IHSG Naik 0,47% ke 6.067 di Sesi I, Top Gainers LQ45: ANTM, ESSA, ISAT, Rabu (15/7) - kontan.co.id",
-            "published": "Wed, 15 Jul 2026 05:11:33 GMT",
+            "title": "IHSG Dibuka Menguat ke 6.058, Top Gainers LQ45: SMGR, AMMN dan ISAT, Kamis (16/7) - kontan.co.id",
+            "published": "Thu, 16 Jul 2026 02:12:16 GMT",
             "source": "kontan.co.id",
-            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZlBJSzdSd3h0anlzTjBuS2pQX29fRVhUUE5nM2tlb3NLWm9HQUlsTHM3bkp0c1JtSzNVcFJxbFQ5WTd1b1lHMVhOc3A2djRIV05pdGtsQl9hMm9ONGRkXzRzeGZ1M1RtSjdzbUNVbjYyT0FjbWd0QUdoTG4yUmRTUXZoMnAzNGlra2ZLUnFEcDFra0hielBvdlhKWUZPbFlUUG5qdFdyM2xTTF8w0gGkAUFVX3lxTFB3cERJTHVDZmNaT09sTldkSGR3MXdRNXUxalZHN0dtOUd1TGRxbkMtUkdfdzZpR3BFbUYyZ29XaDlSczFrX0pNYmNCamZiSXNvaTJxejJzWUQwS2xhd2NVYzB6bGZ4U0pSenZLZ200R2UwdDczVEFHdWxKNUItRDBDUDhBeVVnaEhaRy1BT0ZLT1FUUUlobHFJckVLeTJzMWxYRWI3?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNY20xUUI4cE9XdHlzSUQ2aFJwV0FCLUtZME45MXlBUU83eVBrSTFjbHNhMzZYdklmdmhKQTNEOWJ2ZTh4MDhNSVFvYTFhVVpxdHFFYWZpT0pzZVVVZnBzaE9DeHVNYk41bkFKMXNieWxyTjctNTlCQ295V2RXTGtKX0JhcXlKU1FzSmc4cHdUd3lGUkVfaEdGblR6WTAtbnA1b1YxRUxxUGJZUldZTkHSAaYBQVVfeXFMT1pJNVNGUWVKR2laU2dvQnhPUzhMX0tiZlVpdUJBQ3g5YUpxTUtBYXM3dnA5OHV0N3dEMjVGTEFlV1hSV005dXVWajhnSUZHV3VPT0dTQ3Rpdzlzcjl6SUl5dVlXQ0M4QUMyUC0tcXpMdlRyYXJSNkc3THhFYnJqLVJmMzVqem8ySEg5X0xiZlJZbE5ZazVYdng2eklrZzgxWGdsN21GUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           },
@@ -13260,18 +13677,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
+      "total_skor": 13,
       "skor_maks": 22,
-      "pct": 63.6,
-      "klasifikasi": "BUY",
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -13293,14 +13710,6 @@
             "matches": []
           },
           {
-            "title": "IHSG Sesi I Ditutup ke Zona Hijau, Ditopang Saham AMMN, WIFI, Hingga TINS - Kompas.com",
-            "published": "Thu, 16 Jul 2026 05:47:00 GMT",
-            "source": "Kompas.com",
-            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbk8zYTZQM3p2T21tMm1mZV81VkxLUFhfdVQxRnoyVjdhaUVVRXZhRUpWWng2RXJiaWZKbFpaVUJpMm90YlA5ck1MbER5M2tUMmFZVWZtZUk1TGZDTS1JOUduYnZoVXNVcXRmdjNPVEFCZm9obFFKWGFhaHp5OWs3dXRUUGZLbmNGQ0RMWUptZXZxOEJ0NjIzVS03Y0FwdWg1WXNhSXR5VWhLbHk2Q1IySVBaNnNKdVRpSDFuZ1p3?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
             "title": "Asing Balik Borong Saham RI, Bank Mandiri Jadi Buruan Utama - CNBC Indonesia",
             "published": "Mon, 20 Jul 2026 00:30:00 GMT",
             "source": "CNBC Indonesia",
@@ -13313,6 +13722,14 @@
             "published": "Thu, 16 Jul 2026 09:30:00 GMT",
             "source": "Infobanknews",
             "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPbWZuMFNzXy1fd2lwYjY3cUx4OHV5alloMll5dUFNdlMyOFJxdkNEUUc3ZUVNU1BqY08zV0lqZDY0UWpGWTBvYUVtMjNGZlZNZ1duUEpEaTBiZXRSSDF5YllCZjFYQmRPQlEtWW5pSXlLeG9QcDc2OEVWY01RdkI4MkJhdTFZaHQwbXc?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
+          {
+            "title": "IHSG Sesi I Ditutup ke Zona Hijau, Ditopang Saham AMMN, WIFI, Hingga TINS - Kompas.com",
+            "published": "Thu, 16 Jul 2026 05:47:00 GMT",
+            "source": "Kompas.com",
+            "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbk8zYTZQM3p2T21tMm1mZV81VkxLUFhfdVQxRnoyVjdhaUVVRXZhRUpWWng2RXJiaWZKbFpaVUJpMm90YlA5ck1MbER5M2tUMmFZVWZtZUk1TGZDTS1JOUduYnZoVXNVcXRmdjNPVEFCZm9obFFKWGFhaHp5OWs3dXRUUGZLbmNGQ0RMWUptZXZxOEJ0NjIzVS03Y0FwdWg1WXNhSXR5VWhLbHk2Q1IySVBaNnNKdVRpSDFuZ1p3?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           }
@@ -13706,18 +14123,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 14,
+      "total_skor": 13,
       "skor_maks": 22,
-      "pct": 63.6,
-      "klasifikasi": "BUY",
+      "pct": 59.1,
+      "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -13731,18 +14148,18 @@
             "matches": []
           },
           {
-            "title": "Indeks Bisnis-27 Dibuka Menguat Terdorong Saham AKRA, INCO, hingga DEWA - Bisnis.com - Market",
-            "published": "Tue, 21 Jul 2026 02:35:43 GMT",
-            "source": "Bisnis.com - Market",
-            "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdURyeGliMi1xRWs1cWRwS3N6aVVBcUU3T0VJVUJpNGFJTGlST2xzTC1yQ3ZtcldScGlheHMxVzdaUGRlOHBZRDVuMDNhZTRQMHZ5YU1vbnNnVlBTYWM3STByaHQ4UURNdXVCUVcybGRucFBJM0tyUzdtbV9mSUlwT2NObnpTWDRUaW1HcV9fTHBSTVY1azktUGEyNGxHekpGNnNZdDhEeUlIb1pvMzdMOTRNX1pFbzZCbGww?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
             "title": "Tiga Saham Nikel Andalan JP Morgan, Laba dan Cuan Gede-gede - investor.id",
             "published": "Thu, 16 Jul 2026 12:24:00 GMT",
             "source": "investor.id",
             "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdnRGUDVNSEZScFJxUU9OTGR6ZmlZTU9VbTF3TFE0bGdWTUZCUHFZLVljenJ5VWltRVF6cjU4Zi0tUjJ4QVZEeUJ0TzFNUkQzWkZWN0Q4a1c2RFNGZUhaRDcyZGZRQTV0c2dHakNweTY5aXg0YWZUTVU2TjVMbmNFcXFKeGtOUjdsZU9TYlJ0T3dsMW40Nnc?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
+          {
+            "title": "IHSG Dibuka Naik 0,78% ke level 6.280, Saham AMMN, INCO, ISAT Melaju - Bisnis.com - Market",
+            "published": "Tue, 21 Jul 2026 02:20:53 GMT",
+            "source": "Bisnis.com - Market",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRXZqN3U1Y2d1dkQ4RzMtZE55ajJsODRsZVA0bTZHcFQyU0VaUXNYdGg1YVpySURMWExLYWhNbjhBWGJseVphZHN6TG9LV19XTmJjU3NfalNyLTFoc2tJenpEMUFYWldnbW04MVpvZW5xVXhIb3VfYUFHRXBHekhMS1pPT3kwei1pSG0zVjhIWjd6eEg0OFZDSUY5ZzBTcVhqVmlXZEVrMWljdjE1dnpvRXBB?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           },
@@ -13764,9 +14181,7 @@
           }
         ]
       }
-    }
-  ],
-  "watch": [
+    },
     {
       "kode": "BBRI",
       "nama": "PT Bank Rakyat Indonesia (Persero) Tbk",
@@ -14154,18 +14569,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
+      "total_skor": 12,
       "skor_maks": 22,
-      "pct": 59.1,
+      "pct": 54.5,
       "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -14687,18 +15102,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
+      "total_skor": 12,
       "skor_maks": 22,
-      "pct": 59.1,
+      "pct": 54.5,
       "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -15133,18 +15548,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
+      "total_skor": 12,
       "skor_maks": 22,
-      "pct": 59.1,
+      "pct": 54.5,
       "klasifikasi": "WATCH",
       "news": {
-        "overall": "strong_positive",
-        "skor_normalized": 8.8,
+        "overall": "neutral",
+        "skor_normalized": 5.0,
         "skor_korporasi": 4,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [
           {
             "id": 1,
@@ -15488,470 +15903,6 @@
       "est_yield_bersih": 0.0,
       "est_net_income": 447694016,
       "est_shares": 28800494200
-    },
-    {
-      "kode": "UNVR",
-      "nama": "PT Unilever Indonesia Tbk",
-      "sektor": "Consumer Defensive",
-      "harga": 1905.0,
-      "change_pct": -0.78,
-      "ma20": 1909.0,
-      "ma50": 2069.0,
-      "rsi": 43.7,
-      "macd_line": -55.16,
-      "macd_signal": -70.65,
-      "macd_bullish": true,
-      "vol_ratio": 0.17,
-      "above_ma20": false,
-      "above_ma50": false,
-      "golden_cross": false,
-      "bullish_candle": false,
-      "body_ratio": 0.17,
-      "pbv": 16.17,
-      "per": 20.5,
-      "roe": 106.8,
-      "der": 14.41,
-      "dps": 87.0,
-      "yield_kotor": 4.57,
-      "yield_bersih": 4.11,
-      "div_history": [
-        {
-          "tanggal": "2023-07-06",
-          "dps": 71.0
-        },
-        {
-          "tanggal": "2023-12-05",
-          "dps": 63.0
-        },
-        {
-          "tanggal": "2024-07-01",
-          "dps": 77.0
-        },
-        {
-          "tanggal": "2024-12-05",
-          "dps": 41.0
-        },
-        {
-          "tanggal": "2025-06-16",
-          "dps": 47.0
-        },
-        {
-          "tanggal": "2025-12-15",
-          "dps": 87.0
-        }
-      ],
-      "div_years": 3,
-      "div_konsisten": true,
-      "ex_date": "2025-12-15",
-      "cum_date": "2025-12-14",
-      "days_to_cum": -120,
-      "price_history": [
-        {
-          "date": "2026-02-23",
-          "open": 2260.0,
-          "high": 2370.0,
-          "low": 2250.0,
-          "close": 2370.0,
-          "vol": 34184100
-        },
-        {
-          "date": "2026-02-24",
-          "open": 2370.0,
-          "high": 2380.0,
-          "low": 2320.0,
-          "close": 2350.0,
-          "vol": 24678900
-        },
-        {
-          "date": "2026-02-25",
-          "open": 2350.0,
-          "high": 2370.0,
-          "low": 2320.0,
-          "close": 2330.0,
-          "vol": 15559900
-        },
-        {
-          "date": "2026-02-26",
-          "open": 2350.0,
-          "high": 2360.0,
-          "low": 2300.0,
-          "close": 2310.0,
-          "vol": 15417900
-        },
-        {
-          "date": "2026-02-27",
-          "open": 2320.0,
-          "high": 2410.0,
-          "low": 2310.0,
-          "close": 2380.0,
-          "vol": 68472600
-        },
-        {
-          "date": "2026-03-02",
-          "open": 2310.0,
-          "high": 2320.0,
-          "low": 2240.0,
-          "close": 2250.0,
-          "vol": 23912200
-        },
-        {
-          "date": "2026-03-03",
-          "open": 2260.0,
-          "high": 2280.0,
-          "low": 2080.0,
-          "close": 2080.0,
-          "vol": 29682000
-        },
-        {
-          "date": "2026-03-04",
-          "open": 2090.0,
-          "high": 2090.0,
-          "low": 1920.0,
-          "close": 1935.0,
-          "vol": 31919800
-        },
-        {
-          "date": "2026-03-05",
-          "open": 1975.0,
-          "high": 2040.0,
-          "low": 1975.0,
-          "close": 1990.0,
-          "vol": 14954200
-        },
-        {
-          "date": "2026-03-06",
-          "open": 1990.0,
-          "high": 2040.0,
-          "low": 1955.0,
-          "close": 1975.0,
-          "vol": 11788500
-        },
-        {
-          "date": "2026-03-09",
-          "open": 1955.0,
-          "high": 1955.0,
-          "low": 1845.0,
-          "close": 1880.0,
-          "vol": 20756600
-        },
-        {
-          "date": "2026-03-10",
-          "open": 1910.0,
-          "high": 1945.0,
-          "low": 1890.0,
-          "close": 1945.0,
-          "vol": 11695700
-        },
-        {
-          "date": "2026-03-11",
-          "open": 1965.0,
-          "high": 2050.0,
-          "low": 1945.0,
-          "close": 2000.0,
-          "vol": 19351000
-        },
-        {
-          "date": "2026-03-12",
-          "open": 2010.0,
-          "high": 2020.0,
-          "low": 1890.0,
-          "close": 1890.0,
-          "vol": 27876700
-        },
-        {
-          "date": "2026-03-13",
-          "open": 1890.0,
-          "high": 1910.0,
-          "low": 1870.0,
-          "close": 1870.0,
-          "vol": 12154900
-        },
-        {
-          "date": "2026-03-16",
-          "open": 1870.0,
-          "high": 1880.0,
-          "low": 1820.0,
-          "close": 1855.0,
-          "vol": 10659400
-        },
-        {
-          "date": "2026-03-17",
-          "open": 1865.0,
-          "high": 2080.0,
-          "low": 1865.0,
-          "close": 2000.0,
-          "vol": 50594200
-        },
-        {
-          "date": "2026-03-25",
-          "open": 1930.0,
-          "high": 1950.0,
-          "low": 1905.0,
-          "close": 1935.0,
-          "vol": 34597400
-        },
-        {
-          "date": "2026-03-26",
-          "open": 1935.0,
-          "high": 1960.0,
-          "low": 1920.0,
-          "close": 1940.0,
-          "vol": 20185700
-        },
-        {
-          "date": "2026-03-27",
-          "open": 1940.0,
-          "high": 1940.0,
-          "low": 1855.0,
-          "close": 1860.0,
-          "vol": 20510900
-        },
-        {
-          "date": "2026-03-30",
-          "open": 1820.0,
-          "high": 1845.0,
-          "low": 1810.0,
-          "close": 1835.0,
-          "vol": 14256600
-        },
-        {
-          "date": "2026-03-31",
-          "open": 1860.0,
-          "high": 1865.0,
-          "low": 1815.0,
-          "close": 1820.0,
-          "vol": 21371200
-        },
-        {
-          "date": "2026-04-01",
-          "open": 1845.0,
-          "high": 1970.0,
-          "low": 1845.0,
-          "close": 1910.0,
-          "vol": 46209400
-        },
-        {
-          "date": "2026-04-02",
-          "open": 1910.0,
-          "high": 1960.0,
-          "low": 1910.0,
-          "close": 1930.0,
-          "vol": 17567700
-        },
-        {
-          "date": "2026-04-06",
-          "open": 1935.0,
-          "high": 1940.0,
-          "low": 1885.0,
-          "close": 1915.0,
-          "vol": 5661100
-        },
-        {
-          "date": "2026-04-07",
-          "open": 1915.0,
-          "high": 1920.0,
-          "low": 1890.0,
-          "close": 1905.0,
-          "vol": 3248600
-        },
-        {
-          "date": "2026-04-08",
-          "open": 1925.0,
-          "high": 1960.0,
-          "low": 1915.0,
-          "close": 1955.0,
-          "vol": 11687600
-        },
-        {
-          "date": "2026-04-09",
-          "open": 1945.0,
-          "high": 1945.0,
-          "low": 1905.0,
-          "close": 1910.0,
-          "vol": 10902500
-        },
-        {
-          "date": "2026-04-10",
-          "open": 1920.0,
-          "high": 1935.0,
-          "low": 1910.0,
-          "close": 1920.0,
-          "vol": 8206300
-        },
-        {
-          "date": "2026-04-13",
-          "open": 1910.0,
-          "high": 1915.0,
-          "low": 1885.0,
-          "close": 1905.0,
-          "vol": 3201600
-        }
-      ],
-      "ma20_history": [
-        2169.0,
-        2174.0,
-        2183.0,
-        2195.0,
-        2215.0,
-        2235.0,
-        2242.0,
-        2238.0,
-        2237.0,
-        2233.0,
-        2216.0,
-        2199.0,
-        2184.0,
-        2163.0,
-        2144.0,
-        2122.0,
-        2106.0,
-        2090.0,
-        2076.0,
-        2057.0,
-        2030.0,
-        2004.0,
-        1983.0,
-        1964.0,
-        1941.0,
-        1924.0,
-        1917.0,
-        1916.0,
-        1912.0,
-        1909.0
-      ],
-      "ma50_history": [
-        2408.0,
-        2403.0,
-        2398.0,
-        2393.0,
-        2388.0,
-        2382.0,
-        2372.0,
-        2360.0,
-        2345.0,
-        2332.0,
-        2317.0,
-        2300.0,
-        2286.0,
-        2272.0,
-        2257.0,
-        2242.0,
-        2230.0,
-        2217.0,
-        2204.0,
-        2189.0,
-        2174.0,
-        2158.0,
-        2143.0,
-        2130.0,
-        2116.0,
-        2103.0,
-        2093.0,
-        2084.0,
-        2076.0,
-        2069.0
-      ],
-      "net_income": 3537296949248,
-      "shares_outstanding": 37981233300,
-      "last_updated": "2026-04-13 14:41:34",
-      "flags": [],
-      "skor_detail": {
-        "yield_bersih_4pct": 1,
-        "yield_tidak_abnormal": 1,
-        "div_konsisten_3thn": 1,
-        "div_konsisten_5thn": 0,
-        "dividen_aktif": 1,
-        "pbv_wajar": 0,
-        "per_wajar": 1,
-        "roe_positif": 1,
-        "der_aman": 1,
-        "above_ma20": 0,
-        "above_ma50": 0,
-        "golden_cross": 0,
-        "rsi_ideal": 1,
-        "rsi_tidak_overbought": 1,
-        "macd_bullish": 1,
-        "volume_normal": 0,
-        "volume_momentum": 0,
-        "candle_bullish": 0,
-        "candle_body_kuat": 0,
-        "upcoming_dividen": 1,
-        "news_positif": 1,
-        "news_tidak_major_neg": 1
-      },
-      "total_skor": 13,
-      "skor_maks": 22,
-      "pct": 59.1,
-      "klasifikasi": "WATCH",
-      "news": {
-        "overall": "strong_positive",
-        "skor_normalized": 9.4,
-        "skor_korporasi": 5,
-        "skor_makro": 2,
-        "kategori_match": [
-          {
-            "id": 4,
-            "nama": "Buyback",
-            "sentimen": "bullish",
-            "bobot": 5,
-            "warning": "",
-            "level": "korporasi"
-          }
-        ],
-        "warnings": [],
-        "total_berita": 5,
-        "items": [
-          {
-            "title": "Saham UNVR: Profil, Kinerja & Prospek Unilever - Pluang",
-            "published": "Mon, 20 Jul 2026 11:27:29 GMT",
-            "source": "Pluang",
-            "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9zUjl4bUFQQ1VXa3BhRWJ4cmJmRXBaNzRrVi1mYlRwWk4wY3Vpd0Mzb3R6WlNfQm82aFkwVVdUcFMzUFlUaVcwVzh0WjViVEsyWjl5R1VhMWVXZXB0QWZwcmpoRQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
-            "title": "Rekomendasi Saham Ajaib Sekuritas Hari Ini (UNVR, PTBA, ESSA) - Ajaib",
-            "published": "Mon, 20 Jul 2026 02:00:30 GMT",
-            "source": "Ajaib",
-            "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBYSHNud25XWEJ6eFpqTk5LV25HMjVfQ24yR2l5dHQ3bVZNb2FZRDZBbTRMdmI4TWJmVWYxYVZKX0pNa0gtaEtaWmJJYkNxb0FhVm84NncxN1NkNlhIYTdXZGlPdHN4N0hHdV9JcExEbTlDdUli?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
-            "title": "UNVR Realisasikan Buyback Rp 285 Miliar, Baru Serap 14% dari Dana yang Disiapkan - kontan.co.id",
-            "published": "Thu, 16 Jul 2026 00:40:13 GMT",
-            "source": "kontan.co.id",
-            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMEwwNUxvb2VBSm1JcXcxN2VZTlFSV25FTVlJYkVueVhtZDZzVFhKMmxOdXhVM196bGdLNXhoYWFiMGtjeGdHcU1yUmVaMzY1QVF4QldmVEE2QnFBcmFpVHhCN2tsZllRcFFZVjI2UnNHb2xwbHliblhhdE1lRlZUNkJ5ZUhkX1BlNVZjaWlIVVlvU1RTb1FMc2dJZjFVZWxOYm1iTjFGLWNqbkRGanFpWVIxRXjSAawBQVVfeXFMTXY3a0NSN1M1NDF2c25ueFhuUkNSdkh2VlcwcFpPNFctQ05QLW5pRjFtV0swbFVDM2g4ejZiRHFYSkpqb2xHQ3dVaEc2eHdabXMxTnhLWFo4VFE5VjV2R1MwX0ZrTTdTcWZUSVEtSFBZNXdORnRZdnhwNTRKVWp2b2ttNVJiSnJ0WnhfOXdtUzRXVWEzR0Z6YmVXVEdZd1JPdDAzdjdfUWYxQlNGcg?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": [
-              {
-                "id": 4,
-                "nama": "Buyback",
-                "sentimen": "bullish",
-                "bobot": 5,
-                "warning": "",
-                "level": "korporasi"
-              }
-            ]
-          },
-          {
-            "title": "IHSG Rebound, Tapi UNVR-AMRT Terburuk di LQ45 - Bloomberg Technoz",
-            "published": "Fri, 17 Jul 2026 06:55:00 GMT",
-            "source": "Bloomberg Technoz",
-            "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQ2RBRzZfZUNjaHRCSTBnV1FhQy1YRHYyb29CM01naTFYekhnOXRscld2eGMxMUQyaFlERVNLelhORE5oUExDSk5ScjhxX3NLTnYzMHlodmtiX3YwTDNvQWQzYzR4c0xQd1RpLWxlbWlJTHlNTFJfdFVmT3JiblJiWFlWNjNWcy1fbHBjU2pQYjUyTEhsejdMeTlLemM?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
-            "title": "Rekomendasi Saham Ajaib Sekuritas Hari Ini (PTBA, UNVR, KIJA) - Ajaib",
-            "published": "Thu, 16 Jul 2026 02:02:26 GMT",
-            "source": "Ajaib",
-            "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9uSkZpWmNwejk2dW5WR2dXU1lqcmVPNFI0cWI3YXFKWWVTUVk4Z1dmLXZIZjVfQ0Zjd3Q4ekFXX01ybm9SVzhweExEVlhieEVXOGlQMm43Y2Z2X2FYMGQtUnBLbjlWYWluVThpOWl5MXZVMXFo?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          }
-        ]
-      }
     },
     {
       "kode": "BSDE",
@@ -16342,18 +16293,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 0,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 13,
+      "total_skor": 12,
       "skor_maks": 22,
-      "pct": 59.1,
+      "pct": 54.5,
       "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -16383,18 +16334,18 @@
             "matches": []
           },
           {
-            "title": "Bumi Serpong Damai (BSDE) habiskan dana obligasi Rp 2,72 triliun, ini rinciannya - MSN",
-            "published": "Wed, 15 Jul 2026 07:00:00 GMT",
-            "source": "MSN",
-            "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPVWcxSmpvQ1lmV3NFUWo1NFpPRkYxVmdXSkg3MEtURWxMY3NHVFdFX1hJTTJ4MGVHTm9pYWc0eE9peU9XYzNxYTQ1TkE1MU0xYUNUdXVmRW1kelJZekNJTXpaU1hFVElaT3Qyd19sLVN6Q3lscHdqTlJfNGxlNC1DRGxRUWRJc3NfWDZIamhQV3RZZ2JrZmlNV3BBT01OUEdaQ1FTVVdOWFFUems1ZVJCQ2kxa2RIQnhOMkR0dFBvTUZpdGZjWkJsZ0ZZVWRCUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
             "title": "IHSG Dibuka Menguat 0,37% ke 6.198, Saham Konglomerat BREN ICBP BUVA Berseri - Bisnis.com - Market",
             "published": "Mon, 20 Jul 2026 02:27:47 GMT",
             "source": "Bisnis.com - Market",
             "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQREU2djdWVDJYRmk5ZWFmTVJPV0JGTUJLa05kRzFCeWNFRXJ3dFIxbU1TdWhYWHY4eUpoaWhJa1lvTnNrQkVDQjFVQWdtVGUyYkhtOU00YjF4aEQzLUpjWVdjYVVXLUxRZ0lzMzg0bEZPVnN3SHdxYjlTVHVPX0dQYUpIcXE3VlJaWGJrRVE1R0d0dDZoSWhVd09tVFRycmJ5X0dEc2ZJZFV0V2R1VTBnTXV4MXZSMVRIZnJ1T3BkQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
+          {
+            "title": "IHSG Pekan Ini Siap Bullish, IPOT Jagokan Tiga Saham Berikut - kontan.co.id",
+            "published": "Mon, 20 Jul 2026 12:57:29 GMT",
+            "source": "kontan.co.id",
+            "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPckVQaGtHNm9wOVIyM2dPMzlDRk43TjNYbE1iWDhNeHBLZjhhbkpSR1M5dXBxb3QxN0trVzQ4Y3N6U3VtbE10OXZqVUFVbTlCTUF1YnhfUHE2LTNiR3RhQjI3Z3BiZ3I1eWh4S0F4clpOeWJuOWdYemNNS0EwaHo5TDRrV2lkWVBMdVBCM1llOXRTZXMwdnQzZ2JYNA?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           }
@@ -16788,18 +16739,18 @@
         "candle_bullish": 1,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 12,
+      "total_skor": 11,
       "skor_maks": 22,
-      "pct": 54.5,
+      "pct": 50.0,
       "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -16813,14 +16764,6 @@
             "matches": []
           },
           {
-            "title": "IHSG Naik 0,47% ke 6.067 di Sesi I, Top Gainers LQ45: ANTM, ESSA, ISAT, Rabu (15/7) - kontan.co.id",
-            "published": "Wed, 15 Jul 2026 05:11:33 GMT",
-            "source": "kontan.co.id",
-            "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZlBJSzdSd3h0anlzTjBuS2pQX29fRVhUUE5nM2tlb3NLWm9HQUlsTHM3bkp0c1JtSzNVcFJxbFQ5WTd1b1lHMVhOc3A2djRIV05pdGtsQl9hMm9ONGRkXzRzeGZ1M1RtSjdzbUNVbjYyT0FjbWd0QUdoTG4yUmRTUXZoMnAzNGlra2ZLUnFEcDFra0hielBvdlhKWUZPbFlUUG5qdFdyM2xTTF8w0gGkAUFVX3lxTFB3cERJTHVDZmNaT09sTldkSGR3MXdRNXUxalZHN0dtOUd1TGRxbkMtUkdfdzZpR3BFbUYyZ29XaDlSczFrX0pNYmNCamZiSXNvaTJxejJzWUQwS2xhd2NVYzB6bGZ4U0pSenZLZ200R2UwdDczVEFHdWxKNUItRDBDUDhBeVVnaEhaRy1BT0ZLT1FUUUlobHFJckVLeTJzMWxYRWI3?oc=5&hl=en-US&gl=US&ceid=US:en",
-            "origin": "Google News",
-            "matches": []
-          },
-          {
             "title": "Rangkuman Rekomendasi Saham Hari Ini, 21 Juli 2026 - Bloomberg Technoz",
             "published": "Tue, 21 Jul 2026 01:15:38 GMT",
             "source": "Bloomberg Technoz",
@@ -16829,10 +16772,10 @@
             "matches": []
           },
           {
-            "title": "Harga Minyak Brent Tembus US$90,31/barel, Prospek Saham MEDC, ENRG, ELSA - Bisnis.com - Market",
-            "published": "Mon, 20 Jul 2026 06:19:00 GMT",
+            "title": "IHSG Dibuka Meningkat 0,66% ke 6.381, Saham ANTM, MEDC, hingga WIFI Melaju - Bisnis.com - Market",
+            "published": "Wed, 22 Jul 2026 02:15:28 GMT",
             "source": "Bisnis.com - Market",
-            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQLWNjWWFIbWpKOTdEZlRFVEl1ckJNaDh5ck9od0NPZVVaOVFlTzZ6NDdyZkpwLTRXVm9sSW5kcDhzVFltcFl4Vkx3MktiX1J6dk5TYTF3eWFBZEJrUmNuUkM4NHVFRW5HdmZIQm1CLXF0bFU3XzJUazluUHlieUQwckpRVXVldFk5Wk53d25OZ0pFQ3RpSXZOU0czWDByQjNrZ3UtOHdPNzR0Q3c4MmJrb3hWMXoyUzVFT2c?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOWnpWSUVMOE9udnVuazFKaWUwVGdacmhTNWJzMGdQRkZrT3oybktMMURXMHozVXVJS2xORHdZQlB3STl3XzBlbjkzV2hnbkdzSnBnZFBBdVpUVHpPTi1DX2ZaQWR1Y3pRN0VkUFlkOTVxbHVpM3pTUHBPdHZJdWMtLUVZXzI3c3dxS2gyOEl5N19VRWdFT2FzWkhrbFdpM1JtblRmTXM2dzR3YUc0YWFoWjUzZms1MXc2SUE?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           },
@@ -16841,6 +16784,14 @@
             "published": "Mon, 20 Jul 2026 02:44:05 GMT",
             "source": "RCTI+",
             "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOQ2xXVkVtZ1h6cnR6dG5VQ0lPNGZTTjFJc0J1VnhUaFFrVUpuSXA0dVVRcWdpRXJydXA4dGtobzhRTC1ubEhucmk5eWxQNzIxZDdSTHQxV2JqV0xlUVZTeVpUMVlwRWhhRG1FWDZIVnBGMW9HdnQ4VU14TDBScmFrUXpaMkNCU2lteFFMNE5FcGZHR2xXN3JHS3hhZnhuWk1KenBVbmJ3d3d4ZlNzWnlDTURLVThvXzhaOXRGZ19YVS1VdXA4YjhxWnRpWi1VNGhMZHQ4dFA2aERIXzBDV2NQSVd0bDctMEo5OFRETDhTbHhIazhpbHduZHlQbk1faGJ3NE9YNHFtaVJ3RndZZlE?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "origin": "Google News",
+            "matches": []
+          },
+          {
+            "title": "IHSG Awal Pekan Berakhir Menguat - Media Asuransi News",
+            "published": "Mon, 20 Jul 2026 10:06:00 GMT",
+            "source": "Media Asuransi News",
+            "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQc0pzTEdwVFdHelpPSWRtakNRY2R0WkFUajVwdnhCQ2lrQVJXc3UyY0xGX0tDWFpYaTBFRmVGbzdYRXlvMEcwMEEzckNZQ1pqczJoYzNKSFFqWXdyTzU3blJFY2licEhKSlBjeFQzbjF2Uk9iUTlQalFBdUJPV0Q4TzY2NUtyUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           }
@@ -17234,18 +17185,18 @@
         "candle_bullish": 0,
         "candle_body_kuat": 1,
         "upcoming_dividen": 1,
-        "news_positif": 1,
+        "news_positif": 0,
         "news_tidak_major_neg": 1
       },
-      "total_skor": 11,
+      "total_skor": 10,
       "skor_maks": 22,
-      "pct": 50.0,
+      "pct": 45.5,
       "klasifikasi": "WATCH",
       "news": {
-        "overall": "positive",
-        "skor_normalized": 6.2,
+        "overall": "strong_negative",
+        "skor_normalized": 2.5,
         "skor_korporasi": 0,
-        "skor_makro": 2,
+        "skor_makro": -4,
         "kategori_match": [],
         "warnings": [],
         "total_berita": 5,
@@ -17275,10 +17226,10 @@
             "matches": []
           },
           {
-            "title": "IHSG Dibuka Menguat ke 6.058, Top Gainers LQ45: SMGR, AMMN dan ISAT, Kamis (16/7) - kontan.co.id",
-            "published": "Thu, 16 Jul 2026 02:12:16 GMT",
+            "title": "Simak Rekomendasi Teknikal Saham SMGR, INKP dan MAPI untuk Hari Ini (21/7) - kontan.co.id",
+            "published": "Mon, 20 Jul 2026 21:50:58 GMT",
             "source": "kontan.co.id",
-            "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNY20xUUI4cE9XdHlzSUQ2aFJwV0FCLUtZME45MXlBUU83eVBrSTFjbHNhMzZYdklmdmhKQTNEOWJ2ZTh4MDhNSVFvYTFhVVpxdHFFYWZpT0pzZVVVZnBzaE9DeHVNYk41bkFKMXNieWxyTjctNTlCQ295V2RXTGtKX0JhcXlKU1FzSmc4cHdUd3lGUkVfaEdGblR6WTAtbnA1b1YxRUxxUGJZUldZTkHSAaYBQVVfeXFMT1pJNVNGUWVKR2laU2dvQnhPUzhMX0tiZlVpdUJBQ3g5YUpxTUtBYXM3dnA5OHV0N3dEMjVGTEFlV1hSV005dXVWajhnSUZHV3VPT0dTQ3Rpdzlzcjl6SUl5dVlXQ0M4QUMyUC0tcXpMdlRyYXJSNkc3THhFYnJqLVJmMzVqem8ySEg5X0xiZlJZbE5ZazVYdng2eklrZzgxWGdsN21GUQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+            "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbm13Y1ZsQ3A0Q0duYV9sUHd6bXNtWmhTVHNXcjh2bGVXN2tCYnEweEhISXY4R0w4SWlWS0haWGdyVkRwRk9neWRFYV9ROVFEY2hBdjFTeXVtSGtkOUJJaEc4V1RDNlVHOTkzZjZMNFk0azY5VlFPM0V4VHRJN0VaMGozZEdnd2VEZjdPM2k5TGNhM2dacEdRekhKZk82NXZoMEc5SHBWVlg3UdIBogFBVV95cUxQRnpxM3dXTTM0N3pxMW9ZTlJXdkgxck1Jb3Z5b0lTb18xTzMza1ItV0JhWDBNTmtkVEhFbVZYOEJkLUFvbWpzN1hqVjdET0oxNWJtREthTVplQno5T1huS1d3Y2prejdOQWMzYmZIZzQxNVpHdkdoY3Y5b0Jvc2hNVEsydVdQM3NsM0QxU1dPeTRYZXVDYWJtSFpKVHNxMS1JZmc?oc=5&hl=en-US&gl=US&ceid=US:en",
             "origin": "Google News",
             "matches": []
           },
@@ -17295,5 +17246,5 @@
     }
   ],
   "skip": [],
-  "div_manual_updated": "2026-07-22 02:54:08"
+  "div_manual_updated": "2026-07-22 07:28:17"
 }
